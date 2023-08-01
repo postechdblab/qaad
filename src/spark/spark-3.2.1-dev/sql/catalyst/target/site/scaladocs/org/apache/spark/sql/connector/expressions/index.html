@@ -1,0 +1,532 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Catalyst 3.2.1 API  - org.apache.spark.sql.connector.expressions</title>
+          <meta name="description" content="Spark Project Catalyst 3.2.1 API - org.apache.spark.sql.connector.expressions" />
+          <meta name="keywords" content="Spark Project Catalyst 3.2.1 API org.apache.spark.sql.connector.expressions" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Catalyst 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sql"></a><a id="sql:sql"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">sql</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="connector"></a><a id="connector:connector"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">connector</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.catalog" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="catalog"></a><a id="catalog:catalog"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/catalog/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../catalog/index.html"><span class="name">catalog</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.distributions" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="distributions"></a><a id="distributions:distributions"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/distributions/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../distributions/index.html"><span class="name">distributions</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.expressions" visbl="pub" class="indented6 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="expressions"></a><a id="expressions:expressions"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/expressions/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">expressions</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.expressions.aggregate" visbl="pub" class="indented7 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="aggregate"></a><a id="aggregate:aggregate"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/expressions/aggregate/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="aggregate/index.html"><span class="name">aggregate</span></a>
+      </span>
+      
+      
+    </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="Expression.html" title="Base class of the public logical expression API."></a>
+                        <a href="Expression.html" title="Base class of the public logical expression API.">Expression</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="Expressions.html" title="Helper methods to create logical transforms to pass into Spark."></a>
+                        <a href="Expressions.html" title="Helper methods to create logical transforms to pass into Spark.">Expressions</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="Literal.html" title="Represents a constant literal value in the public expression API."></a>
+                        <a href="Literal.html" title="Represents a constant literal value in the public expression API.">Literal</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="NamedReference.html" title="Represents a field or column reference in the public logical expression API."></a>
+                        <a href="NamedReference.html" title="Represents a field or column reference in the public logical expression API.">NamedReference</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="NullOrdering.html" title="A null order used in sorting expressions."></a>
+                        <a href="NullOrdering.html" title="A null order used in sorting expressions.">NullOrdering</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="SortDirection.html" title="A sort direction used in sorting expressions."></a>
+                        <a href="SortDirection.html" title="A sort direction used in sorting expressions.">SortDirection</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="SortOrder.html" title="Represents a sort order in the public expression API."></a>
+                        <a href="SortOrder.html" title="Represents a sort order in the public expression API.">SortOrder</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="Transform.html" title="Represents a transform function in the public logical expression API."></a>
+                        <a href="Transform.html" title="Represents a transform function in the public logical expression API.">Transform</a>
+                      </li><li name="org.apache.spark.sql.connector.metric" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="metric"></a><a id="metric:metric"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/metric/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../metric/index.html"><span class="name">metric</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="read"></a><a id="read:read"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/read/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../read/index.html"><span class="name">read</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.write" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="write"></a><a id="write:write"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/write/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../write/index.html"><span class="name">write</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a></dd></dl></div>
+    </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../../../index.html" class="extype" name="org">org</a>.<a href="../../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../../index.html" class="extype" name="org.apache.spark.sql">sql</a>.<a href="../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a></p>
+        <h1>expressions<span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/expressions/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">expressions</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.spark.sql.connector.expressions.Expression" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ExpressionextendsObject"></a><a id="Expression:Expression"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/expressions/Expression.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Base class of the public logical expression API." href="Expression.html"><span class="name">Expression</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Base class of the public logical expression API.</p><div class="fullcomment"><div class="comment cmt"><p>Base class of the public logical expression API.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.expressions.Expressions" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ExpressionsextendsObject"></a><a id="Expressions:Expressions"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/expressions/Expressions.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Helper methods to create logical transforms to pass into Spark." href="Expressions.html"><span class="name">Expressions</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Helper methods to create logical transforms to pass into Spark.</p><div class="fullcomment"><div class="comment cmt"><p>Helper methods to create logical transforms to pass into Spark.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.expressions.Literal" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="Literal[T]extendsExpression"></a><a id="Literal[T]:Literal[T]"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/expressions/Literal.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Represents a constant literal value in the public expression API." href="Literal.html"><span class="name">Literal</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="Expression.html" class="extype" name="org.apache.spark.sql.connector.expressions.Expression">Expression</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Represents a constant literal value in the public expression API.</p><div class="fullcomment"><div class="comment cmt"><p>Represents a constant literal value in the public expression API.</p><p>The JVM type of the value held by a literal must be the type used by Spark's InternalRow API for
+the literal's <code><span class="extype" name="DataType">SQL data type</span></code>.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.expressions.NamedReference" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="NamedReferenceextendsExpression"></a><a id="NamedReference:NamedReference"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/expressions/NamedReference.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Represents a field or column reference in the public logical expression API." href="NamedReference.html"><span class="name">NamedReference</span></a><span class="result"> extends <a href="Expression.html" class="extype" name="org.apache.spark.sql.connector.expressions.Expression">Expression</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Represents a field or column reference in the public logical expression API.</p><div class="fullcomment"><div class="comment cmt"><p>Represents a field or column reference in the public logical expression API.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.expressions.NullOrdering" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="NullOrderingextendsEnum[org.apache.spark.sql.connector.expressions.NullOrdering]"></a><a id="NullOrdering:NullOrdering"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/expressions/NullOrdering.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A null order used in sorting expressions." href="NullOrdering.html"><span class="name">NullOrdering</span></a><span class="result"> extends <span class="extype" name="java.lang.Enum">Enum</span>[<a href="NullOrdering.html" class="extype" name="org.apache.spark.sql.connector.expressions.NullOrdering">NullOrdering</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">A null order used in sorting expressions.</p><div class="fullcomment"><div class="comment cmt"><p>A null order used in sorting expressions.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Experimental</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.2.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.expressions.SortDirection" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="SortDirectionextendsEnum[org.apache.spark.sql.connector.expressions.SortDirection]"></a><a id="SortDirection:SortDirection"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/expressions/SortDirection.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A sort direction used in sorting expressions." href="SortDirection.html"><span class="name">SortDirection</span></a><span class="result"> extends <span class="extype" name="java.lang.Enum">Enum</span>[<a href="SortDirection.html" class="extype" name="org.apache.spark.sql.connector.expressions.SortDirection">SortDirection</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">A sort direction used in sorting expressions.</p><div class="fullcomment"><div class="comment cmt"><p>A sort direction used in sorting expressions.</p><p>Each direction has a default null ordering that is implied if no null ordering is specified
+explicitly.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Experimental</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.2.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.expressions.SortOrder" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="SortOrderextendsExpression"></a><a id="SortOrder:SortOrder"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/expressions/SortOrder.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Represents a sort order in the public expression API." href="SortOrder.html"><span class="name">SortOrder</span></a><span class="result"> extends <a href="Expression.html" class="extype" name="org.apache.spark.sql.connector.expressions.Expression">Expression</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Represents a sort order in the public expression API.</p><div class="fullcomment"><div class="comment cmt"><p>Represents a sort order in the public expression API.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Experimental</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.2.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.expressions.Transform" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="TransformextendsExpression"></a><a id="Transform:Transform"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/expressions/Transform.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Represents a transform function in the public logical expression API." href="Transform.html"><span class="name">Transform</span></a><span class="result"> extends <a href="Expression.html" class="extype" name="org.apache.spark.sql.connector.expressions.Expression">Expression</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Represents a transform function in the public logical expression API.</p><div class="fullcomment"><div class="comment cmt"><p>Represents a transform function in the public logical expression API.</p><p>For example, the transform date(ts) is used to derive a date value from a timestamp column. The
+transform name is &quot;date&quot; and its argument is a reference to the &quot;ts&quot; column.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

@@ -1,0 +1,942 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Catalyst 3.2.1 API  - org.apache.spark.sql.catalyst.plans</title>
+          <meta name="description" content="Spark Project Catalyst 3.2.1 API - org.apache.spark.sql.catalyst.plans" />
+          <meta name="keywords" content="Spark Project Catalyst 3.2.1 API org.apache.spark.sql.catalyst.plans" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Catalyst 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sql"></a><a id="sql:sql"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">sql</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="catalyst"></a><a id="catalyst:catalyst"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Catalyst is a library for manipulating relational query plans." href="../index.html"><span class="name">catalyst</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Catalyst is a library for manipulating relational query plans.</p><div class="fullcomment"><div class="comment cmt"><p>Catalyst is a library for manipulating relational query plans.  All classes in catalyst are
+considered an internal API to Spark SQL and are subject to change between minor releases.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.analysis" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="analysis"></a><a id="analysis:analysis"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Provides a logical query plan Analyzer and supporting classes for performing analysis." href="../analysis/index.html"><span class="name">analysis</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Provides a logical query plan <a href="../analysis/Analyzer.html" class="extype" name="org.apache.spark.sql.catalyst.analysis.Analyzer">Analyzer</a> and supporting classes for performing analysis.</p><div class="fullcomment"><div class="comment cmt"><p>Provides a logical query plan <a href="../analysis/Analyzer.html" class="extype" name="org.apache.spark.sql.catalyst.analysis.Analyzer">Analyzer</a> and supporting classes for performing analysis.
+Analysis consists of translating <a href="../analysis/UnresolvedAttribute.html" class="extype" name="org.apache.spark.sql.catalyst.analysis.UnresolvedAttribute">UnresolvedAttribute</a>s and <a href="../analysis/UnresolvedRelation.html" class="extype" name="org.apache.spark.sql.catalyst.analysis.UnresolvedRelation">UnresolvedRelation</a>s
+into fully typed objects using information in a schema <span class="extype" name="Catalog">Catalog</span>.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.catalog" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="catalog"></a><a id="catalog:catalog"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/catalog/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../catalog/index.html"><span class="name">catalog</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.csv" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="csv"></a><a id="csv:csv"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/csv/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../csv/index.html"><span class="name">csv</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.dsl" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dsl"></a><a id="dsl:dsl"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/dsl/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="A collection of implicit conversions that create a DSL for constructing catalyst data structures." href="../dsl/index.html"><span class="name">dsl</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">A collection of implicit conversions that create a DSL for constructing catalyst data structures.</p><div class="fullcomment"><div class="comment cmt"><p>A collection of implicit conversions that create a DSL for constructing catalyst data structures.</p><pre>scala&gt; <span class="kw">import</span> org.apache.spark.sql.catalyst.dsl.expressions._
+
+<span class="cmt">// Standard operators are added to expressions.</span>
+scala&gt; <span class="kw">import</span> org.apache.spark.sql.catalyst.expressions.Literal
+scala&gt; Literal(<span class="num">1</span>) + Literal(<span class="num">1</span>)
+res0: org.apache.spark.sql.catalyst.expressions.Add = (<span class="num">1</span> + <span class="num">1</span>)
+
+<span class="cmt">// There is a conversion from 'symbols to unresolved attributes.</span>
+scala&gt; 'a.attr
+res1: org.apache.spark.sql.catalyst.analysis.UnresolvedAttribute = 'a
+
+<span class="cmt">// These unresolved attributes can be used to create more complicated expressions.</span>
+scala&gt; <span class="lit">'a === '</span>b
+res2: org.apache.spark.sql.catalyst.expressions.EqualTo = (<span class="lit">'a = '</span>b)
+
+<span class="cmt">// SQL verbs can be used to construct logical query plans.</span>
+scala&gt; <span class="kw">import</span> org.apache.spark.sql.catalyst.plans.logical._
+scala&gt; <span class="kw">import</span> org.apache.spark.sql.catalyst.dsl.plans._
+scala&gt; LocalRelation('key.int, 'value.string).where('key === <span class="num">1</span>).select('value).analyze
+res3: org.apache.spark.sql.catalyst.plans.logical.LogicalPlan =
+Project [value#<span class="num">3</span>]
+ Filter (key#<span class="num">2</span> = <span class="num">1</span>)
+  LocalRelation [key#<span class="num">2</span>,value#<span class="num">3</span>], []</pre></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.encoders" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="encoders"></a><a id="encoders:encoders"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/encoders/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../encoders/index.html"><span class="name">encoders</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.expressions" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="expressions"></a><a id="expressions:expressions"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/expressions/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="A set of classes that can be used to represent trees of relational expressions." href="../expressions/index.html"><span class="name">expressions</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">A set of classes that can be used to represent trees of relational expressions.</p><div class="fullcomment"><div class="comment cmt"><p>A set of classes that can be used to represent trees of relational expressions.  A key goal of
+the expression library is to hide the details of naming and scoping from developers who want to
+manipulate trees of relational operators. As such, the library defines a special type of
+expression, a <a href="../expressions/NamedExpression.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.NamedExpression">NamedExpression</a> in addition to the standard collection of expressions.</p><h4>Standard Expressions</h4><p>A library of standard expressions (e.g., <a href="../expressions/Add.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.Add">Add</a>, <a href="../expressions/EqualTo.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.EqualTo">EqualTo</a>), aggregates (e.g., SUM, COUNT),
+and other computations (e.g. UDFs). Each expression type is capable of determining its output
+schema as a function of its children's output schema.</p><h4>Named Expressions</h4><p>Some expression are named and thus can be referenced by later operators in the dataflow graph.
+The two types of named expressions are <a href="../expressions/AttributeReference.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.AttributeReference">AttributeReference</a>s and <a href="../expressions/Alias.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.Alias">Alias</a>es.
+<a href="../expressions/AttributeReference.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.AttributeReference">AttributeReference</a>s refer to attributes of the input tuple for a given operator and form
+the leaves of some expression trees.  Aliases assign a name to intermediate computations.
+For example, in the SQL statement <code>SELECT a+b AS c FROM ...</code>, the expressions <code>a</code> and <code>b</code> would
+be represented by <code>AttributeReferences</code> and <code>c</code> would be represented by an <code>Alias</code>.</p><p>During <a href="../analysis/index.html" class="extype" name="org.apache.spark.sql.catalyst.analysis">analysis</a>, all named expressions are assigned a globally unique expression id, which
+can be used for equality comparisons.  While the original names are kept around for debugging
+purposes, they should never be used to check if two attributes refer to the same value, as
+plan transformations can result in the introduction of naming ambiguity. For example, consider
+a plan that contains subqueries, both of which are reading from the same table.  If an
+optimization removes the subqueries, scoping information would be destroyed, eliminating the
+ability to reason about which subquery produced a given attribute.</p><h4>Evaluation</h4><p>The result of expressions can be evaluated using the <code>Expression.apply(Row)</code> method.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.json" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="json"></a><a id="json:json"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/json/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../json/index.html"><span class="name">json</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.optimizer" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="optimizer"></a><a id="optimizer:optimizer"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../optimizer/index.html"><span class="name">optimizer</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.parser" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="parser"></a><a id="parser:parser"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/parser/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../parser/index.html"><span class="name">parser</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.planning" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="planning"></a><a id="planning:planning"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/planning/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Contains classes for enumerating possible physical plans for a given logical query plan." href="../planning/index.html"><span class="name">planning</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Contains classes for enumerating possible physical plans for a given logical query plan.</p><div class="fullcomment"><div class="comment cmt"><p>Contains classes for enumerating possible physical plans for a given logical query plan.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.plans" visbl="pub" class="indented6 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="plans"></a><a id="plans:plans"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/plans/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">plans</span>
+      </span>
+      
+      <p class="shortcomment cmt">A collection of common abstractions for query plans as well as
+a base logical plan representation.</p><div class="fullcomment"><div class="comment cmt"><p>A collection of common abstractions for query plans as well as
+a base logical plan representation.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.plans.logical" visbl="pub" class="indented7 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="logical"></a><a id="logical:logical"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/plans/logical/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="logical/index.html"><span class="name">logical</span></a>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.catalyst.plans.physical" visbl="pub" class="indented7 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="physical"></a><a id="physical:physical"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/plans/physical/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="physical/index.html"><span class="name">physical</span></a>
+      </span>
+      
+      
+    </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="Cross$.html" title=""></a>
+                        <a href="Cross$.html" title="">Cross</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="ExistenceJoin.html" title=""></a>
+                        <a href="ExistenceJoin.html" title="">ExistenceJoin</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="FullOuter$.html" title=""></a>
+                        <a href="FullOuter$.html" title="">FullOuter</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="Inner$.html" title=""></a>
+                        <a href="Inner$.html" title="">Inner</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="InnerLike.html" title="The explicitCartesian flag indicates if the inner join was constructed with a CROSS join indicating a cartesian product has been explicitly requested."></a>
+                        <a href="InnerLike.html" title="The explicitCartesian flag indicates if the inner join was constructed with a CROSS join indicating a cartesian product has been explicitly requested.">InnerLike</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="JoinType$.html" title=""></a>
+                        <a class="class" href="JoinType.html" title=""></a>
+                        <a href="JoinType.html" title="">JoinType</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="LeftAnti$.html" title=""></a>
+                        <a href="LeftAnti$.html" title="">LeftAnti</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="LeftExistence$.html" title=""></a>
+                        <a href="LeftExistence$.html" title="">LeftExistence</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="LeftOuter$.html" title=""></a>
+                        <a href="LeftOuter$.html" title="">LeftOuter</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="LeftSemi$.html" title=""></a>
+                        <a href="LeftSemi$.html" title="">LeftSemi</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="LeftSemiOrAnti$.html" title=""></a>
+                        <a href="LeftSemiOrAnti$.html" title="">LeftSemiOrAnti</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="NaturalJoin.html" title=""></a>
+                        <a href="NaturalJoin.html" title="">NaturalJoin</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="QueryPlan$.html" title=""></a>
+                        <a class="class" href="QueryPlan.html" title="An abstraction of the Spark SQL query plan tree, which can be logical or physical."></a>
+                        <a href="QueryPlan.html" title="An abstraction of the Spark SQL query plan tree, which can be logical or physical.">QueryPlan</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="RightOuter$.html" title=""></a>
+                        <a href="RightOuter$.html" title="">RightOuter</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="UsingJoin.html" title=""></a>
+                        <a href="UsingJoin.html" title="">UsingJoin</a>
+                      </li><li name="org.apache.spark.sql.catalyst.rules" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="rules"></a><a id="rules:rules"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/rules/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="A framework for applying batches rewrite rules to trees, possibly to fixed point." href="../rules/index.html"><span class="name">rules</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">A framework for applying batches rewrite rules to trees, possibly to fixed point.</p><div class="fullcomment"><div class="comment cmt"><p>A framework for applying batches rewrite rules to trees, possibly to fixed point.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.streaming" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="streaming"></a><a id="streaming:streaming"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/streaming/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../streaming/index.html"><span class="name">streaming</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.trees" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="trees"></a><a id="trees:trees"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="A library for easily manipulating trees of operators." href="../trees/index.html"><span class="name">trees</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">A library for easily manipulating trees of operators.</p><div class="fullcomment"><div class="comment cmt"><p>A library for easily manipulating trees of operators.  Operators that extend TreeNode are
+granted the following interface:</p><ul><li>Scala collection like methods (foreach, map, flatMap, collect, etc)</li></ul><p> -
+    transform - accepts a partial function that is used to generate a new tree.  When the
+    partial function can be applied to a given tree segment, that segment is replaced with the
+    result.  After attempting to apply the partial function to a given node, the transform
+    function recursively attempts to apply the function to that node's children.</p><ul><li>debugging support - pretty printing, easy splicing of trees, etc.</li></ul></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.util" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="util"></a><a id="util:util"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../util/index.html"><span class="name">util</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../../../index.html" class="extype" name="org">org</a>.<a href="../../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../../index.html" class="extype" name="org.apache.spark.sql">sql</a>.<a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></p>
+        <h1>plans<span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/plans/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">plans</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A collection of common abstractions for query plans as well as
+a base logical plan representation.
+</p></div><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="org.apache.spark.sql.catalyst.plans"><span>plans</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.spark.sql.catalyst.plans.ExistenceJoin" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ExistenceJoinextendsJoinTypewithProductwithSerializable"></a><a id="ExistenceJoin:ExistenceJoin"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/plans/ExistenceJoin.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ExistenceJoin.html"><span class="name">ExistenceJoin</span></a><span class="params">(<span name="exists">exists: <a href="../expressions/Attribute.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.Attribute">Attribute</a></span>)</span><span class="result"> extends <a href="JoinType.html" class="extype" name="org.apache.spark.sql.catalyst.plans.JoinType">JoinType</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.catalyst.plans.InnerLike" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="InnerLikeextendsJoinType"></a><a id="InnerLike:InnerLike"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/plans/InnerLike.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The explicitCartesian flag indicates if the inner join was constructed with a CROSS join indicating a cartesian product has been explicitly requested." href="InnerLike.html"><span class="name">InnerLike</span></a><span class="result"> extends <a href="JoinType.html" class="extype" name="org.apache.spark.sql.catalyst.plans.JoinType">JoinType</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The explicitCartesian flag indicates if the inner join was constructed with a CROSS join
+indicating a cartesian product has been explicitly requested.</p>
+    </li><li name="org.apache.spark.sql.catalyst.plans.JoinType" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="JoinTypeextendsAnyRef"></a><a id="JoinType:JoinType"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/plans/JoinType.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="JoinType.html"><span class="name">JoinType</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.catalyst.plans.NaturalJoin" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NaturalJoinextendsJoinTypewithProductwithSerializable"></a><a id="NaturalJoin:NaturalJoin"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/plans/NaturalJoin.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="NaturalJoin.html"><span class="name">NaturalJoin</span></a><span class="params">(<span name="tpe">tpe: <a href="JoinType.html" class="extype" name="org.apache.spark.sql.catalyst.plans.JoinType">JoinType</a></span>)</span><span class="result"> extends <a href="JoinType.html" class="extype" name="org.apache.spark.sql.catalyst.plans.JoinType">JoinType</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.catalyst.plans.QueryPlan" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="QueryPlan[PlanType&lt;:org.apache.spark.sql.catalyst.plans.QueryPlan[PlanType]]extendsTreeNode[PlanType]withSQLConfHelper"></a><a id="QueryPlan[PlanType&lt;:QueryPlan[PlanType]]:QueryPlan[PlanType]"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/plans/QueryPlan.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="An abstraction of the Spark SQL query plan tree, which can be logical or physical." href="QueryPlan.html"><span class="name">QueryPlan</span></a><span class="tparams">[<span name="PlanType">PlanType &lt;: <a href="QueryPlan.html" class="extype" name="org.apache.spark.sql.catalyst.plans.QueryPlan">QueryPlan</a>[<span class="extype" name="org.apache.spark.sql.catalyst.plans.QueryPlan.PlanType">PlanType</span>]</span>]</span><span class="result"> extends <a href="../trees/TreeNode.html" class="extype" name="org.apache.spark.sql.catalyst.trees.TreeNode">TreeNode</a>[<span class="extype" name="org.apache.spark.sql.catalyst.plans.QueryPlan.PlanType">PlanType</span>] with <a href="../SQLConfHelper.html" class="extype" name="org.apache.spark.sql.catalyst.SQLConfHelper">SQLConfHelper</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">An abstraction of the Spark SQL query plan tree, which can be logical or physical.</p><div class="fullcomment"><div class="comment cmt"><p>An abstraction of the Spark SQL query plan tree, which can be logical or physical. This class
+defines some basic properties of a query plan node, as well as some new transform APIs to
+transform the expressions of the plan node.</p><p>Note that, the query plan is a mutually recursive structure:
+  QueryPlan -&gt; Expression (subquery) -&gt; QueryPlan
+The tree traverse APIs like <code>transform</code>, <code>foreach</code>, <code>collect</code>, etc. that are
+inherited from <code>TreeNode</code>, do not traverse into query plans inside subqueries.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.catalyst.plans.UsingJoin" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UsingJoinextendsJoinTypewithProductwithSerializable"></a><a id="UsingJoin:UsingJoin"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/plans/UsingJoin.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="UsingJoin.html"><span class="name">UsingJoin</span></a><span class="params">(<span name="tpe">tpe: <a href="JoinType.html" class="extype" name="org.apache.spark.sql.catalyst.plans.JoinType">JoinType</a></span>, <span name="usingColumns">usingColumns: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="JoinType.html" class="extype" name="org.apache.spark.sql.catalyst.plans.JoinType">JoinType</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="org.apache.spark.sql.catalyst.plans.Cross" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Cross"></a><a id="Cross:Cross"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/plans/Cross$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Cross$.html"><span class="name">Cross</span></a><span class="result"> extends <a href="InnerLike.html" class="extype" name="org.apache.spark.sql.catalyst.plans.InnerLike">InnerLike</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.catalyst.plans.FullOuter" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FullOuter"></a><a id="FullOuter:FullOuter"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/plans/FullOuter$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="FullOuter$.html"><span class="name">FullOuter</span></a><span class="result"> extends <a href="JoinType.html" class="extype" name="org.apache.spark.sql.catalyst.plans.JoinType">JoinType</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.catalyst.plans.Inner" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Inner"></a><a id="Inner:Inner"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/plans/Inner$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Inner$.html"><span class="name">Inner</span></a><span class="result"> extends <a href="InnerLike.html" class="extype" name="org.apache.spark.sql.catalyst.plans.InnerLike">InnerLike</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.catalyst.plans.JoinType" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="JoinType"></a><a id="JoinType:JoinType"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/plans/JoinType$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="JoinType$.html"><span class="name">JoinType</span></a>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.catalyst.plans.LeftAnti" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LeftAnti"></a><a id="LeftAnti:LeftAnti"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/plans/LeftAnti$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="LeftAnti$.html"><span class="name">LeftAnti</span></a><span class="result"> extends <a href="JoinType.html" class="extype" name="org.apache.spark.sql.catalyst.plans.JoinType">JoinType</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.catalyst.plans.LeftExistence" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LeftExistence"></a><a id="LeftExistence:LeftExistence"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/plans/LeftExistence$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="LeftExistence$.html"><span class="name">LeftExistence</span></a>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.catalyst.plans.LeftOuter" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LeftOuter"></a><a id="LeftOuter:LeftOuter"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/plans/LeftOuter$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="LeftOuter$.html"><span class="name">LeftOuter</span></a><span class="result"> extends <a href="JoinType.html" class="extype" name="org.apache.spark.sql.catalyst.plans.JoinType">JoinType</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.catalyst.plans.LeftSemi" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LeftSemi"></a><a id="LeftSemi:LeftSemi"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/plans/LeftSemi$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="LeftSemi$.html"><span class="name">LeftSemi</span></a><span class="result"> extends <a href="JoinType.html" class="extype" name="org.apache.spark.sql.catalyst.plans.JoinType">JoinType</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.catalyst.plans.LeftSemiOrAnti" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LeftSemiOrAnti"></a><a id="LeftSemiOrAnti:LeftSemiOrAnti"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/plans/LeftSemiOrAnti$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="LeftSemiOrAnti$.html"><span class="name">LeftSemiOrAnti</span></a>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.catalyst.plans.QueryPlan" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="QueryPlan"></a><a id="QueryPlan:QueryPlan"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/plans/QueryPlan$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="QueryPlan$.html"><span class="name">QueryPlan</span></a><span class="result"> extends <a href="../expressions/PredicateHelper.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.PredicateHelper">PredicateHelper</a></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.catalyst.plans.RightOuter" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RightOuter"></a><a id="RightOuter:RightOuter"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/plans/RightOuter$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="RightOuter$.html"><span class="name">RightOuter</span></a><span class="result"> extends <a href="JoinType.html" class="extype" name="org.apache.spark.sql.catalyst.plans.JoinType">JoinType</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

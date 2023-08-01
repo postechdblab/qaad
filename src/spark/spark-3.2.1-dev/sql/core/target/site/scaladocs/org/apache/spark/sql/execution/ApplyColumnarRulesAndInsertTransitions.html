@@ -1,0 +1,1760 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project SQL 3.2.1 API  - org.apache.spark.sql.execution.ApplyColumnarRulesAndInsertTransitions</title>
+          <meta name="description" content="Spark Project SQL 3.2.1 API - org.apache.spark.sql.execution.ApplyColumnarRulesAndInsertTransitions" />
+          <meta name="keywords" content="Spark Project SQL 3.2.1 API org.apache.spark.sql.execution.ApplyColumnarRulesAndInsertTransitions" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project SQL 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sql"></a><a id="sql:sql"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Allows the execution of relational queries, including those expressed in SQL using Spark." href="../index.html"><span class="name">sql</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Allows the execution of relational queries, including those expressed in SQL using Spark.</p><div class="fullcomment"><div class="comment cmt"><p>Allows the execution of relational queries, including those expressed in SQL using Spark.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="execution"></a><a id="execution:execution"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="The physical execution component of Spark SQL." href="index.html"><span class="name">execution</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">The physical execution component of Spark SQL.</p><div class="fullcomment"><div class="comment cmt"><p>The physical execution component of Spark SQL. Note that this is a private package.
+All classes in catalyst are considered an internal API to Spark SQL and are subject
+to change between minor releases.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.adaptive" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="adaptive"></a><a id="adaptive:adaptive"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/adaptive/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="adaptive/index.html"><span class="name">adaptive</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.aggregate" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="aggregate"></a><a id="aggregate:aggregate"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/aggregate/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="aggregate/index.html"><span class="name">aggregate</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.analysis" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="analysis"></a><a id="analysis:analysis"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/analysis/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="analysis/index.html"><span class="name">analysis</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.arrow" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="arrow"></a><a id="arrow:arrow"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/arrow/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="arrow/index.html"><span class="name">arrow</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.bucketing" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="bucketing"></a><a id="bucketing:bucketing"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/bucketing/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="bucketing/index.html"><span class="name">bucketing</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.columnar" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="columnar"></a><a id="columnar:columnar"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/columnar/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="columnar/index.html"><span class="name">columnar</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.command" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="command"></a><a id="command:command"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/command/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="command/index.html"><span class="name">command</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="datasources"></a><a id="datasources:datasources"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/datasources/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="datasources/index.html"><span class="name">datasources</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.debug" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="debug"></a><a id="debug:debug"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/debug/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Contains methods for debugging query execution." href="debug/index.html"><span class="name">debug</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Contains methods for debugging query execution.</p><div class="fullcomment"><div class="comment cmt"><p>Contains methods for debugging query execution.</p><p>Usage:</p><pre><span class="kw">import</span> org.apache.spark.sql.execution.debug._
+sql(<span class="lit">"SELECT 1"</span>).debug()
+sql(<span class="lit">"SELECT 1"</span>).debugCodegen()</pre><p>or for streaming case (structured streaming):</p><pre><span class="kw">import</span> org.apache.spark.sql.execution.debug._
+<span class="kw">val</span> query = df.writeStream.&lt;...&gt;.start()
+query.debugCodegen()</pre><p>Note that debug in structured streaming is not supported, because it doesn't make sense for
+streaming to execute batch once while main query is running concurrently.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.dynamicpruning" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dynamicpruning"></a><a id="dynamicpruning:dynamicpruning"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/dynamicpruning/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="dynamicpruning/index.html"><span class="name">dynamicpruning</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.exchange" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="exchange"></a><a id="exchange:exchange"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/exchange/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="exchange/index.html"><span class="name">exchange</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.joins" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="joins"></a><a id="joins:joins"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/joins/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="joins/index.html"><span class="name">joins</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.metric" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="metric"></a><a id="metric:metric"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/metric/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="metric/index.html"><span class="name">metric</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.python" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="python"></a><a id="python:python"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/python/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="python/index.html"><span class="name">python</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.r" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="r"></a><a id="r:r"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/r/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="r/index.html"><span class="name">r</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.reuse" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="reuse"></a><a id="reuse:reuse"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/reuse/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="reuse/index.html"><span class="name">reuse</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.stat" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="stat"></a><a id="stat:stat"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/stat/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="stat/index.html"><span class="name">stat</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.streaming" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="streaming"></a><a id="streaming:streaming"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/streaming/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="streaming/index.html"><span class="name">streaming</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.ui" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ui"></a><a id="ui:ui"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ui/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ui/index.html"><span class="name">ui</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.vectorized" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="vectorized"></a><a id="vectorized:vectorized"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/vectorized/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="vectorized/index.html"><span class="name">vectorized</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.window" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="window"></a><a id="window:window"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/window/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="window/index.html"><span class="name">window</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li class="current-entities indented5">
+                        <a class="object" href="AggregatingAccumulator$.html" title=""></a>
+                        <a class="class" href="AggregatingAccumulator.html" title="Accumulator that computes a global aggregate."></a>
+                        <a href="AggregatingAccumulator.html" title="Accumulator that computes a global aggregate.">AggregatingAccumulator</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="AliasAwareOutputExpression.html" title="A trait that provides functionality to handle aliases in the outputExpressions."></a>
+                        <a href="AliasAwareOutputExpression.html" title="A trait that provides functionality to handle aliases in the outputExpressions.">AliasAwareOutputExpression</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="AliasAwareOutputOrdering.html" title="A trait that handles aliases in the orderingExpressions to produce outputOrdering that satisfies ordering requirements."></a>
+                        <a href="AliasAwareOutputOrdering.html" title="A trait that handles aliases in the orderingExpressions to produce outputOrdering that satisfies ordering requirements.">AliasAwareOutputOrdering</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="AliasAwareOutputPartitioning.html" title="A trait that handles aliases in the outputExpressions to produce outputPartitioning that satisfies distribution requirements."></a>
+                        <a href="AliasAwareOutputPartitioning.html" title="A trait that handles aliases in the outputExpressions to produce outputPartitioning that satisfies distribution requirements.">AliasAwareOutputPartitioning</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="AppendColumnsExec.html" title="Applies the given function to each input row, appending the encoded result at the end of the row."></a>
+                        <a href="AppendColumnsExec.html" title="Applies the given function to each input row, appending the encoded result at the end of the row.">AppendColumnsExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="AppendColumnsWithObjectExec.html" title="An optimized version of AppendColumnsExec, that can be executed on deserialized object directly."></a>
+                        <a href="AppendColumnsWithObjectExec.html" title="An optimized version of AppendColumnsExec, that can be executed on deserialized object directly.">AppendColumnsWithObjectExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="" title="Apply any user defined ColumnarRules and find the correct place to insert transitions to/from columnar formatted data."></a>
+                        <a href="" title="Apply any user defined ColumnarRules and find the correct place to insert transitions to/from columnar formatted data.">ApplyColumnarRulesAndInsertTransitions</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="BaseLimitExec$.html" title=""></a>
+                        <a class="trait" href="BaseLimitExec.html" title="Helper trait which defines methods that are shared by both LocalLimitExec and GlobalLimitExec."></a>
+                        <a href="BaseLimitExec.html" title="Helper trait which defines methods that are shared by both LocalLimitExec and GlobalLimitExec.">BaseLimitExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="BaseScriptTransformationExec.html" title=""></a>
+                        <a href="BaseScriptTransformationExec.html" title="">BaseScriptTransformationExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="BaseScriptTransformationWriterThread.html" title=""></a>
+                        <a href="BaseScriptTransformationWriterThread.html" title="">BaseScriptTransformationWriterThread</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="BaseSubqueryExec.html" title="Parent class for different types of subquery plans"></a>
+                        <a href="BaseSubqueryExec.html" title="Parent class for different types of subquery plans">BaseSubqueryExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="BinaryExecNode.html" title=""></a>
+                        <a href="BinaryExecNode.html" title="">BinaryExecNode</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="BlockingOperatorWithCodegen.html" title="A special kind of operators which support whole stage codegen."></a>
+                        <a href="BlockingOperatorWithCodegen.html" title="A special kind of operators which support whole stage codegen.">BlockingOperatorWithCodegen</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="BufferedRowIterator.html" title="An iterator interface used to pull the output from generated function for multiple operators (whole stage codegen)."></a>
+                        <a href="BufferedRowIterator.html" title="An iterator interface used to pull the output from generated function for multiple operators (whole stage codegen).">BufferedRowIterator</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="CacheManager.html" title="Provides support in a SQLContext for caching query results and automatically using these cached results when subsequent queries are executed."></a>
+                        <a href="CacheManager.html" title="Provides support in a SQLContext for caching query results and automatically using these cached results when subsequent queries are executed.">CacheManager</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="CachedData.html" title="Holds a cached logical plan and its data"></a>
+                        <a href="CachedData.html" title="Holds a cached logical plan and its data">CachedData</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="CoGroupExec.html" title="Co-groups the data from left and right children, and calls the function with each group and 2 iterators containing all elements in the group from left and right side."></a>
+                        <a href="CoGroupExec.html" title="Co-groups the data from left and right children, and calls the function with each group and 2 iterators containing all elements in the group from left and right side.">CoGroupExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="CoGroupedIterator.html" title="Iterates over GroupedIterators and returns the cogrouped data, i.e."></a>
+                        <a href="CoGroupedIterator.html" title="Iterates over GroupedIterators and returns the cogrouped data, i.e.">CoGroupedIterator</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="CoalesceExec$.html" title=""></a>
+                        <a class="class" href="CoalesceExec.html" title="Physical plan for returning a new RDD that has exactly numPartitions partitions."></a>
+                        <a href="CoalesceExec.html" title="Physical plan for returning a new RDD that has exactly numPartitions partitions.">CoalesceExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="CoalescedMapperPartitionSpec.html" title=""></a>
+                        <a href="CoalescedMapperPartitionSpec.html" title="">CoalescedMapperPartitionSpec</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="CoalescedPartitionSpec$.html" title=""></a>
+                        <a class="class" href="CoalescedPartitionSpec.html" title=""></a>
+                        <a href="CoalescedPartitionSpec.html" title="">CoalescedPartitionSpec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="CoalescedPartitioner.html" title="A Partitioner that might group together one or more partitions from the parent."></a>
+                        <a href="CoalescedPartitioner.html" title="A Partitioner that might group together one or more partitions from the parent.">CoalescedPartitioner</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="CodegenMode$.html" title="Codegen mode means that when printing explain for a DataFrame, if generated codes are available, a physical plan and the generated codes are expected to be printed to the console."></a>
+                        <a href="CodegenMode$.html" title="Codegen mode means that when printing explain for a DataFrame, if generated codes are available, a physical plan and the generated codes are expected to be printed to the console.">CodegenMode</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="CodegenSupport.html" title="An interface for those physical operators that support codegen."></a>
+                        <a href="CodegenSupport.html" title="An interface for those physical operators that support codegen.">CodegenSupport</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="CollapseCodegenStages.html" title="Find the chained plans that support codegen, collapse them together as WholeStageCodegen."></a>
+                        <a href="CollapseCodegenStages.html" title="Find the chained plans that support codegen, collapse them together as WholeStageCodegen.">CollapseCodegenStages</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="CollectLimitExec.html" title="Take the first limit elements and collect them to a single partition."></a>
+                        <a href="CollectLimitExec.html" title="Take the first limit elements and collect them to a single partition.">CollectLimitExec</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="CollectMetricsExec$.html" title=""></a>
+                        <a class="class" href="CollectMetricsExec.html" title="Collect arbitrary (named) metrics from a SparkPlan."></a>
+                        <a href="CollectMetricsExec.html" title="Collect arbitrary (named) metrics from a SparkPlan.">CollectMetricsExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="CollectTailExec.html" title="Take the last limit elements and collect them to a single partition."></a>
+                        <a href="CollectTailExec.html" title="Take the last limit elements and collect them to a single partition.">CollectTailExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ColumnarRule.html" title="Holds a user defined rule that can be used to inject columnar implementations of various operators in the plan."></a>
+                        <a href="ColumnarRule.html" title="Holds a user defined rule that can be used to inject columnar implementations of various operators in the plan.">ColumnarRule</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ColumnarToRowExec.html" title="Provides a common executor to translate an RDD of ColumnarBatch into an RDD of InternalRow."></a>
+                        <a href="ColumnarToRowExec.html" title="Provides a common executor to translate an RDD of ColumnarBatch into an RDD of InternalRow.">ColumnarToRowExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="ColumnarToRowTransition.html" title="A trait that is used as a tag to indicate a transition from columns to rows."></a>
+                        <a href="ColumnarToRowTransition.html" title="A trait that is used as a tag to indicate a transition from columns to rows.">ColumnarToRowTransition</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="CommandExecutionMode$.html" title="SPARK-35378: Commands should be executed eagerly so that something like sql(&quot;INSERT ...&quot;) can trigger the table insertion immediately without a .collect()."></a>
+                        <a href="CommandExecutionMode$.html" title="SPARK-35378: Commands should be executed eagerly so that something like sql(&quot;INSERT ...&quot;) can trigger the table insertion immediately without a .collect().">CommandExecutionMode</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="CommandResultExec.html" title="Physical plan node for holding data from a command."></a>
+                        <a href="CommandResultExec.html" title="Physical plan node for holding data from a command.">CommandResultExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="CostMode$.html" title="Cost mode means that when printing explain for a DataFrame, if plan node statistics are available, a logical plan and the statistics are expected to be printed to the console."></a>
+                        <a href="CostMode$.html" title="Cost mode means that when printing explain for a DataFrame, if plan node statistics are available, a logical plan and the statistics are expected to be printed to the console.">CostMode</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="DataSourceScanExec.html" title=""></a>
+                        <a href="DataSourceScanExec.html" title="">DataSourceScanExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="DeserializeToObjectExec.html" title="Takes the input row from child and turns it into object using the given deserializer expression."></a>
+                        <a href="DeserializeToObjectExec.html" title="Takes the input row from child and turns it into object using the given deserializer expression.">DeserializeToObjectExec</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="ExecSubqueryExpression$.html" title=""></a>
+                        <a class="class" href="ExecSubqueryExpression.html" title="The base class for subquery that is used in SparkPlan."></a>
+                        <a href="ExecSubqueryExpression.html" title="The base class for subquery that is used in SparkPlan.">ExecSubqueryExpression</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ExpandExec.html" title="Apply all of the GroupExpressions to every input row, hence we will get multiple output rows for an input row."></a>
+                        <a href="ExpandExec.html" title="Apply all of the GroupExpressions to every input row, hence we will get multiple output rows for an input row.">ExpandExec</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="ExplainMode$.html" title=""></a>
+                        <a class="trait" href="ExplainMode.html" title=""></a>
+                        <a href="ExplainMode.html" title="">ExplainMode</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="ExplainUtils$.html" title=""></a>
+                        <a href="ExplainUtils$.html" title="">ExplainUtils</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="ExtendedMode$.html" title="Extended mode means that when printing explain for a DataFrame, both logical and physical plans are expected to be printed to the console."></a>
+                        <a href="ExtendedMode$.html" title="Extended mode means that when printing explain for a DataFrame, both logical and physical plans are expected to be printed to the console.">ExtendedMode</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="ExternalRDD$.html" title=""></a>
+                        <a class="class" href="ExternalRDD.html" title="Logical plan node for scanning data from an RDD."></a>
+                        <a href="ExternalRDD.html" title="Logical plan node for scanning data from an RDD.">ExternalRDD</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ExternalRDDScanExec.html" title="Physical plan node for scanning data from an RDD."></a>
+                        <a href="ExternalRDDScanExec.html" title="Physical plan node for scanning data from an RDD.">ExternalRDDScanExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="FileRelation.html" title="An interface for relations that are backed by files."></a>
+                        <a href="FileRelation.html" title="An interface for relations that are backed by files.">FileRelation</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="FileSourceScanExec.html" title="Physical plan node for scanning data from HadoopFsRelations."></a>
+                        <a href="FileSourceScanExec.html" title="Physical plan node for scanning data from HadoopFsRelations.">FileSourceScanExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="FilterExec.html" title="Physical plan for Filter."></a>
+                        <a href="FilterExec.html" title="Physical plan for Filter.">FilterExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="FlatMapGroupsInRExec.html" title="Groups the input rows together and calls the R function with each group and an iterator containing all elements in the group."></a>
+                        <a href="FlatMapGroupsInRExec.html" title="Groups the input rows together and calls the R function with each group and an iterator containing all elements in the group.">FlatMapGroupsInRExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="FlatMapGroupsInRWithArrowExec.html" title="Similar with FlatMapGroupsInRExec but serializes and deserializes input/output in Arrow format."></a>
+                        <a href="FlatMapGroupsInRWithArrowExec.html" title="Similar with FlatMapGroupsInRExec but serializes and deserializes input/output in Arrow format.">FlatMapGroupsInRWithArrowExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="FormattedMode$.html" title="Formatted mode means that when printing explain for a DataFrame, explain output is expected to be split into two sections: a physical plan outline and node details."></a>
+                        <a href="FormattedMode$.html" title="Formatted mode means that when printing explain for a DataFrame, explain output is expected to be split into two sections: a physical plan outline and node details.">FormattedMode</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="GenerateExec.html" title="Applies a Generator to a stream of input rows, combining the output of each into a new stream of rows."></a>
+                        <a href="GenerateExec.html" title="Applies a Generator to a stream of input rows, combining the output of each into a new stream of rows.">GenerateExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="GeneratePredicateHelper.html" title=""></a>
+                        <a href="GeneratePredicateHelper.html" title="">GeneratePredicateHelper</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="GlobalLimitExec.html" title="Take the first limit elements of the child's single output partition."></a>
+                        <a href="GlobalLimitExec.html" title="Take the first limit elements of the child's single output partition.">GlobalLimitExec</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="GroupedIterator$.html" title=""></a>
+                        <a class="class" href="GroupedIterator.html" title="Iterates over a presorted set of rows, chunking it up by the grouping expression."></a>
+                        <a href="GroupedIterator.html" title="Iterates over a presorted set of rows, chunking it up by the grouping expression.">GroupedIterator</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="HiveResult$.html" title="Runs a query returning the result in Hive compatible form."></a>
+                        <a href="HiveResult$.html" title="Runs a query returning the result in Hive compatible form.">HiveResult</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="InSubqueryExec.html" title="The physical node of in-subquery."></a>
+                        <a href="InSubqueryExec.html" title="The physical node of in-subquery.">InSubqueryExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="InputAdapter.html" title="InputAdapter is used to hide a SparkPlan from a subtree that supports codegen."></a>
+                        <a href="InputAdapter.html" title="InputAdapter is used to hide a SparkPlan from a subtree that supports codegen.">InputAdapter</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="InputRDDCodegen.html" title="Leaf codegen node reading from a single RDD."></a>
+                        <a href="InputRDDCodegen.html" title="Leaf codegen node reading from a single RDD.">InputRDDCodegen</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="LeafExecNode.html" title=""></a>
+                        <a href="LeafExecNode.html" title="">LeafExecNode</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="LimitExec.html" title="The operator takes limited number of elements from its child operator."></a>
+                        <a href="LimitExec.html" title="The operator takes limited number of elements from its child operator.">LimitExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="LocalLimitExec.html" title="Take the first limit elements of each child partition, but do not collect or shuffle them."></a>
+                        <a href="LocalLimitExec.html" title="Take the first limit elements of each child partition, but do not collect or shuffle them.">LocalLimitExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="LocalTableScanExec.html" title="Physical plan node for scanning data from a local collection."></a>
+                        <a href="LocalTableScanExec.html" title="Physical plan node for scanning data from a local collection.">LocalTableScanExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="LogicalRDD.html" title="Logical plan node for scanning data from an RDD of InternalRow."></a>
+                        <a href="LogicalRDD.html" title="Logical plan node for scanning data from an RDD of InternalRow.">LogicalRDD</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="MapElementsExec.html" title="Applies the given function to each input object."></a>
+                        <a href="MapElementsExec.html" title="Applies the given function to each input object.">MapElementsExec</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="MapGroupsExec$.html" title=""></a>
+                        <a class="class" href="MapGroupsExec.html" title="Groups the input rows together and calls the function with each group and an iterator containing all elements in the group."></a>
+                        <a href="MapGroupsExec.html" title="Groups the input rows together and calls the function with each group and an iterator containing all elements in the group.">MapGroupsExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="MapPartitionsExec.html" title="Applies the given function to input object iterator."></a>
+                        <a href="MapPartitionsExec.html" title="Applies the given function to input object iterator.">MapPartitionsExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="MapPartitionsInRWithArrowExec.html" title="Similar with MapPartitionsExec and org.apache.spark.sql.execution.r.MapPartitionsRWrapper but serializes and deserializes input/output in Arrow format."></a>
+                        <a href="MapPartitionsInRWithArrowExec.html" title="Similar with MapPartitionsExec and org.apache.spark.sql.execution.r.MapPartitionsRWrapper but serializes and deserializes input/output in Arrow format.">MapPartitionsInRWithArrowExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="ObjectConsumerExec.html" title="Physical version of ObjectConsumer."></a>
+                        <a href="ObjectConsumerExec.html" title="Physical version of ObjectConsumer.">ObjectConsumerExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="ObjectOperator$.html" title="Helper functions for physical operators that work with user defined objects."></a>
+                        <a href="ObjectOperator$.html" title="Helper functions for physical operators that work with user defined objects.">ObjectOperator</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="ObjectProducerExec.html" title="Physical version of ObjectProducer."></a>
+                        <a href="ObjectProducerExec.html" title="Physical version of ObjectProducer.">ObjectProducerExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="OptimizeMetadataOnlyQuery.html" title="This rule optimizes the execution of queries that can be answered by looking only at partition-level metadata."></a>
+                        <a href="OptimizeMetadataOnlyQuery.html" title="This rule optimizes the execution of queries that can be answered by looking only at partition-level metadata.">OptimizeMetadataOnlyQuery</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="PartialMapperPartitionSpec.html" title=""></a>
+                        <a href="PartialMapperPartitionSpec.html" title="">PartialMapperPartitionSpec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="PartialReducerPartitionSpec.html" title=""></a>
+                        <a href="PartialReducerPartitionSpec.html" title="">PartialReducerPartitionSpec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="PartitionedFileUtil$.html" title=""></a>
+                        <a href="PartitionedFileUtil$.html" title="">PartitionedFileUtil</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="PlanLater.html" title=""></a>
+                        <a href="PlanLater.html" title="">PlanLater</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="PlanSubqueries.html" title="Plans subqueries that are present in the given SparkPlan."></a>
+                        <a href="PlanSubqueries.html" title="Plans subqueries that are present in the given SparkPlan.">PlanSubqueries</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ProjectExec.html" title="Physical plan for Project."></a>
+                        <a href="ProjectExec.html" title="Physical plan for Project.">ProjectExec</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="QueryExecution$.html" title=""></a>
+                        <a class="class" href="QueryExecution.html" title="The primary workflow for executing relational queries using Spark."></a>
+                        <a href="QueryExecution.html" title="The primary workflow for executing relational queries using Spark.">QueryExecution</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="RDDScanExec.html" title="Physical plan node for scanning data from an RDD of InternalRow."></a>
+                        <a href="RDDScanExec.html" title="Physical plan node for scanning data from an RDD of InternalRow.">RDDScanExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="RangeExec.html" title="Physical plan for range (generating a range of 64 bit numbers)."></a>
+                        <a href="RangeExec.html" title="Physical plan for range (generating a range of 64 bit numbers).">RangeExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="RecordBinaryComparator.html" title=""></a>
+                        <a href="RecordBinaryComparator.html" title="">RecordBinaryComparator</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="RemoveRedundantProjects$.html" title="Remove redundant ProjectExec node from the spark plan."></a>
+                        <a href="RemoveRedundantProjects$.html" title="Remove redundant ProjectExec node from the spark plan.">RemoveRedundantProjects</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="RemoveRedundantSorts$.html" title="Remove redundant SortExec node from the spark plan."></a>
+                        <a href="RemoveRedundantSorts$.html" title="Remove redundant SortExec node from the spark plan.">RemoveRedundantSorts</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ReusedSubqueryExec.html" title="A wrapper for reused BaseSubqueryExec."></a>
+                        <a href="ReusedSubqueryExec.html" title="A wrapper for reused BaseSubqueryExec.">ReusedSubqueryExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="RowDataSourceScanExec.html" title="Physical plan node for scanning data from a relation."></a>
+                        <a href="RowDataSourceScanExec.html" title="Physical plan node for scanning data from a relation.">RowDataSourceScanExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="RowToColumnarExec.html" title="Provides a common executor to translate an RDD of InternalRow into an RDD of ColumnarBatch."></a>
+                        <a href="RowToColumnarExec.html" title="Provides a common executor to translate an RDD of InternalRow into an RDD of ColumnarBatch.">RowToColumnarExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="RowToColumnarTransition.html" title="A trait that is used as a tag to indicate a transition from rows to columns."></a>
+                        <a href="RowToColumnarTransition.html" title="A trait that is used as a tag to indicate a transition from rows to columns.">RowToColumnarTransition</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="SQLExecution$.html" title=""></a>
+                        <a href="SQLExecution$.html" title="">SQLExecution</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="SQLExecutionRDD.html" title="It is just a wrapper over sqlRDD, which sets and makes effective all the configs from the captured SQLConf."></a>
+                        <a href="SQLExecutionRDD.html" title="It is just a wrapper over sqlRDD, which sets and makes effective all the configs from the captured SQLConf.">SQLExecutionRDD</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="SampleExec.html" title="Physical plan for sampling the dataset."></a>
+                        <a href="SampleExec.html" title="Physical plan for sampling the dataset.">SampleExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ScalarSubquery.html" title="A subquery that will return only one row and one column."></a>
+                        <a href="ScalarSubquery.html" title="A subquery that will return only one row and one column.">ScalarSubquery</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="ScriptTransformationIOSchema$.html" title=""></a>
+                        <a class="class" href="ScriptTransformationIOSchema.html" title="The wrapper class of input and output schema properties"></a>
+                        <a href="ScriptTransformationIOSchema.html" title="The wrapper class of input and output schema properties">ScriptTransformationIOSchema</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="SerializeFromObjectExec.html" title="Takes the input object from child and turns in into unsafe row using the given serializer expression."></a>
+                        <a href="SerializeFromObjectExec.html" title="Takes the input object from child and turns in into unsafe row using the given serializer expression.">SerializeFromObjectExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="ShufflePartitionSpec.html" title=""></a>
+                        <a href="ShufflePartitionSpec.html" title="">ShufflePartitionSpec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ShuffledRowRDD.html" title="This is a specialized version of org.apache.spark.rdd.ShuffledRDD that is optimized for shuffling rows instead of Java key-value pairs."></a>
+                        <a href="ShuffledRowRDD.html" title="This is a specialized version of org.apache.spark.rdd.ShuffledRDD that is optimized for shuffling rows instead of Java key-value pairs.">ShuffledRowRDD</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="SimpleMode$.html" title="Simple mode means that when printing explain for a DataFrame, only a physical plan is expected to be printed to the console."></a>
+                        <a href="SimpleMode$.html" title="Simple mode means that when printing explain for a DataFrame, only a physical plan is expected to be printed to the console.">SimpleMode</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="SortExec.html" title="Performs (external) sorting."></a>
+                        <a href="SortExec.html" title="Performs (external) sorting.">SortExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="SortPrefixUtils$.html" title=""></a>
+                        <a href="SortPrefixUtils$.html" title="">SortPrefixUtils</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="SparkOptimizer.html" title=""></a>
+                        <a href="SparkOptimizer.html" title="">SparkOptimizer</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="SparkPlan$.html" title=""></a>
+                        <a class="class" href="SparkPlan.html" title="The base class for physical operators."></a>
+                        <a href="SparkPlan.html" title="The base class for physical operators.">SparkPlan</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="SparkPlanInfo.html" title=":: DeveloperApi :: Stores information about a SQL SparkPlan."></a>
+                        <a href="SparkPlanInfo.html" title=":: DeveloperApi :: Stores information about a SQL SparkPlan.">SparkPlanInfo</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="SparkPlanner.html" title=""></a>
+                        <a href="SparkPlanner.html" title="">SparkPlanner</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="SparkScriptTransformationExec.html" title="Transforms the input by forking and running the specified script."></a>
+                        <a href="SparkScriptTransformationExec.html" title="Transforms the input by forking and running the specified script.">SparkScriptTransformationExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="SparkScriptTransformationWriterThread.html" title=""></a>
+                        <a href="SparkScriptTransformationWriterThread.html" title="">SparkScriptTransformationWriterThread</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="SparkSqlAstBuilder.html" title="Builder that converts an ANTLR ParseTree into a LogicalPlan/Expression/TableIdentifier."></a>
+                        <a href="SparkSqlAstBuilder.html" title="Builder that converts an ANTLR ParseTree into a LogicalPlan/Expression/TableIdentifier.">SparkSqlAstBuilder</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="SparkSqlParser.html" title="Concrete parser for Spark SQL statements."></a>
+                        <a href="SparkSqlParser.html" title="Concrete parser for Spark SQL statements.">SparkSqlParser</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="SparkStrategies.html" title=""></a>
+                        <a href="SparkStrategies.html" title="">SparkStrategies</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="SparkStrategy.html" title="Converts a logical plan into zero or more SparkPlans."></a>
+                        <a href="SparkStrategy.html" title="Converts a logical plan into zero or more SparkPlans.">SparkStrategy</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="SubqueryAdaptiveBroadcastExec.html" title="Similar to SubqueryBroadcastExec, this node is used to store the initial physical plan of DPP subquery filters when enabling both AQE and DPP."></a>
+                        <a href="SubqueryAdaptiveBroadcastExec.html" title="Similar to SubqueryBroadcastExec, this node is used to store the initial physical plan of DPP subquery filters when enabling both AQE and DPP.">SubqueryAdaptiveBroadcastExec</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="SubqueryBroadcastExec$.html" title=""></a>
+                        <a class="class" href="SubqueryBroadcastExec.html" title="Physical plan for a custom subquery that collects and transforms the broadcast key values."></a>
+                        <a href="SubqueryBroadcastExec.html" title="Physical plan for a custom subquery that collects and transforms the broadcast key values.">SubqueryBroadcastExec</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="SubqueryExec$.html" title=""></a>
+                        <a class="class" href="SubqueryExec.html" title="Physical plan for a subquery."></a>
+                        <a href="SubqueryExec.html" title="Physical plan for a subquery.">SubqueryExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TakeOrderedAndProjectExec.html" title="Take the first limit elements as defined by the sortOrder, and do projection if needed."></a>
+                        <a href="TakeOrderedAndProjectExec.html" title="Take the first limit elements as defined by the sortOrder, and do projection if needed.">TakeOrderedAndProjectExec</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="UnaryExecNode$.html" title=""></a>
+                        <a class="trait" href="UnaryExecNode.html" title=""></a>
+                        <a href="UnaryExecNode.html" title="">UnaryExecNode</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="UnionExec.html" title="Physical plan for unioning two plans, without a distinct."></a>
+                        <a href="UnionExec.html" title="Physical plan for unioning two plans, without a distinct.">UnionExec</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="UnsafeExternalRowSorter.html" title=""></a>
+                        <a href="UnsafeExternalRowSorter.html" title="">UnsafeExternalRowSorter</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="UnsafeFixedWidthAggregationMap.html" title="Unsafe-based HashMap for performing aggregations where the aggregated values are fixed-width."></a>
+                        <a href="UnsafeFixedWidthAggregationMap.html" title="Unsafe-based HashMap for performing aggregations where the aggregated values are fixed-width.">UnsafeFixedWidthAggregationMap</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="UnsafeKVExternalSorter.html" title="A class for performing external sorting on key-value records."></a>
+                        <a href="UnsafeKVExternalSorter.html" title="A class for performing external sorting on key-value records.">UnsafeKVExternalSorter</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="UnsafeRowSerializer.html" title="Serializer for serializing UnsafeRows during shuffle."></a>
+                        <a href="UnsafeRowSerializer.html" title="Serializer for serializing UnsafeRows during shuffle.">UnsafeRowSerializer</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="WholeStageCodegenExec$.html" title=""></a>
+                        <a class="class" href="WholeStageCodegenExec.html" title="WholeStageCodegen compiles a subtree of plans that support codegen together into single Java function."></a>
+                        <a href="WholeStageCodegenExec.html" title="WholeStageCodegen compiles a subtree of plans that support codegen together into single Java function.">WholeStageCodegenExec</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="class type">
+      <div id="definition">
+        <div class="big-circle class">c</div>
+        <p id="owner"><a href="../../../../index.html" class="extype" name="org">org</a>.<a href="../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../index.html" class="extype" name="org.apache.spark.sql">sql</a>.<a href="index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></p>
+        <h1>ApplyColumnarRulesAndInsertTransitions<span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ApplyColumnarRulesAndInsertTransitions</span><span class="params">(<span name="columnarRules">columnarRules: <span class="extype" name="scala.Seq">Seq</span>[<a href="ColumnarRule.html" class="extype" name="org.apache.spark.sql.execution.ColumnarRule">ColumnarRule</a>]</span>, <span name="outputsColumnar">outputsColumnar: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</span>[<a href="SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Apply any user defined <a href="ColumnarRule.html" class="extype" name="org.apache.spark.sql.execution.ColumnarRule">ColumnarRule</a>s and find the correct place to insert transitions
+to/from columnar formatted data.
+</p></div><dl class="paramcmts block"><dt class="param">columnarRules</dt><dd class="cmt"><p>custom columnar rules</p></dd><dt class="param">outputsColumnar</dt><dd class="cmt"><p>whether or not the produced plan should output columnar format.</p></dd></dl><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</span>[<a href="SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a>], <span class="extype" name="org.apache.spark.internal.Logging">Logging</span>, <span class="extype" name="org.apache.spark.sql.catalyst.SQLConfHelper">SQLConfHelper</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="org.apache.spark.sql.execution.ApplyColumnarRulesAndInsertTransitions"><span>ApplyColumnarRulesAndInsertTransitions</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="org.apache.spark.sql.catalyst.rules.Rule"><span>Rule</span></li><li class="in" name="org.apache.spark.internal.Logging"><span>Logging</span></li><li class="in" name="org.apache.spark.sql.catalyst.SQLConfHelper"><span>SQLConfHelper</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="org.apache.spark.sql.execution.ApplyColumnarRulesAndInsertTransitions#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;init&gt;(columnarRules:Seq[org.apache.spark.sql.execution.ColumnarRule],outputsColumnar:Boolean):org.apache.spark.sql.execution.ApplyColumnarRulesAndInsertTransitions"></a><a id="&lt;init&gt;:ApplyColumnarRulesAndInsertTransitions"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#&lt;init&gt;(columnarRules:Seq[org.apache.spark.sql.execution.ColumnarRule],outputsColumnar:Boolean):org.apache.spark.sql.execution.ApplyColumnarRulesAndInsertTransitions" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ApplyColumnarRulesAndInsertTransitions</span><span class="params">(<span name="columnarRules">columnarRules: <span class="extype" name="scala.Seq">Seq</span>[<a href="ColumnarRule.html" class="extype" name="org.apache.spark.sql.execution.ColumnarRule">ColumnarRule</a>]</span>, <span name="outputsColumnar">outputsColumnar: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">columnarRules</dt><dd class="cmt"><p>custom columnar rules</p></dd><dt class="param">outputsColumnar</dt><dd class="cmt"><p>whether or not the produced plan should output columnar format.</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.ApplyColumnarRulesAndInsertTransitions#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply(plan:org.apache.spark.sql.execution.SparkPlan):org.apache.spark.sql.execution.SparkPlan"></a><a id="apply(SparkPlan):SparkPlan"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#apply(plan:org.apache.spark.sql.execution.SparkPlan):org.apache.spark.sql.execution.SparkPlan" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="plan">plan: <a href="SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>)</span><span class="result">: <a href="SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.sql.execution.ApplyColumnarRulesAndInsertTransitions">ApplyColumnarRulesAndInsertTransitions</a> → Rule</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.ApplyColumnarRulesAndInsertTransitions#columnarRules" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="columnarRules:Seq[org.apache.spark.sql.execution.ColumnarRule]"></a><a id="columnarRules:Seq[ColumnarRule]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#columnarRules:Seq[org.apache.spark.sql.execution.ColumnarRule]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">columnarRules</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="ColumnarRule.html" class="extype" name="org.apache.spark.sql.execution.ColumnarRule">ColumnarRule</a>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.catalyst.SQLConfHelper#conf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="conf:org.apache.spark.sql.internal.SQLConf"></a><a id="conf:SQLConf"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#conf:org.apache.spark.sql.internal.SQLConf" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">conf</span><span class="result">: <span class="extype" name="org.apache.spark.sql.internal.SQLConf">SQLConf</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>SQLConfHelper</dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#initializeLogIfNecessary" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="initializeLogIfNecessary(isInterpreter:Boolean,silent:Boolean):Boolean"></a><a id="initializeLogIfNecessary(Boolean,Boolean):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#initializeLogIfNecessary(isInterpreter:Boolean,silent:Boolean):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">initializeLogIfNecessary</span><span class="params">(<span name="isInterpreter">isInterpreter: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="silent">silent: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#initializeLogIfNecessary" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="initializeLogIfNecessary(isInterpreter:Boolean):Unit"></a><a id="initializeLogIfNecessary(Boolean):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#initializeLogIfNecessary(isInterpreter:Boolean):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">initializeLogIfNecessary</span><span class="params">(<span name="isInterpreter">isInterpreter: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#isTraceEnabled" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isTraceEnabled():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#isTraceEnabled():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isTraceEnabled</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#log" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="log:org.slf4j.Logger"></a><a id="log:Logger"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#log:org.slf4j.Logger" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">log</span><span class="result">: <span class="extype" name="org.slf4j.Logger">Logger</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logDebug" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logDebug(msg:=&gt;String,throwable:Throwable):Unit"></a><a id="logDebug(⇒String,Throwable):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#logDebug(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logDebug</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logDebug" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logDebug(msg:=&gt;String):Unit"></a><a id="logDebug(⇒String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#logDebug(msg:=&gt;String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logDebug</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logError" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logError(msg:=&gt;String,throwable:Throwable):Unit"></a><a id="logError(⇒String,Throwable):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#logError(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logError</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logError" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logError(msg:=&gt;String):Unit"></a><a id="logError(⇒String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#logError(msg:=&gt;String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logError</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logInfo" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logInfo(msg:=&gt;String,throwable:Throwable):Unit"></a><a id="logInfo(⇒String,Throwable):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#logInfo(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logInfo</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logInfo" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logInfo(msg:=&gt;String):Unit"></a><a id="logInfo(⇒String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#logInfo(msg:=&gt;String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logInfo</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logName" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logName:String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#logName:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logName</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logTrace" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logTrace(msg:=&gt;String,throwable:Throwable):Unit"></a><a id="logTrace(⇒String,Throwable):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#logTrace(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logTrace</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logTrace" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logTrace(msg:=&gt;String):Unit"></a><a id="logTrace(⇒String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#logTrace(msg:=&gt;String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logTrace</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logWarning" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logWarning(msg:=&gt;String,throwable:Throwable):Unit"></a><a id="logWarning(⇒String,Throwable):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#logWarning(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logWarning</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logWarning" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logWarning(msg:=&gt;String):Unit"></a><a id="logWarning(⇒String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#logWarning(msg:=&gt;String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logWarning</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.ApplyColumnarRulesAndInsertTransitions#outputsColumnar" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="outputsColumnar:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#outputsColumnar:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">outputsColumnar</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.catalyst.rules.Rule#ruleId" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ruleId:org.apache.spark.sql.catalyst.rules.RuleId"></a><a id="ruleId:RuleId"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#ruleId:org.apache.spark.sql.catalyst.rules.RuleId" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ruleId</span><span class="result">: <span class="extype" name="org.apache.spark.sql.catalyst.rules.RuleId">RuleId</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Rule</dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.rules.Rule#ruleName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ruleName:String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#ruleName:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ruleName</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Rule</dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/ApplyColumnarRulesAndInsertTransitions.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.Product">
+              <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
+            </div><div class="parent" name="scala.Equals">
+              <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
+            </div><div class="parent" name="org.apache.spark.sql.catalyst.rules.Rule">
+              <h3>Inherited from <span class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</span>[<a href="SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a>]</h3>
+            </div><div class="parent" name="org.apache.spark.internal.Logging">
+              <h3>Inherited from <span class="extype" name="org.apache.spark.internal.Logging">Logging</span></h3>
+            </div><div class="parent" name="org.apache.spark.sql.catalyst.SQLConfHelper">
+              <h3>Inherited from <span class="extype" name="org.apache.spark.sql.catalyst.SQLConfHelper">SQLConfHelper</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

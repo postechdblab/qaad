@@ -1,0 +1,1078 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project SQL 3.2.1 API  - org.apache.spark.sql.execution.python</title>
+          <meta name="description" content="Spark Project SQL 3.2.1 API - org.apache.spark.sql.execution.python" />
+          <meta name="keywords" content="Spark Project SQL 3.2.1 API org.apache.spark.sql.execution.python" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project SQL 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sql"></a><a id="sql:sql"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Allows the execution of relational queries, including those expressed in SQL using Spark." href="../../index.html"><span class="name">sql</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Allows the execution of relational queries, including those expressed in SQL using Spark.</p><div class="fullcomment"><div class="comment cmt"><p>Allows the execution of relational queries, including those expressed in SQL using Spark.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="execution"></a><a id="execution:execution"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="The physical execution component of Spark SQL." href="../index.html"><span class="name">execution</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">The physical execution component of Spark SQL.</p><div class="fullcomment"><div class="comment cmt"><p>The physical execution component of Spark SQL. Note that this is a private package.
+All classes in catalyst are considered an internal API to Spark SQL and are subject
+to change between minor releases.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.adaptive" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="adaptive"></a><a id="adaptive:adaptive"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../adaptive/index.html"><span class="name">adaptive</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.aggregate" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="aggregate"></a><a id="aggregate:aggregate"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/aggregate/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../aggregate/index.html"><span class="name">aggregate</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.analysis" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="analysis"></a><a id="analysis:analysis"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/analysis/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../analysis/index.html"><span class="name">analysis</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.arrow" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="arrow"></a><a id="arrow:arrow"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/arrow/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../arrow/index.html"><span class="name">arrow</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.bucketing" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="bucketing"></a><a id="bucketing:bucketing"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/bucketing/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../bucketing/index.html"><span class="name">bucketing</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.columnar" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="columnar"></a><a id="columnar:columnar"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/columnar/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../columnar/index.html"><span class="name">columnar</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.command" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="command"></a><a id="command:command"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/command/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../command/index.html"><span class="name">command</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="datasources"></a><a id="datasources:datasources"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../datasources/index.html"><span class="name">datasources</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.debug" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="debug"></a><a id="debug:debug"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/debug/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Contains methods for debugging query execution." href="../debug/index.html"><span class="name">debug</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Contains methods for debugging query execution.</p><div class="fullcomment"><div class="comment cmt"><p>Contains methods for debugging query execution.</p><p>Usage:</p><pre><span class="kw">import</span> org.apache.spark.sql.execution.debug._
+sql(<span class="lit">"SELECT 1"</span>).debug()
+sql(<span class="lit">"SELECT 1"</span>).debugCodegen()</pre><p>or for streaming case (structured streaming):</p><pre><span class="kw">import</span> org.apache.spark.sql.execution.debug._
+<span class="kw">val</span> query = df.writeStream.&lt;...&gt;.start()
+query.debugCodegen()</pre><p>Note that debug in structured streaming is not supported, because it doesn't make sense for
+streaming to execute batch once while main query is running concurrently.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.dynamicpruning" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dynamicpruning"></a><a id="dynamicpruning:dynamicpruning"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/dynamicpruning/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../dynamicpruning/index.html"><span class="name">dynamicpruning</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.exchange" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="exchange"></a><a id="exchange:exchange"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/exchange/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../exchange/index.html"><span class="name">exchange</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.joins" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="joins"></a><a id="joins:joins"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/joins/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../joins/index.html"><span class="name">joins</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.metric" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="metric"></a><a id="metric:metric"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/metric/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../metric/index.html"><span class="name">metric</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.python" visbl="pub" class="indented6 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="python"></a><a id="python:python"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/python/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">python</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="AggregateInPandasExec.html" title="Physical node for aggregation with group aggregate Pandas UDF."></a>
+                        <a href="AggregateInPandasExec.html" title="Physical node for aggregation with group aggregate Pandas UDF.">AggregateInPandasExec</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="ArrowEvalPythonExec.html" title="A physical plan that evaluates a PythonUDF."></a>
+                        <a href="ArrowEvalPythonExec.html" title="A physical plan that evaluates a PythonUDF.">ArrowEvalPythonExec</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="ArrowPythonRunner.html" title="Similar to PythonUDFRunner, but exchange data with Python worker via Arrow stream."></a>
+                        <a href="ArrowPythonRunner.html" title="Similar to PythonUDFRunner, but exchange data with Python worker via Arrow stream.">ArrowPythonRunner</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="AttachDistributedSequenceExec.html" title="A physical plan that adds a new long column with sequenceAttr that increases one by one."></a>
+                        <a href="AttachDistributedSequenceExec.html" title="A physical plan that adds a new long column with sequenceAttr that increases one by one.">AttachDistributedSequenceExec</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="BatchEvalPythonExec.html" title="A physical plan that evaluates a PythonUDF"></a>
+                        <a href="BatchEvalPythonExec.html" title="A physical plan that evaluates a PythonUDF">BatchEvalPythonExec</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="CoGroupedArrowPythonRunner.html" title="Python UDF Runner for cogrouped udfs."></a>
+                        <a href="CoGroupedArrowPythonRunner.html" title="Python UDF Runner for cogrouped udfs.">CoGroupedArrowPythonRunner</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="EvalPythonExec.html" title="A physical plan that evaluates a PythonUDF, one partition of tuples at a time."></a>
+                        <a href="EvalPythonExec.html" title="A physical plan that evaluates a PythonUDF, one partition of tuples at a time.">EvalPythonExec</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="EvaluatePython$.html" title=""></a>
+                        <a href="EvaluatePython$.html" title="">EvaluatePython</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ExtractGroupingPythonUDFFromAggregate$.html" title="Extracts PythonUDFs in logical aggregate, which are used in grouping keys, evaluate them before aggregate."></a>
+                        <a href="ExtractGroupingPythonUDFFromAggregate$.html" title="Extracts PythonUDFs in logical aggregate, which are used in grouping keys, evaluate them before aggregate.">ExtractGroupingPythonUDFFromAggregate</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ExtractPythonUDFFromAggregate$.html" title="Extracts all the Python UDFs in logical aggregate, which depends on aggregate expression or grouping key, or doesn't depend on any above expressions, evaluate them after aggregate."></a>
+                        <a href="ExtractPythonUDFFromAggregate$.html" title="Extracts all the Python UDFs in logical aggregate, which depends on aggregate expression or grouping key, or doesn't depend on any above expressions, evaluate them after aggregate.">ExtractPythonUDFFromAggregate</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ExtractPythonUDFs$.html" title="Extracts PythonUDFs from operators, rewriting the query plan so that the UDF can be evaluated alone in a batch."></a>
+                        <a href="ExtractPythonUDFs$.html" title="Extracts PythonUDFs from operators, rewriting the query plan so that the UDF can be evaluated alone in a batch.">ExtractPythonUDFs</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="FlatMapCoGroupsInPandasExec.html" title="Physical node for org.apache.spark.sql.catalyst.plans.logical.FlatMapCoGroupsInPandas"></a>
+                        <a href="FlatMapCoGroupsInPandasExec.html" title="Physical node for org.apache.spark.sql.catalyst.plans.logical.FlatMapCoGroupsInPandas">FlatMapCoGroupsInPandasExec</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="FlatMapGroupsInPandasExec.html" title="Physical node for org.apache.spark.sql.catalyst.plans.logical.FlatMapGroupsInPandas"></a>
+                        <a href="FlatMapGroupsInPandasExec.html" title="Physical node for org.apache.spark.sql.catalyst.plans.logical.FlatMapGroupsInPandas">FlatMapGroupsInPandasExec</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="MapInPandasExec.html" title="A relation produced by applying a function that takes an iterator of pandas DataFrames and outputs an iterator of pandas DataFrames."></a>
+                        <a href="MapInPandasExec.html" title="A relation produced by applying a function that takes an iterator of pandas DataFrames and outputs an iterator of pandas DataFrames.">MapInPandasExec</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="PythonForeachWriter$.html" title=""></a>
+                        <a class="class" href="PythonForeachWriter.html" title=""></a>
+                        <a href="PythonForeachWriter.html" title="">PythonForeachWriter</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="PythonUDFRunner$.html" title=""></a>
+                        <a class="class" href="PythonUDFRunner.html" title="A helper class to run Python UDFs in Spark."></a>
+                        <a href="PythonUDFRunner.html" title="A helper class to run Python UDFs in Spark.">PythonUDFRunner</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="UserDefinedPythonFunction.html" title="A user-defined Python function."></a>
+                        <a href="UserDefinedPythonFunction.html" title="A user-defined Python function.">UserDefinedPythonFunction</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="WindowInPandasExec.html" title="This class calculates and outputs windowed aggregates over the rows in a single partition."></a>
+                        <a href="WindowInPandasExec.html" title="This class calculates and outputs windowed aggregates over the rows in a single partition.">WindowInPandasExec</a>
+                      </li><li name="org.apache.spark.sql.execution.r" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="r"></a><a id="r:r"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/r/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../r/index.html"><span class="name">r</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.reuse" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="reuse"></a><a id="reuse:reuse"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/reuse/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../reuse/index.html"><span class="name">reuse</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.stat" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="stat"></a><a id="stat:stat"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/stat/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../stat/index.html"><span class="name">stat</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.streaming" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="streaming"></a><a id="streaming:streaming"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/streaming/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../streaming/index.html"><span class="name">streaming</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.ui" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ui"></a><a id="ui:ui"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/ui/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../ui/index.html"><span class="name">ui</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.vectorized" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="vectorized"></a><a id="vectorized:vectorized"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/vectorized/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../vectorized/index.html"><span class="name">vectorized</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.window" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="window"></a><a id="window:window"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/window/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../window/index.html"><span class="name">window</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../../../index.html" class="extype" name="org">org</a>.<a href="../../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../../index.html" class="extype" name="org.apache.spark.sql">sql</a>.<a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></p>
+        <h1>python<span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/python/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">python</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              
+            </ol>
+          </div>
+          
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.spark.sql.execution.python.AggregateInPandasExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AggregateInPandasExecextendsSparkPlanwithUnaryExecNodewithProductwithSerializable"></a><a id="AggregateInPandasExec:AggregateInPandasExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/python/AggregateInPandasExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical node for aggregation with group aggregate Pandas UDF." href="AggregateInPandasExec.html"><span class="name">AggregateInPandasExec</span></a><span class="params">(<span name="groupingExpressions">groupingExpressions: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.NamedExpression">NamedExpression</span>]</span>, <span name="udfExpressions">udfExpressions: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.PythonUDF">PythonUDF</span>]</span>, <span name="resultExpressions">resultExpressions: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.NamedExpression">NamedExpression</span>]</span>, <span name="child">child: <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>)</span><span class="result"> extends <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a> with <a href="../UnaryExecNode.html" class="extype" name="org.apache.spark.sql.execution.UnaryExecNode">UnaryExecNode</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical node for aggregation with group aggregate Pandas UDF.</p><div class="fullcomment"><div class="comment cmt"><p>Physical node for aggregation with group aggregate Pandas UDF.</p><p>This plan works by sending the necessary (projected) input grouped data as Arrow record batches
+to the python worker, the python worker invokes the UDF and sends the results to the executor,
+finally the executor evaluates any post-aggregation expressions and join the result with the
+grouped key.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.python.ArrowEvalPythonExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ArrowEvalPythonExecextendsSparkPlanwithEvalPythonExecwithProductwithSerializable"></a><a id="ArrowEvalPythonExec:ArrowEvalPythonExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/python/ArrowEvalPythonExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="A physical plan that evaluates a PythonUDF." href="ArrowEvalPythonExec.html"><span class="name">ArrowEvalPythonExec</span></a><span class="params">(<span name="udfs">udfs: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.PythonUDF">PythonUDF</span>]</span>, <span name="resultAttrs">resultAttrs: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.Attribute">Attribute</span>]</span>, <span name="child">child: <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>, <span name="evalType">evalType: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a> with <a href="EvalPythonExec.html" class="extype" name="org.apache.spark.sql.execution.python.EvalPythonExec">EvalPythonExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A physical plan that evaluates a <span class="extype" name="PythonUDF">PythonUDF</span>.</p>
+    </li><li name="org.apache.spark.sql.execution.python.ArrowPythonRunner" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ArrowPythonRunnerextendsBasePythonRunner[Iterator[org.apache.spark.sql.catalyst.InternalRow],org.apache.spark.sql.vectorized.ColumnarBatch]withPythonArrowOutput"></a><a id="ArrowPythonRunner:ArrowPythonRunner"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/python/ArrowPythonRunner.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Similar to PythonUDFRunner, but exchange data with Python worker via Arrow stream." href="ArrowPythonRunner.html"><span class="name">ArrowPythonRunner</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.api.python.BasePythonRunner">BasePythonRunner</span>[<span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.sql.catalyst.InternalRow">InternalRow</span>], <span class="extype" name="org.apache.spark.sql.vectorized.ColumnarBatch">ColumnarBatch</span>] with <span class="extype" name="org.apache.spark.sql.execution.python.PythonArrowOutput">PythonArrowOutput</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Similar to <code>PythonUDFRunner</code>, but exchange data with Python worker via Arrow stream.</p>
+    </li><li name="org.apache.spark.sql.execution.python.AttachDistributedSequenceExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AttachDistributedSequenceExecextendsSparkPlanwithUnaryExecNodewithProductwithSerializable"></a><a id="AttachDistributedSequenceExec:AttachDistributedSequenceExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/python/AttachDistributedSequenceExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="A physical plan that adds a new long column with sequenceAttr that increases one by one." href="AttachDistributedSequenceExec.html"><span class="name">AttachDistributedSequenceExec</span></a><span class="params">(<span name="sequenceAttr">sequenceAttr: <span class="extype" name="org.apache.spark.sql.catalyst.expressions.Attribute">Attribute</span></span>, <span name="child">child: <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>)</span><span class="result"> extends <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a> with <a href="../UnaryExecNode.html" class="extype" name="org.apache.spark.sql.execution.UnaryExecNode">UnaryExecNode</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A physical plan that adds a new long column with <code>sequenceAttr</code> that
+increases one by one.</p><div class="fullcomment"><div class="comment cmt"><p>A physical plan that adds a new long column with <code>sequenceAttr</code> that
+increases one by one. This is for 'distributed-sequence' default index
+in pandas API on Spark.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.python.BatchEvalPythonExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BatchEvalPythonExecextendsSparkPlanwithEvalPythonExecwithProductwithSerializable"></a><a id="BatchEvalPythonExec:BatchEvalPythonExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/python/BatchEvalPythonExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="A physical plan that evaluates a PythonUDF" href="BatchEvalPythonExec.html"><span class="name">BatchEvalPythonExec</span></a><span class="params">(<span name="udfs">udfs: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.PythonUDF">PythonUDF</span>]</span>, <span name="resultAttrs">resultAttrs: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.Attribute">Attribute</span>]</span>, <span name="child">child: <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>)</span><span class="result"> extends <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a> with <a href="EvalPythonExec.html" class="extype" name="org.apache.spark.sql.execution.python.EvalPythonExec">EvalPythonExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A physical plan that evaluates a <span class="extype" name="PythonUDF">PythonUDF</span>
+</p>
+    </li><li name="org.apache.spark.sql.execution.python.CoGroupedArrowPythonRunner" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="CoGroupedArrowPythonRunnerextendsBasePythonRunner[(Iterator[org.apache.spark.sql.catalyst.InternalRow],Iterator[org.apache.spark.sql.catalyst.InternalRow]),org.apache.spark.sql.vectorized.ColumnarBatch]withPythonArrowOutput"></a><a id="CoGroupedArrowPythonRunner:CoGroupedArrowPythonRunner"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/python/CoGroupedArrowPythonRunner.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Python UDF Runner for cogrouped udfs." href="CoGroupedArrowPythonRunner.html"><span class="name">CoGroupedArrowPythonRunner</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.api.python.BasePythonRunner">BasePythonRunner</span>[(<span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.sql.catalyst.InternalRow">InternalRow</span>], <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.sql.catalyst.InternalRow">InternalRow</span>]), <span class="extype" name="org.apache.spark.sql.vectorized.ColumnarBatch">ColumnarBatch</span>] with <span class="extype" name="org.apache.spark.sql.execution.python.PythonArrowOutput">PythonArrowOutput</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Python UDF Runner for cogrouped udfs.</p><div class="fullcomment"><div class="comment cmt"><p>Python UDF Runner for cogrouped udfs. It sends Arrow bathes from two different DataFrames,
+groups them in Python, and receive it back in JVM as batches of single DataFrame.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.python.EvalPythonExec" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="EvalPythonExecextendsSparkPlanwithUnaryExecNode"></a><a id="EvalPythonExec:EvalPythonExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/python/EvalPythonExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A physical plan that evaluates a PythonUDF, one partition of tuples at a time." href="EvalPythonExec.html"><span class="name">EvalPythonExec</span></a><span class="result"> extends <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a> with <a href="../UnaryExecNode.html" class="extype" name="org.apache.spark.sql.execution.UnaryExecNode">UnaryExecNode</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A physical plan that evaluates a <span class="extype" name="PythonUDF">PythonUDF</span>, one partition of tuples at a time.</p><div class="fullcomment"><div class="comment cmt"><p>A physical plan that evaluates a <span class="extype" name="PythonUDF">PythonUDF</span>, one partition of tuples at a time.</p><p>Python evaluation works by sending the necessary (projected) input data via a socket to an
+external Python process, and combine the result from the Python process with the original row.</p><p>For each row we send to Python, we also put it in a queue first. For each output row from Python,
+we drain the queue to find the original input row. Note that if the Python process is way too
+slow, this could lead to the queue growing unbounded and spill into disk when run out of memory.</p><p>Here is a diagram to show how this works:</p><p>           Downstream (for parent)
+            /      \
+           /     socket  (output of UDF)
+          /         \
+       RowQueue    Python
+          \         /
+           \     socket  (input of UDF)
+            \     /
+         upstream (from child)</p><p>The rows sent to and received from Python are packed into batches (100 rows) and serialized,
+there should be always some rows buffered in the socket or Python process, so the pulling from
+RowQueue ALWAYS happened after pushing into it.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.python.FlatMapCoGroupsInPandasExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FlatMapCoGroupsInPandasExecextendsSparkPlanwithBinaryExecNodewithProductwithSerializable"></a><a id="FlatMapCoGroupsInPandasExec:FlatMapCoGroupsInPandasExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/python/FlatMapCoGroupsInPandasExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical node for org.apache.spark.sql.catalyst.plans.logical.FlatMapCoGroupsInPandas" href="FlatMapCoGroupsInPandasExec.html"><span class="name">FlatMapCoGroupsInPandasExec</span></a><span class="params">(<span name="leftGroup">leftGroup: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.Attribute">Attribute</span>]</span>, <span name="rightGroup">rightGroup: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.Attribute">Attribute</span>]</span>, <span name="func">func: <span class="extype" name="org.apache.spark.sql.catalyst.expressions.Expression">Expression</span></span>, <span name="output">output: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.Attribute">Attribute</span>]</span>, <span name="left">left: <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>, <span name="right">right: <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>)</span><span class="result"> extends <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a> with <a href="../BinaryExecNode.html" class="extype" name="org.apache.spark.sql.execution.BinaryExecNode">BinaryExecNode</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical node for <span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.FlatMapCoGroupsInPandas">org.apache.spark.sql.catalyst.plans.logical.FlatMapCoGroupsInPandas</span></p><div class="fullcomment"><div class="comment cmt"><p>Physical node for <span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.FlatMapCoGroupsInPandas">org.apache.spark.sql.catalyst.plans.logical.FlatMapCoGroupsInPandas</span></p><p>The input dataframes are first Cogrouped.  Rows from each side of the cogroup are passed to the
+Python worker via Arrow.  As each side of the cogroup may have a different schema we send every
+group in its own Arrow stream.
+The Python worker turns the resulting record batches to <code>pandas.DataFrame</code>s, invokes the
+user-defined function, and passes the resulting <code>pandas.DataFrame</code>
+as an Arrow record batch. Finally, each record batch is turned to
+Iterator[InternalRow] using ColumnarBatch.</p><p>Note on memory usage:
+Both the Python worker and the Java executor need to have enough memory to
+hold the largest cogroup. The memory on the Java side is used to construct the
+record batches (off heap memory). The memory on the Python side is used for
+holding the <code>pandas.DataFrame</code>. It's possible to further split one group into
+multiple record batches to reduce the memory footprint on the Java side, this
+is left as future work.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.python.FlatMapGroupsInPandasExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FlatMapGroupsInPandasExecextendsSparkPlanwithUnaryExecNodewithProductwithSerializable"></a><a id="FlatMapGroupsInPandasExec:FlatMapGroupsInPandasExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/python/FlatMapGroupsInPandasExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical node for org.apache.spark.sql.catalyst.plans.logical.FlatMapGroupsInPandas" href="FlatMapGroupsInPandasExec.html"><span class="name">FlatMapGroupsInPandasExec</span></a><span class="params">(<span name="groupingAttributes">groupingAttributes: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.Attribute">Attribute</span>]</span>, <span name="func">func: <span class="extype" name="org.apache.spark.sql.catalyst.expressions.Expression">Expression</span></span>, <span name="output">output: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.Attribute">Attribute</span>]</span>, <span name="child">child: <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>)</span><span class="result"> extends <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a> with <a href="../UnaryExecNode.html" class="extype" name="org.apache.spark.sql.execution.UnaryExecNode">UnaryExecNode</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical node for <span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.FlatMapGroupsInPandas">org.apache.spark.sql.catalyst.plans.logical.FlatMapGroupsInPandas</span></p><div class="fullcomment"><div class="comment cmt"><p>Physical node for <span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.FlatMapGroupsInPandas">org.apache.spark.sql.catalyst.plans.logical.FlatMapGroupsInPandas</span></p><p>Rows in each group are passed to the Python worker as an Arrow record batch.
+The Python worker turns the record batch to a <code>pandas.DataFrame</code>, invoke the
+user-defined function, and passes the resulting <code>pandas.DataFrame</code>
+as an Arrow record batch. Finally, each record batch is turned to
+Iterator[InternalRow] using ColumnarBatch.</p><p>Note on memory usage:
+Both the Python worker and the Java executor need to have enough memory to
+hold the largest group. The memory on the Java side is used to construct the
+record batch (off heap memory). The memory on the Python side is used for
+holding the <code>pandas.DataFrame</code>. It's possible to further split one group into
+multiple record batches to reduce the memory footprint on the Java side, this
+is left as future work.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.python.MapInPandasExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="MapInPandasExecextendsSparkPlanwithUnaryExecNodewithProductwithSerializable"></a><a id="MapInPandasExec:MapInPandasExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/python/MapInPandasExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="A relation produced by applying a function that takes an iterator of pandas DataFrames and outputs an iterator of pandas DataFrames." href="MapInPandasExec.html"><span class="name">MapInPandasExec</span></a><span class="params">(<span name="func">func: <span class="extype" name="org.apache.spark.sql.catalyst.expressions.Expression">Expression</span></span>, <span name="output">output: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.Attribute">Attribute</span>]</span>, <span name="child">child: <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>)</span><span class="result"> extends <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a> with <a href="../UnaryExecNode.html" class="extype" name="org.apache.spark.sql.execution.UnaryExecNode">UnaryExecNode</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A relation produced by applying a function that takes an iterator of pandas DataFrames
+and outputs an iterator of pandas DataFrames.</p><div class="fullcomment"><div class="comment cmt"><p>A relation produced by applying a function that takes an iterator of pandas DataFrames
+and outputs an iterator of pandas DataFrames.</p><p>This is somewhat similar with <a href="FlatMapGroupsInPandasExec.html" class="extype" name="org.apache.spark.sql.execution.python.FlatMapGroupsInPandasExec">FlatMapGroupsInPandasExec</a> and
+<code>org.apache.spark.sql.catalyst.plans.logical.MapPartitionsInRWithArrow</code></p></div></div>
+    </li><li name="org.apache.spark.sql.execution.python.PythonForeachWriter" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PythonForeachWriterextendsForeachWriter[org.apache.spark.sql.catalyst.expressions.UnsafeRow]"></a><a id="PythonForeachWriter:PythonForeachWriter"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/python/PythonForeachWriter.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="PythonForeachWriter.html"><span class="name">PythonForeachWriter</span></a><span class="result"> extends <a href="../../ForeachWriter.html" class="extype" name="org.apache.spark.sql.ForeachWriter">ForeachWriter</a>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.UnsafeRow">UnsafeRow</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.python.PythonUDFRunner" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PythonUDFRunnerextendsBasePythonRunner[Array[Byte],Array[Byte]]"></a><a id="PythonUDFRunner:PythonUDFRunner"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/python/PythonUDFRunner.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A helper class to run Python UDFs in Spark." href="PythonUDFRunner.html"><span class="name">PythonUDFRunner</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.api.python.BasePythonRunner">BasePythonRunner</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>], <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">A helper class to run Python UDFs in Spark.</p>
+    </li><li name="org.apache.spark.sql.execution.python.UserDefinedPythonFunction" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="UserDefinedPythonFunctionextendsProductwithSerializable"></a><a id="UserDefinedPythonFunction:UserDefinedPythonFunction"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/python/UserDefinedPythonFunction.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="A user-defined Python function." href="UserDefinedPythonFunction.html"><span class="name">UserDefinedPythonFunction</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="func">func: <span class="extype" name="org.apache.spark.api.python.PythonFunction">PythonFunction</span></span>, <span name="dataType">dataType: <span class="extype" name="org.apache.spark.sql.types.DataType">DataType</span></span>, <span name="pythonEvalType">pythonEvalType: <span class="extype" name="scala.Int">Int</span></span>, <span name="udfDeterministic">udfDeterministic: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A user-defined Python function.</p><div class="fullcomment"><div class="comment cmt"><p>A user-defined Python function. This is used by the Python API.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.python.WindowInPandasExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="WindowInPandasExecextendsSparkPlanwithWindowExecBasewithProductwithSerializable"></a><a id="WindowInPandasExec:WindowInPandasExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/python/WindowInPandasExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="This class calculates and outputs windowed aggregates over the rows in a single partition." href="WindowInPandasExec.html"><span class="name">WindowInPandasExec</span></a><span class="params">(<span name="windowExpression">windowExpression: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.NamedExpression">NamedExpression</span>]</span>, <span name="partitionSpec">partitionSpec: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.Expression">Expression</span>]</span>, <span name="orderSpec">orderSpec: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.SortOrder">SortOrder</span>]</span>, <span name="child">child: <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>)</span><span class="result"> extends <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a> with <a href="../window/WindowExecBase.html" class="extype" name="org.apache.spark.sql.execution.window.WindowExecBase">WindowExecBase</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">This class calculates and outputs windowed aggregates over the rows in a single partition.</p><div class="fullcomment"><div class="comment cmt"><p>This class calculates and outputs windowed aggregates over the rows in a single partition.</p><p>This is similar to <span class="extype" name="WindowExec">WindowExec</span>. The main difference is that this node does not compute
+any window aggregation values. Instead, it computes the lower and upper bound for each window
+(i.e. window bounds) and pass the data and indices to Python worker to do the actual window
+aggregation.</p><p>It currently materializes all data associated with the same partition key and passes them to
+Python worker. This is not strictly necessary for sliding windows and can be improved (by
+possibly slicing data into overlapping chunks and stitching them together).</p><p>This class groups window expressions by their window boundaries so that window expressions
+with the same window boundaries can share the same window bounds. The window bounds are
+prepended to the data passed to the python worker.</p><p>For example, if we have:
+    avg(v) over specifiedwindowframe(RowFrame, -5, 5),
+    avg(v) over specifiedwindowframe(RowFrame, UnboundedPreceding, UnboundedFollowing),
+    avg(v) over specifiedwindowframe(RowFrame, -3, 3),
+    max(v) over specifiedwindowframe(RowFrame, -3, 3)</p><p>The python input will look like:
+(lower_bound_w1, upper_bound_w1, lower_bound_w3, upper_bound_w3, v)</p><p>where w1 is specifiedwindowframe(RowFrame, -5, 5)
+      w2 is specifiedwindowframe(RowFrame, UnboundedPreceding, UnboundedFollowing)
+      w3 is specifiedwindowframe(RowFrame, -3, 3)</p><p>Note that w2 doesn't have bound indices in the python input because it's unbounded window
+so it's bound indices will always be the same.</p><p>Bounded window and Unbounded window are evaluated differently in Python worker:
+(1) Bounded window takes the window bound indices in addition to the input columns.
+    Unbounded window takes only input columns.
+(2) Bounded window evaluates the udf once per input row.
+    Unbounded window evaluates the udf once per window partition.
+This is controlled by Python runner conf &quot;pandas_window_bound_types&quot;</p><p>The logic to compute window bounds is delegated to <span class="extype" name="WindowFunctionFrame">WindowFunctionFrame</span> and shared with
+<span class="extype" name="WindowExec">WindowExec</span></p><p>Note this doesn't support partial aggregation and all aggregation is computed from the entire
+window.
+</p></div></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="org.apache.spark.sql.execution.python.EvaluatePython" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EvaluatePython"></a><a id="EvaluatePython:EvaluatePython"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/python/EvaluatePython$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="EvaluatePython$.html"><span class="name">EvaluatePython</span></a>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.python.ExtractGroupingPythonUDFFromAggregate" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ExtractGroupingPythonUDFFromAggregate"></a><a id="ExtractGroupingPythonUDFFromAggregate:ExtractGroupingPythonUDFFromAggregate"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/python/ExtractGroupingPythonUDFFromAggregate$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Extracts PythonUDFs in logical aggregate, which are used in grouping keys, evaluate them before aggregate." href="ExtractGroupingPythonUDFFromAggregate$.html"><span class="name">ExtractGroupingPythonUDFFromAggregate</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</span>[<span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Extracts PythonUDFs in logical aggregate, which are used in grouping keys, evaluate them
+before aggregate.</p><div class="fullcomment"><div class="comment cmt"><p>Extracts PythonUDFs in logical aggregate, which are used in grouping keys, evaluate them
+before aggregate.
+This must be executed after <code>ExtractPythonUDFFromAggregate</code> rule and before <code>ExtractPythonUDFs</code>.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.python.ExtractPythonUDFFromAggregate" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ExtractPythonUDFFromAggregate"></a><a id="ExtractPythonUDFFromAggregate:ExtractPythonUDFFromAggregate"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/python/ExtractPythonUDFFromAggregate$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Extracts all the Python UDFs in logical aggregate, which depends on aggregate expression or grouping key, or doesn't depend on any above expressions, evaluate them after aggregate." href="ExtractPythonUDFFromAggregate$.html"><span class="name">ExtractPythonUDFFromAggregate</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</span>[<span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Extracts all the Python UDFs in logical aggregate, which depends on aggregate expression or
+grouping key, or doesn't depend on any above expressions, evaluate them after aggregate.</p>
+    </li><li name="org.apache.spark.sql.execution.python.ExtractPythonUDFs" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ExtractPythonUDFs"></a><a id="ExtractPythonUDFs:ExtractPythonUDFs"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/python/ExtractPythonUDFs$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Extracts PythonUDFs from operators, rewriting the query plan so that the UDF can be evaluated alone in a batch." href="ExtractPythonUDFs$.html"><span class="name">ExtractPythonUDFs</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</span>[<span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</span>] with <span class="extype" name="org.apache.spark.sql.catalyst.expressions.PredicateHelper">PredicateHelper</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Extracts PythonUDFs from operators, rewriting the query plan so that the UDF can be evaluated
+alone in a batch.</p><div class="fullcomment"><div class="comment cmt"><p>Extracts PythonUDFs from operators, rewriting the query plan so that the UDF can be evaluated
+alone in a batch.</p><p>Only extracts the PythonUDFs that could be evaluated in Python (the single child is PythonUDFs
+or all the children could be evaluated in JVM).</p><p>This has the limitation that the input to the Python UDF is not allowed include attributes from
+multiple child operators.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.python.PythonForeachWriter" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PythonForeachWriter"></a><a id="PythonForeachWriter:PythonForeachWriter"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/python/PythonForeachWriter$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="PythonForeachWriter$.html"><span class="name">PythonForeachWriter</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.python.PythonUDFRunner" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PythonUDFRunner"></a><a id="PythonUDFRunner:PythonUDFRunner"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/python/PythonUDFRunner$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="PythonUDFRunner$.html"><span class="name">PythonUDFRunner</span></a>
+      </span>
+      
+      
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

@@ -1,0 +1,804 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Catalyst 3.2.1 API  - org.apache.spark.sql.catalyst.trees.BinaryLike</title>
+          <meta name="description" content="Spark Project Catalyst 3.2.1 API - org.apache.spark.sql.catalyst.trees.BinaryLike" />
+          <meta name="keywords" content="Spark Project Catalyst 3.2.1 API org.apache.spark.sql.catalyst.trees.BinaryLike" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Catalyst 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sql"></a><a id="sql:sql"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">sql</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="catalyst"></a><a id="catalyst:catalyst"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Catalyst is a library for manipulating relational query plans." href="../index.html"><span class="name">catalyst</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Catalyst is a library for manipulating relational query plans.</p><div class="fullcomment"><div class="comment cmt"><p>Catalyst is a library for manipulating relational query plans.  All classes in catalyst are
+considered an internal API to Spark SQL and are subject to change between minor releases.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.trees" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="trees"></a><a id="trees:trees"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="A library for easily manipulating trees of operators." href="index.html"><span class="name">trees</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">A library for easily manipulating trees of operators.</p><div class="fullcomment"><div class="comment cmt"><p>A library for easily manipulating trees of operators.  Operators that extend TreeNode are
+granted the following interface:</p><ul><li>Scala collection like methods (foreach, map, flatMap, collect, etc)</li></ul><p> -
+    transform - accepts a partial function that is used to generate a new tree.  When the
+    partial function can be applied to a given tree segment, that segment is replaced with the
+    result.  After attempting to apply the partial function to a given node, the transform
+    function recursively attempts to apply the function to that node's children.</p><ul><li>debugging support - pretty printing, easy splicing of trees, etc.</li></ul></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="AlwaysProcess$.html" title=""></a>
+                        <a href="AlwaysProcess$.html" title="">AlwaysProcess</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="" title=""></a>
+                        <a href="" title="">BinaryLike</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="CurrentOrigin$.html" title="Provides a location for TreeNodes to ask about the context of their origin."></a>
+                        <a href="CurrentOrigin$.html" title="Provides a location for TreeNodes to ask about the context of their origin.">CurrentOrigin</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="LeafLike.html" title=""></a>
+                        <a href="LeafLike.html" title="">LeafLike</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="Origin.html" title=""></a>
+                        <a href="Origin.html" title="">Origin</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="QuaternaryLike.html" title=""></a>
+                        <a href="QuaternaryLike.html" title="">QuaternaryLike</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="TernaryLike.html" title=""></a>
+                        <a href="TernaryLike.html" title="">TernaryLike</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="TreeNode.html" title=""></a>
+                        <a href="TreeNode.html" title="">TreeNode</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$TreeNodeRef.html" title="A TreeNode companion for reference equality for Hash based Collection."></a>
+                        <a href="package$$TreeNodeRef.html" title="A TreeNode companion for reference equality for Hash based Collection.">TreeNodeRef</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="TreeNodeTag.html" title=""></a>
+                        <a href="TreeNodeTag.html" title="">TreeNodeTag</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="TreePattern$.html" title=""></a>
+                        <a href="TreePattern$.html" title="">TreePattern</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="TreePatternBits.html" title=""></a>
+                        <a href="TreePatternBits.html" title="">TreePatternBits</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="UnaryLike.html" title=""></a>
+                        <a href="UnaryLike.html" title="">UnaryLike</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="trait type">
+      <div id="definition">
+        <div class="big-circle trait">t</div>
+        <p id="owner"><a href="../../../../../index.html" class="extype" name="org">org</a>.<a href="../../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../../index.html" class="extype" name="org.apache.spark.sql">sql</a>.<a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a>.<a href="index.html" class="extype" name="org.apache.spark.sql.catalyst.trees">trees</a></p>
+        <h1>BinaryLike<span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/BinaryLike.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BinaryLike</span><span class="tparams">[<span name="T">T &lt;: <a href="TreeNode.html" class="extype" name="org.apache.spark.sql.catalyst.trees.TreeNode">TreeNode</a>[<span class="extype" name="org.apache.spark.sql.catalyst.trees.BinaryLike.T">T</span>]</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="org.apache.spark.sql.catalyst.trees.BinaryLike">BinaryLike</a>[<span class="extype" name="org.apache.spark.sql.catalyst.trees.BinaryLike.T">T</span>] with <a href="TreeNode.html" class="extype" name="org.apache.spark.sql.catalyst.trees.TreeNode">TreeNode</a>[<span class="extype" name="org.apache.spark.sql.catalyst.trees.BinaryLike.T">T</span>]</dd></dl><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div><div class="toggleContainer block">
+            <span class="toggle">
+              Known Subclasses
+            </span>
+            <div class="subClasses hiddenContent"><a href="../analysis/UnresolvedExtractValue.html" class="extype" name="org.apache.spark.sql.catalyst.analysis.UnresolvedExtractValue">UnresolvedExtractValue</a>, <a href="../expressions/Add.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.Add">Add</a>, <a href="../expressions/AddMonths.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.AddMonths">AddMonths</a>, <a href="../expressions/AddMonthsBase.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.AddMonthsBase">AddMonthsBase</a>, <a href="../expressions/And.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.And">And</a>, <a href="../expressions/ArrayBasedSimpleHigherOrderFunction.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.ArrayBasedSimpleHigherOrderFunction">ArrayBasedSimpleHigherOrderFunction</a>, <a href="../expressions/ArrayBinaryLike.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.ArrayBinaryLike">ArrayBinaryLike</a>, <a href="../expressions/ArrayContains.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.ArrayContains">ArrayContains</a>, <a href="../expressions/ArrayExcept.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.ArrayExcept">ArrayExcept</a>, <a href="../expressions/ArrayExists.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.ArrayExists">ArrayExists</a>, <a href="../expressions/ArrayFilter.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.ArrayFilter">ArrayFilter</a>, <a href="../expressions/ArrayForAll.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.ArrayForAll">ArrayForAll</a>, <a href="../expressions/ArrayIntersect.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.ArrayIntersect">ArrayIntersect</a>, <a href="../expressions/ArrayPosition.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.ArrayPosition">ArrayPosition</a>, <a href="../expressions/ArrayRemove.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.ArrayRemove">ArrayRemove</a>, <a href="../expressions/ArrayRepeat.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.ArrayRepeat">ArrayRepeat</a>, <a href="../expressions/ArraySort.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.ArraySort">ArraySort</a>, <a href="../expressions/ArrayTransform.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.ArrayTransform">ArrayTransform</a>, <a href="../expressions/ArrayUnion.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.ArrayUnion">ArrayUnion</a>, <a href="../expressions/ArraysOverlap.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.ArraysOverlap">ArraysOverlap</a>, <a href="../expressions/Atan2.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.Atan2">Atan2</a>, <a href="../expressions/BRound.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.BRound">BRound</a>, <a href="../expressions/BinaryArithmetic.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.BinaryArithmetic">BinaryArithmetic</a>, <a href="../expressions/BinaryArrayExpressionWithImplicitCast.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.BinaryArrayExpressionWithImplicitCast">BinaryArrayExpressionWithImplicitCast</a>, <a href="../expressions/BinaryComparison.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.BinaryComparison">BinaryComparison</a>, <a href="../expressions/BinaryExpression.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.BinaryExpression">BinaryExpression</a>, <a href="../expressions/BinaryMathExpression.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.BinaryMathExpression">BinaryMathExpression</a>, <a href="../expressions/BinaryOperator.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.BinaryOperator">BinaryOperator</a>, <a href="../expressions/BitwiseAnd.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.BitwiseAnd">BitwiseAnd</a>, <a href="../expressions/BitwiseGet.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.BitwiseGet">BitwiseGet</a>, <a href="../expressions/BitwiseOr.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.BitwiseOr">BitwiseOr</a>, <a href="../expressions/BitwiseXor.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.BitwiseXor">BitwiseXor</a>, <a href="../expressions/Contains.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.Contains">Contains</a>, <a href="../expressions/DateAdd.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.DateAdd">DateAdd</a>, <a href="../expressions/DateAddInterval.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.DateAddInterval">DateAddInterval</a>, <a href="../expressions/DateAddYMInterval.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.DateAddYMInterval">DateAddYMInterval</a>, <a href="../expressions/DateDiff.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.DateDiff">DateDiff</a>, <a href="../expressions/DateFormatClass.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.DateFormatClass">DateFormatClass</a>, <a href="../expressions/DateSub.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.DateSub">DateSub</a>, <a href="../expressions/DivModLike.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.DivModLike">DivModLike</a>, <a href="../expressions/Divide.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.Divide">Divide</a>, <a href="../expressions/DivideDTInterval.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.DivideDTInterval">DivideDTInterval</a>, <a href="../expressions/DivideInterval.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.DivideInterval">DivideInterval</a>, <a href="../expressions/DivideYMInterval.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.DivideYMInterval">DivideYMInterval</a>, <a href="../expressions/ElementAt.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.ElementAt">ElementAt</a>, <a href="../expressions/Encode.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.Encode">Encode</a>, <a href="../expressions/EndsWith.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.EndsWith">EndsWith</a>, <a href="../expressions/EqualNullSafe.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.EqualNullSafe">EqualNullSafe</a>, <a href="../expressions/EqualTo.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.EqualTo">EqualTo</a>, <a href="../expressions/FindInSet.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.FindInSet">FindInSet</a>, <a href="../expressions/FormatNumber.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.FormatNumber">FormatNumber</a>, <a href="../expressions/FromUTCTimestamp.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.FromUTCTimestamp">FromUTCTimestamp</a>, <a href="../expressions/FromUnixTime.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.FromUnixTime">FromUnixTime</a>, <a href="../expressions/GetArrayItem.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.GetArrayItem">GetArrayItem</a>, <a href="../expressions/GetJsonObject.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.GetJsonObject">GetJsonObject</a>, <a href="../expressions/GetMapValue.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.GetMapValue">GetMapValue</a>, <a href="../expressions/GetMapValueUtil.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.GetMapValueUtil">GetMapValueUtil</a>, <a href="../expressions/GetTimestamp.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.GetTimestamp">GetTimestamp</a>, <a href="../expressions/GreaterThan.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.GreaterThan">GreaterThan</a>, <a href="../expressions/GreaterThanOrEqual.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.GreaterThanOrEqual">GreaterThanOrEqual</a>, <a href="../expressions/Hypot.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.Hypot">Hypot</a>, <a href="../expressions/IntegralDivide.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.IntegralDivide">IntegralDivide</a>, <a href="../expressions/IntervalNumOperation.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.IntervalNumOperation">IntervalNumOperation</a>, <a href="../expressions/LessThan.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.LessThan">LessThan</a>, <a href="../expressions/LessThanOrEqual.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.LessThanOrEqual">LessThanOrEqual</a>, <a href="../expressions/Levenshtein.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.Levenshtein">Levenshtein</a>, <a href="../expressions/Like.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.Like">Like</a>, <a href="../expressions/Logarithm.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.Logarithm">Logarithm</a>, <a href="../expressions/MakeYMInterval.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.MakeYMInterval">MakeYMInterval</a>, <a href="../expressions/MapBasedSimpleHigherOrderFunction.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.MapBasedSimpleHigherOrderFunction">MapBasedSimpleHigherOrderFunction</a>, <a href="../expressions/MapFilter.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.MapFilter">MapFilter</a>, <a href="../expressions/MapFromArrays.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.MapFromArrays">MapFromArrays</a>, <a href="../expressions/Multiply.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.Multiply">Multiply</a>, <a href="../expressions/MultiplyDTInterval.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.MultiplyDTInterval">MultiplyDTInterval</a>, <a href="../expressions/MultiplyInterval.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.MultiplyInterval">MultiplyInterval</a>, <a href="../expressions/MultiplyYMInterval.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.MultiplyYMInterval">MultiplyYMInterval</a>, <a href="../expressions/NaNvl.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.NaNvl">NaNvl</a>, <a href="../expressions/NextDay.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.NextDay">NextDay</a>, <a href="../expressions/NthValue.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.NthValue">NthValue</a>, <a href="../expressions/Or.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.Or">Or</a>, <a href="../expressions/Pmod.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.Pmod">Pmod</a>, <a href="../expressions/Pow.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.Pow">Pow</a>, <a href="../expressions/RLike.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.RLike">RLike</a>, <a href="../expressions/Remainder.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.Remainder">Remainder</a>, <a href="../expressions/Round.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.Round">Round</a>, <a href="../expressions/RoundBase.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.RoundBase">RoundBase</a>, <a href="../expressions/Sha2.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.Sha2">Sha2</a>, <a href="../expressions/ShiftLeft.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.ShiftLeft">ShiftLeft</a>, <a href="../expressions/ShiftRight.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.ShiftRight">ShiftRight</a>, <a href="../expressions/ShiftRightUnsigned.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.ShiftRightUnsigned">ShiftRightUnsigned</a>, <a href="../expressions/SimpleHigherOrderFunction.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.SimpleHigherOrderFunction">SimpleHigherOrderFunction</a>, <a href="../expressions/SortArray.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.SortArray">SortArray</a>, <a href="../expressions/SpecifiedWindowFrame.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.SpecifiedWindowFrame">SpecifiedWindowFrame</a>, <a href="../expressions/StartsWith.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.StartsWith">StartsWith</a>, <a href="../expressions/StringDecode.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.StringDecode">StringDecode</a>, <a href="../expressions/StringInstr.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.StringInstr">StringInstr</a>, <a href="../expressions/StringPredicate.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.StringPredicate">StringPredicate</a>, <a href="../expressions/StringRegexExpression.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.StringRegexExpression">StringRegexExpression</a>, <a href="../expressions/StringRepeat.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.StringRepeat">StringRepeat</a>, <a href="../expressions/Subtract.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.Subtract">Subtract</a>, <a href="../expressions/SubtractDates.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.SubtractDates">SubtractDates</a>, <a href="../expressions/SubtractTimestamps.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.SubtractTimestamps">SubtractTimestamps</a>, <a href="../expressions/TimeAdd.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.TimeAdd">TimeAdd</a>, <a href="../expressions/TimestampAddYMInterval.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.TimestampAddYMInterval">TimestampAddYMInterval</a>, <a href="../expressions/ToTimestamp.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.ToTimestamp">ToTimestamp</a>, <a href="../expressions/ToUTCTimestamp.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.ToUTCTimestamp">ToUTCTimestamp</a>, <a href="../expressions/ToUnixTimestamp.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.ToUnixTimestamp">ToUnixTimestamp</a>, <a href="../expressions/TransformKeys.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.TransformKeys">TransformKeys</a>, <a href="../expressions/TransformValues.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.TransformValues">TransformValues</a>, <a href="../expressions/TruncDate.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.TruncDate">TruncDate</a>, <a href="../expressions/TruncInstant.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.TruncInstant">TruncInstant</a>, <a href="../expressions/TruncTimestamp.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.TruncTimestamp">TruncTimestamp</a>, <a href="../expressions/UTCTimestamp.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.UTCTimestamp">UTCTimestamp</a>, <a href="../expressions/UnixTime.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.UnixTime">UnixTime</a>, <a href="../expressions/UnixTimestamp.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.UnixTimestamp">UnixTimestamp</a>, <a href="../expressions/WindowExpression.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.WindowExpression">WindowExpression</a>, <a href="../expressions/aggregate/ApproxCountDistinctForIntervals.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.aggregate.ApproxCountDistinctForIntervals">ApproxCountDistinctForIntervals</a>, <a href="../expressions/aggregate/Corr.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.aggregate.Corr">Corr</a>, <a href="../expressions/aggregate/CovPopulation.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.aggregate.CovPopulation">CovPopulation</a>, <a href="../expressions/aggregate/CovSample.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.aggregate.CovSample">CovSample</a>, <a href="../expressions/aggregate/Covariance.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.aggregate.Covariance">Covariance</a>, <a href="../expressions/aggregate/MaxBy.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.aggregate.MaxBy">MaxBy</a>, <a href="../expressions/aggregate/MaxMinBy.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.aggregate.MaxMinBy">MaxMinBy</a>, <a href="../expressions/aggregate/MinBy.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.aggregate.MinBy">MinBy</a>, <a href="../expressions/aggregate/PearsonCorrelation.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.aggregate.PearsonCorrelation">PearsonCorrelation</a>, <a href="../expressions/aggregate/PivotFirst.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.aggregate.PivotFirst">PivotFirst</a>, <a href="../expressions/xml/XPathBoolean.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.xml.XPathBoolean">XPathBoolean</a>, <a href="../expressions/xml/XPathDouble.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.xml.XPathDouble">XPathDouble</a>, <a href="../expressions/xml/XPathExtract.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.xml.XPathExtract">XPathExtract</a>, <a href="../expressions/xml/XPathFloat.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.xml.XPathFloat">XPathFloat</a>, <a href="../expressions/xml/XPathInt.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.xml.XPathInt">XPathInt</a>, <a href="../expressions/xml/XPathList.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.xml.XPathList">XPathList</a>, <a href="../expressions/xml/XPathLong.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.xml.XPathLong">XPathLong</a>, <a href="../expressions/xml/XPathShort.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.xml.XPathShort">XPathShort</a>, <a href="../expressions/xml/XPathString.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.xml.XPathString">XPathString</a>, <a href="../optimizer/OrderedJoin.html" class="extype" name="org.apache.spark.sql.catalyst.optimizer.OrderedJoin">OrderedJoin</a>, <a href="../plans/logical/AlterViewAs.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.AlterViewAs">AlterViewAs</a>, <a href="../plans/logical/Assignment.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.Assignment">Assignment</a>, <a href="../plans/logical/BinaryCommand.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.BinaryCommand">BinaryCommand</a>, <a href="../plans/logical/BinaryNode.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.BinaryNode">BinaryNode</a>, <a href="../plans/logical/CoGroup.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.CoGroup">CoGroup</a>, <a href="../plans/logical/Except.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.Except">Except</a>, <a href="../plans/logical/FlatMapCoGroupsInPandas.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.FlatMapCoGroupsInPandas">FlatMapCoGroupsInPandas</a>, <a href="../plans/logical/FlatMapGroupsWithState.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.FlatMapGroupsWithState">FlatMapGroupsWithState</a>, <a href="../plans/logical/Intersect.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.Intersect">Intersect</a>, <a href="../plans/logical/Join.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.Join">Join</a>, <a href="../plans/logical/MergeIntoTable.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.MergeIntoTable">MergeIntoTable</a>, <a href="../plans/logical/SetOperation.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.SetOperation">SetOperation</a></div>
+          </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="org.apache.spark.sql.catalyst.trees.BinaryLike"><span>BinaryLike</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        
+
+        <div class="values members">
+              <h3>Abstract Value Members</h3>
+              <ol><li name="org.apache.spark.sql.catalyst.trees.BinaryLike#left" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="left:T"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/BinaryLike.html#left:T" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">left</span><span class="result">: <span class="extype" name="org.apache.spark.sql.catalyst.trees.BinaryLike.T">T</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.catalyst.trees.BinaryLike#right" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="right:T"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/BinaryLike.html#right:T" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">right</span><span class="result">: <span class="extype" name="org.apache.spark.sql.catalyst.trees.BinaryLike.T">T</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.catalyst.trees.BinaryLike#withNewChildrenInternal" visbl="prt" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="withNewChildrenInternal(newLeft:T,newRight:T):T"></a><a id="withNewChildrenInternal(T,T):T"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/BinaryLike.html#withNewChildrenInternal(newLeft:T,newRight:T):T" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withNewChildrenInternal</span><span class="params">(<span name="newLeft">newLeft: <span class="extype" name="org.apache.spark.sql.catalyst.trees.BinaryLike.T">T</span></span>, <span name="newRight">newRight: <span class="extype" name="org.apache.spark.sql.catalyst.trees.BinaryLike.T">T</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.catalyst.trees.BinaryLike.T">T</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div class="values members">
+              <h3>Concrete Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/BinaryLike.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/BinaryLike.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/BinaryLike.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/BinaryLike.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.trees.BinaryLike#children" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="children:Seq[T]"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/BinaryLike.html#children:Seq[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">children</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.trees.BinaryLike.T">T</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@transient</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/BinaryLike.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/BinaryLike.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/BinaryLike.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/BinaryLike.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/BinaryLike.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/BinaryLike.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/BinaryLike.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.trees.BinaryLike#mapChildren" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="mapChildren(f:T=&gt;T):T"></a><a id="mapChildren((T)⇒T):T"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/BinaryLike.html#mapChildren(f:T=&gt;T):T" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mapChildren</span><span class="params">(<span name="f">f: (<span class="extype" name="org.apache.spark.sql.catalyst.trees.BinaryLike.T">T</span>) ⇒ <span class="extype" name="org.apache.spark.sql.catalyst.trees.BinaryLike.T">T</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.catalyst.trees.BinaryLike.T">T</span></span>
+      </span>
+      
+      
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/BinaryLike.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/BinaryLike.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/BinaryLike.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/BinaryLike.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/BinaryLike.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/BinaryLike.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/BinaryLike.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/BinaryLike.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.trees.BinaryLike#withNewChildrenInternal" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="withNewChildrenInternal(newChildren:IndexedSeq[T]):T"></a><a id="withNewChildrenInternal(IndexedSeq[T]):T"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/trees/BinaryLike.html#withNewChildrenInternal(newChildren:IndexedSeq[T]):T" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withNewChildrenInternal</span><span class="params">(<span name="newChildren">newChildren: <span class="extype" name="scala.IndexedSeq">IndexedSeq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.trees.BinaryLike.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.catalyst.trees.BinaryLike.T">T</span></span>
+      </span>
+      
+      
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

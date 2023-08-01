@@ -1,0 +1,408 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Networking 3.2.1 API  - org.apache.spark.network.buffer</title>
+          <meta name="description" content="Spark Project Networking 3.2.1 API - org.apache.spark.network.buffer" />
+          <meta name="keywords" content="Spark Project Networking 3.2.1 API org.apache.spark.network.buffer" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Networking 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.network" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="network"></a><a id="network:network"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">network</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.buffer" visbl="pub" class="indented5 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="buffer"></a><a id="buffer:buffer"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/buffer/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">buffer</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="FileSegmentManagedBuffer.html" title="A ManagedBuffer backed by a segment in a file."></a>
+                        <a href="FileSegmentManagedBuffer.html" title="A ManagedBuffer backed by a segment in a file.">FileSegmentManagedBuffer</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ManagedBuffer.html" title="This interface provides an immutable view for data in the form of bytes."></a>
+                        <a href="ManagedBuffer.html" title="This interface provides an immutable view for data in the form of bytes.">ManagedBuffer</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="NettyManagedBuffer.html" title="A ManagedBuffer backed by a Netty ByteBuf."></a>
+                        <a href="NettyManagedBuffer.html" title="A ManagedBuffer backed by a Netty ByteBuf.">NettyManagedBuffer</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="NioManagedBuffer.html" title="A ManagedBuffer backed by ByteBuffer."></a>
+                        <a href="NioManagedBuffer.html" title="A ManagedBuffer backed by ByteBuffer.">NioManagedBuffer</a>
+                      </li><li name="org.apache.spark.network.client" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="client"></a><a id="client:client"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/client/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../client/index.html"><span class="name">client</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.crypto" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="crypto"></a><a id="crypto:crypto"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/crypto/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../crypto/index.html"><span class="name">crypto</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.protocol" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="protocol"></a><a id="protocol:protocol"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../protocol/index.html"><span class="name">protocol</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.sasl" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sasl"></a><a id="sasl:sasl"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/sasl/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../sasl/index.html"><span class="name">sasl</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.server" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="server"></a><a id="server:server"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../server/index.html"><span class="name">server</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.util" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="util"></a><a id="util:util"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../util/index.html"><span class="name">util</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../../index.html" class="extype" name="org">org</a>.<a href="../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../index.html" class="extype" name="org.apache.spark.network">network</a></p>
+        <h1>buffer<span class="permalink">
+      <a href="../../../../../org/apache/spark/network/buffer/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">buffer</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.spark.network.buffer.FileSegmentManagedBuffer" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FileSegmentManagedBufferextendsManagedBuffer"></a><a id="FileSegmentManagedBuffer:FileSegmentManagedBuffer"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/buffer/FileSegmentManagedBuffer.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A ManagedBuffer backed by a segment in a file." href="FileSegmentManagedBuffer.html"><span class="name">FileSegmentManagedBuffer</span></a><span class="result"> extends <a href="ManagedBuffer.html" class="extype" name="org.apache.spark.network.buffer.ManagedBuffer">ManagedBuffer</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A <code><a href="ManagedBuffer.html" class="extype" name="org.apache.spark.network.buffer.ManagedBuffer">ManagedBuffer</a></code> backed by a segment in a file.</p>
+    </li><li name="org.apache.spark.network.buffer.ManagedBuffer" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ManagedBufferextendsObject"></a><a id="ManagedBuffer:ManagedBuffer"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/buffer/ManagedBuffer.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="This interface provides an immutable view for data in the form of bytes." href="ManagedBuffer.html"><span class="name">ManagedBuffer</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">This interface provides an immutable view for data in the form of bytes.</p><div class="fullcomment"><div class="comment cmt"><p>This interface provides an immutable view for data in the form of bytes. The implementation
+should specify how the data is provided:</p><p>- <code><a href="FileSegmentManagedBuffer.html" class="extype" name="org.apache.spark.network.buffer.FileSegmentManagedBuffer">FileSegmentManagedBuffer</a></code>: data backed by part of a file
+- <code><a href="NioManagedBuffer.html" class="extype" name="org.apache.spark.network.buffer.NioManagedBuffer">NioManagedBuffer</a></code>: data backed by a NIO ByteBuffer
+- <code><a href="NettyManagedBuffer.html" class="extype" name="org.apache.spark.network.buffer.NettyManagedBuffer">NettyManagedBuffer</a></code>: data backed by a Netty ByteBuf</p><p>The concrete buffer implementation might be managed outside the JVM garbage collector.
+For example, in the case of <code><a href="NettyManagedBuffer.html" class="extype" name="org.apache.spark.network.buffer.NettyManagedBuffer">NettyManagedBuffer</a></code>, the buffers are reference counted.
+In that case, if the buffer is going to be passed around to a different thread, retain/release
+should be called.
+</p></div></div>
+    </li><li name="org.apache.spark.network.buffer.NettyManagedBuffer" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NettyManagedBufferextendsManagedBuffer"></a><a id="NettyManagedBuffer:NettyManagedBuffer"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/buffer/NettyManagedBuffer.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A ManagedBuffer backed by a Netty ByteBuf." href="NettyManagedBuffer.html"><span class="name">NettyManagedBuffer</span></a><span class="result"> extends <a href="ManagedBuffer.html" class="extype" name="org.apache.spark.network.buffer.ManagedBuffer">ManagedBuffer</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A <code><a href="ManagedBuffer.html" class="extype" name="org.apache.spark.network.buffer.ManagedBuffer">ManagedBuffer</a></code> backed by a Netty <code><span class="extype" name="ByteBuf">ByteBuf</span></code>.</p>
+    </li><li name="org.apache.spark.network.buffer.NioManagedBuffer" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NioManagedBufferextendsManagedBuffer"></a><a id="NioManagedBuffer:NioManagedBuffer"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/buffer/NioManagedBuffer.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A ManagedBuffer backed by ByteBuffer." href="NioManagedBuffer.html"><span class="name">NioManagedBuffer</span></a><span class="result"> extends <a href="ManagedBuffer.html" class="extype" name="org.apache.spark.network.buffer.ManagedBuffer">ManagedBuffer</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A <code><a href="ManagedBuffer.html" class="extype" name="org.apache.spark.network.buffer.ManagedBuffer">ManagedBuffer</a></code> backed by <code><span class="extype" name="ByteBuffer">ByteBuffer</span></code>.</p>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

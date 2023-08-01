@@ -1,0 +1,1088 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Catalyst 3.2.1 API  - org.apache.spark.sql.catalyst.TableIdentifier</title>
+          <meta name="description" content="Spark Project Catalyst 3.2.1 API - org.apache.spark.sql.catalyst.TableIdentifier" />
+          <meta name="keywords" content="Spark Project Catalyst 3.2.1 API org.apache.spark.sql.catalyst.TableIdentifier" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Catalyst 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sql"></a><a id="sql:sql"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">sql</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="catalyst"></a><a id="catalyst:catalyst"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Catalyst is a library for manipulating relational query plans." href="index.html"><span class="name">catalyst</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Catalyst is a library for manipulating relational query plans.</p><div class="fullcomment"><div class="comment cmt"><p>Catalyst is a library for manipulating relational query plans.  All classes in catalyst are
+considered an internal API to Spark SQL and are subject to change between minor releases.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.analysis" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="analysis"></a><a id="analysis:analysis"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/analysis/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Provides a logical query plan Analyzer and supporting classes for performing analysis." href="analysis/index.html"><span class="name">analysis</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Provides a logical query plan <a href="analysis/Analyzer.html" class="extype" name="org.apache.spark.sql.catalyst.analysis.Analyzer">Analyzer</a> and supporting classes for performing analysis.</p><div class="fullcomment"><div class="comment cmt"><p>Provides a logical query plan <a href="analysis/Analyzer.html" class="extype" name="org.apache.spark.sql.catalyst.analysis.Analyzer">Analyzer</a> and supporting classes for performing analysis.
+Analysis consists of translating <a href="analysis/UnresolvedAttribute.html" class="extype" name="org.apache.spark.sql.catalyst.analysis.UnresolvedAttribute">UnresolvedAttribute</a>s and <a href="analysis/UnresolvedRelation.html" class="extype" name="org.apache.spark.sql.catalyst.analysis.UnresolvedRelation">UnresolvedRelation</a>s
+into fully typed objects using information in a schema <span class="extype" name="Catalog">Catalog</span>.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.catalog" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="catalog"></a><a id="catalog:catalog"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/catalog/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="catalog/index.html"><span class="name">catalog</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.csv" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="csv"></a><a id="csv:csv"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/csv/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="csv/index.html"><span class="name">csv</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.dsl" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dsl"></a><a id="dsl:dsl"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/dsl/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="A collection of implicit conversions that create a DSL for constructing catalyst data structures." href="dsl/index.html"><span class="name">dsl</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">A collection of implicit conversions that create a DSL for constructing catalyst data structures.</p><div class="fullcomment"><div class="comment cmt"><p>A collection of implicit conversions that create a DSL for constructing catalyst data structures.</p><pre>scala&gt; <span class="kw">import</span> org.apache.spark.sql.catalyst.dsl.expressions._
+
+<span class="cmt">// Standard operators are added to expressions.</span>
+scala&gt; <span class="kw">import</span> org.apache.spark.sql.catalyst.expressions.Literal
+scala&gt; Literal(<span class="num">1</span>) + Literal(<span class="num">1</span>)
+res0: org.apache.spark.sql.catalyst.expressions.Add = (<span class="num">1</span> + <span class="num">1</span>)
+
+<span class="cmt">// There is a conversion from 'symbols to unresolved attributes.</span>
+scala&gt; 'a.attr
+res1: org.apache.spark.sql.catalyst.analysis.UnresolvedAttribute = 'a
+
+<span class="cmt">// These unresolved attributes can be used to create more complicated expressions.</span>
+scala&gt; <span class="lit">'a === '</span>b
+res2: org.apache.spark.sql.catalyst.expressions.EqualTo = (<span class="lit">'a = '</span>b)
+
+<span class="cmt">// SQL verbs can be used to construct logical query plans.</span>
+scala&gt; <span class="kw">import</span> org.apache.spark.sql.catalyst.plans.logical._
+scala&gt; <span class="kw">import</span> org.apache.spark.sql.catalyst.dsl.plans._
+scala&gt; LocalRelation('key.int, 'value.string).where('key === <span class="num">1</span>).select('value).analyze
+res3: org.apache.spark.sql.catalyst.plans.logical.LogicalPlan =
+Project [value#<span class="num">3</span>]
+ Filter (key#<span class="num">2</span> = <span class="num">1</span>)
+  LocalRelation [key#<span class="num">2</span>,value#<span class="num">3</span>], []</pre></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.encoders" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="encoders"></a><a id="encoders:encoders"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/encoders/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="encoders/index.html"><span class="name">encoders</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.expressions" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="expressions"></a><a id="expressions:expressions"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/expressions/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="A set of classes that can be used to represent trees of relational expressions." href="expressions/index.html"><span class="name">expressions</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">A set of classes that can be used to represent trees of relational expressions.</p><div class="fullcomment"><div class="comment cmt"><p>A set of classes that can be used to represent trees of relational expressions.  A key goal of
+the expression library is to hide the details of naming and scoping from developers who want to
+manipulate trees of relational operators. As such, the library defines a special type of
+expression, a <a href="expressions/NamedExpression.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.NamedExpression">NamedExpression</a> in addition to the standard collection of expressions.</p><h4>Standard Expressions</h4><p>A library of standard expressions (e.g., <a href="expressions/Add.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.Add">Add</a>, <a href="expressions/EqualTo.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.EqualTo">EqualTo</a>), aggregates (e.g., SUM, COUNT),
+and other computations (e.g. UDFs). Each expression type is capable of determining its output
+schema as a function of its children's output schema.</p><h4>Named Expressions</h4><p>Some expression are named and thus can be referenced by later operators in the dataflow graph.
+The two types of named expressions are <a href="expressions/AttributeReference.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.AttributeReference">AttributeReference</a>s and <a href="expressions/Alias.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.Alias">Alias</a>es.
+<a href="expressions/AttributeReference.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.AttributeReference">AttributeReference</a>s refer to attributes of the input tuple for a given operator and form
+the leaves of some expression trees.  Aliases assign a name to intermediate computations.
+For example, in the SQL statement <code>SELECT a+b AS c FROM ...</code>, the expressions <code>a</code> and <code>b</code> would
+be represented by <code>AttributeReferences</code> and <code>c</code> would be represented by an <code>Alias</code>.</p><p>During <a href="analysis/index.html" class="extype" name="org.apache.spark.sql.catalyst.analysis">analysis</a>, all named expressions are assigned a globally unique expression id, which
+can be used for equality comparisons.  While the original names are kept around for debugging
+purposes, they should never be used to check if two attributes refer to the same value, as
+plan transformations can result in the introduction of naming ambiguity. For example, consider
+a plan that contains subqueries, both of which are reading from the same table.  If an
+optimization removes the subqueries, scoping information would be destroyed, eliminating the
+ability to reason about which subquery produced a given attribute.</p><h4>Evaluation</h4><p>The result of expressions can be evaluated using the <code>Expression.apply(Row)</code> method.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.json" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="json"></a><a id="json:json"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/json/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="json/index.html"><span class="name">json</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.optimizer" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="optimizer"></a><a id="optimizer:optimizer"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/optimizer/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="optimizer/index.html"><span class="name">optimizer</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.parser" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="parser"></a><a id="parser:parser"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/parser/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="parser/index.html"><span class="name">parser</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.planning" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="planning"></a><a id="planning:planning"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/planning/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Contains classes for enumerating possible physical plans for a given logical query plan." href="planning/index.html"><span class="name">planning</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Contains classes for enumerating possible physical plans for a given logical query plan.</p><div class="fullcomment"><div class="comment cmt"><p>Contains classes for enumerating possible physical plans for a given logical query plan.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.plans" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="plans"></a><a id="plans:plans"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/plans/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="A collection of common abstractions for query plans as well as a base logical plan representation." href="plans/index.html"><span class="name">plans</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">A collection of common abstractions for query plans as well as
+a base logical plan representation.</p><div class="fullcomment"><div class="comment cmt"><p>A collection of common abstractions for query plans as well as
+a base logical plan representation.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.rules" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="rules"></a><a id="rules:rules"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/rules/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="A framework for applying batches rewrite rules to trees, possibly to fixed point." href="rules/index.html"><span class="name">rules</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">A framework for applying batches rewrite rules to trees, possibly to fixed point.</p><div class="fullcomment"><div class="comment cmt"><p>A framework for applying batches rewrite rules to trees, possibly to fixed point.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.streaming" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="streaming"></a><a id="streaming:streaming"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/streaming/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="streaming/index.html"><span class="name">streaming</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.trees" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="trees"></a><a id="trees:trees"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/trees/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="A library for easily manipulating trees of operators." href="trees/index.html"><span class="name">trees</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">A library for easily manipulating trees of operators.</p><div class="fullcomment"><div class="comment cmt"><p>A library for easily manipulating trees of operators.  Operators that extend TreeNode are
+granted the following interface:</p><ul><li>Scala collection like methods (foreach, map, flatMap, collect, etc)</li></ul><p> -
+    transform - accepts a partial function that is used to generate a new tree.  When the
+    partial function can be applied to a given tree segment, that segment is replaced with the
+    result.  After attempting to apply the partial function to a given node, the transform
+    function recursively attempts to apply the function to that node's children.</p><ul><li>debugging support - pretty printing, easy splicing of trees, etc.</li></ul></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.util" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="util"></a><a id="util:util"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/util/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="util/index.html"><span class="name">util</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li class="current-entities indented5">
+                        <a class="object" href="AliasIdentifier$.html" title=""></a>
+                        <a class="class" href="AliasIdentifier.html" title="Encapsulates an identifier that is either a alias name or an identifier that has table name and a qualifier."></a>
+                        <a href="AliasIdentifier.html" title="Encapsulates an identifier that is either a alias name or an identifier that has table name and a qualifier.">AliasIdentifier</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="CatalystTypeConverters$.html" title="Functions to convert Scala types to Catalyst types and vice versa."></a>
+                        <a href="CatalystTypeConverters$.html" title="Functions to convert Scala types to Catalyst types and vice versa.">CatalystTypeConverters</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="CurrentUserContext$.html" title=""></a>
+                        <a href="CurrentUserContext$.html" title="">CurrentUserContext</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="DefinedByConstructorParams.html" title="A helper trait to create org.apache.spark.sql.catalyst.encoders.ExpressionEncoders for classes whose fields are entirely defined by constructor params but should not be case classes."></a>
+                        <a href="DefinedByConstructorParams.html" title="A helper trait to create org.apache.spark.sql.catalyst.encoders.ExpressionEncoders for classes whose fields are entirely defined by constructor params but should not be case classes.">DefinedByConstructorParams</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="DeserializerBuildHelper$.html" title=""></a>
+                        <a href="DeserializerBuildHelper$.html" title="">DeserializerBuildHelper</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="FunctionIdentifier$.html" title=""></a>
+                        <a class="class" href="FunctionIdentifier.html" title="Identifies a function in a database."></a>
+                        <a href="FunctionIdentifier.html" title="Identifies a function in a database.">FunctionIdentifier</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="IdentifierWithDatabase.html" title="An identifier that optionally specifies a database."></a>
+                        <a href="IdentifierWithDatabase.html" title="An identifier that optionally specifies a database.">IdentifierWithDatabase</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="InternalRow$.html" title=""></a>
+                        <a class="class" href="InternalRow.html" title="An abstract class for row used internally in Spark SQL, which only contains the columns as internal types."></a>
+                        <a href="InternalRow.html" title="An abstract class for row used internally in Spark SQL, which only contains the columns as internal types.">InternalRow</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="JavaTypeInference$.html" title="Type-inference utilities for POJOs and Java collections."></a>
+                        <a href="JavaTypeInference$.html" title="Type-inference utilities for POJOs and Java collections.">JavaTypeInference</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="NoopFilters.html" title=""></a>
+                        <a href="NoopFilters.html" title="">NoopFilters</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="OrderedFilters.html" title="An instance of the class compiles filters to predicates and sorts them in the order which allows to apply the predicates to an internal row with partially initialized values, for instance converted from parsed CSV fields."></a>
+                        <a href="OrderedFilters.html" title="An instance of the class compiles filters to predicates and sorts them in the order which allows to apply the predicates to an internal row with partially initialized values, for instance converted from parsed CSV fields.">OrderedFilters</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="QualifiedTableName.html" title="A fully qualified identifier for a table (i.e., database.tableName)"></a>
+                        <a href="QualifiedTableName.html" title="A fully qualified identifier for a table (i.e., database.tableName)">QualifiedTableName</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="QueryPlanningTracker$.html" title="A simple utility for tracking runtime and associated stats in query planning."></a>
+                        <a class="class" href="QueryPlanningTracker.html" title=""></a>
+                        <a href="QueryPlanningTracker.html" title="">QueryPlanningTracker</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="SQLConfHelper.html" title="Trait for getting the active SQLConf."></a>
+                        <a href="SQLConfHelper.html" title="Trait for getting the active SQLConf.">SQLConfHelper</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="ScalaReflection$.html" title="A default version of ScalaReflection that uses the runtime universe."></a>
+                        <a class="trait" href="ScalaReflection.html" title="Support for generating catalyst schemas for scala objects."></a>
+                        <a href="ScalaReflection.html" title="Support for generating catalyst schemas for scala objects.">ScalaReflection</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="SerializerBuildHelper$.html" title=""></a>
+                        <a href="SerializerBuildHelper$.html" title="">SerializerBuildHelper</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="StructFilters$.html" title=""></a>
+                        <a class="class" href="StructFilters.html" title="The class provides API for applying pushed down filters to partially or fully set internal rows that have the struct schema."></a>
+                        <a href="StructFilters.html" title="The class provides API for applying pushed down filters to partially or fully set internal rows that have the struct schema.">StructFilters</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="TableIdentifier$.html" title=""></a>
+                        <a class="class" href="" title="Identifies a table in a database."></a>
+                        <a href="" title="Identifies a table in a database.">TableIdentifier</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="WalkedTypePath.html" title="This class records the paths the serializer and deserializer walk through to reach current path."></a>
+                        <a href="WalkedTypePath.html" title="This class records the paths the serializer and deserializer walk through to reach current path.">WalkedTypePath</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="class type">
+      <div id="definition">
+        <a href="TableIdentifier$.html" title="See companion object"><div class="big-circle class-companion-object">c</div></a>
+        <p id="owner"><a href="../../../../index.html" class="extype" name="org">org</a>.<a href="../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../index.html" class="extype" name="org.apache.spark.sql">sql</a>.<a href="index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></p>
+        <h1><a href="TableIdentifier$.html" title="See companion object">TableIdentifier</a><span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/TableIdentifier.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"><div>
+            Companion <a href="TableIdentifier$.html" title="See companion object">object TableIdentifier</a>
+          </div></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TableIdentifier</span><span class="params">(<span name="table">table: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="database">database: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="IdentifierWithDatabase.html" class="extype" name="org.apache.spark.sql.catalyst.IdentifierWithDatabase">IdentifierWithDatabase</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Identifies a table in a database.
+If <code>database</code> is not defined, the current database is used.
+When we register a permanent function in the FunctionRegistry, we use
+unquotedString as the function name.
+</p></div><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="IdentifierWithDatabase.html" class="extype" name="org.apache.spark.sql.catalyst.IdentifierWithDatabase">IdentifierWithDatabase</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="org.apache.spark.sql.catalyst.TableIdentifier"><span>TableIdentifier</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="org.apache.spark.sql.catalyst.IdentifierWithDatabase"><span>IdentifierWithDatabase</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="org.apache.spark.sql.catalyst.TableIdentifier#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(table:String):org.apache.spark.sql.catalyst.TableIdentifier"></a><a id="&lt;init&gt;:TableIdentifier"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/TableIdentifier.html#&lt;init&gt;(table:String):org.apache.spark.sql.catalyst.TableIdentifier" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TableIdentifier</span><span class="params">(<span name="table">table: <span class="extype" name="scala.Predef.String">String</span></span>)</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.catalyst.TableIdentifier#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(table:String,database:Option[String]):org.apache.spark.sql.catalyst.TableIdentifier"></a><a id="&lt;init&gt;:TableIdentifier"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/TableIdentifier.html#&lt;init&gt;(table:String,database:Option[String]):org.apache.spark.sql.catalyst.TableIdentifier" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TableIdentifier</span><span class="params">(<span name="table">table: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="database">database: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/TableIdentifier.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/TableIdentifier.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/TableIdentifier.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/TableIdentifier.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/TableIdentifier.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.TableIdentifier#database" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="database:Option[String]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/TableIdentifier.html#database:Option[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">database</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.sql.catalyst.TableIdentifier">TableIdentifier</a> → <a href="IdentifierWithDatabase.html" class="extype" name="org.apache.spark.sql.catalyst.IdentifierWithDatabase">IdentifierWithDatabase</a></dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/TableIdentifier.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/TableIdentifier.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/TableIdentifier.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.TableIdentifier#identifier" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="identifier:String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/TableIdentifier.html#identifier:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">identifier</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.sql.catalyst.TableIdentifier">TableIdentifier</a> → <a href="IdentifierWithDatabase.html" class="extype" name="org.apache.spark.sql.catalyst.IdentifierWithDatabase">IdentifierWithDatabase</a></dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/TableIdentifier.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/TableIdentifier.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/TableIdentifier.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/TableIdentifier.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.IdentifierWithDatabase#quotedString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="quotedString:String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/TableIdentifier.html#quotedString:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">quotedString</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="IdentifierWithDatabase.html" class="extype" name="org.apache.spark.sql.catalyst.IdentifierWithDatabase">IdentifierWithDatabase</a></dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/TableIdentifier.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.TableIdentifier#table" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="table:String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/TableIdentifier.html#table:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">table</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.catalyst.IdentifierWithDatabase#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/TableIdentifier.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="IdentifierWithDatabase.html" class="extype" name="org.apache.spark.sql.catalyst.IdentifierWithDatabase">IdentifierWithDatabase</a> → AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.IdentifierWithDatabase#unquotedString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="unquotedString:String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/TableIdentifier.html#unquotedString:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">unquotedString</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="IdentifierWithDatabase.html" class="extype" name="org.apache.spark.sql.catalyst.IdentifierWithDatabase">IdentifierWithDatabase</a></dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/TableIdentifier.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/TableIdentifier.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/TableIdentifier.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.Product">
+              <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
+            </div><div class="parent" name="scala.Equals">
+              <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
+            </div><div class="parent" name="org.apache.spark.sql.catalyst.IdentifierWithDatabase">
+              <h3>Inherited from <a href="IdentifierWithDatabase.html" class="extype" name="org.apache.spark.sql.catalyst.IdentifierWithDatabase">IdentifierWithDatabase</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

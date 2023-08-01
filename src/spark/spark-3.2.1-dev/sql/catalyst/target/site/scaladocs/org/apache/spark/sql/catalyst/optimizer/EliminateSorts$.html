@@ -1,0 +1,1390 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Catalyst 3.2.1 API  - org.apache.spark.sql.catalyst.optimizer.EliminateSorts</title>
+          <meta name="description" content="Spark Project Catalyst 3.2.1 API - org.apache.spark.sql.catalyst.optimizer.EliminateSorts" />
+          <meta name="keywords" content="Spark Project Catalyst 3.2.1 API org.apache.spark.sql.catalyst.optimizer.EliminateSorts" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Catalyst 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sql"></a><a id="sql:sql"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">sql</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="catalyst"></a><a id="catalyst:catalyst"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Catalyst is a library for manipulating relational query plans." href="../index.html"><span class="name">catalyst</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Catalyst is a library for manipulating relational query plans.</p><div class="fullcomment"><div class="comment cmt"><p>Catalyst is a library for manipulating relational query plans.  All classes in catalyst are
+considered an internal API to Spark SQL and are subject to change between minor releases.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.optimizer" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="optimizer"></a><a id="optimizer:optimizer"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="index.html"><span class="name">optimizer</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="BooleanSimplification$.html" title="Simplifies boolean expressions: 1."></a>
+                        <a href="BooleanSimplification$.html" title="Simplifies boolean expressions: 1.">BooleanSimplification</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="BuildLeft$.html" title=""></a>
+                        <a href="BuildLeft$.html" title="">BuildLeft</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="BuildRight$.html" title=""></a>
+                        <a href="BuildRight$.html" title="">BuildRight</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="BuildSide.html" title=""></a>
+                        <a href="BuildSide.html" title="">BuildSide</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="CheckCartesianProducts$.html" title="Check if there any cartesian products between joins of any type in the optimized plan tree."></a>
+                        <a href="CheckCartesianProducts$.html" title="Check if there any cartesian products between joins of any type in the optimized plan tree.">CheckCartesianProducts</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="CollapseProject$.html" title="Combines two Project operators into one and perform alias substitution, merging the expressions into one single expression for the following cases."></a>
+                        <a href="CollapseProject$.html" title="Combines two Project operators into one and perform alias substitution, merging the expressions into one single expression for the following cases.">CollapseProject</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="CollapseRepartition$.html" title="Combines adjacent RepartitionOperation operators"></a>
+                        <a href="CollapseRepartition$.html" title="Combines adjacent RepartitionOperation operators">CollapseRepartition</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="CollapseWindow$.html" title="Collapse Adjacent Window Expression."></a>
+                        <a href="CollapseWindow$.html" title="Collapse Adjacent Window Expression.">CollapseWindow</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ColumnPruning$.html" title="Attempts to eliminate the reading of unneeded columns from the query plan."></a>
+                        <a href="ColumnPruning$.html" title="Attempts to eliminate the reading of unneeded columns from the query plan.">ColumnPruning</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="CombineConcats$.html" title="Combine nested Concat expressions."></a>
+                        <a href="CombineConcats$.html" title="Combine nested Concat expressions.">CombineConcats</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="CombineFilters$.html" title="Combines two adjacent Filter operators into one, merging the non-redundant conditions into one conjunctive predicate."></a>
+                        <a href="CombineFilters$.html" title="Combines two adjacent Filter operators into one, merging the non-redundant conditions into one conjunctive predicate.">CombineFilters</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="CombineTypedFilters$.html" title="Combines two adjacent TypedFilters, which operate on same type object in condition, into one, merging the filter functions into one conjunctive function."></a>
+                        <a href="CombineTypedFilters$.html" title="Combines two adjacent TypedFilters, which operate on same type object in condition, into one, merging the filter functions into one conjunctive function.">CombineTypedFilters</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="CombineUnions$.html" title="Combines all adjacent Union operators into a single Union."></a>
+                        <a href="CombineUnions$.html" title="Combines all adjacent Union operators into a single Union.">CombineUnions</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ComputeCurrentTime$.html" title="Computes the current date and time to make sure we return the same result in a single query."></a>
+                        <a href="ComputeCurrentTime$.html" title="Computes the current date and time to make sure we return the same result in a single query.">ComputeCurrentTime</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ConstantFolding$.html" title="Replaces Expressions that can be statically evaluated with equivalent Literal values."></a>
+                        <a href="ConstantFolding$.html" title="Replaces Expressions that can be statically evaluated with equivalent Literal values.">ConstantFolding</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ConstantPropagation$.html" title="Substitutes Attributes which can be statically evaluated with their corresponding value in conjunctive Expressions e.g."></a>
+                        <a href="ConstantPropagation$.html" title="Substitutes Attributes which can be statically evaluated with their corresponding value in conjunctive Expressions e.g.">ConstantPropagation</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ConvertToLocalRelation$.html" title="Converts local operations (i.e."></a>
+                        <a href="ConvertToLocalRelation$.html" title="Converts local operations (i.e.">ConvertToLocalRelation</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="Cost.html" title="This class defines the cost model for a plan."></a>
+                        <a href="Cost.html" title="This class defines the cost model for a plan.">Cost</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="CostBasedJoinReorder$.html" title="Cost-based join reorder."></a>
+                        <a href="CostBasedJoinReorder$.html" title="Cost-based join reorder.">CostBasedJoinReorder</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="DecimalAggregates$.html" title="Speeds up aggregates on fixed-precision decimals by executing them on unscaled Long values."></a>
+                        <a href="DecimalAggregates$.html" title="Speeds up aggregates on fixed-precision decimals by executing them on unscaled Long values.">DecimalAggregates</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="DecorrelateInnerQuery$.html" title="Decorrelate the inner query by eliminating outer references and create domain joins."></a>
+                        <a href="DecorrelateInnerQuery$.html" title="Decorrelate the inner query by eliminating outer references and create domain joins.">DecorrelateInnerQuery</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="EliminateAggregateFilter$.html" title="Remove useless FILTER clause for aggregate expressions."></a>
+                        <a href="EliminateAggregateFilter$.html" title="Remove useless FILTER clause for aggregate expressions.">EliminateAggregateFilter</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="EliminateDistinct$.html" title="Remove useless DISTINCT for MAX and MIN."></a>
+                        <a href="EliminateDistinct$.html" title="Remove useless DISTINCT for MAX and MIN.">EliminateDistinct</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="EliminateLimits$.html" title="This rule optimizes Limit operators by: 1."></a>
+                        <a href="EliminateLimits$.html" title="This rule optimizes Limit operators by: 1.">EliminateLimits</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="EliminateMapObjects$.html" title="Removes MapObjects when the following conditions are satisfied"></a>
+                        <a href="EliminateMapObjects$.html" title="Removes MapObjects when the following conditions are satisfied">EliminateMapObjects</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="EliminateOuterJoin$.html" title="1."></a>
+                        <a href="EliminateOuterJoin$.html" title="1.">EliminateOuterJoin</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="EliminateResolvedHint$.html" title="Replaces ResolvedHint operators from the plan."></a>
+                        <a href="EliminateResolvedHint$.html" title="Replaces ResolvedHint operators from the plan.">EliminateResolvedHint</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="EliminateSerialization$.html" title="Removes cases where we are unnecessarily going between the object and serialized (InternalRow) representation of data item."></a>
+                        <a href="EliminateSerialization$.html" title="Removes cases where we are unnecessarily going between the object and serialized (InternalRow) representation of data item.">EliminateSerialization</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="" title="Removes Sort operations if they don't affect the final output ordering."></a>
+                        <a href="" title="Removes Sort operations if they don't affect the final output ordering.">EliminateSorts</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ExtractPythonUDFFromJoinCondition$.html" title="PythonUDF in join condition can't be evaluated if it refers to attributes from both join sides."></a>
+                        <a href="ExtractPythonUDFFromJoinCondition$.html" title="PythonUDF in join condition can't be evaluated if it refers to attributes from both join sides.">ExtractPythonUDFFromJoinCondition</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="FoldablePropagation$.html" title="Replace attributes with aliases of the original foldable expressions if possible."></a>
+                        <a href="FoldablePropagation$.html" title="Replace attributes with aliases of the original foldable expressions if possible.">FoldablePropagation</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="GeneratorNestedColumnAliasing$.html" title="This prunes unnecessary nested columns from Generate, or Project -&gt; Generate"></a>
+                        <a href="GeneratorNestedColumnAliasing$.html" title="This prunes unnecessary nested columns from Generate, or Project -&gt; Generate">GeneratorNestedColumnAliasing</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="InferFiltersFromConstraints$.html" title="Generate a list of additional filters from an operator's existing constraint but remove those that are either already part of the operator's condition or are part of the operator's child constraints."></a>
+                        <a href="InferFiltersFromConstraints$.html" title="Generate a list of additional filters from an operator's existing constraint but remove those that are either already part of the operator's condition or are part of the operator's child constraints.">InferFiltersFromConstraints</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="InferFiltersFromGenerate$.html" title="Infers filters from Generate, such that rows that would have been removed by this Generate can be removed earlier - before joins and in data sources."></a>
+                        <a href="InferFiltersFromGenerate$.html" title="Infers filters from Generate, such that rows that would have been removed by this Generate can be removed earlier - before joins and in data sources.">InferFiltersFromGenerate</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="InlineCTE$.html" title="Inlines CTE definitions into corresponding references if either of the conditions satisfies: 1."></a>
+                        <a href="InlineCTE$.html" title="Inlines CTE definitions into corresponding references if either of the conditions satisfies: 1.">InlineCTE</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="JoinGraphInfo.html" title="Helper class that keeps information about the join graph as sets of item/plan ids."></a>
+                        <a href="JoinGraphInfo.html" title="Helper class that keeps information about the join graph as sets of item/plan ids.">JoinGraphInfo</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="JoinReorderDP$.html" title="Reorder the joins using a dynamic programming algorithm."></a>
+                        <a href="JoinReorderDP$.html" title="Reorder the joins using a dynamic programming algorithm.">JoinReorderDP</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="JoinReorderDPFilters$.html" title="Implements optional filters to reduce the search space for join enumeration."></a>
+                        <a href="JoinReorderDPFilters$.html" title="Implements optional filters to reduce the search space for join enumeration.">JoinReorderDPFilters</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="JoinSelectionHelper.html" title=""></a>
+                        <a href="JoinSelectionHelper.html" title="">JoinSelectionHelper</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="LikeSimplification$.html" title="Simplifies LIKE expressions that do not need full regular expressions to evaluate the condition."></a>
+                        <a href="LikeSimplification$.html" title="Simplifies LIKE expressions that do not need full regular expressions to evaluate the condition.">LikeSimplification</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="LimitPushDown$.html" title="Pushes down LocalLimit beneath UNION ALL and joins."></a>
+                        <a href="LimitPushDown$.html" title="Pushes down LocalLimit beneath UNION ALL and joins.">LimitPushDown</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="LimitPushDownThroughWindow$.html" title="Pushes down LocalLimit beneath WINDOW."></a>
+                        <a href="LimitPushDownThroughWindow$.html" title="Pushes down LocalLimit beneath WINDOW.">LimitPushDownThroughWindow</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="NestedColumnAliasing$.html" title="This aims to handle a nested column aliasing pattern inside the ColumnPruning optimizer rule."></a>
+                        <a href="NestedColumnAliasing$.html" title="This aims to handle a nested column aliasing pattern inside the ColumnPruning optimizer rule.">NestedColumnAliasing</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="NormalizeFloatingNumbers$.html" title="We need to take care of special floating numbers (NaN and -0.0) in several places:"></a>
+                        <a href="NormalizeFloatingNumbers$.html" title="We need to take care of special floating numbers (NaN and -0.0) in several places:">NormalizeFloatingNumbers</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="NormalizeNaNAndZero.html" title=""></a>
+                        <a href="NormalizeNaNAndZero.html" title="">NormalizeNaNAndZero</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="NullPropagation$.html" title="Replaces Expressions that can be statically evaluated with equivalent Literal values."></a>
+                        <a href="NullPropagation$.html" title="Replaces Expressions that can be statically evaluated with equivalent Literal values.">NullPropagation</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ObjectSerializerPruning$.html" title="Prunes unnecessary object serializers from query plan."></a>
+                        <a href="ObjectSerializerPruning$.html" title="Prunes unnecessary object serializers from query plan.">ObjectSerializerPruning</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="OptimizeCsvJsonExprs$.html" title="Simplify redundant csv/json related expressions."></a>
+                        <a href="OptimizeCsvJsonExprs$.html" title="Simplify redundant csv/json related expressions.">OptimizeCsvJsonExprs</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="OptimizeIn$.html" title="Optimize IN predicates: 1."></a>
+                        <a href="OptimizeIn$.html" title="Optimize IN predicates: 1.">OptimizeIn</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="OptimizeLimitZero$.html" title="Replaces GlobalLimit 0 and LocalLimit 0 nodes (subtree) with empty Local Relation, as they don't return any rows."></a>
+                        <a href="OptimizeLimitZero$.html" title="Replaces GlobalLimit 0 and LocalLimit 0 nodes (subtree) with empty Local Relation, as they don't return any rows.">OptimizeLimitZero</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="OptimizeOneRowRelationSubquery$.html" title="This rule optimizes subqueries with OneRowRelation as leaf nodes."></a>
+                        <a href="OptimizeOneRowRelationSubquery$.html" title="This rule optimizes subqueries with OneRowRelation as leaf nodes.">OptimizeOneRowRelationSubquery</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="OptimizeRepartition$.html" title="Replace RepartitionByExpression numPartitions to 1 if all partition expressions are foldable and user not specify."></a>
+                        <a href="OptimizeRepartition$.html" title="Replace RepartitionByExpression numPartitions to 1 if all partition expressions are foldable and user not specify.">OptimizeRepartition</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="OptimizeUpdateFields$.html" title="Optimizes UpdateFields expression chains."></a>
+                        <a href="OptimizeUpdateFields$.html" title="Optimizes UpdateFields expression chains.">OptimizeUpdateFields</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="OptimizeWindowFunctions$.html" title="Replaces first(col) to nth_value(col, 1) for better performance."></a>
+                        <a href="OptimizeWindowFunctions$.html" title="Replaces first(col) to nth_value(col, 1) for better performance.">OptimizeWindowFunctions</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="Optimizer.html" title="Abstract class all optimizers should inherit of, contains the standard batches (extending Optimizers can override this."></a>
+                        <a href="Optimizer.html" title="Abstract class all optimizers should inherit of, contains the standard batches (extending Optimizers can override this.">Optimizer</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="OrderedJoin.html" title="This is a mimic class for a join node that has been ordered."></a>
+                        <a href="OrderedJoin.html" title="This is a mimic class for a join node that has been ordered.">OrderedJoin</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="PropagateEmptyRelation$.html" title="This rule runs in the normal optimizer and optimizes more cases compared to PropagateEmptyRelationBase: 1."></a>
+                        <a href="PropagateEmptyRelation$.html" title="This rule runs in the normal optimizer and optimizes more cases compared to PropagateEmptyRelationBase: 1.">PropagateEmptyRelation</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="PropagateEmptyRelationBase.html" title="The base class of two rules in the normal and AQE Optimizer."></a>
+                        <a href="PropagateEmptyRelationBase.html" title="The base class of two rules in the normal and AQE Optimizer.">PropagateEmptyRelationBase</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="PruneFilters$.html" title="Removes filters that can be evaluated trivially."></a>
+                        <a href="PruneFilters$.html" title="Removes filters that can be evaluated trivially.">PruneFilters</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="PullOutGroupingExpressions$.html" title="This rule ensures that Aggregate nodes doesn't contain complex grouping expressions in the optimization phase."></a>
+                        <a href="PullOutGroupingExpressions$.html" title="This rule ensures that Aggregate nodes doesn't contain complex grouping expressions in the optimization phase.">PullOutGroupingExpressions</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="PullupCorrelatedPredicates$.html" title="Pull out all (outer) correlated predicates from a given subquery."></a>
+                        <a href="PullupCorrelatedPredicates$.html" title="Pull out all (outer) correlated predicates from a given subquery.">PullupCorrelatedPredicates</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="PushDownLeftSemiAntiJoin$.html" title="This rule is a variant of PushPredicateThroughNonJoin which can handle pushing down Left semi and Left Anti joins below the following operators."></a>
+                        <a href="PushDownLeftSemiAntiJoin$.html" title="This rule is a variant of PushPredicateThroughNonJoin which can handle pushing down Left semi and Left Anti joins below the following operators.">PushDownLeftSemiAntiJoin</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="PushDownPredicates$.html" title="The unified version for predicate pushdown of normal operators and joins."></a>
+                        <a href="PushDownPredicates$.html" title="The unified version for predicate pushdown of normal operators and joins.">PushDownPredicates</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="PushExtraPredicateThroughJoin$.html" title="Try pushing down disjunctive join condition into left and right child."></a>
+                        <a href="PushExtraPredicateThroughJoin$.html" title="Try pushing down disjunctive join condition into left and right child.">PushExtraPredicateThroughJoin</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="PushFoldableIntoBranches$.html" title="Push the foldable expression into (if / case) branches."></a>
+                        <a href="PushFoldableIntoBranches$.html" title="Push the foldable expression into (if / case) branches.">PushFoldableIntoBranches</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="PushLeftSemiLeftAntiThroughJoin$.html" title="This rule is a variant of PushPredicateThroughJoin which can handle pushing down Left semi and Left Anti joins below a join operator."></a>
+                        <a href="PushLeftSemiLeftAntiThroughJoin$.html" title="This rule is a variant of PushPredicateThroughJoin which can handle pushing down Left semi and Left Anti joins below a join operator.">PushLeftSemiLeftAntiThroughJoin</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="PushPredicateThroughJoin$.html" title="Pushes down Filter operators where the condition can be evaluated using only the attributes of the left or right side of a join."></a>
+                        <a href="PushPredicateThroughJoin$.html" title="Pushes down Filter operators where the condition can be evaluated using only the attributes of the left or right side of a join.">PushPredicateThroughJoin</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="PushPredicateThroughNonJoin$.html" title="Pushes Filter operators through many operators iff: 1) the operator is deterministic 2) the predicate is deterministic and the operator will not change any of rows."></a>
+                        <a href="PushPredicateThroughNonJoin$.html" title="Pushes Filter operators through many operators iff: 1) the operator is deterministic 2) the predicate is deterministic and the operator will not change any of rows.">PushPredicateThroughNonJoin</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="PushProjectionThroughUnion$.html" title="Pushes Project operator to both sides of a Union operator."></a>
+                        <a href="PushProjectionThroughUnion$.html" title="Pushes Project operator to both sides of a Union operator.">PushProjectionThroughUnion</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ReassignLambdaVariableID$.html" title="Reassigns per-query unique IDs to LambdaVariables, whose original IDs are globally unique."></a>
+                        <a href="ReassignLambdaVariableID$.html" title="Reassigns per-query unique IDs to LambdaVariables, whose original IDs are globally unique.">ReassignLambdaVariableID</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="RemoveDispensableExpressions$.html" title="Removes nodes that are not necessary."></a>
+                        <a href="RemoveDispensableExpressions$.html" title="Removes nodes that are not necessary.">RemoveDispensableExpressions</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="RemoveLiteralFromGroupExpressions$.html" title="Removes literals from group expressions in Aggregate, as they have no effect to the result but only makes the grouping key bigger."></a>
+                        <a href="RemoveLiteralFromGroupExpressions$.html" title="Removes literals from group expressions in Aggregate, as they have no effect to the result but only makes the grouping key bigger.">RemoveLiteralFromGroupExpressions</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="RemoveNoopOperators$.html" title="Remove no-op operators from the query plan that do not make any modifications."></a>
+                        <a href="RemoveNoopOperators$.html" title="Remove no-op operators from the query plan that do not make any modifications.">RemoveNoopOperators</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="RemoveNoopUnion$.html" title="Smplify the children of Union or remove no-op Union from the query plan that do not make any modifications to the query."></a>
+                        <a href="RemoveNoopUnion$.html" title="Smplify the children of Union or remove no-op Union from the query plan that do not make any modifications to the query.">RemoveNoopUnion</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="RemoveRedundantAggregates$.html" title="Remove redundant aggregates from a query plan."></a>
+                        <a href="RemoveRedundantAggregates$.html" title="Remove redundant aggregates from a query plan.">RemoveRedundantAggregates</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="RemoveRedundantAliases$.html" title="Remove redundant aliases from a query plan."></a>
+                        <a href="RemoveRedundantAliases$.html" title="Remove redundant aliases from a query plan.">RemoveRedundantAliases</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="RemoveRepetitionFromGroupExpressions$.html" title="Removes repetition from group expressions in Aggregate, as they have no effect to the result but only makes the grouping key bigger."></a>
+                        <a href="RemoveRepetitionFromGroupExpressions$.html" title="Removes repetition from group expressions in Aggregate, as they have no effect to the result but only makes the grouping key bigger.">RemoveRepetitionFromGroupExpressions</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ReorderAssociativeOperator$.html" title="Reorder associative integral-type operators and fold all constants into one."></a>
+                        <a href="ReorderAssociativeOperator$.html" title="Reorder associative integral-type operators and fold all constants into one.">ReorderAssociativeOperator</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ReorderJoin$.html" title="Reorder the joins and push all the conditions into join, so that the bottom ones have at least one condition."></a>
+                        <a href="ReorderJoin$.html" title="Reorder the joins and push all the conditions into join, so that the bottom ones have at least one condition.">ReorderJoin</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="ReplaceCurrentLike.html" title="Replaces the expression of CurrentDatabase with the current database name."></a>
+                        <a href="ReplaceCurrentLike.html" title="Replaces the expression of CurrentDatabase with the current database name.">ReplaceCurrentLike</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ReplaceDeduplicateWithAggregate$.html" title="Replaces logical Deduplicate operator with an Aggregate operator."></a>
+                        <a href="ReplaceDeduplicateWithAggregate$.html" title="Replaces logical Deduplicate operator with an Aggregate operator.">ReplaceDeduplicateWithAggregate</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ReplaceDistinctWithAggregate$.html" title="Replaces logical Distinct operator with an Aggregate operator."></a>
+                        <a href="ReplaceDistinctWithAggregate$.html" title="Replaces logical Distinct operator with an Aggregate operator.">ReplaceDistinctWithAggregate</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ReplaceExceptWithAntiJoin$.html" title="Replaces logical Except operator with a left-anti Join operator."></a>
+                        <a href="ReplaceExceptWithAntiJoin$.html" title="Replaces logical Except operator with a left-anti Join operator.">ReplaceExceptWithAntiJoin</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ReplaceExceptWithFilter$.html" title="If one or both of the datasets in the logical Except operator are purely transformed using Filter, this rule will replace logical Except operator with a Filter operator by flipping the filter condition of the right child."></a>
+                        <a href="ReplaceExceptWithFilter$.html" title="If one or both of the datasets in the logical Except operator are purely transformed using Filter, this rule will replace logical Except operator with a Filter operator by flipping the filter condition of the right child.">ReplaceExceptWithFilter</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ReplaceExpressions$.html" title="Finds all the expressions that are unevaluable and replace/rewrite them with semantically equivalent expressions that can be evaluated."></a>
+                        <a href="ReplaceExpressions$.html" title="Finds all the expressions that are unevaluable and replace/rewrite them with semantically equivalent expressions that can be evaluated.">ReplaceExpressions</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ReplaceIntersectWithSemiJoin$.html" title="Replaces logical Intersect operator with a left-semi Join operator."></a>
+                        <a href="ReplaceIntersectWithSemiJoin$.html" title="Replaces logical Intersect operator with a left-semi Join operator.">ReplaceIntersectWithSemiJoin</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ReplaceNullWithFalseInPredicate$.html" title="A rule that replaces Literal(null, BooleanType) with FalseLiteral, if possible, in the search condition of the WHERE/HAVING/ON(JOIN) clauses, which contain an implicit Boolean operator &quot;(search condition) = TRUE&quot;."></a>
+                        <a href="ReplaceNullWithFalseInPredicate$.html" title="A rule that replaces Literal(null, BooleanType) with FalseLiteral, if possible, in the search condition of the WHERE/HAVING/ON(JOIN) clauses, which contain an implicit Boolean operator &quot;(search condition) = TRUE&quot;.">ReplaceNullWithFalseInPredicate</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ReplaceUpdateFieldsExpression$.html" title="Replaces UpdateFields expression with an evaluable expression."></a>
+                        <a href="ReplaceUpdateFieldsExpression$.html" title="Replaces UpdateFields expression with an evaluable expression.">ReplaceUpdateFieldsExpression</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="RewriteCorrelatedScalarSubquery$.html" title="This rule rewrites correlated ScalarSubquery expressions into LEFT OUTER joins."></a>
+                        <a href="RewriteCorrelatedScalarSubquery$.html" title="This rule rewrites correlated ScalarSubquery expressions into LEFT OUTER joins.">RewriteCorrelatedScalarSubquery</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="RewriteDistinctAggregates$.html" title="This rule rewrites an aggregate query with distinct aggregations into an expanded double aggregation in which the regular aggregation expressions and every distinct clause is aggregated in a separate group."></a>
+                        <a href="RewriteDistinctAggregates$.html" title="This rule rewrites an aggregate query with distinct aggregations into an expanded double aggregation in which the regular aggregation expressions and every distinct clause is aggregated in a separate group.">RewriteDistinctAggregates</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="RewriteExceptAll$.html" title="Replaces logical Except operator using a combination of Union, Aggregate and Generate operator."></a>
+                        <a href="RewriteExceptAll$.html" title="Replaces logical Except operator using a combination of Union, Aggregate and Generate operator.">RewriteExceptAll</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="RewriteIntersectAll$.html" title="Replaces logical Intersect operator using a combination of Union, Aggregate and Generate operator."></a>
+                        <a href="RewriteIntersectAll$.html" title="Replaces logical Intersect operator using a combination of Union, Aggregate and Generate operator.">RewriteIntersectAll</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="RewriteLateralSubquery$.html" title="This rule rewrites LateralSubquery expressions into joins."></a>
+                        <a href="RewriteLateralSubquery$.html" title="This rule rewrites LateralSubquery expressions into joins.">RewriteLateralSubquery</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="RewriteNonCorrelatedExists$.html" title="Rewrite non correlated exists subquery to use ScalarSubquery WHERE EXISTS (SELECT A FROM TABLE B WHERE COL1 &gt; 10) will be rewritten to WHERE (SELECT 1 FROM (SELECT A FROM TABLE B WHERE COL1 &gt; 10) LIMIT 1) IS NOT NULL"></a>
+                        <a href="RewriteNonCorrelatedExists$.html" title="Rewrite non correlated exists subquery to use ScalarSubquery WHERE EXISTS (SELECT A FROM TABLE B WHERE COL1 &gt; 10) will be rewritten to WHERE (SELECT 1 FROM (SELECT A FROM TABLE B WHERE COL1 &gt; 10) LIMIT 1) IS NOT NULL">RewriteNonCorrelatedExists</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="RewritePredicateSubquery$.html" title="This rule rewrites predicate sub-queries into left semi/anti joins."></a>
+                        <a href="RewritePredicateSubquery$.html" title="This rule rewrites predicate sub-queries into left semi/anti joins.">RewritePredicateSubquery</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="SimpleTestOptimizer$.html" title="An optimizer used in test code."></a>
+                        <a class="class" href="SimpleTestOptimizer.html" title=""></a>
+                        <a href="SimpleTestOptimizer.html" title="">SimpleTestOptimizer</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="SimplifyBinaryComparison$.html" title="Simplifies binary comparisons with semantically-equal expressions: 1) Replace '&lt;=&gt;' with 'true' literal."></a>
+                        <a href="SimplifyBinaryComparison$.html" title="Simplifies binary comparisons with semantically-equal expressions: 1) Replace '&lt;=&gt;' with 'true' literal.">SimplifyBinaryComparison</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="SimplifyCaseConversionExpressions$.html" title="Removes the inner case conversion expressions that are unnecessary because the inner conversion is overwritten by the outer one."></a>
+                        <a href="SimplifyCaseConversionExpressions$.html" title="Removes the inner case conversion expressions that are unnecessary because the inner conversion is overwritten by the outer one.">SimplifyCaseConversionExpressions</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="SimplifyCasts$.html" title="Removes Casts that are unnecessary because the input is already the correct type."></a>
+                        <a href="SimplifyCasts$.html" title="Removes Casts that are unnecessary because the input is already the correct type.">SimplifyCasts</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="SimplifyConditionals$.html" title="Simplifies conditional expressions (if / case)."></a>
+                        <a href="SimplifyConditionals$.html" title="Simplifies conditional expressions (if / case).">SimplifyConditionals</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="SimplifyConditionalsInPredicate$.html" title="A rule that converts conditional expressions to predicate expressions, if possible, in the search condition of the WHERE/HAVING/ON(JOIN) clauses, which contain an implicit Boolean operator &quot;(search condition) = TRUE&quot;."></a>
+                        <a href="SimplifyConditionalsInPredicate$.html" title="A rule that converts conditional expressions to predicate expressions, if possible, in the search condition of the WHERE/HAVING/ON(JOIN) clauses, which contain an implicit Boolean operator &quot;(search condition) = TRUE&quot;.">SimplifyConditionalsInPredicate</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="SimplifyExtractValueOps$.html" title="Simplify redundant CreateNamedStruct, CreateArray and CreateMap expressions."></a>
+                        <a href="SimplifyExtractValueOps$.html" title="Simplify redundant CreateNamedStruct, CreateArray and CreateMap expressions.">SimplifyExtractValueOps</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="SpecialDatetimeValues$.html" title="Replaces casts of special datetime strings by its date/timestamp values if the input strings are foldable."></a>
+                        <a href="SpecialDatetimeValues$.html" title="Replaces casts of special datetime strings by its date/timestamp values if the input strings are foldable.">SpecialDatetimeValues</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="StarSchemaDetection$.html" title="Encapsulates star-schema detection logic."></a>
+                        <a href="StarSchemaDetection$.html" title="Encapsulates star-schema detection logic.">StarSchemaDetection</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="TransposeWindow$.html" title="Transpose Adjacent Window Expressions."></a>
+                        <a href="TransposeWindow$.html" title="Transpose Adjacent Window Expressions.">TransposeWindow</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="UnwrapCastInBinaryComparison$.html" title="Unwrap casts in binary comparison or In/InSet operations with patterns like following:"></a>
+                        <a href="UnwrapCastInBinaryComparison$.html" title="Unwrap casts in binary comparison or In/InSet operations with patterns like following:">UnwrapCastInBinaryComparison</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="object value">
+      <div id="definition">
+        <div class="big-circle object">o</div>
+        <p id="owner"><a href="../../../../../index.html" class="extype" name="org">org</a>.<a href="../../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../../index.html" class="extype" name="org.apache.spark.sql">sql</a>.<a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a>.<a href="index.html" class="extype" name="org.apache.spark.sql.catalyst.optimizer">optimizer</a></p>
+        <h1>EliminateSorts<span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <span class="name">EliminateSorts</span><span class="result"> extends <a href="../rules/Rule.html" class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</a>[<a href="../plans/logical/LogicalPlan.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</a>]</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Removes Sort operations if they don't affect the final output ordering.
+Note that changes in the final output ordering may affect the file size (SPARK-32318).
+This rule handles the following cases:
+1) if the child maximum number of rows less than or equal to 1
+2) if the sort order is empty or the sort order does not have any reference
+3) if the Sort operator is a local sort and the child is already sorted
+4) if there is another Sort operator separated by 0...n Project, Filter, Repartition or
+   RepartitionByExpression (with deterministic expressions) operators
+5) if the Sort operator is within Join separated by 0...n Project, Filter, Repartition or
+   RepartitionByExpression (with deterministic expressions) operators only and the Join condition
+   is deterministic
+6) if the Sort operator is within GroupBy separated by 0...n Project, Filter, Repartition or
+   RepartitionByExpression (with deterministic expressions) operators only and the aggregate
+   function is order irrelevant
+</p></div><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><a href="../rules/Rule.html" class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</a>[<a href="../plans/logical/LogicalPlan.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</a>], <span class="extype" name="org.apache.spark.internal.Logging">Logging</span>, <a href="../SQLConfHelper.html" class="extype" name="org.apache.spark.sql.catalyst.SQLConfHelper">SQLConfHelper</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="org.apache.spark.sql.catalyst.optimizer.EliminateSorts"><span>EliminateSorts</span></li><li class="in" name="org.apache.spark.sql.catalyst.rules.Rule"><span>Rule</span></li><li class="in" name="org.apache.spark.internal.Logging"><span>Logging</span></li><li class="in" name="org.apache.spark.sql.catalyst.SQLConfHelper"><span>SQLConfHelper</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.optimizer.EliminateSorts#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply(plan:org.apache.spark.sql.catalyst.plans.logical.LogicalPlan):org.apache.spark.sql.catalyst.plans.logical.LogicalPlan"></a><a id="apply(LogicalPlan):LogicalPlan"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#apply(plan:org.apache.spark.sql.catalyst.plans.logical.LogicalPlan):org.apache.spark.sql.catalyst.plans.logical.LogicalPlan" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="plan">plan: <a href="../plans/logical/LogicalPlan.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</a></span>)</span><span class="result">: <a href="../plans/logical/LogicalPlan.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.sql.catalyst.optimizer.EliminateSorts">EliminateSorts</a> → <a href="../rules/Rule.html" class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</a></dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.SQLConfHelper#conf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="conf:org.apache.spark.sql.internal.SQLConf"></a><a id="conf:SQLConf"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#conf:org.apache.spark.sql.internal.SQLConf" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">conf</span><span class="result">: <a href="../../internal/SQLConf.html" class="extype" name="org.apache.spark.sql.internal.SQLConf">SQLConf</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The active config object within the current scope.</p><div class="fullcomment"><div class="comment cmt"><p>The active config object within the current scope.
+See <span class="extype" name="SQLConf.get">SQLConf.get</span> for more information.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../SQLConfHelper.html" class="extype" name="org.apache.spark.sql.catalyst.SQLConfHelper">SQLConfHelper</a></dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#initializeLogIfNecessary" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="initializeLogIfNecessary(isInterpreter:Boolean,silent:Boolean):Boolean"></a><a id="initializeLogIfNecessary(Boolean,Boolean):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#initializeLogIfNecessary(isInterpreter:Boolean,silent:Boolean):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">initializeLogIfNecessary</span><span class="params">(<span name="isInterpreter">isInterpreter: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="silent">silent: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#initializeLogIfNecessary" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="initializeLogIfNecessary(isInterpreter:Boolean):Unit"></a><a id="initializeLogIfNecessary(Boolean):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#initializeLogIfNecessary(isInterpreter:Boolean):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">initializeLogIfNecessary</span><span class="params">(<span name="isInterpreter">isInterpreter: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#isTraceEnabled" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isTraceEnabled():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#isTraceEnabled():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isTraceEnabled</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#log" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="log:org.slf4j.Logger"></a><a id="log:Logger"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#log:org.slf4j.Logger" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">log</span><span class="result">: <span class="extype" name="org.slf4j.Logger">Logger</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logDebug" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logDebug(msg:=&gt;String,throwable:Throwable):Unit"></a><a id="logDebug(⇒String,Throwable):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#logDebug(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logDebug</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logDebug" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logDebug(msg:=&gt;String):Unit"></a><a id="logDebug(⇒String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#logDebug(msg:=&gt;String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logDebug</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logError" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logError(msg:=&gt;String,throwable:Throwable):Unit"></a><a id="logError(⇒String,Throwable):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#logError(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logError</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logError" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logError(msg:=&gt;String):Unit"></a><a id="logError(⇒String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#logError(msg:=&gt;String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logError</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logInfo" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logInfo(msg:=&gt;String,throwable:Throwable):Unit"></a><a id="logInfo(⇒String,Throwable):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#logInfo(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logInfo</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logInfo" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logInfo(msg:=&gt;String):Unit"></a><a id="logInfo(⇒String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#logInfo(msg:=&gt;String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logInfo</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logName" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logName:String"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#logName:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logName</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logTrace" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logTrace(msg:=&gt;String,throwable:Throwable):Unit"></a><a id="logTrace(⇒String,Throwable):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#logTrace(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logTrace</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logTrace" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logTrace(msg:=&gt;String):Unit"></a><a id="logTrace(⇒String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#logTrace(msg:=&gt;String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logTrace</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logWarning" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logWarning(msg:=&gt;String,throwable:Throwable):Unit"></a><a id="logWarning(⇒String,Throwable):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#logWarning(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logWarning</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logWarning" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logWarning(msg:=&gt;String):Unit"></a><a id="logWarning(⇒String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#logWarning(msg:=&gt;String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logWarning</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.rules.Rule#ruleId" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ruleId:org.apache.spark.sql.catalyst.rules.RuleId"></a><a id="ruleId:RuleId"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#ruleId:org.apache.spark.sql.catalyst.rules.RuleId" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ruleId</span><span class="result">: <a href="../rules/RuleId.html" class="extype" name="org.apache.spark.sql.catalyst.rules.RuleId">RuleId</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../rules/Rule.html" class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.rules.Rule#ruleName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ruleName:String"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#ruleName:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ruleName</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Name for this rule, automatically inferred based on class name.</p><div class="fullcomment"><div class="comment cmt"><p>Name for this rule, automatically inferred based on class name.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../rules/Rule.html" class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</a></dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/optimizer/EliminateSorts$.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="org.apache.spark.sql.catalyst.rules.Rule">
+              <h3>Inherited from <a href="../rules/Rule.html" class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</a>[<a href="../plans/logical/LogicalPlan.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</a>]</h3>
+            </div><div class="parent" name="org.apache.spark.internal.Logging">
+              <h3>Inherited from <span class="extype" name="org.apache.spark.internal.Logging">Logging</span></h3>
+            </div><div class="parent" name="org.apache.spark.sql.catalyst.SQLConfHelper">
+              <h3>Inherited from <a href="../SQLConfHelper.html" class="extype" name="org.apache.spark.sql.catalyst.SQLConfHelper">SQLConfHelper</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

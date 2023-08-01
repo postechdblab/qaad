@@ -1,0 +1,478 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project SQL 3.2.1 API  - org.apache.spark.sql.execution.datasources.v2.json</title>
+          <meta name="description" content="Spark Project SQL 3.2.1 API - org.apache.spark.sql.execution.datasources.v2.json" />
+          <meta name="keywords" content="Spark Project SQL 3.2.1 API org.apache.spark.sql.execution.datasources.v2.json" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project SQL 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sql"></a><a id="sql:sql"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Allows the execution of relational queries, including those expressed in SQL using Spark." href="../../../../index.html"><span class="name">sql</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Allows the execution of relational queries, including those expressed in SQL using Spark.</p><div class="fullcomment"><div class="comment cmt"><p>Allows the execution of relational queries, including those expressed in SQL using Spark.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="execution"></a><a id="execution:execution"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/execution/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="The physical execution component of Spark SQL." href="../../../index.html"><span class="name">execution</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">The physical execution component of Spark SQL.</p><div class="fullcomment"><div class="comment cmt"><p>The physical execution component of Spark SQL. Note that this is a private package.
+All classes in catalyst are considered an internal API to Spark SQL and are subject
+to change between minor releases.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="datasources"></a><a id="datasources:datasources"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/execution/datasources/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">datasources</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="v2"></a><a id="v2:v2"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/execution/datasources/v2/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">v2</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark.sql.execution.datasources">datasources</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.csv" visbl="pub" class="indented8 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="csv"></a><a id="csv:csv"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/execution/datasources/v2/csv/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../csv/index.html"><span class="name">csv</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2">v2</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.jdbc" visbl="pub" class="indented8 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="jdbc"></a><a id="jdbc:jdbc"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/execution/datasources/v2/jdbc/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../jdbc/index.html"><span class="name">jdbc</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2">v2</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.json" visbl="pub" class="indented8 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="json"></a><a id="json:json"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/execution/datasources/v2/json/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">json</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2">v2</a></dd></dl></div>
+    </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="class" href="JsonDataSourceV2.html" title=""></a>
+                        <a href="JsonDataSourceV2.html" title="">JsonDataSourceV2</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="class" href="JsonPartitionReaderFactory.html" title="A factory used to create JSON readers."></a>
+                        <a href="JsonPartitionReaderFactory.html" title="A factory used to create JSON readers.">JsonPartitionReaderFactory</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="class" href="JsonScan.html" title=""></a>
+                        <a href="JsonScan.html" title="">JsonScan</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="class" href="JsonScanBuilder.html" title=""></a>
+                        <a href="JsonScanBuilder.html" title="">JsonScanBuilder</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="class" href="JsonTable.html" title=""></a>
+                        <a href="JsonTable.html" title="">JsonTable</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="class" href="JsonWrite.html" title=""></a>
+                        <a href="JsonWrite.html" title="">JsonWrite</a>
+                      </li><li name="org.apache.spark.sql.execution.datasources.v2.orc" visbl="pub" class="indented8 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="orc"></a><a id="orc:orc"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/execution/datasources/v2/orc/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../orc/index.html"><span class="name">orc</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2">v2</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.parquet" visbl="pub" class="indented8 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="parquet"></a><a id="parquet:parquet"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/execution/datasources/v2/parquet/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../parquet/index.html"><span class="name">parquet</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2">v2</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.text" visbl="pub" class="indented8 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="text"></a><a id="text:text"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/execution/datasources/v2/text/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../text/index.html"><span class="name">text</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2">v2</a></dd></dl></div>
+    </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../../../../../index.html" class="extype" name="org">org</a>.<a href="../../../../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../../../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../../../../index.html" class="extype" name="org.apache.spark.sql">sql</a>.<a href="../../../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a>.<a href="../../index.html" class="extype" name="org.apache.spark.sql.execution.datasources">datasources</a>.<a href="../index.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2">v2</a></p>
+        <h1>json<span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/execution/datasources/v2/json/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">json</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.spark.sql.execution.datasources.v2.json.JsonDataSourceV2" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="JsonDataSourceV2extendsFileDataSourceV2"></a><a id="JsonDataSourceV2:JsonDataSourceV2"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/execution/datasources/v2/json/JsonDataSourceV2.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="JsonDataSourceV2.html"><span class="name">JsonDataSourceV2</span></a><span class="result"> extends <a href="../FileDataSourceV2.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.FileDataSourceV2">FileDataSourceV2</a></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.json.JsonPartitionReaderFactory" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="JsonPartitionReaderFactoryextendsFilePartitionReaderFactorywithProductwithSerializable"></a><a id="JsonPartitionReaderFactory:JsonPartitionReaderFactory"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/execution/datasources/v2/json/JsonPartitionReaderFactory.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="A factory used to create JSON readers." href="JsonPartitionReaderFactory.html"><span class="name">JsonPartitionReaderFactory</span></a><span class="params">(<span name="sqlConf">sqlConf: <span class="extype" name="org.apache.spark.sql.internal.SQLConf">SQLConf</span></span>, <span name="broadcastedConf">broadcastedConf: <span class="extype" name="org.apache.spark.broadcast.Broadcast">Broadcast</span>[<span class="extype" name="org.apache.spark.util.SerializableConfiguration">SerializableConfiguration</span>]</span>, <span name="dataSchema">dataSchema: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>, <span name="readDataSchema">readDataSchema: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>, <span name="partitionSchema">partitionSchema: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>, <span name="parsedOptions">parsedOptions: <span class="extype" name="org.apache.spark.sql.catalyst.json.JSONOptionsInRead">JSONOptionsInRead</span></span>, <span name="filters">filters: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.sources.Filter">Filter</span>]</span>)</span><span class="result"> extends <a href="../FilePartitionReaderFactory.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.FilePartitionReaderFactory">FilePartitionReaderFactory</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A factory used to create JSON readers.</p><div class="fullcomment"><div class="comment cmt"><p>A factory used to create JSON readers.
+</p></div><dl class="paramcmts block"><dt class="param">sqlConf</dt><dd class="cmt"><p>SQL configuration.</p></dd><dt class="param">broadcastedConf</dt><dd class="cmt"><p>Broadcast serializable Hadoop Configuration.</p></dd><dt class="param">dataSchema</dt><dd class="cmt"><p>Schema of JSON files.</p></dd><dt class="param">readDataSchema</dt><dd class="cmt"><p>Required schema of JSON files.</p></dd><dt class="param">partitionSchema</dt><dd class="cmt"><p>Schema of partitions.</p></dd><dt class="param">parsedOptions</dt><dd class="cmt"><p>Options for parsing JSON files.</p></dd><dt class="param">filters</dt><dd class="cmt"><p>The filters pushed down to JSON datasource.</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.json.JsonScan" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="JsonScanextendsTextBasedFileScanwithProductwithSerializable"></a><a id="JsonScan:JsonScan"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/execution/datasources/v2/json/JsonScan.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="JsonScan.html"><span class="name">JsonScan</span></a><span class="params">(<span name="sparkSession">sparkSession: <a href="../../../../SparkSession.html" class="extype" name="org.apache.spark.sql.SparkSession">SparkSession</a></span>, <span name="fileIndex">fileIndex: <a href="../../PartitioningAwareFileIndex.html" class="extype" name="org.apache.spark.sql.execution.datasources.PartitioningAwareFileIndex">PartitioningAwareFileIndex</a></span>, <span name="dataSchema">dataSchema: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>, <span name="readDataSchema">readDataSchema: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>, <span name="readPartitionSchema">readPartitionSchema: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>, <span name="options">options: <span class="extype" name="org.apache.spark.sql.util.CaseInsensitiveStringMap">CaseInsensitiveStringMap</span></span>, <span name="pushedFilters">pushedFilters: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="org.apache.spark.sql.sources.Filter">Filter</span>]</span>, <span name="partitionFilters">partitionFilters: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.Expression">Expression</span>] = <span class="symbol">Seq.empty</span></span>, <span name="dataFilters">dataFilters: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.Expression">Expression</span>] = <span class="symbol">Seq.empty</span></span>)</span><span class="result"> extends <a href="../TextBasedFileScan.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.TextBasedFileScan">TextBasedFileScan</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.json.JsonScanBuilder" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="JsonScanBuilderextendsFileScanBuilderwithSupportsPushDownFilters"></a><a id="JsonScanBuilder:JsonScanBuilder"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/execution/datasources/v2/json/JsonScanBuilder.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="JsonScanBuilder.html"><span class="name">JsonScanBuilder</span></a><span class="result"> extends <a href="../FileScanBuilder.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.FileScanBuilder">FileScanBuilder</a> with <span class="extype" name="org.apache.spark.sql.connector.read.SupportsPushDownFilters">SupportsPushDownFilters</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.json.JsonTable" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="JsonTableextendsFileTablewithProductwithSerializable"></a><a id="JsonTable:JsonTable"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/execution/datasources/v2/json/JsonTable.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="JsonTable.html"><span class="name">JsonTable</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="sparkSession">sparkSession: <a href="../../../../SparkSession.html" class="extype" name="org.apache.spark.sql.SparkSession">SparkSession</a></span>, <span name="options">options: <span class="extype" name="org.apache.spark.sql.util.CaseInsensitiveStringMap">CaseInsensitiveStringMap</span></span>, <span name="paths">paths: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="userSpecifiedSchema">userSpecifiedSchema: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span>]</span>, <span name="fallbackFileFormat">fallbackFileFormat: <span class="extype" name="scala.Predef.Class">Class</span>[_ &lt;: <a href="../../FileFormat.html" class="extype" name="org.apache.spark.sql.execution.datasources.FileFormat">FileFormat</a>]</span>)</span><span class="result"> extends <a href="../FileTable.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.FileTable">FileTable</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.json.JsonWrite" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="JsonWriteextendsFileWritewithProductwithSerializable"></a><a id="JsonWrite:JsonWrite"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/execution/datasources/v2/json/JsonWrite.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="JsonWrite.html"><span class="name">JsonWrite</span></a><span class="params">(<span name="paths">paths: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="formatName">formatName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="supportsDataType">supportsDataType: (<span class="extype" name="org.apache.spark.sql.types.DataType">DataType</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="info">info: <span class="extype" name="org.apache.spark.sql.connector.write.LogicalWriteInfo">LogicalWriteInfo</span></span>)</span><span class="result"> extends <a href="../FileWrite.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.FileWrite">FileWrite</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

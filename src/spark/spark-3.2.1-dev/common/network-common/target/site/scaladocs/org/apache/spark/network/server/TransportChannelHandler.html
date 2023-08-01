@@ -1,0 +1,1043 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Networking 3.2.1 API  - org.apache.spark.network.server.TransportChannelHandler</title>
+          <meta name="description" content="Spark Project Networking 3.2.1 API - org.apache.spark.network.server.TransportChannelHandler" />
+          <meta name="keywords" content="Spark Project Networking 3.2.1 API org.apache.spark.network.server.TransportChannelHandler" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Networking 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.network" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="network"></a><a id="network:network"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">network</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.server" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="server"></a><a id="server:server"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="index.html"><span class="name">server</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="AbstractAuthRpcHandler.html" title="RPC Handler which performs authentication, and when it's successful, delegates further calls to another RPC handler."></a>
+                        <a href="AbstractAuthRpcHandler.html" title="RPC Handler which performs authentication, and when it's successful, delegates further calls to another RPC handler.">AbstractAuthRpcHandler</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="BlockPushNonFatalFailure.html" title="A special RuntimeException thrown when shuffle service experiences a non-fatal failure with handling block push requests with push-based shuffle."></a>
+                        <a href="BlockPushNonFatalFailure.html" title="A special RuntimeException thrown when shuffle service experiences a non-fatal failure with handling block push requests with push-based shuffle.">BlockPushNonFatalFailure</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ChunkFetchRequestHandler.html" title="A dedicated ChannelHandler for processing ChunkFetchRequest messages."></a>
+                        <a href="ChunkFetchRequestHandler.html" title="A dedicated ChannelHandler for processing ChunkFetchRequest messages.">ChunkFetchRequestHandler</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="MessageHandler.html" title="Handles either request or response messages coming off of Netty."></a>
+                        <a href="MessageHandler.html" title="Handles either request or response messages coming off of Netty.">MessageHandler</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="NoOpRpcHandler.html" title="An RpcHandler suitable for a client-only TransportContext, which cannot receive RPCs."></a>
+                        <a href="NoOpRpcHandler.html" title="An RpcHandler suitable for a client-only TransportContext, which cannot receive RPCs.">NoOpRpcHandler</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="OneForOneStreamManager.html" title="StreamManager which allows registration of an Iterator&amp;lt;ManagedBuffer&amp;gt;, which are individually fetched as chunks by the client."></a>
+                        <a href="OneForOneStreamManager.html" title="StreamManager which allows registration of an Iterator&amp;lt;ManagedBuffer&amp;gt;, which are individually fetched as chunks by the client.">OneForOneStreamManager</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="RpcHandler.html" title="Handler for sendRPC() messages sent by org.apache.spark.network.client.TransportClients."></a>
+                        <a href="RpcHandler.html" title="Handler for sendRPC() messages sent by org.apache.spark.network.client.TransportClients.">RpcHandler</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="StreamManager.html" title="The StreamManager is used to fetch individual chunks from a stream."></a>
+                        <a href="StreamManager.html" title="The StreamManager is used to fetch individual chunks from a stream.">StreamManager</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="" title="The single Transport-level Channel handler which is used for delegating requests to the TransportRequestHandler and responses to the TransportResponseHandler."></a>
+                        <a href="" title="The single Transport-level Channel handler which is used for delegating requests to the TransportRequestHandler and responses to the TransportResponseHandler.">TransportChannelHandler</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TransportRequestHandler.html" title="A handler that processes requests from clients and writes chunk data back."></a>
+                        <a href="TransportRequestHandler.html" title="A handler that processes requests from clients and writes chunk data back.">TransportRequestHandler</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TransportServer.html" title="Server for the efficient, low-level streaming service."></a>
+                        <a href="TransportServer.html" title="Server for the efficient, low-level streaming service.">TransportServer</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="TransportServerBootstrap.html" title="A bootstrap which is executed on a TransportServer's client channel once a client connects to the server."></a>
+                        <a href="TransportServerBootstrap.html" title="A bootstrap which is executed on a TransportServer's client channel once a client connects to the server.">TransportServerBootstrap</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="class type">
+      <div id="definition">
+        <div class="big-circle class">c</div>
+        <p id="owner"><a href="../../../../index.html" class="extype" name="org">org</a>.<a href="../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../index.html" class="extype" name="org.apache.spark.network">network</a>.<a href="index.html" class="extype" name="org.apache.spark.network.server">server</a></p>
+        <h1>TransportChannelHandler<span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TransportChannelHandler</span><span class="result"> extends <span class="extype" name="io.netty.channel.SimpleChannelInboundHandler">SimpleChannelInboundHandler</span>[<a href="../protocol/Message.html" class="extype" name="org.apache.spark.network.protocol.Message">Message</a>]</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The single Transport-level Channel handler which is used for delegating requests to the
+<code><a href="TransportRequestHandler.html" class="extype" name="org.apache.spark.network.server.TransportRequestHandler">TransportRequestHandler</a></code> and responses to the <code><span class="extype" name="TransportResponseHandler">TransportResponseHandler</span></code>.</p><p>All channels created in the transport layer are bidirectional. When the Client initiates a Netty
+Channel with a RequestMessage (which gets handled by the Server's RequestHandler), the Server
+will produce a ResponseMessage (handled by the Client's ResponseHandler). However, the Server
+also gets a handle on the same Channel, so it may then begin to send RequestMessages to the
+Client.
+This means that the Client also needs a RequestHandler and the Server needs a ResponseHandler,
+for the Client's responses to the Server's requests.</p><p>This class also handles timeouts from a <code><span class="extype" name="io.netty.handler.timeout.IdleStateHandler">io.netty.handler.timeout.IdleStateHandler</span></code>.
+We consider a connection timed out if there are outstanding fetch or RPC requests but no traffic
+on the channel for at least <code>requestTimeoutMs</code>. Note that this is duplex traffic; we will not
+timeout if the client is continuously sending but getting no responses, for simplicity.
+</p></div><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><span class="extype" name="io.netty.channel.SimpleChannelInboundHandler">SimpleChannelInboundHandler</span>[<a href="../protocol/Message.html" class="extype" name="org.apache.spark.network.protocol.Message">Message</a>], <span class="extype" name="io.netty.channel.ChannelInboundHandlerAdapter">ChannelInboundHandlerAdapter</span>, <span class="extype" name="io.netty.channel.ChannelInboundHandler">ChannelInboundHandler</span>, <span class="extype" name="io.netty.channel.ChannelHandlerAdapter">ChannelHandlerAdapter</span>, <span class="extype" name="io.netty.channel.ChannelHandler">ChannelHandler</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="org.apache.spark.network.server.TransportChannelHandler"><span>TransportChannelHandler</span></li><li class="in" name="io.netty.channel.SimpleChannelInboundHandler"><span>SimpleChannelInboundHandler</span></li><li class="in" name="io.netty.channel.ChannelInboundHandlerAdapter"><span>ChannelInboundHandlerAdapter</span></li><li class="in" name="io.netty.channel.ChannelInboundHandler"><span>ChannelInboundHandler</span></li><li class="in" name="io.netty.channel.ChannelHandlerAdapter"><span>ChannelHandlerAdapter</span></li><li class="in" name="io.netty.channel.ChannelHandler"><span>ChannelHandler</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="org.apache.spark.network.server.TransportChannelHandler#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(client:org.apache.spark.network.client.TransportClient,responseHandler:org.apache.spark.network.client.TransportResponseHandler,requestHandler:org.apache.spark.network.server.TransportRequestHandler,requestTimeoutMs:Long,skipChunkFetchRequest:Boolean,closeIdleConnections:Boolean,transportContext:org.apache.spark.network.TransportContext):org.apache.spark.network.server.TransportChannelHandler"></a><a id="&lt;init&gt;:TransportChannelHandler"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#&lt;init&gt;(client:org.apache.spark.network.client.TransportClient,responseHandler:org.apache.spark.network.client.TransportResponseHandler,requestHandler:org.apache.spark.network.server.TransportRequestHandler,requestTimeoutMs:Long,skipChunkFetchRequest:Boolean,closeIdleConnections:Boolean,transportContext:org.apache.spark.network.TransportContext):org.apache.spark.network.server.TransportChannelHandler" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TransportChannelHandler</span><span class="params">(<span name="client">client: <a href="../client/TransportClient.html" class="extype" name="org.apache.spark.network.client.TransportClient">TransportClient</a></span>, <span name="responseHandler">responseHandler: <a href="../client/TransportResponseHandler.html" class="extype" name="org.apache.spark.network.client.TransportResponseHandler">TransportResponseHandler</a></span>, <span name="requestHandler">requestHandler: <a href="TransportRequestHandler.html" class="extype" name="org.apache.spark.network.server.TransportRequestHandler">TransportRequestHandler</a></span>, <span name="requestTimeoutMs">requestTimeoutMs: <span class="extype" name="scala.Long">Long</span></span>, <span name="skipChunkFetchRequest">skipChunkFetchRequest: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="closeIdleConnections">closeIdleConnections: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="transportContext">transportContext: <a href="../TransportContext.html" class="extype" name="org.apache.spark.network.TransportContext">TransportContext</a></span>)</span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.spark.network.server.TransportChannelHandler#acceptInboundMessage" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="acceptInboundMessage(msg:Any):Boolean"></a><a id="acceptInboundMessage(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#acceptInboundMessage(msg:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">acceptInboundMessage</span><span class="params">(<span name="msg">msg: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Overwrite acceptInboundMessage to properly delegate ChunkFetchRequest messages
+to ChunkFetchRequestHandler.</p><div class="fullcomment"><div class="comment cmt"><p>Overwrite acceptInboundMessage to properly delegate ChunkFetchRequest messages
+to ChunkFetchRequestHandler.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.network.server.TransportChannelHandler">TransportChannelHandler</a> → SimpleChannelInboundHandler</dd><dt>Annotations</dt><dd>
+                <span class="name">@Override</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.apache.spark.network.server.TransportChannelHandler#channelActive" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="channelActive(ctx:io.netty.channel.ChannelHandlerContext):Unit"></a><a id="channelActive(ChannelHandlerContext):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#channelActive(ctx:io.netty.channel.ChannelHandlerContext):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">channelActive</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="io.netty.channel.ChannelHandlerContext">ChannelHandlerContext</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.network.server.TransportChannelHandler">TransportChannelHandler</a> → ChannelInboundHandlerAdapter → ChannelInboundHandler</dd><dt>Annotations</dt><dd>
+                <span class="name">@Override</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.network.server.TransportChannelHandler#channelInactive" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="channelInactive(ctx:io.netty.channel.ChannelHandlerContext):Unit"></a><a id="channelInactive(ChannelHandlerContext):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#channelInactive(ctx:io.netty.channel.ChannelHandlerContext):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">channelInactive</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="io.netty.channel.ChannelHandlerContext">ChannelHandlerContext</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.network.server.TransportChannelHandler">TransportChannelHandler</a> → ChannelInboundHandlerAdapter → ChannelInboundHandler</dd><dt>Annotations</dt><dd>
+                <span class="name">@Override</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="io.netty.channel.SimpleChannelInboundHandler#channelRead" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="channelRead(x$1:io.netty.channel.ChannelHandlerContext,x$2:Any):Unit"></a><a id="channelRead(ChannelHandlerContext,Any):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#channelRead(x$1:io.netty.channel.ChannelHandlerContext,x$2:Any):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">channelRead</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="io.netty.channel.ChannelHandlerContext">ChannelHandlerContext</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>SimpleChannelInboundHandler → ChannelInboundHandlerAdapter → ChannelInboundHandler</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Exception]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.network.server.TransportChannelHandler#channelRead0" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="channelRead0(ctx:io.netty.channel.ChannelHandlerContext,request:org.apache.spark.network.protocol.Message):Unit"></a><a id="channelRead0(ChannelHandlerContext,Message):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#channelRead0(ctx:io.netty.channel.ChannelHandlerContext,request:org.apache.spark.network.protocol.Message):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">channelRead0</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="io.netty.channel.ChannelHandlerContext">ChannelHandlerContext</span></span>, <span name="request">request: <a href="../protocol/Message.html" class="extype" name="org.apache.spark.network.protocol.Message">Message</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.network.server.TransportChannelHandler">TransportChannelHandler</a> → SimpleChannelInboundHandler</dd><dt>Annotations</dt><dd>
+                <span class="name">@Override</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="io.netty.channel.ChannelInboundHandlerAdapter#channelReadComplete" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="channelReadComplete(x$1:io.netty.channel.ChannelHandlerContext):Unit"></a><a id="channelReadComplete(ChannelHandlerContext):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#channelReadComplete(x$1:io.netty.channel.ChannelHandlerContext):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">channelReadComplete</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="io.netty.channel.ChannelHandlerContext">ChannelHandlerContext</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ChannelInboundHandlerAdapter → ChannelInboundHandler</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Exception]</span>
+    </span>)</span>
+              
+                <span class="name">@Skip</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.network.server.TransportChannelHandler#channelRegistered" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="channelRegistered(ctx:io.netty.channel.ChannelHandlerContext):Unit"></a><a id="channelRegistered(ChannelHandlerContext):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#channelRegistered(ctx:io.netty.channel.ChannelHandlerContext):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">channelRegistered</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="io.netty.channel.ChannelHandlerContext">ChannelHandlerContext</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.network.server.TransportChannelHandler">TransportChannelHandler</a> → ChannelInboundHandlerAdapter → ChannelInboundHandler</dd><dt>Annotations</dt><dd>
+                <span class="name">@Override</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.network.server.TransportChannelHandler#channelUnregistered" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="channelUnregistered(ctx:io.netty.channel.ChannelHandlerContext):Unit"></a><a id="channelUnregistered(ChannelHandlerContext):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#channelUnregistered(ctx:io.netty.channel.ChannelHandlerContext):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">channelUnregistered</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="io.netty.channel.ChannelHandlerContext">ChannelHandlerContext</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.network.server.TransportChannelHandler">TransportChannelHandler</a> → ChannelInboundHandlerAdapter → ChannelInboundHandler</dd><dt>Annotations</dt><dd>
+                <span class="name">@Override</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="io.netty.channel.ChannelInboundHandlerAdapter#channelWritabilityChanged" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="channelWritabilityChanged(x$1:io.netty.channel.ChannelHandlerContext):Unit"></a><a id="channelWritabilityChanged(ChannelHandlerContext):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#channelWritabilityChanged(x$1:io.netty.channel.ChannelHandlerContext):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">channelWritabilityChanged</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="io.netty.channel.ChannelHandlerContext">ChannelHandlerContext</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ChannelInboundHandlerAdapter → ChannelInboundHandler</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Exception]</span>
+    </span>)</span>
+              
+                <span class="name">@Skip</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="io.netty.channel.ChannelHandlerAdapter#ensureNotSharable" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensureNotSharable():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#ensureNotSharable():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ensureNotSharable</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="io.netty.channel">channel</span>] </dd><dt>Definition Classes</dt><dd>ChannelHandlerAdapter</dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.spark.network.server.TransportChannelHandler#exceptionCaught" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="exceptionCaught(ctx:io.netty.channel.ChannelHandlerContext,cause:Throwable):Unit"></a><a id="exceptionCaught(ChannelHandlerContext,Throwable):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#exceptionCaught(ctx:io.netty.channel.ChannelHandlerContext,cause:Throwable):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">exceptionCaught</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="io.netty.channel.ChannelHandlerContext">ChannelHandlerContext</span></span>, <span name="cause">cause: <span class="extype" name="java.lang.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.network.server.TransportChannelHandler">TransportChannelHandler</a> → ChannelInboundHandlerAdapter → ChannelInboundHandler → ChannelHandlerAdapter → ChannelHandler</dd><dt>Annotations</dt><dd>
+                <span class="name">@Override</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.network.server.TransportChannelHandler#getClient" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getClient():org.apache.spark.network.client.TransportClient"></a><a id="getClient():TransportClient"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#getClient():org.apache.spark.network.client.TransportClient" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClient</span><span class="params">()</span><span class="result">: <a href="../client/TransportClient.html" class="extype" name="org.apache.spark.network.client.TransportClient">TransportClient</a></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.network.server.TransportChannelHandler#getResponseHandler" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getResponseHandler():org.apache.spark.network.client.TransportResponseHandler"></a><a id="getResponseHandler():TransportResponseHandler"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#getResponseHandler():org.apache.spark.network.client.TransportResponseHandler" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getResponseHandler</span><span class="params">()</span><span class="result">: <a href="../client/TransportResponseHandler.html" class="extype" name="org.apache.spark.network.client.TransportResponseHandler">TransportResponseHandler</a></span>
+      </span>
+      
+      
+    </li><li name="io.netty.channel.ChannelHandlerAdapter#handlerAdded" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="handlerAdded(x$1:io.netty.channel.ChannelHandlerContext):Unit"></a><a id="handlerAdded(ChannelHandlerContext):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#handlerAdded(x$1:io.netty.channel.ChannelHandlerContext):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">handlerAdded</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="io.netty.channel.ChannelHandlerContext">ChannelHandlerContext</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ChannelHandlerAdapter → ChannelHandler</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Exception]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="io.netty.channel.ChannelHandlerAdapter#handlerRemoved" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="handlerRemoved(x$1:io.netty.channel.ChannelHandlerContext):Unit"></a><a id="handlerRemoved(ChannelHandlerContext):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#handlerRemoved(x$1:io.netty.channel.ChannelHandlerContext):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">handlerRemoved</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="io.netty.channel.ChannelHandlerContext">ChannelHandlerContext</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ChannelHandlerAdapter → ChannelHandler</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Exception]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="io.netty.channel.ChannelHandlerAdapter#isSharable" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isSharable():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#isSharable():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isSharable</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ChannelHandlerAdapter</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.spark.network.server.TransportChannelHandler#userEventTriggered" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="userEventTriggered(ctx:io.netty.channel.ChannelHandlerContext,evt:Any):Unit"></a><a id="userEventTriggered(ChannelHandlerContext,Any):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#userEventTriggered(ctx:io.netty.channel.ChannelHandlerContext,evt:Any):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">userEventTriggered</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="io.netty.channel.ChannelHandlerContext">ChannelHandlerContext</span></span>, <span name="evt">evt: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Triggered based on events from an <code><span class="extype" name="io.netty.handler.timeout.IdleStateHandler">io.netty.handler.timeout.IdleStateHandler</span></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Triggered based on events from an <code><span class="extype" name="io.netty.handler.timeout.IdleStateHandler">io.netty.handler.timeout.IdleStateHandler</span></code>.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.network.server.TransportChannelHandler">TransportChannelHandler</a> → ChannelInboundHandlerAdapter → ChannelInboundHandler</dd><dt>Annotations</dt><dd>
+                <span class="name">@Override</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/TransportChannelHandler.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="io.netty.channel.SimpleChannelInboundHandler">
+              <h3>Inherited from <span class="extype" name="io.netty.channel.SimpleChannelInboundHandler">SimpleChannelInboundHandler</span>[<a href="../protocol/Message.html" class="extype" name="org.apache.spark.network.protocol.Message">Message</a>]</h3>
+            </div><div class="parent" name="io.netty.channel.ChannelInboundHandlerAdapter">
+              <h3>Inherited from <span class="extype" name="io.netty.channel.ChannelInboundHandlerAdapter">ChannelInboundHandlerAdapter</span></h3>
+            </div><div class="parent" name="io.netty.channel.ChannelInboundHandler">
+              <h3>Inherited from <span class="extype" name="io.netty.channel.ChannelInboundHandler">ChannelInboundHandler</span></h3>
+            </div><div class="parent" name="io.netty.channel.ChannelHandlerAdapter">
+              <h3>Inherited from <span class="extype" name="io.netty.channel.ChannelHandlerAdapter">ChannelHandlerAdapter</span></h3>
+            </div><div class="parent" name="io.netty.channel.ChannelHandler">
+              <h3>Inherited from <span class="extype" name="io.netty.channel.ChannelHandler">ChannelHandler</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

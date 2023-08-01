@@ -1,0 +1,603 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Networking 3.2.1 API  - org.apache.spark.network.client</title>
+          <meta name="description" content="Spark Project Networking 3.2.1 API - org.apache.spark.network.client" />
+          <meta name="keywords" content="Spark Project Networking 3.2.1 API org.apache.spark.network.client" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Networking 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.network" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="network"></a><a id="network:network"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">network</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.buffer" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="buffer"></a><a id="buffer:buffer"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/buffer/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../buffer/index.html"><span class="name">buffer</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.client" visbl="pub" class="indented5 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="client"></a><a id="client:client"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/client/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">client</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="BaseResponseCallback.html" title="A basic callback."></a>
+                        <a href="BaseResponseCallback.html" title="A basic callback.">BaseResponseCallback</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ChunkFetchFailureException.html" title="General exception caused by a remote exception while fetching a chunk."></a>
+                        <a href="ChunkFetchFailureException.html" title="General exception caused by a remote exception while fetching a chunk.">ChunkFetchFailureException</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="ChunkReceivedCallback.html" title="Callback for the result of a single chunk result."></a>
+                        <a href="ChunkReceivedCallback.html" title="Callback for the result of a single chunk result.">ChunkReceivedCallback</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="MergedBlockMetaResponseCallback.html" title="Callback for the result of a single org.apache.spark.network.protocol.MergedBlockMetaRequest."></a>
+                        <a href="MergedBlockMetaResponseCallback.html" title="Callback for the result of a single org.apache.spark.network.protocol.MergedBlockMetaRequest.">MergedBlockMetaResponseCallback</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="RpcResponseCallback.html" title="Callback for the result of a single RPC."></a>
+                        <a href="RpcResponseCallback.html" title="Callback for the result of a single RPC.">RpcResponseCallback</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="StreamCallback.html" title="Callback for streaming data."></a>
+                        <a href="StreamCallback.html" title="Callback for streaming data.">StreamCallback</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="StreamCallbackWithID.html" title=""></a>
+                        <a href="StreamCallbackWithID.html" title="">StreamCallbackWithID</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="StreamInterceptor.html" title="An interceptor that is registered with the frame decoder to feed stream data to a callback."></a>
+                        <a href="StreamInterceptor.html" title="An interceptor that is registered with the frame decoder to feed stream data to a callback.">StreamInterceptor</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TransportClient.html" title="Client for fetching consecutive chunks of a pre-negotiated stream."></a>
+                        <a href="TransportClient.html" title="Client for fetching consecutive chunks of a pre-negotiated stream.">TransportClient</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="TransportClientBootstrap.html" title="A bootstrap which is executed on a TransportClient before it is returned to the user."></a>
+                        <a href="TransportClientBootstrap.html" title="A bootstrap which is executed on a TransportClient before it is returned to the user.">TransportClientBootstrap</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TransportClientFactory.html" title="Factory for creating TransportClients by using createClient."></a>
+                        <a href="TransportClientFactory.html" title="Factory for creating TransportClients by using createClient.">TransportClientFactory</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TransportResponseHandler.html" title="Handler that processes server responses, in response to requests issued from a TransportClient."></a>
+                        <a href="TransportResponseHandler.html" title="Handler that processes server responses, in response to requests issued from a TransportClient.">TransportResponseHandler</a>
+                      </li><li name="org.apache.spark.network.crypto" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="crypto"></a><a id="crypto:crypto"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/crypto/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../crypto/index.html"><span class="name">crypto</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.protocol" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="protocol"></a><a id="protocol:protocol"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../protocol/index.html"><span class="name">protocol</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.sasl" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sasl"></a><a id="sasl:sasl"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/sasl/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../sasl/index.html"><span class="name">sasl</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.server" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="server"></a><a id="server:server"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../server/index.html"><span class="name">server</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.util" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="util"></a><a id="util:util"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../util/index.html"><span class="name">util</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../../index.html" class="extype" name="org">org</a>.<a href="../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../index.html" class="extype" name="org.apache.spark.network">network</a></p>
+        <h1>client<span class="permalink">
+      <a href="../../../../../org/apache/spark/network/client/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">client</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.spark.network.client.BaseResponseCallback" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="BaseResponseCallbackextendsObject"></a><a id="BaseResponseCallback:BaseResponseCallback"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/client/BaseResponseCallback.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A basic callback." href="BaseResponseCallback.html"><span class="name">BaseResponseCallback</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A basic callback.</p><div class="fullcomment"><div class="comment cmt"><p>A basic callback. This is extended by <code><a href="RpcResponseCallback.html" class="extype" name="org.apache.spark.network.client.RpcResponseCallback">RpcResponseCallback</a></code> and
+<code><a href="MergedBlockMetaResponseCallback.html" class="extype" name="org.apache.spark.network.client.MergedBlockMetaResponseCallback">MergedBlockMetaResponseCallback</a></code> so that both RpcRequests and MergedBlockMetaRequests
+can be handled in <code><a href="TransportResponseHandler.html" class="extype" name="org.apache.spark.network.client.TransportResponseHandler">TransportResponseHandler</a></code> a similar way.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>3.2.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.network.client.ChunkFetchFailureException" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ChunkFetchFailureExceptionextendsRuntimeException"></a><a id="ChunkFetchFailureException:ChunkFetchFailureException"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/client/ChunkFetchFailureException.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="General exception caused by a remote exception while fetching a chunk." href="ChunkFetchFailureException.html"><span class="name">ChunkFetchFailureException</span></a><span class="result"> extends <span class="extype" name="java.lang.RuntimeException">RuntimeException</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">General exception caused by a remote exception while fetching a chunk.</p>
+    </li><li name="org.apache.spark.network.client.ChunkReceivedCallback" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ChunkReceivedCallbackextendsObject"></a><a id="ChunkReceivedCallback:ChunkReceivedCallback"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/client/ChunkReceivedCallback.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Callback for the result of a single chunk result." href="ChunkReceivedCallback.html"><span class="name">ChunkReceivedCallback</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Callback for the result of a single chunk result.</p><div class="fullcomment"><div class="comment cmt"><p>Callback for the result of a single chunk result. For a single stream, the callbacks are
+guaranteed to be called by the same thread in the same order as the requests for chunks were
+made.</p><p>Note that if a general stream failure occurs, all outstanding chunk requests may be failed.
+</p></div></div>
+    </li><li name="org.apache.spark.network.client.MergedBlockMetaResponseCallback" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="MergedBlockMetaResponseCallbackextendsBaseResponseCallback"></a><a id="MergedBlockMetaResponseCallback:MergedBlockMetaResponseCallback"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/client/MergedBlockMetaResponseCallback.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Callback for the result of a single org.apache.spark.network.protocol.MergedBlockMetaRequest." href="MergedBlockMetaResponseCallback.html"><span class="name">MergedBlockMetaResponseCallback</span></a><span class="result"> extends <a href="BaseResponseCallback.html" class="extype" name="org.apache.spark.network.client.BaseResponseCallback">BaseResponseCallback</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Callback for the result of a single
+<code><a href="../protocol/MergedBlockMetaRequest.html" class="extype" name="org.apache.spark.network.protocol.MergedBlockMetaRequest">org.apache.spark.network.protocol.MergedBlockMetaRequest</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Callback for the result of a single
+<code><a href="../protocol/MergedBlockMetaRequest.html" class="extype" name="org.apache.spark.network.protocol.MergedBlockMetaRequest">org.apache.spark.network.protocol.MergedBlockMetaRequest</a></code>.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>3.2.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.network.client.RpcResponseCallback" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="RpcResponseCallbackextendsBaseResponseCallback"></a><a id="RpcResponseCallback:RpcResponseCallback"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/client/RpcResponseCallback.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Callback for the result of a single RPC." href="RpcResponseCallback.html"><span class="name">RpcResponseCallback</span></a><span class="result"> extends <a href="BaseResponseCallback.html" class="extype" name="org.apache.spark.network.client.BaseResponseCallback">BaseResponseCallback</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Callback for the result of a single RPC.</p><div class="fullcomment"><div class="comment cmt"><p>Callback for the result of a single RPC. This will be invoked once with either success or
+failure.
+</p></div></div>
+    </li><li name="org.apache.spark.network.client.StreamCallback" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="StreamCallbackextendsObject"></a><a id="StreamCallback:StreamCallback"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/client/StreamCallback.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Callback for streaming data." href="StreamCallback.html"><span class="name">StreamCallback</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Callback for streaming data.</p><div class="fullcomment"><div class="comment cmt"><p>Callback for streaming data. Stream data will be offered to the
+<code><span class="extype" name="#onData(String,">ByteBuffer)</span></code> method as it arrives. Once all the stream data is received,
+<code><span class="extype" name="#onComplete(String)">#onComplete(String)</span></code> will be called.</p><p>The network library guarantees that a single thread will call these methods at a time, but
+different call may be made by different threads.
+</p></div></div>
+    </li><li name="org.apache.spark.network.client.StreamCallbackWithID" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="StreamCallbackWithIDextendsStreamCallback"></a><a id="StreamCallbackWithID:StreamCallbackWithID"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/client/StreamCallbackWithID.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="StreamCallbackWithID.html"><span class="name">StreamCallbackWithID</span></a><span class="result"> extends <a href="StreamCallback.html" class="extype" name="org.apache.spark.network.client.StreamCallback">StreamCallback</a></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.network.client.StreamInterceptor" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StreamInterceptor[T&lt;:org.apache.spark.network.protocol.Message]extendsTransportFrameDecoder.Interceptor"></a><a id="StreamInterceptor[T&lt;:Message]:StreamInterceptor[T]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/client/StreamInterceptor.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="An interceptor that is registered with the frame decoder to feed stream data to a callback." href="StreamInterceptor.html"><span class="name">StreamInterceptor</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../protocol/Message.html" class="extype" name="org.apache.spark.network.protocol.Message">Message</a></span>]</span><span class="result"> extends <span class="extype" name="org.apache.spark.network.util.TransportFrameDecoder.Interceptor">Interceptor</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">An interceptor that is registered with the frame decoder to feed stream data to a
+callback.</p>
+    </li><li name="org.apache.spark.network.client.TransportClient" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TransportClientextendsCloseable"></a><a id="TransportClient:TransportClient"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/client/TransportClient.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Client for fetching consecutive chunks of a pre-negotiated stream." href="TransportClient.html"><span class="name">TransportClient</span></a><span class="result"> extends <span class="extype" name="java.io.Closeable">Closeable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Client for fetching consecutive chunks of a pre-negotiated stream.</p><div class="fullcomment"><div class="comment cmt"><p>Client for fetching consecutive chunks of a pre-negotiated stream. This API is intended to allow
+efficient transfer of a large amount of data, broken up into chunks with size ranging from
+hundreds of KB to a few MB.</p><p>Note that while this client deals with the fetching of chunks from a stream (i.e., data plane),
+the actual setup of the streams is done outside the scope of the transport layer. The convenience
+method &quot;sendRPC&quot; is provided to enable control plane communication between the client and server
+to perform this setup.</p><p>For example, a typical workflow might be:
+client.sendRPC(new OpenFile(&quot;/foo&quot;)) --&gt; returns StreamId = 100
+client.fetchChunk(streamId = 100, chunkIndex = 0, callback)
+client.fetchChunk(streamId = 100, chunkIndex = 1, callback)
+...
+client.sendRPC(new CloseStream(100))</p><p>Construct an instance of TransportClient using <code><a href="TransportClientFactory.html" class="extype" name="org.apache.spark.network.client.TransportClientFactory">TransportClientFactory</a></code>. A single
+TransportClient may be used for multiple streams, but any given stream must be restricted to a
+single client, in order to avoid out-of-order responses.</p><p>NB: This class is used to make requests to the server, while <code><a href="TransportResponseHandler.html" class="extype" name="org.apache.spark.network.client.TransportResponseHandler">TransportResponseHandler</a></code> is
+responsible for handling responses from the server.</p><p>Concurrency: thread safe and can be called from multiple threads.
+</p></div></div>
+    </li><li name="org.apache.spark.network.client.TransportClientBootstrap" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="TransportClientBootstrapextendsObject"></a><a id="TransportClientBootstrap:TransportClientBootstrap"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/client/TransportClientBootstrap.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A bootstrap which is executed on a TransportClient before it is returned to the user." href="TransportClientBootstrap.html"><span class="name">TransportClientBootstrap</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A bootstrap which is executed on a TransportClient before it is returned to the user.</p><div class="fullcomment"><div class="comment cmt"><p>A bootstrap which is executed on a TransportClient before it is returned to the user.
+This enables an initial exchange of information (e.g., SASL authentication tokens) on a once-per-
+connection basis.</p><p>Since connections (and TransportClients) are reused as much as possible, it is generally
+reasonable to perform an expensive bootstrapping operation, as they often share a lifespan with
+the JVM itself.
+</p></div></div>
+    </li><li name="org.apache.spark.network.client.TransportClientFactory" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TransportClientFactoryextendsCloseable"></a><a id="TransportClientFactory:TransportClientFactory"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/client/TransportClientFactory.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Factory for creating TransportClients by using createClient." href="TransportClientFactory.html"><span class="name">TransportClientFactory</span></a><span class="result"> extends <span class="extype" name="java.io.Closeable">Closeable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Factory for creating <code><a href="TransportClient.html" class="extype" name="org.apache.spark.network.client.TransportClient">TransportClient</a></code>s by using createClient.</p><div class="fullcomment"><div class="comment cmt"><p>Factory for creating <code><a href="TransportClient.html" class="extype" name="org.apache.spark.network.client.TransportClient">TransportClient</a></code>s by using createClient.</p><p>The factory maintains a connection pool to other hosts and should return the same
+TransportClient for the same remote host. It also shares a single worker thread pool for
+all TransportClients.</p><p>TransportClients will be reused whenever possible. Prior to completing the creation of a new
+TransportClient, all given <code><a href="TransportClientBootstrap.html" class="extype" name="org.apache.spark.network.client.TransportClientBootstrap">TransportClientBootstrap</a></code>s will be run.
+</p></div></div>
+    </li><li name="org.apache.spark.network.client.TransportResponseHandler" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TransportResponseHandlerextendsMessageHandler[org.apache.spark.network.protocol.ResponseMessage]"></a><a id="TransportResponseHandler:TransportResponseHandler"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/client/TransportResponseHandler.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Handler that processes server responses, in response to requests issued from a TransportClient." href="TransportResponseHandler.html"><span class="name">TransportResponseHandler</span></a><span class="result"> extends <a href="../server/MessageHandler.html" class="extype" name="org.apache.spark.network.server.MessageHandler">MessageHandler</a>[<a href="../protocol/ResponseMessage.html" class="extype" name="org.apache.spark.network.protocol.ResponseMessage">ResponseMessage</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Handler that processes server responses, in response to requests issued from a
+<a href="TransportClient.html" class="extype" name="org.apache.spark.network.client.TransportClient">TransportClient</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Handler that processes server responses, in response to requests issued from a
+<a href="TransportClient.html" class="extype" name="org.apache.spark.network.client.TransportClient">TransportClient</a>. It works by tracking the list of outstanding requests (and their callbacks).</p><p>Concurrency: thread safe and can be called from multiple threads.
+</p></div></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

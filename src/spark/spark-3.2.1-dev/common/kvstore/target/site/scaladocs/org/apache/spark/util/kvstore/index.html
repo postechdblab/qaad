@@ -1,0 +1,456 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Local DB 3.2.1 API  - org.apache.spark.util.kvstore</title>
+          <meta name="description" content="Spark Project Local DB 3.2.1 API - org.apache.spark.util.kvstore" />
+          <meta name="keywords" content="Spark Project Local DB 3.2.1 API org.apache.spark.util.kvstore" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Local DB 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.util" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="util"></a><a id="util:util"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/util/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">util</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.util.kvstore" visbl="pub" class="indented5 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="kvstore"></a><a id="kvstore:kvstore"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/util/kvstore/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">kvstore</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.util">util</a></dd></dl></div>
+    </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="InMemoryStore.html" title="Implementation of KVStore that keeps data deserialized in memory."></a>
+                        <a href="InMemoryStore.html" title="Implementation of KVStore that keeps data deserialized in memory.">InMemoryStore</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="KVIndex.html" title=""></a>
+                        <a href="KVIndex.html" title="">KVIndex</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="KVStore.html" title="Abstraction for a local key/value store for storing app data."></a>
+                        <a href="KVStore.html" title="Abstraction for a local key/value store for storing app data.">KVStore</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="KVStoreIterator.html" title="An iterator for KVStore."></a>
+                        <a href="KVStoreIterator.html" title="An iterator for KVStore.">KVStoreIterator</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="KVStoreSerializer.html" title="Serializer used to translate between app-defined types and the LevelDB store."></a>
+                        <a href="KVStoreSerializer.html" title="Serializer used to translate between app-defined types and the LevelDB store.">KVStoreSerializer</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="KVStoreView.html" title="A configurable view that allows iterating over values in a KVStore."></a>
+                        <a href="KVStoreView.html" title="A configurable view that allows iterating over values in a KVStore.">KVStoreView</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="KVTypeInfo.html" title="Wrapper around types managed in a KVStore, providing easy access to their indexed fields."></a>
+                        <a href="KVTypeInfo.html" title="Wrapper around types managed in a KVStore, providing easy access to their indexed fields.">KVTypeInfo</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="LevelDB.html" title="Implementation of KVStore that uses LevelDB as the underlying data store."></a>
+                        <a href="LevelDB.html" title="Implementation of KVStore that uses LevelDB as the underlying data store.">LevelDB</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="UnsupportedStoreVersionException.html" title="Exception thrown when the store implementation is not compatible with the underlying data."></a>
+                        <a href="UnsupportedStoreVersionException.html" title="Exception thrown when the store implementation is not compatible with the underlying data.">UnsupportedStoreVersionException</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../../index.html" class="extype" name="org">org</a>.<a href="../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../index.html" class="extype" name="org.apache.spark.util">util</a></p>
+        <h1>kvstore<span class="permalink">
+      <a href="../../../../../org/apache/spark/util/kvstore/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">kvstore</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.spark.util.kvstore.InMemoryStore" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="InMemoryStoreextendsKVStore"></a><a id="InMemoryStore:InMemoryStore"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/util/kvstore/InMemoryStore.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Implementation of KVStore that keeps data deserialized in memory." href="InMemoryStore.html"><span class="name">InMemoryStore</span></a><span class="result"> extends <a href="KVStore.html" class="extype" name="org.apache.spark.util.kvstore.KVStore">KVStore</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Implementation of KVStore that keeps data deserialized in memory.</p><div class="fullcomment"><div class="comment cmt"><p>Implementation of KVStore that keeps data deserialized in memory. This store does not index
+data; instead, whenever iterating over an indexed field, the stored data is copied and sorted
+according to the index. This saves memory but makes iteration more expensive.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Private</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.util.kvstore.KVIndex" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="KVIndexextendsAnnotationwithAnnotationwithClassfileAnnotation"></a><a id="KVIndex:KVIndex"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/util/kvstore/KVIndex.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="KVIndex.html"><span class="name">KVIndex</span></a><span class="result"> extends <span class="extype" name="scala.annotation.Annotation">Annotation</span> with <span class="extype" name="java.lang.annotation.Annotation">Annotation</span> with <span class="extype" name="scala.annotation.ClassfileAnnotation">ClassfileAnnotation</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Private</span><span class="args">()</span>
+              
+                <span class="name">@Retention</span><span class="args">()</span>
+              
+                <span class="name">@Target</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.util.kvstore.KVStore" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="KVStoreextendsCloseable"></a><a id="KVStore:KVStore"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/util/kvstore/KVStore.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Abstraction for a local key/value store for storing app data." href="KVStore.html"><span class="name">KVStore</span></a><span class="result"> extends <span class="extype" name="java.io.Closeable">Closeable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Abstraction for a local key/value store for storing app data.</p><div class="fullcomment"><div class="comment cmt"><p>Abstraction for a local key/value store for storing app data.</p><p>There are two main features provided by the implementations of this interface:</p><h5> Serialization </h5><p>If the underlying data store requires serialization, data will be serialized to and deserialized
+using a <code><a href="KVStoreSerializer.html" class="extype" name="org.apache.spark.util.kvstore.KVStoreSerializer">KVStoreSerializer</a></code>, which can be customized by the application. The serializer is
+based on Jackson, so it supports all the Jackson annotations for controlling the serialization of
+app-defined types.</p><p>Data is also automatically compressed to save disk space.</p><h5> Automatic Key Management </h5><p>When using the built-in key management, the implementation will automatically create unique
+keys for each type written to the store. Keys are based on the type name, and always start
+with the &quot;+&quot; prefix character (so that it's easy to use both manual and automatic key
+management APIs without conflicts).</p><p>Another feature of automatic key management is indexing; by annotating fields or methods of
+objects written to the store with <code><a href="KVIndex.html" class="extype" name="org.apache.spark.util.kvstore.KVIndex">KVIndex</a></code>, indices are created to sort the data
+by the values of those properties. This makes it possible to provide sorting without having
+to load all instances of those types from the store.</p><p>KVStore instances are thread-safe for both reads and writes.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Private</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.util.kvstore.KVStoreIterator" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="KVStoreIterator[T]extendsIterator[T]withCloseable"></a><a id="KVStoreIterator[T]:KVStoreIterator[T]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/util/kvstore/KVStoreIterator.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="An iterator for KVStore." href="KVStoreIterator.html"><span class="name">KVStoreIterator</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="java.util.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.util.kvstore.KVStoreIterator.T">T</span>] with <span class="extype" name="java.io.Closeable">Closeable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">An iterator for KVStore.</p><div class="fullcomment"><div class="comment cmt"><p>An iterator for KVStore.</p><p>Iterators may keep references to resources that need to be closed. It's recommended that users
+explicitly close iterators after they're used.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Private</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.util.kvstore.KVStoreSerializer" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="KVStoreSerializerextendsObject"></a><a id="KVStoreSerializer:KVStoreSerializer"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/util/kvstore/KVStoreSerializer.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Serializer used to translate between app-defined types and the LevelDB store." href="KVStoreSerializer.html"><span class="name">KVStoreSerializer</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Serializer used to translate between app-defined types and the LevelDB store.</p><div class="fullcomment"><div class="comment cmt"><p>Serializer used to translate between app-defined types and the LevelDB store.</p><p>The serializer is based on Jackson, so values are written as JSON. It also allows &quot;naked strings&quot;
+and integers to be written as values directly, which will be written as UTF-8 strings.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Private</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.util.kvstore.KVStoreView" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="KVStoreView[T]extendsIterable[T]"></a><a id="KVStoreView[T]:KVStoreView[T]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/util/kvstore/KVStoreView.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A configurable view that allows iterating over values in a KVStore." href="KVStoreView.html"><span class="name">KVStoreView</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="java.lang.Iterable">Iterable</span>[<span class="extype" name="org.apache.spark.util.kvstore.KVStoreView.T">T</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">A configurable view that allows iterating over values in a <code><a href="KVStore.html" class="extype" name="org.apache.spark.util.kvstore.KVStore">KVStore</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>A configurable view that allows iterating over values in a <code><a href="KVStore.html" class="extype" name="org.apache.spark.util.kvstore.KVStore">KVStore</a></code>.</p><p>The different methods can be used to configure the behavior of the iterator. Calling the same
+method multiple times is allowed; the most recent value will be used.</p><p>The iterators returned by this view are of type <code><a href="KVStoreIterator.html" class="extype" name="org.apache.spark.util.kvstore.KVStoreIterator">KVStoreIterator</a></code>; they auto-close
+when used in a for loop that exhausts their contents, but when used manually, they need
+to be closed explicitly unless all elements are read.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Private</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.util.kvstore.KVTypeInfo" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="KVTypeInfoextendsObject"></a><a id="KVTypeInfo:KVTypeInfo"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/util/kvstore/KVTypeInfo.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Wrapper around types managed in a KVStore, providing easy access to their indexed fields." href="KVTypeInfo.html"><span class="name">KVTypeInfo</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Wrapper around types managed in a KVStore, providing easy access to their indexed fields.</p><div class="fullcomment"><div class="comment cmt"><p>Wrapper around types managed in a KVStore, providing easy access to their indexed fields.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Private</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.util.kvstore.LevelDB" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LevelDBextendsKVStore"></a><a id="LevelDB:LevelDB"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/util/kvstore/LevelDB.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Implementation of KVStore that uses LevelDB as the underlying data store." href="LevelDB.html"><span class="name">LevelDB</span></a><span class="result"> extends <a href="KVStore.html" class="extype" name="org.apache.spark.util.kvstore.KVStore">KVStore</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Implementation of KVStore that uses LevelDB as the underlying data store.</p><div class="fullcomment"><div class="comment cmt"><p>Implementation of KVStore that uses LevelDB as the underlying data store.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Private</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.util.kvstore.UnsupportedStoreVersionException" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="UnsupportedStoreVersionExceptionextendsIOException"></a><a id="UnsupportedStoreVersionException:UnsupportedStoreVersionException"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/util/kvstore/UnsupportedStoreVersionException.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Exception thrown when the store implementation is not compatible with the underlying data." href="UnsupportedStoreVersionException.html"><span class="name">UnsupportedStoreVersionException</span></a><span class="result"> extends <span class="extype" name="java.io.IOException">IOException</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Exception thrown when the store implementation is not compatible with the underlying data.</p><div class="fullcomment"><div class="comment cmt"><p>Exception thrown when the store implementation is not compatible with the underlying data.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Private</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

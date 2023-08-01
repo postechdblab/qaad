@@ -1,0 +1,738 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Catalyst 3.2.1 API  - org.apache.spark.sql.connector.read</title>
+          <meta name="description" content="Spark Project Catalyst 3.2.1 API - org.apache.spark.sql.connector.read" />
+          <meta name="keywords" content="Spark Project Catalyst 3.2.1 API org.apache.spark.sql.connector.read" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Catalyst 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sql"></a><a id="sql:sql"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">sql</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="connector"></a><a id="connector:connector"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">connector</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.catalog" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="catalog"></a><a id="catalog:catalog"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/catalog/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../catalog/index.html"><span class="name">catalog</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.distributions" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="distributions"></a><a id="distributions:distributions"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/distributions/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../distributions/index.html"><span class="name">distributions</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.expressions" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="expressions"></a><a id="expressions:expressions"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/expressions/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../expressions/index.html"><span class="name">expressions</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.metric" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="metric"></a><a id="metric:metric"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/metric/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../metric/index.html"><span class="name">metric</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read" visbl="pub" class="indented6 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="read"></a><a id="read:read"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/read/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">read</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.partitioning" visbl="pub" class="indented7 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="partitioning"></a><a id="partitioning:partitioning"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/read/partitioning/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="partitioning/index.html"><span class="name">partitioning</span></a>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.connector.read.streaming" visbl="pub" class="indented7 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="streaming"></a><a id="streaming:streaming"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/read/streaming/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="streaming/index.html"><span class="name">streaming</span></a>
+      </span>
+      
+      
+    </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="Batch.html" title="A physical representation of a data source scan for batch queries."></a>
+                        <a href="Batch.html" title="A physical representation of a data source scan for batch queries.">Batch</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="InputPartition.html" title="A serializable representation of an input partition returned by Batch#planInputPartitions() and the corresponding ones in streaming ."></a>
+                        <a href="InputPartition.html" title="A serializable representation of an input partition returned by Batch#planInputPartitions() and the corresponding ones in streaming .">InputPartition</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="LocalScan.html" title="A special Scan which will happen on Driver locally instead of Executors."></a>
+                        <a href="LocalScan.html" title="A special Scan which will happen on Driver locally instead of Executors.">LocalScan</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="PartitionReader.html" title="A partition reader returned by PartitionReaderFactory#createReader(InputPartition) or PartitionReaderFactory#createColumnarReader(InputPartition)."></a>
+                        <a href="PartitionReader.html" title="A partition reader returned by PartitionReaderFactory#createReader(InputPartition) or PartitionReaderFactory#createColumnarReader(InputPartition).">PartitionReader</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="PartitionReaderFactory.html" title="A factory used to create PartitionReader instances."></a>
+                        <a href="PartitionReaderFactory.html" title="A factory used to create PartitionReader instances.">PartitionReaderFactory</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="Scan.html" title="A logical representation of a data source scan."></a>
+                        <a href="Scan.html" title="A logical representation of a data source scan.">Scan</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="ScanBuilder.html" title="An interface for building the Scan."></a>
+                        <a href="ScanBuilder.html" title="An interface for building the Scan.">ScanBuilder</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="Statistics.html" title="An interface to represent statistics for a data source, which is returned by SupportsReportStatistics#estimateStatistics()."></a>
+                        <a href="Statistics.html" title="An interface to represent statistics for a data source, which is returned by SupportsReportStatistics#estimateStatistics().">Statistics</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="SupportsPushDownAggregates.html" title="A mix-in interface for ScanBuilder."></a>
+                        <a href="SupportsPushDownAggregates.html" title="A mix-in interface for ScanBuilder.">SupportsPushDownAggregates</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="SupportsPushDownFilters.html" title="A mix-in interface for ScanBuilder."></a>
+                        <a href="SupportsPushDownFilters.html" title="A mix-in interface for ScanBuilder.">SupportsPushDownFilters</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="SupportsPushDownRequiredColumns.html" title="A mix-in interface for ScanBuilder."></a>
+                        <a href="SupportsPushDownRequiredColumns.html" title="A mix-in interface for ScanBuilder.">SupportsPushDownRequiredColumns</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="SupportsReportPartitioning.html" title="A mix in interface for Scan."></a>
+                        <a href="SupportsReportPartitioning.html" title="A mix in interface for Scan.">SupportsReportPartitioning</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="SupportsReportStatistics.html" title="A mix in interface for Scan."></a>
+                        <a href="SupportsReportStatistics.html" title="A mix in interface for Scan.">SupportsReportStatistics</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="SupportsRuntimeFiltering.html" title="A mix-in interface for Scan."></a>
+                        <a href="SupportsRuntimeFiltering.html" title="A mix-in interface for Scan.">SupportsRuntimeFiltering</a>
+                      </li><li name="org.apache.spark.sql.connector.write" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="write"></a><a id="write:write"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/write/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../write/index.html"><span class="name">write</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a></dd></dl></div>
+    </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../../../index.html" class="extype" name="org">org</a>.<a href="../../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../../index.html" class="extype" name="org.apache.spark.sql">sql</a>.<a href="../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a></p>
+        <h1>read<span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/read/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">read</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.spark.sql.connector.read.Batch" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="BatchextendsObject"></a><a id="Batch:Batch"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/read/Batch.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A physical representation of a data source scan for batch queries." href="Batch.html"><span class="name">Batch</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A physical representation of a data source scan for batch queries.</p><div class="fullcomment"><div class="comment cmt"><p>A physical representation of a data source scan for batch queries. This interface is used to
+provide physical information, like how many partitions the scanned data has, and how to read
+records from the partitions.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.InputPartition" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="InputPartitionextendsSerializable"></a><a id="InputPartition:InputPartition"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/read/InputPartition.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A serializable representation of an input partition returned by Batch#planInputPartitions() and the corresponding ones in streaming ." href="InputPartition.html"><span class="name">InputPartition</span></a><span class="result"> extends <span class="extype" name="java.io.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A serializable representation of an input partition returned by
+<code><span class="extype" name="Batch#planInputPartitions()">Batch#planInputPartitions()</span></code> and the corresponding ones in streaming .</p><div class="fullcomment"><div class="comment cmt"><p>A serializable representation of an input partition returned by
+<code><span class="extype" name="Batch#planInputPartitions()">Batch#planInputPartitions()</span></code> and the corresponding ones in streaming .</p><p>Note that <code><a href="InputPartition.html" class="extype" name="org.apache.spark.sql.connector.read.InputPartition">InputPartition</a></code> will be serialized and sent to executors, then
+<code><a href="PartitionReader.html" class="extype" name="org.apache.spark.sql.connector.read.PartitionReader">PartitionReader</a></code> will be created by
+<code><span class="extype" name="PartitionReaderFactory#createReader(InputPartition)">PartitionReaderFactory#createReader(InputPartition)</span></code> or
+<code><span class="extype" name="PartitionReaderFactory#createColumnarReader(InputPartition)">PartitionReaderFactory#createColumnarReader(InputPartition)</span></code> on executors to do
+the actual reading. So <code><a href="InputPartition.html" class="extype" name="org.apache.spark.sql.connector.read.InputPartition">InputPartition</a></code> must be serializable while <code><a href="PartitionReader.html" class="extype" name="org.apache.spark.sql.connector.read.PartitionReader">PartitionReader</a></code>
+doesn't need to be.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.LocalScan" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="LocalScanextendsScan"></a><a id="LocalScan:LocalScan"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/read/LocalScan.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A special Scan which will happen on Driver locally instead of Executors." href="LocalScan.html"><span class="name">LocalScan</span></a><span class="result"> extends <a href="Scan.html" class="extype" name="org.apache.spark.sql.connector.read.Scan">Scan</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A special Scan which will happen on Driver locally instead of Executors.</p><div class="fullcomment"><div class="comment cmt"><p>A special Scan which will happen on Driver locally instead of Executors.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Experimental</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.2.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.PartitionReader" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="PartitionReader[T]extendsCloseable"></a><a id="PartitionReader[T]:PartitionReader[T]"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/read/PartitionReader.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A partition reader returned by PartitionReaderFactory#createReader(InputPartition) or PartitionReaderFactory#createColumnarReader(InputPartition)." href="PartitionReader.html"><span class="name">PartitionReader</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="java.io.Closeable">Closeable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A partition reader returned by <code><span class="extype" name="PartitionReaderFactory#createReader(InputPartition)">PartitionReaderFactory#createReader(InputPartition)</span></code> or
+<code><span class="extype" name="PartitionReaderFactory#createColumnarReader(InputPartition)">PartitionReaderFactory#createColumnarReader(InputPartition)</span></code>.</p><div class="fullcomment"><div class="comment cmt"><p>A partition reader returned by <code><span class="extype" name="PartitionReaderFactory#createReader(InputPartition)">PartitionReaderFactory#createReader(InputPartition)</span></code> or
+<code><span class="extype" name="PartitionReaderFactory#createColumnarReader(InputPartition)">PartitionReaderFactory#createColumnarReader(InputPartition)</span></code>. It's responsible for
+outputting data for a RDD partition.</p><p>Note that, Currently the type <code>T</code> can only be <code><a href="../../catalyst/InternalRow.html" class="extype" name="org.apache.spark.sql.catalyst.InternalRow">org.apache.spark.sql.catalyst.InternalRow</a></code>
+for normal data sources, or <code><a href="../../vectorized/ColumnarBatch.html" class="extype" name="org.apache.spark.sql.vectorized.ColumnarBatch">org.apache.spark.sql.vectorized.ColumnarBatch</a></code> for columnar
+data sources(whose <code><span class="extype" name="PartitionReaderFactory#supportColumnarReads(InputPartition)">PartitionReaderFactory#supportColumnarReads(InputPartition)</span></code>
+returns true).
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.PartitionReaderFactory" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="PartitionReaderFactoryextendsSerializable"></a><a id="PartitionReaderFactory:PartitionReaderFactory"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/read/PartitionReaderFactory.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A factory used to create PartitionReader instances." href="PartitionReaderFactory.html"><span class="name">PartitionReaderFactory</span></a><span class="result"> extends <span class="extype" name="java.io.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A factory used to create <code><a href="PartitionReader.html" class="extype" name="org.apache.spark.sql.connector.read.PartitionReader">PartitionReader</a></code> instances.</p><div class="fullcomment"><div class="comment cmt"><p>A factory used to create <code><a href="PartitionReader.html" class="extype" name="org.apache.spark.sql.connector.read.PartitionReader">PartitionReader</a></code> instances.</p><p>If Spark fails to execute any methods in the implementations of this interface or in the returned
+<code><a href="PartitionReader.html" class="extype" name="org.apache.spark.sql.connector.read.PartitionReader">PartitionReader</a></code> (by throwing an exception), corresponding Spark task would fail and
+get retried until hitting the maximum retry times.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.Scan" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ScanextendsObject"></a><a id="Scan:Scan"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/read/Scan.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A logical representation of a data source scan." href="Scan.html"><span class="name">Scan</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A logical representation of a data source scan.</p><div class="fullcomment"><div class="comment cmt"><p>A logical representation of a data source scan. This interface is used to provide logical
+information, like what the actual read schema is.</p><p>This logical representation is shared between batch scan, micro-batch streaming scan and
+continuous streaming scan. Data sources must implement the corresponding methods in this
+interface, to match what the table promises to support. For example, <code><span class="extype" name="#toBatch()">#toBatch()</span></code> must be
+implemented, if the <code><span class="extype" name="Table">Table</span></code> that creates this <code><a href="Scan.html" class="extype" name="org.apache.spark.sql.connector.read.Scan">Scan</a></code> returns
+<code><span class="extype" name="TableCapability#BATCH_READ">TableCapability#BATCH_READ</span></code> support in its <code><span class="extype" name="Table#capabilities()">Table#capabilities()</span></code>.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.ScanBuilder" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ScanBuilderextendsObject"></a><a id="ScanBuilder:ScanBuilder"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/read/ScanBuilder.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="An interface for building the Scan." href="ScanBuilder.html"><span class="name">ScanBuilder</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">An interface for building the <code><a href="Scan.html" class="extype" name="org.apache.spark.sql.connector.read.Scan">Scan</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>An interface for building the <code><a href="Scan.html" class="extype" name="org.apache.spark.sql.connector.read.Scan">Scan</a></code>. Implementations can mixin SupportsPushDownXYZ
+interfaces to do operator pushdown, and keep the operator pushdown result in the returned
+<code><a href="Scan.html" class="extype" name="org.apache.spark.sql.connector.read.Scan">Scan</a></code>. When pushing down operators, Spark pushes down filters first, then pushes down
+aggregates or applies column pruning.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.Statistics" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="StatisticsextendsObject"></a><a id="Statistics:Statistics"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/read/Statistics.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="An interface to represent statistics for a data source, which is returned by SupportsReportStatistics#estimateStatistics()." href="Statistics.html"><span class="name">Statistics</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">An interface to represent statistics for a data source, which is returned by
+<code><span class="extype" name="SupportsReportStatistics#estimateStatistics()">SupportsReportStatistics#estimateStatistics()</span></code>.</p><div class="fullcomment"><div class="comment cmt"><p>An interface to represent statistics for a data source, which is returned by
+<code><span class="extype" name="SupportsReportStatistics#estimateStatistics()">SupportsReportStatistics#estimateStatistics()</span></code>.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.SupportsPushDownAggregates" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="SupportsPushDownAggregatesextendsScanBuilder"></a><a id="SupportsPushDownAggregates:SupportsPushDownAggregates"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/read/SupportsPushDownAggregates.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A mix-in interface for ScanBuilder." href="SupportsPushDownAggregates.html"><span class="name">SupportsPushDownAggregates</span></a><span class="result"> extends <a href="ScanBuilder.html" class="extype" name="org.apache.spark.sql.connector.read.ScanBuilder">ScanBuilder</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A mix-in interface for <code><a href="ScanBuilder.html" class="extype" name="org.apache.spark.sql.connector.read.ScanBuilder">ScanBuilder</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>A mix-in interface for <code><a href="ScanBuilder.html" class="extype" name="org.apache.spark.sql.connector.read.ScanBuilder">ScanBuilder</a></code>. Data sources can implement this interface to
+push down aggregates. Spark assumes that the data source can't fully complete the
+grouping work, and will group the data source output again. For queries like
+&quot;SELECT min(value) AS m FROM t GROUP BY key&quot;, after pushing down the aggregate
+to the data source, the data source can still output data with duplicated keys, which is OK
+as Spark will do GROUP BY key again. The final query plan can be something like this:
+<pre>
+  Aggregate [key#1], [min(min(value)#2) AS m#3]
+    +- RelationV2[key#1, min(value)#2]
+</pre>
+Similarly, if there is no grouping expression, the data source can still output more than one
+rows.</p><p>When pushing down operators, Spark pushes down filters to the data source first, then push down
+aggregates or apply column pruning. Depends on data source implementation, aggregates may or
+may not be able to be pushed down with filters. If pushed filters still need to be evaluated
+after scanning, aggregates can't be pushed down.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.2.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.SupportsPushDownFilters" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="SupportsPushDownFiltersextendsScanBuilder"></a><a id="SupportsPushDownFilters:SupportsPushDownFilters"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/read/SupportsPushDownFilters.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A mix-in interface for ScanBuilder." href="SupportsPushDownFilters.html"><span class="name">SupportsPushDownFilters</span></a><span class="result"> extends <a href="ScanBuilder.html" class="extype" name="org.apache.spark.sql.connector.read.ScanBuilder">ScanBuilder</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A mix-in interface for <code><a href="ScanBuilder.html" class="extype" name="org.apache.spark.sql.connector.read.ScanBuilder">ScanBuilder</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>A mix-in interface for <code><a href="ScanBuilder.html" class="extype" name="org.apache.spark.sql.connector.read.ScanBuilder">ScanBuilder</a></code>. Data sources can implement this interface to
+push down filters to the data source and reduce the size of the data to be read.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.SupportsPushDownRequiredColumns" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="SupportsPushDownRequiredColumnsextendsScanBuilder"></a><a id="SupportsPushDownRequiredColumns:SupportsPushDownRequiredColumns"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/read/SupportsPushDownRequiredColumns.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A mix-in interface for ScanBuilder." href="SupportsPushDownRequiredColumns.html"><span class="name">SupportsPushDownRequiredColumns</span></a><span class="result"> extends <a href="ScanBuilder.html" class="extype" name="org.apache.spark.sql.connector.read.ScanBuilder">ScanBuilder</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A mix-in interface for <code><a href="ScanBuilder.html" class="extype" name="org.apache.spark.sql.connector.read.ScanBuilder">ScanBuilder</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>A mix-in interface for <code><a href="ScanBuilder.html" class="extype" name="org.apache.spark.sql.connector.read.ScanBuilder">ScanBuilder</a></code>. Data sources can implement this
+interface to push down required columns to the data source and only read these columns during
+scan to reduce the size of the data to be read.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.SupportsReportPartitioning" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="SupportsReportPartitioningextendsScan"></a><a id="SupportsReportPartitioning:SupportsReportPartitioning"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/read/SupportsReportPartitioning.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A mix in interface for Scan." href="SupportsReportPartitioning.html"><span class="name">SupportsReportPartitioning</span></a><span class="result"> extends <a href="Scan.html" class="extype" name="org.apache.spark.sql.connector.read.Scan">Scan</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A mix in interface for <code><a href="Scan.html" class="extype" name="org.apache.spark.sql.connector.read.Scan">Scan</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>A mix in interface for <code><a href="Scan.html" class="extype" name="org.apache.spark.sql.connector.read.Scan">Scan</a></code>. Data sources can implement this interface to
+report data partitioning and try to avoid shuffle at Spark side.</p><p>Note that, when a <code><a href="Scan.html" class="extype" name="org.apache.spark.sql.connector.read.Scan">Scan</a></code> implementation creates exactly one <code><a href="InputPartition.html" class="extype" name="org.apache.spark.sql.connector.read.InputPartition">InputPartition</a></code>,
+Spark may avoid adding a shuffle even if the reader does not implement this interface.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.SupportsReportStatistics" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="SupportsReportStatisticsextendsScan"></a><a id="SupportsReportStatistics:SupportsReportStatistics"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/read/SupportsReportStatistics.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A mix in interface for Scan." href="SupportsReportStatistics.html"><span class="name">SupportsReportStatistics</span></a><span class="result"> extends <a href="Scan.html" class="extype" name="org.apache.spark.sql.connector.read.Scan">Scan</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A mix in interface for <code><a href="Scan.html" class="extype" name="org.apache.spark.sql.connector.read.Scan">Scan</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>A mix in interface for <code><a href="Scan.html" class="extype" name="org.apache.spark.sql.connector.read.Scan">Scan</a></code>. Data sources can implement this interface to
+report statistics to Spark.</p><p>As of Spark 3.0, statistics are reported to the optimizer after operators are pushed to the
+data source. Implementations may return more accurate statistics based on pushed operators
+which may improve query performance by providing better information to the optimizer.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.SupportsRuntimeFiltering" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="SupportsRuntimeFilteringextendsScan"></a><a id="SupportsRuntimeFiltering:SupportsRuntimeFiltering"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/read/SupportsRuntimeFiltering.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A mix-in interface for Scan." href="SupportsRuntimeFiltering.html"><span class="name">SupportsRuntimeFiltering</span></a><span class="result"> extends <a href="Scan.html" class="extype" name="org.apache.spark.sql.connector.read.Scan">Scan</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A mix-in interface for <code><a href="Scan.html" class="extype" name="org.apache.spark.sql.connector.read.Scan">Scan</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>A mix-in interface for <code><a href="Scan.html" class="extype" name="org.apache.spark.sql.connector.read.Scan">Scan</a></code>. Data sources can implement this interface if they can
+filter initially planned <code><a href="InputPartition.html" class="extype" name="org.apache.spark.sql.connector.read.InputPartition">InputPartition</a></code>s using predicates Spark infers at runtime.</p><p>Note that Spark will push runtime filters only if they are beneficial.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Experimental</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.2.0</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

@@ -1,0 +1,18 @@
+----------------------------------------------------------------
+Wed Jul 27 12:15:45 UTC 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0182-3f95-9a7c-00006481f678 
+on database directory /home/yspark/DBLAB_SNIC/spark/ap/spark-3.2.1-dev/core/target/JavaJdbcRDDSuiteDb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@55054057 
+Loaded from file:/home/yspark/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Private Build
+java.runtime.version=11.0.15+10-Ubuntu-0ubuntu0.20.04.1
+user.dir=/home/yspark/DBLAB_SNIC/spark/ap/spark-3.2.1-dev/core
+os.name=Linux
+os.arch=amd64
+os.version=5.4.0-122-generic
+derby.system.home=null
+Warning: The database is booted with derby.system.durability=test. In this mode, it is possible that database may not be able to recover, committed transactions may be lost, database may be in an inconsistent state. Please use this mode only when these consequences are acceptable  
+
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Wed Jul 27 12:15:47 UTC 2022:
+Shutting down instance a816c00e-0182-3f95-9a7c-00006481f678 on database directory /home/yspark/DBLAB_SNIC/spark/ap/spark-3.2.1-dev/core/target/JavaJdbcRDDSuiteDb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@55054057 

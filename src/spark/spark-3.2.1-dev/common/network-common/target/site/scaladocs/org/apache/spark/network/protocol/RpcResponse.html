@@ -1,0 +1,881 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Networking 3.2.1 API  - org.apache.spark.network.protocol.RpcResponse</title>
+          <meta name="description" content="Spark Project Networking 3.2.1 API - org.apache.spark.network.protocol.RpcResponse" />
+          <meta name="keywords" content="Spark Project Networking 3.2.1 API org.apache.spark.network.protocol.RpcResponse" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Networking 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.network" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="network"></a><a id="network:network"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">network</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.protocol" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="protocol"></a><a id="protocol:protocol"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="index.html"><span class="name">protocol</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="AbstractMessage.html" title="Abstract class for messages which optionally contain a body kept in a separate buffer."></a>
+                        <a href="AbstractMessage.html" title="Abstract class for messages which optionally contain a body kept in a separate buffer.">AbstractMessage</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="AbstractResponseMessage.html" title="Abstract class for response messages."></a>
+                        <a href="AbstractResponseMessage.html" title="Abstract class for response messages.">AbstractResponseMessage</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ChunkFetchFailure.html" title="Response to ChunkFetchRequest when there is an error fetching the chunk."></a>
+                        <a href="ChunkFetchFailure.html" title="Response to ChunkFetchRequest when there is an error fetching the chunk.">ChunkFetchFailure</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ChunkFetchRequest.html" title="Request to fetch a sequence of a single chunk of a stream."></a>
+                        <a href="ChunkFetchRequest.html" title="Request to fetch a sequence of a single chunk of a stream.">ChunkFetchRequest</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ChunkFetchSuccess.html" title="Response to ChunkFetchRequest when a chunk exists and has been successfully fetched."></a>
+                        <a href="ChunkFetchSuccess.html" title="Response to ChunkFetchRequest when a chunk exists and has been successfully fetched.">ChunkFetchSuccess</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="Encodable.html" title="Interface for an object which can be encoded into a ByteBuf."></a>
+                        <a href="Encodable.html" title="Interface for an object which can be encoded into a ByteBuf.">Encodable</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="Encoders.html" title="Provides a canonical set of Encoders for simple types."></a>
+                        <a href="Encoders.html" title="Provides a canonical set of Encoders for simple types.">Encoders</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="MergedBlockMetaRequest.html" title="Request to find the meta information for the specified merged block."></a>
+                        <a href="MergedBlockMetaRequest.html" title="Request to find the meta information for the specified merged block.">MergedBlockMetaRequest</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="MergedBlockMetaSuccess.html" title="Response to MergedBlockMetaRequest request."></a>
+                        <a href="MergedBlockMetaSuccess.html" title="Response to MergedBlockMetaRequest request.">MergedBlockMetaSuccess</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="Message.html" title="An on-the-wire transmittable message."></a>
+                        <a href="Message.html" title="An on-the-wire transmittable message.">Message</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="MessageDecoder.html" title="Decoder used by the client side to encode server-to-client responses."></a>
+                        <a href="MessageDecoder.html" title="Decoder used by the client side to encode server-to-client responses.">MessageDecoder</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="MessageEncoder.html" title="Encoder used by the server side to encode server-to-client responses."></a>
+                        <a href="MessageEncoder.html" title="Encoder used by the server side to encode server-to-client responses.">MessageEncoder</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="OneWayMessage.html" title="A RPC that does not expect a reply, which is handled by a remote org.apache.spark.network.server.RpcHandler."></a>
+                        <a href="OneWayMessage.html" title="A RPC that does not expect a reply, which is handled by a remote org.apache.spark.network.server.RpcHandler.">OneWayMessage</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="RequestMessage.html" title="Messages from the client to the server."></a>
+                        <a href="RequestMessage.html" title="Messages from the client to the server.">RequestMessage</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="ResponseMessage.html" title="Messages from the server to the client."></a>
+                        <a href="ResponseMessage.html" title="Messages from the server to the client.">ResponseMessage</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="RpcFailure.html" title="Response to RpcRequest for a failed RPC."></a>
+                        <a href="RpcFailure.html" title="Response to RpcRequest for a failed RPC.">RpcFailure</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="RpcRequest.html" title="A generic RPC which is handled by a remote org.apache.spark.network.server.RpcHandler."></a>
+                        <a href="RpcRequest.html" title="A generic RPC which is handled by a remote org.apache.spark.network.server.RpcHandler.">RpcRequest</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="" title="Response to RpcRequest for a successful RPC."></a>
+                        <a href="" title="Response to RpcRequest for a successful RPC.">RpcResponse</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="StreamChunkId.html" title="Encapsulates a request for a particular chunk of a stream."></a>
+                        <a href="StreamChunkId.html" title="Encapsulates a request for a particular chunk of a stream.">StreamChunkId</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="StreamFailure.html" title="Message indicating an error when transferring a stream."></a>
+                        <a href="StreamFailure.html" title="Message indicating an error when transferring a stream.">StreamFailure</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="StreamRequest.html" title="Request to stream data from the remote end."></a>
+                        <a href="StreamRequest.html" title="Request to stream data from the remote end.">StreamRequest</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="StreamResponse.html" title="Response to StreamRequest when the stream has been successfully opened."></a>
+                        <a href="StreamResponse.html" title="Response to StreamRequest when the stream has been successfully opened.">StreamResponse</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="UploadStream.html" title="An RPC with data that is sent outside of the frame, so it can be read as a stream."></a>
+                        <a href="UploadStream.html" title="An RPC with data that is sent outside of the frame, so it can be read as a stream.">UploadStream</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="class type">
+      <div id="definition">
+        <div class="big-circle class">c</div>
+        <p id="owner"><a href="../../../../index.html" class="extype" name="org">org</a>.<a href="../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../index.html" class="extype" name="org.apache.spark.network">network</a>.<a href="index.html" class="extype" name="org.apache.spark.network.protocol">protocol</a></p>
+        <h1>RpcResponse<span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">RpcResponse</span><span class="result"> extends <a href="AbstractResponseMessage.html" class="extype" name="org.apache.spark.network.protocol.AbstractResponseMessage">AbstractResponseMessage</a></span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Response to <code><a href="RpcRequest.html" class="extype" name="org.apache.spark.network.protocol.RpcRequest">RpcRequest</a></code> for a successful RPC.</p></div><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><a href="AbstractResponseMessage.html" class="extype" name="org.apache.spark.network.protocol.AbstractResponseMessage">AbstractResponseMessage</a>, <a href="ResponseMessage.html" class="extype" name="org.apache.spark.network.protocol.ResponseMessage">ResponseMessage</a>, <a href="AbstractMessage.html" class="extype" name="org.apache.spark.network.protocol.AbstractMessage">AbstractMessage</a>, <a href="Message.html" class="extype" name="org.apache.spark.network.protocol.Message">Message</a>, <a href="Encodable.html" class="extype" name="org.apache.spark.network.protocol.Encodable">Encodable</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="org.apache.spark.network.protocol.RpcResponse"><span>RpcResponse</span></li><li class="in" name="org.apache.spark.network.protocol.AbstractResponseMessage"><span>AbstractResponseMessage</span></li><li class="in" name="org.apache.spark.network.protocol.ResponseMessage"><span>ResponseMessage</span></li><li class="in" name="org.apache.spark.network.protocol.AbstractMessage"><span>AbstractMessage</span></li><li class="in" name="org.apache.spark.network.protocol.Message"><span>Message</span></li><li class="in" name="org.apache.spark.network.protocol.Encodable"><span>Encodable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="org.apache.spark.network.protocol.RpcResponse#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(requestId:Long,message:org.apache.spark.network.buffer.ManagedBuffer):org.apache.spark.network.protocol.RpcResponse"></a><a id="&lt;init&gt;:RpcResponse"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html#&lt;init&gt;(requestId:Long,message:org.apache.spark.network.buffer.ManagedBuffer):org.apache.spark.network.protocol.RpcResponse" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">RpcResponse</span><span class="params">(<span name="requestId">requestId: <span class="extype" name="scala.Long">Long</span></span>, <span name="message">message: <a href="../buffer/ManagedBuffer.html" class="extype" name="org.apache.spark.network.buffer.ManagedBuffer">ManagedBuffer</a></span>)</span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.apache.spark.network.protocol.AbstractMessage#body" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="body():org.apache.spark.network.buffer.ManagedBuffer"></a><a id="body():ManagedBuffer"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html#body():org.apache.spark.network.buffer.ManagedBuffer" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">body</span><span class="params">()</span><span class="result">: <a href="../buffer/ManagedBuffer.html" class="extype" name="org.apache.spark.network.buffer.ManagedBuffer">ManagedBuffer</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">An optional body for the message.</p><div class="fullcomment"><div class="comment cmt"><p>An optional body for the message.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="AbstractMessage.html" class="extype" name="org.apache.spark.network.protocol.AbstractMessage">AbstractMessage</a> → <a href="Message.html" class="extype" name="org.apache.spark.network.protocol.Message">Message</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@Override</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.network.protocol.RpcResponse#createFailureResponse" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="createFailureResponse(error:String):org.apache.spark.network.protocol.ResponseMessage"></a><a id="createFailureResponse(String):ResponseMessage"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html#createFailureResponse(error:String):org.apache.spark.network.protocol.ResponseMessage" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">createFailureResponse</span><span class="params">(<span name="error">error: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <a href="ResponseMessage.html" class="extype" name="org.apache.spark.network.protocol.ResponseMessage">ResponseMessage</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.network.protocol.RpcResponse">RpcResponse</a> → <a href="AbstractResponseMessage.html" class="extype" name="org.apache.spark.network.protocol.AbstractResponseMessage">AbstractResponseMessage</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@Override</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.network.protocol.RpcResponse#encode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="encode(buf:io.netty.buffer.ByteBuf):Unit"></a><a id="encode(ByteBuf):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html#encode(buf:io.netty.buffer.ByteBuf):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">encode</span><span class="params">(<span name="buf">buf: <span class="extype" name="io.netty.buffer.ByteBuf">ByteBuf</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Serializes this object by writing into the given ByteBuf.</p><div class="fullcomment"><div class="comment cmt"><p>Serializes this object by writing into the given ByteBuf.
+This method must write exactly encodedLength() bytes.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.network.protocol.RpcResponse">RpcResponse</a> → <a href="Encodable.html" class="extype" name="org.apache.spark.network.protocol.Encodable">Encodable</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@Override</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.network.protocol.RpcResponse#encodedLength" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="encodedLength():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html#encodedLength():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">encodedLength</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Number of bytes of the encoded form of this object.</p><div class="fullcomment"><div class="comment cmt"><p>Number of bytes of the encoded form of this object.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.network.protocol.RpcResponse">RpcResponse</a> → <a href="Encodable.html" class="extype" name="org.apache.spark.network.protocol.Encodable">Encodable</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@Override</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.apache.spark.network.protocol.RpcResponse#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(other:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html#equals(other:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.network.protocol.RpcResponse">RpcResponse</a> → AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@Override</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.network.protocol.AbstractMessage#equals" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(other:org.apache.spark.network.protocol.AbstractMessage):Boolean"></a><a id="equals(AbstractMessage):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html#equals(other:org.apache.spark.network.protocol.AbstractMessage):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="other">other: <a href="AbstractMessage.html" class="extype" name="org.apache.spark.network.protocol.AbstractMessage">AbstractMessage</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="index.html" class="extype" name="org.apache.spark.network.protocol">protocol</a>] </dd><dt>Definition Classes</dt><dd><a href="AbstractMessage.html" class="extype" name="org.apache.spark.network.protocol.AbstractMessage">AbstractMessage</a></dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.network.protocol.RpcResponse#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.network.protocol.RpcResponse">RpcResponse</a> → AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@Override</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.network.protocol.AbstractMessage#isBodyInFrame" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isBodyInFrame():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html#isBodyInFrame():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isBodyInFrame</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Whether to include the body of the message in the same frame as the message.</p><div class="fullcomment"><div class="comment cmt"><p>Whether to include the body of the message in the same frame as the message.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="AbstractMessage.html" class="extype" name="org.apache.spark.network.protocol.AbstractMessage">AbstractMessage</a> → <a href="Message.html" class="extype" name="org.apache.spark.network.protocol.Message">Message</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@Override</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.apache.spark.network.protocol.RpcResponse#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.network.protocol.RpcResponse">RpcResponse</a> → AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@Override</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.network.protocol.RpcResponse#type" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="type():org.apache.spark.network.protocol.Message.Type"></a><a id="type():Type"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html#type():org.apache.spark.network.protocol.Message.Type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">type</span><span class="params">()</span><span class="result">: <span class="extype" name="org.apache.spark.network.protocol.Message.Type">Type</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Used to identify this request type.</p><div class="fullcomment"><div class="comment cmt"><p>Used to identify this request type.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.network.protocol.RpcResponse">RpcResponse</a> → <a href="Message.html" class="extype" name="org.apache.spark.network.protocol.Message">Message</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@Override</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="org.apache.spark.network.protocol.AbstractResponseMessage">
+              <h3>Inherited from <a href="AbstractResponseMessage.html" class="extype" name="org.apache.spark.network.protocol.AbstractResponseMessage">AbstractResponseMessage</a></h3>
+            </div><div class="parent" name="org.apache.spark.network.protocol.ResponseMessage">
+              <h3>Inherited from <a href="ResponseMessage.html" class="extype" name="org.apache.spark.network.protocol.ResponseMessage">ResponseMessage</a></h3>
+            </div><div class="parent" name="org.apache.spark.network.protocol.AbstractMessage">
+              <h3>Inherited from <a href="AbstractMessage.html" class="extype" name="org.apache.spark.network.protocol.AbstractMessage">AbstractMessage</a></h3>
+            </div><div class="parent" name="org.apache.spark.network.protocol.Message">
+              <h3>Inherited from <a href="Message.html" class="extype" name="org.apache.spark.network.protocol.Message">Message</a></h3>
+            </div><div class="parent" name="org.apache.spark.network.protocol.Encodable">
+              <h3>Inherited from <a href="Encodable.html" class="extype" name="org.apache.spark.network.protocol.Encodable">Encodable</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

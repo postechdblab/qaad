@@ -1,0 +1,754 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project SQL 3.2.1 API  - org.apache.spark.sql.execution.streaming.continuous</title>
+          <meta name="description" content="Spark Project SQL 3.2.1 API - org.apache.spark.sql.execution.streaming.continuous" />
+          <meta name="keywords" content="Spark Project SQL 3.2.1 API org.apache.spark.sql.execution.streaming.continuous" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project SQL 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sql"></a><a id="sql:sql"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Allows the execution of relational queries, including those expressed in SQL using Spark." href="../../../index.html"><span class="name">sql</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Allows the execution of relational queries, including those expressed in SQL using Spark.</p><div class="fullcomment"><div class="comment cmt"><p>Allows the execution of relational queries, including those expressed in SQL using Spark.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="execution"></a><a id="execution:execution"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="The physical execution component of Spark SQL." href="../../index.html"><span class="name">execution</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">The physical execution component of Spark SQL.</p><div class="fullcomment"><div class="comment cmt"><p>The physical execution component of Spark SQL. Note that this is a private package.
+All classes in catalyst are considered an internal API to Spark SQL and are subject
+to change between minor releases.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.streaming" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="streaming"></a><a id="streaming:streaming"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/streaming/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">streaming</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.streaming.continuous" visbl="pub" class="indented7 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="continuous"></a><a id="continuous:continuous"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/streaming/continuous/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">continuous</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution.streaming">streaming</a></dd></dl></div>
+    </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ContinuousDataSourceRDD.html" title="The bottom-most RDD of a continuous processing read task."></a>
+                        <a href="ContinuousDataSourceRDD.html" title="The bottom-most RDD of a continuous processing read task.">ContinuousDataSourceRDD</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ContinuousDataSourceRDDPartition.html" title=""></a>
+                        <a href="ContinuousDataSourceRDDPartition.html" title="">ContinuousDataSourceRDDPartition</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="ContinuousExecution$.html" title=""></a>
+                        <a class="class" href="ContinuousExecution.html" title=""></a>
+                        <a href="ContinuousExecution.html" title="">ContinuousExecution</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ContinuousQueuedDataReader.html" title="A wrapper for a continuous processing data reader, including a reading queue and epoch markers."></a>
+                        <a href="ContinuousQueuedDataReader.html" title="A wrapper for a continuous processing data reader, including a reading queue and epoch markers.">ContinuousQueuedDataReader</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ContinuousTaskRetryException.html" title="An exception thrown when a continuous processing task runs with a nonzero attempt ID."></a>
+                        <a href="ContinuousTaskRetryException.html" title="An exception thrown when a continuous processing task runs with a nonzero attempt ID.">ContinuousTaskRetryException</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ContinuousWriteRDD.html" title="The RDD writing to a sink in continuous processing."></a>
+                        <a href="ContinuousWriteRDD.html" title="The RDD writing to a sink in continuous processing.">ContinuousWriteRDD</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="object" href="EpochTracker$.html" title="Tracks the current continuous processing epoch within a task."></a>
+                        <a href="EpochTracker$.html" title="Tracks the current continuous processing epoch within a task.">EpochTracker</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="RateStreamContinuousInputPartition.html" title=""></a>
+                        <a href="RateStreamContinuousInputPartition.html" title="">RateStreamContinuousInputPartition</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="RateStreamContinuousPartitionReader.html" title=""></a>
+                        <a href="RateStreamContinuousPartitionReader.html" title="">RateStreamContinuousPartitionReader</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="object" href="RateStreamContinuousReaderFactory$.html" title=""></a>
+                        <a href="RateStreamContinuousReaderFactory$.html" title="">RateStreamContinuousReaderFactory</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="RateStreamContinuousStream.html" title=""></a>
+                        <a href="RateStreamContinuousStream.html" title="">RateStreamContinuousStream</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="RateStreamPartitionOffset.html" title=""></a>
+                        <a href="RateStreamPartitionOffset.html" title="">RateStreamPartitionOffset</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="SetWriterPartitions.html" title=""></a>
+                        <a href="SetWriterPartitions.html" title="">SetWriterPartitions</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="TextSocketContinuousInputPartition.html" title="Continuous text socket input partition."></a>
+                        <a href="TextSocketContinuousInputPartition.html" title="Continuous text socket input partition.">TextSocketContinuousInputPartition</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="TextSocketContinuousPartitionReader.html" title="Continuous text socket input partition reader."></a>
+                        <a href="TextSocketContinuousPartitionReader.html" title="Continuous text socket input partition reader.">TextSocketContinuousPartitionReader</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="TextSocketContinuousStream.html" title="A ContinuousStream that reads text lines through a TCP socket, designed only for tutorials and debugging."></a>
+                        <a href="TextSocketContinuousStream.html" title="A ContinuousStream that reads text lines through a TCP socket, designed only for tutorials and debugging.">TextSocketContinuousStream</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="TextSocketOffset.html" title=""></a>
+                        <a href="TextSocketOffset.html" title="">TextSocketOffset</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="object" href="TextSocketReaderFactory$.html" title=""></a>
+                        <a href="TextSocketReaderFactory$.html" title="">TextSocketReaderFactory</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="WriteToContinuousDataSource.html" title="The logical plan for writing data in a continuous stream."></a>
+                        <a href="WriteToContinuousDataSource.html" title="The logical plan for writing data in a continuous stream.">WriteToContinuousDataSource</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="WriteToContinuousDataSourceExec.html" title="The physical plan for writing data into a continuous processing StreamingWrite."></a>
+                        <a href="WriteToContinuousDataSourceExec.html" title="The physical plan for writing data into a continuous processing StreamingWrite.">WriteToContinuousDataSourceExec</a>
+                      </li><li name="org.apache.spark.sql.execution.streaming.sources" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sources"></a><a id="sources:sources"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/streaming/sources/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../sources/index.html"><span class="name">sources</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution.streaming">streaming</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.streaming.state" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="state"></a><a id="state:state"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/streaming/state/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../state/index.html"><span class="name">state</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution.streaming">streaming</a></dd></dl></div>
+    </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../../../../index.html" class="extype" name="org">org</a>.<a href="../../../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../../../index.html" class="extype" name="org.apache.spark.sql">sql</a>.<a href="../../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a>.<a href="../index.html" class="extype" name="org.apache.spark.sql.execution.streaming">streaming</a></p>
+        <h1>continuous<span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/streaming/continuous/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">continuous</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              
+            </ol>
+          </div>
+          
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.spark.sql.execution.streaming.continuous.ContinuousDataSourceRDD" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ContinuousDataSourceRDDextendsRDD[org.apache.spark.sql.catalyst.InternalRow]"></a><a id="ContinuousDataSourceRDD:ContinuousDataSourceRDD"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/streaming/continuous/ContinuousDataSourceRDD.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The bottom-most RDD of a continuous processing read task." href="ContinuousDataSourceRDD.html"><span class="name">ContinuousDataSourceRDD</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<span class="extype" name="org.apache.spark.sql.catalyst.InternalRow">InternalRow</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">The bottom-most RDD of a continuous processing read task.</p><div class="fullcomment"><div class="comment cmt"><p>The bottom-most RDD of a continuous processing read task. Wraps a <a href="ContinuousQueuedDataReader.html" class="extype" name="org.apache.spark.sql.execution.streaming.continuous.ContinuousQueuedDataReader">ContinuousQueuedDataReader</a>
+to read from the remote source, and polls that queue for incoming rows.</p><p>Note that continuous processing calls compute() multiple times, and the same
+<a href="ContinuousQueuedDataReader.html" class="extype" name="org.apache.spark.sql.execution.streaming.continuous.ContinuousQueuedDataReader">ContinuousQueuedDataReader</a> instance will/must be shared between each call for the same split.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.streaming.continuous.ContinuousDataSourceRDDPartition" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ContinuousDataSourceRDDPartitionextendsPartitionwithSerializable"></a><a id="ContinuousDataSourceRDDPartition:ContinuousDataSourceRDDPartition"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/streaming/continuous/ContinuousDataSourceRDDPartition.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ContinuousDataSourceRDDPartition.html"><span class="name">ContinuousDataSourceRDDPartition</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.Partition">Partition</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.streaming.continuous.ContinuousExecution" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ContinuousExecutionextendsStreamExecution"></a><a id="ContinuousExecution:ContinuousExecution"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/streaming/continuous/ContinuousExecution.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ContinuousExecution.html"><span class="name">ContinuousExecution</span></a><span class="result"> extends <a href="../StreamExecution.html" class="extype" name="org.apache.spark.sql.execution.streaming.StreamExecution">StreamExecution</a></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.streaming.continuous.ContinuousQueuedDataReader" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ContinuousQueuedDataReaderextendsCloseable"></a><a id="ContinuousQueuedDataReader:ContinuousQueuedDataReader"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/streaming/continuous/ContinuousQueuedDataReader.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A wrapper for a continuous processing data reader, including a reading queue and epoch markers." href="ContinuousQueuedDataReader.html"><span class="name">ContinuousQueuedDataReader</span></a><span class="result"> extends <span class="extype" name="java.io.Closeable">Closeable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A wrapper for a continuous processing data reader, including a reading queue and epoch markers.</p><div class="fullcomment"><div class="comment cmt"><p>A wrapper for a continuous processing data reader, including a reading queue and epoch markers.</p><p>This will be instantiated once per partition - successive calls to compute() in the
+<a href="ContinuousDataSourceRDD.html" class="extype" name="org.apache.spark.sql.execution.streaming.continuous.ContinuousDataSourceRDD">ContinuousDataSourceRDD</a> will reuse the same reader. This is required to get continuity of
+offsets across epochs. Each compute() should call the next() method here until null is returned.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.streaming.continuous.ContinuousTaskRetryException" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ContinuousTaskRetryExceptionextendsSparkException"></a><a id="ContinuousTaskRetryException:ContinuousTaskRetryException"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/streaming/continuous/ContinuousTaskRetryException.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="An exception thrown when a continuous processing task runs with a nonzero attempt ID." href="ContinuousTaskRetryException.html"><span class="name">ContinuousTaskRetryException</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.SparkException">SparkException</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">An exception thrown when a continuous processing task runs with a nonzero attempt ID.</p>
+    </li><li name="org.apache.spark.sql.execution.streaming.continuous.ContinuousWriteRDD" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ContinuousWriteRDDextendsRDD[Unit]"></a><a id="ContinuousWriteRDD:ContinuousWriteRDD"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/streaming/continuous/ContinuousWriteRDD.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The RDD writing to a sink in continuous processing." href="ContinuousWriteRDD.html"><span class="name">ContinuousWriteRDD</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">The RDD writing to a sink in continuous processing.</p><div class="fullcomment"><div class="comment cmt"><p>The RDD writing to a sink in continuous processing.</p><p>Within each task, we repeatedly call prev.compute(). Each resulting iterator contains the data
+to be written for one epoch, which we commit and forward to the driver.</p><p>We keep repeating prev.compute() and writing new epochs until the query is shut down.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.streaming.continuous.RateStreamContinuousInputPartition" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RateStreamContinuousInputPartitionextendsInputPartitionwithProductwithSerializable"></a><a id="RateStreamContinuousInputPartition:RateStreamContinuousInputPartition"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/streaming/continuous/RateStreamContinuousInputPartition.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="RateStreamContinuousInputPartition.html"><span class="name">RateStreamContinuousInputPartition</span></a><span class="params">(<span name="startValue">startValue: <span class="extype" name="scala.Long">Long</span></span>, <span name="startTimeMs">startTimeMs: <span class="extype" name="scala.Long">Long</span></span>, <span name="partitionIndex">partitionIndex: <span class="extype" name="scala.Int">Int</span></span>, <span name="increment">increment: <span class="extype" name="scala.Long">Long</span></span>, <span name="rowsPerSecond">rowsPerSecond: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.connector.read.InputPartition">InputPartition</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.streaming.continuous.RateStreamContinuousPartitionReader" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RateStreamContinuousPartitionReaderextendsContinuousPartitionReader[org.apache.spark.sql.catalyst.InternalRow]"></a><a id="RateStreamContinuousPartitionReader:RateStreamContinuousPartitionReader"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/streaming/continuous/RateStreamContinuousPartitionReader.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="RateStreamContinuousPartitionReader.html"><span class="name">RateStreamContinuousPartitionReader</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.connector.read.streaming.ContinuousPartitionReader">ContinuousPartitionReader</span>[<span class="extype" name="org.apache.spark.sql.catalyst.InternalRow">InternalRow</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.streaming.continuous.RateStreamContinuousStream" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RateStreamContinuousStreamextendsContinuousStream"></a><a id="RateStreamContinuousStream:RateStreamContinuousStream"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/streaming/continuous/RateStreamContinuousStream.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="RateStreamContinuousStream.html"><span class="name">RateStreamContinuousStream</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.connector.read.streaming.ContinuousStream">ContinuousStream</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.streaming.continuous.RateStreamPartitionOffset" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RateStreamPartitionOffsetextendsPartitionOffsetwithProductwithSerializable"></a><a id="RateStreamPartitionOffset:RateStreamPartitionOffset"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/streaming/continuous/RateStreamPartitionOffset.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="RateStreamPartitionOffset.html"><span class="name">RateStreamPartitionOffset</span></a><span class="params">(<span name="partition">partition: <span class="extype" name="scala.Int">Int</span></span>, <span name="currentValue">currentValue: <span class="extype" name="scala.Long">Long</span></span>, <span name="currentTimeMs">currentTimeMs: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.connector.read.streaming.PartitionOffset">PartitionOffset</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.streaming.continuous.SetWriterPartitions" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SetWriterPartitionsextendsEpochCoordinatorMessagewithProductwithSerializable"></a><a id="SetWriterPartitions:SetWriterPartitions"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/streaming/continuous/SetWriterPartitions.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="SetWriterPartitions.html"><span class="name">SetWriterPartitions</span></a><span class="params">(<span name="numPartitions">numPartitions: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.execution.streaming.continuous.EpochCoordinatorMessage">EpochCoordinatorMessage</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.streaming.continuous.TextSocketContinuousInputPartition" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TextSocketContinuousInputPartitionextendsInputPartitionwithProductwithSerializable"></a><a id="TextSocketContinuousInputPartition:TextSocketContinuousInputPartition"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/streaming/continuous/TextSocketContinuousInputPartition.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Continuous text socket input partition." href="TextSocketContinuousInputPartition.html"><span class="name">TextSocketContinuousInputPartition</span></a><span class="params">(<span name="driverEndpointName">driverEndpointName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="partitionId">partitionId: <span class="extype" name="scala.Int">Int</span></span>, <span name="startOffset">startOffset: <span class="extype" name="scala.Int">Int</span></span>, <span name="includeTimestamp">includeTimestamp: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.connector.read.InputPartition">InputPartition</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Continuous text socket input partition.</p>
+    </li><li name="org.apache.spark.sql.execution.streaming.continuous.TextSocketContinuousPartitionReader" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TextSocketContinuousPartitionReaderextendsContinuousPartitionReader[org.apache.spark.sql.catalyst.InternalRow]"></a><a id="TextSocketContinuousPartitionReader:TextSocketContinuousPartitionReader"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/streaming/continuous/TextSocketContinuousPartitionReader.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Continuous text socket input partition reader." href="TextSocketContinuousPartitionReader.html"><span class="name">TextSocketContinuousPartitionReader</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.connector.read.streaming.ContinuousPartitionReader">ContinuousPartitionReader</span>[<span class="extype" name="org.apache.spark.sql.catalyst.InternalRow">InternalRow</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Continuous text socket input partition reader.</p><div class="fullcomment"><div class="comment cmt"><p>Continuous text socket input partition reader.</p><p>Polls the driver endpoint for new records.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.streaming.continuous.TextSocketContinuousStream" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TextSocketContinuousStreamextendsContinuousStreamwithLogging"></a><a id="TextSocketContinuousStream:TextSocketContinuousStream"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/streaming/continuous/TextSocketContinuousStream.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A ContinuousStream that reads text lines through a TCP socket, designed only for tutorials and debugging." href="TextSocketContinuousStream.html"><span class="name">TextSocketContinuousStream</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.connector.read.streaming.ContinuousStream">ContinuousStream</span> with <span class="extype" name="org.apache.spark.internal.Logging">Logging</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A <span class="extype" name="ContinuousStream">ContinuousStream</span> that reads text lines through a TCP socket, designed only for tutorials
+and debugging.</p><div class="fullcomment"><div class="comment cmt"><p>A <span class="extype" name="ContinuousStream">ContinuousStream</span> that reads text lines through a TCP socket, designed only for tutorials
+and debugging. This ContinuousStream will *not* work in production applications due to
+multiple reasons, including no support for fault recovery.</p><p>The driver maintains a socket connection to the host-port, keeps the received messages in
+buckets and serves the messages to the executors via a RPC endpoint.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.streaming.continuous.TextSocketOffset" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TextSocketOffsetextendsOffsetwithProductwithSerializable"></a><a id="TextSocketOffset:TextSocketOffset"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/streaming/continuous/TextSocketOffset.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="TextSocketOffset.html"><span class="name">TextSocketOffset</span></a><span class="params">(<span name="offsets">offsets: <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.connector.read.streaming.Offset">connector.read.streaming.Offset</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.streaming.continuous.WriteToContinuousDataSource" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WriteToContinuousDataSourceextendsLogicalPlanwithUnaryNodewithProductwithSerializable"></a><a id="WriteToContinuousDataSource:WriteToContinuousDataSource"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/streaming/continuous/WriteToContinuousDataSource.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="The logical plan for writing data in a continuous stream." href="WriteToContinuousDataSource.html"><span class="name">WriteToContinuousDataSource</span></a><span class="params">(<span name="write">write: <span class="extype" name="org.apache.spark.sql.connector.write.streaming.StreamingWrite">StreamingWrite</span></span>, <span name="query">query: <span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</span></span>, <span name="customMetrics">customMetrics: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.connector.metric.CustomMetric">CustomMetric</span>]</span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</span> with <span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.UnaryNode">UnaryNode</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The logical plan for writing data in a continuous stream.</p>
+    </li><li name="org.apache.spark.sql.execution.streaming.continuous.WriteToContinuousDataSourceExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WriteToContinuousDataSourceExecextendsSparkPlanwithUnaryExecNodewithLoggingwithProductwithSerializable"></a><a id="WriteToContinuousDataSourceExec:WriteToContinuousDataSourceExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/streaming/continuous/WriteToContinuousDataSourceExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="The physical plan for writing data into a continuous processing StreamingWrite." href="WriteToContinuousDataSourceExec.html"><span class="name">WriteToContinuousDataSourceExec</span></a><span class="params">(<span name="write">write: <span class="extype" name="org.apache.spark.sql.connector.write.streaming.StreamingWrite">StreamingWrite</span></span>, <span name="query">query: <a href="../../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>, <span name="customMetrics">customMetrics: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.connector.metric.CustomMetric">CustomMetric</span>]</span>)</span><span class="result"> extends <a href="../../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a> with <a href="../../UnaryExecNode.html" class="extype" name="org.apache.spark.sql.execution.UnaryExecNode">UnaryExecNode</a> with <span class="extype" name="org.apache.spark.internal.Logging">Logging</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The physical plan for writing data into a continuous processing <span class="extype" name="StreamingWrite">StreamingWrite</span>.</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="org.apache.spark.sql.execution.streaming.continuous.ContinuousExecution" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ContinuousExecution"></a><a id="ContinuousExecution:ContinuousExecution"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/streaming/continuous/ContinuousExecution$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ContinuousExecution$.html"><span class="name">ContinuousExecution</span></a>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.streaming.continuous.EpochTracker" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="EpochTracker"></a><a id="EpochTracker:EpochTracker"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/streaming/continuous/EpochTracker$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Tracks the current continuous processing epoch within a task." href="EpochTracker$.html"><span class="name">EpochTracker</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Tracks the current continuous processing epoch within a task.</p><div class="fullcomment"><div class="comment cmt"><p>Tracks the current continuous processing epoch within a task. Call
+EpochTracker.getCurrentEpoch to get the current epoch.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.streaming.continuous.RateStreamContinuousReaderFactory" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RateStreamContinuousReaderFactory"></a><a id="RateStreamContinuousReaderFactory:RateStreamContinuousReaderFactory"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/streaming/continuous/RateStreamContinuousReaderFactory$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="RateStreamContinuousReaderFactory$.html"><span class="name">RateStreamContinuousReaderFactory</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.connector.read.streaming.ContinuousPartitionReaderFactory">ContinuousPartitionReaderFactory</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.streaming.continuous.TextSocketReaderFactory" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TextSocketReaderFactory"></a><a id="TextSocketReaderFactory:TextSocketReaderFactory"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/streaming/continuous/TextSocketReaderFactory$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="TextSocketReaderFactory$.html"><span class="name">TextSocketReaderFactory</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.connector.read.streaming.ContinuousPartitionReaderFactory">ContinuousPartitionReaderFactory</span></span>
+      </span>
+      
+      
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

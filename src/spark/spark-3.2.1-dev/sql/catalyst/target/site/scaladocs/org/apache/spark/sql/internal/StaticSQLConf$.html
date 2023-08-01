@@ -1,0 +1,1040 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Catalyst 3.2.1 API  - org.apache.spark.sql.internal.StaticSQLConf</title>
+          <meta name="description" content="Spark Project Catalyst 3.2.1 API - org.apache.spark.sql.internal.StaticSQLConf" />
+          <meta name="keywords" content="Spark Project Catalyst 3.2.1 API org.apache.spark.sql.internal.StaticSQLConf" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Catalyst 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sql"></a><a id="sql:sql"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">sql</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.internal" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="internal"></a><a id="internal:internal"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="index.html"><span class="name">internal</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.internal.connector" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="connector"></a><a id="connector:connector"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/connector/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="connector/index.html"><span class="name">connector</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.internal">internal</a></dd></dl></div>
+    </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ReadOnlySQLConf.html" title="A readonly SQLConf that will be created by tasks running at the executor side."></a>
+                        <a href="ReadOnlySQLConf.html" title="A readonly SQLConf that will be created by tasks running at the executor side.">ReadOnlySQLConf</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="SQLConf$.html" title=""></a>
+                        <a class="class" href="SQLConf.html" title="A class that enables the setting and getting of mutable config parameters/hints."></a>
+                        <a href="SQLConf.html" title="A class that enables the setting and getting of mutable config parameters/hints.">SQLConf</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="" title="Static SQL configuration is a cross-session, immutable Spark configuration."></a>
+                        <a href="" title="Static SQL configuration is a cross-session, immutable Spark configuration.">StaticSQLConf</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TaskContextConfigProvider.html" title=""></a>
+                        <a href="TaskContextConfigProvider.html" title="">TaskContextConfigProvider</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="object value">
+      <div id="definition">
+        <div class="big-circle object">o</div>
+        <p id="owner"><a href="../../../../index.html" class="extype" name="org">org</a>.<a href="../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../index.html" class="extype" name="org.apache.spark.sql">sql</a>.<a href="index.html" class="extype" name="org.apache.spark.sql.internal">internal</a></p>
+        <h1>StaticSQLConf<span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <span class="name">StaticSQLConf</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Static SQL configuration is a cross-session, immutable Spark configuration. External users can
+see the static sql configs via <code>SparkSession.conf</code>, but can NOT set/unset them.
+</p></div><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="org.apache.spark.sql.internal.StaticSQLConf"><span>StaticSQLConf</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.spark.sql.internal.StaticSQLConf#BROADCAST_EXCHANGE_MAX_THREAD_THRESHOLD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BROADCAST_EXCHANGE_MAX_THREAD_THRESHOLD:org.apache.spark.internal.config.ConfigEntry[Int]"></a><a id="BROADCAST_EXCHANGE_MAX_THREAD_THRESHOLD:ConfigEntry[Int]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#BROADCAST_EXCHANGE_MAX_THREAD_THRESHOLD:org.apache.spark.internal.config.ConfigEntry[Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BROADCAST_EXCHANGE_MAX_THREAD_THRESHOLD</span><span class="result">: <span class="extype" name="org.apache.spark.internal.config.ConfigEntry">ConfigEntry</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.internal.StaticSQLConf#CATALOG_IMPLEMENTATION" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CATALOG_IMPLEMENTATION:org.apache.spark.internal.config.ConfigEntry[String]"></a><a id="CATALOG_IMPLEMENTATION:ConfigEntry[String]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#CATALOG_IMPLEMENTATION:org.apache.spark.internal.config.ConfigEntry[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">CATALOG_IMPLEMENTATION</span><span class="result">: <span class="extype" name="org.apache.spark.internal.config.ConfigEntry">ConfigEntry</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.internal.StaticSQLConf#CODEGEN_CACHE_MAX_ENTRIES" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CODEGEN_CACHE_MAX_ENTRIES:org.apache.spark.internal.config.ConfigEntry[Int]"></a><a id="CODEGEN_CACHE_MAX_ENTRIES:ConfigEntry[Int]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#CODEGEN_CACHE_MAX_ENTRIES:org.apache.spark.internal.config.ConfigEntry[Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">CODEGEN_CACHE_MAX_ENTRIES</span><span class="result">: <span class="extype" name="org.apache.spark.internal.config.ConfigEntry">ConfigEntry</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.internal.StaticSQLConf#CODEGEN_COMMENTS" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CODEGEN_COMMENTS:org.apache.spark.internal.config.ConfigEntry[Boolean]"></a><a id="CODEGEN_COMMENTS:ConfigEntry[Boolean]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#CODEGEN_COMMENTS:org.apache.spark.internal.config.ConfigEntry[Boolean]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">CODEGEN_COMMENTS</span><span class="result">: <span class="extype" name="org.apache.spark.internal.config.ConfigEntry">ConfigEntry</span>[<span class="extype" name="scala.Boolean">Boolean</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.internal.StaticSQLConf#DEBUG_MODE" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DEBUG_MODE:org.apache.spark.internal.config.ConfigEntry[Boolean]"></a><a id="DEBUG_MODE:ConfigEntry[Boolean]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#DEBUG_MODE:org.apache.spark.internal.config.ConfigEntry[Boolean]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DEBUG_MODE</span><span class="result">: <span class="extype" name="org.apache.spark.internal.config.ConfigEntry">ConfigEntry</span>[<span class="extype" name="scala.Boolean">Boolean</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.internal.StaticSQLConf#DEFAULT_URL_STREAM_HANDLER_FACTORY_ENABLED" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DEFAULT_URL_STREAM_HANDLER_FACTORY_ENABLED:org.apache.spark.internal.config.ConfigEntry[Boolean]"></a><a id="DEFAULT_URL_STREAM_HANDLER_FACTORY_ENABLED:ConfigEntry[Boolean]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#DEFAULT_URL_STREAM_HANDLER_FACTORY_ENABLED:org.apache.spark.internal.config.ConfigEntry[Boolean]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DEFAULT_URL_STREAM_HANDLER_FACTORY_ENABLED</span><span class="result">: <span class="extype" name="org.apache.spark.internal.config.ConfigEntry">ConfigEntry</span>[<span class="extype" name="scala.Boolean">Boolean</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.internal.StaticSQLConf#ENABLED_STREAMING_UI_CUSTOM_METRIC_LIST" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ENABLED_STREAMING_UI_CUSTOM_METRIC_LIST:org.apache.spark.internal.config.ConfigEntry[Seq[String]]"></a><a id="ENABLED_STREAMING_UI_CUSTOM_METRIC_LIST:ConfigEntry[Seq[String]]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#ENABLED_STREAMING_UI_CUSTOM_METRIC_LIST:org.apache.spark.internal.config.ConfigEntry[Seq[String]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ENABLED_STREAMING_UI_CUSTOM_METRIC_LIST</span><span class="result">: <span class="extype" name="org.apache.spark.internal.config.ConfigEntry">ConfigEntry</span>[<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.internal.StaticSQLConf#FILESOURCE_TABLE_RELATION_CACHE_SIZE" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FILESOURCE_TABLE_RELATION_CACHE_SIZE:org.apache.spark.internal.config.ConfigEntry[Int]"></a><a id="FILESOURCE_TABLE_RELATION_CACHE_SIZE:ConfigEntry[Int]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#FILESOURCE_TABLE_RELATION_CACHE_SIZE:org.apache.spark.internal.config.ConfigEntry[Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">FILESOURCE_TABLE_RELATION_CACHE_SIZE</span><span class="result">: <span class="extype" name="org.apache.spark.internal.config.ConfigEntry">ConfigEntry</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.internal.StaticSQLConf#GLOBAL_TEMP_DATABASE" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GLOBAL_TEMP_DATABASE:org.apache.spark.internal.config.ConfigEntry[String]"></a><a id="GLOBAL_TEMP_DATABASE:ConfigEntry[String]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#GLOBAL_TEMP_DATABASE:org.apache.spark.internal.config.ConfigEntry[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">GLOBAL_TEMP_DATABASE</span><span class="result">: <span class="extype" name="org.apache.spark.internal.config.ConfigEntry">ConfigEntry</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.internal.StaticSQLConf#HIVE_THRIFT_SERVER_SINGLESESSION" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HIVE_THRIFT_SERVER_SINGLESESSION:org.apache.spark.internal.config.ConfigEntry[Boolean]"></a><a id="HIVE_THRIFT_SERVER_SINGLESESSION:ConfigEntry[Boolean]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#HIVE_THRIFT_SERVER_SINGLESESSION:org.apache.spark.internal.config.ConfigEntry[Boolean]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">HIVE_THRIFT_SERVER_SINGLESESSION</span><span class="result">: <span class="extype" name="org.apache.spark.internal.config.ConfigEntry">ConfigEntry</span>[<span class="extype" name="scala.Boolean">Boolean</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.internal.StaticSQLConf#METADATA_CACHE_TTL_SECONDS" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="METADATA_CACHE_TTL_SECONDS:org.apache.spark.internal.config.ConfigEntry[Long]"></a><a id="METADATA_CACHE_TTL_SECONDS:ConfigEntry[Long]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#METADATA_CACHE_TTL_SECONDS:org.apache.spark.internal.config.ConfigEntry[Long]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">METADATA_CACHE_TTL_SECONDS</span><span class="result">: <span class="extype" name="org.apache.spark.internal.config.ConfigEntry">ConfigEntry</span>[<span class="extype" name="scala.Long">Long</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.internal.StaticSQLConf#QUERY_EXECUTION_LISTENERS" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="QUERY_EXECUTION_LISTENERS:org.apache.spark.internal.config.OptionalConfigEntry[Seq[String]]"></a><a id="QUERY_EXECUTION_LISTENERS:OptionalConfigEntry[Seq[String]]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#QUERY_EXECUTION_LISTENERS:org.apache.spark.internal.config.OptionalConfigEntry[Seq[String]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">QUERY_EXECUTION_LISTENERS</span><span class="result">: <span class="extype" name="org.apache.spark.internal.config.OptionalConfigEntry">OptionalConfigEntry</span>[<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.internal.StaticSQLConf#SCHEMA_STRING_LENGTH_THRESHOLD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SCHEMA_STRING_LENGTH_THRESHOLD:org.apache.spark.internal.config.ConfigEntry[Int]"></a><a id="SCHEMA_STRING_LENGTH_THRESHOLD:ConfigEntry[Int]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#SCHEMA_STRING_LENGTH_THRESHOLD:org.apache.spark.internal.config.ConfigEntry[Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SCHEMA_STRING_LENGTH_THRESHOLD</span><span class="result">: <span class="extype" name="org.apache.spark.internal.config.ConfigEntry">ConfigEntry</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.internal.StaticSQLConf#SPARK_CACHE_SERIALIZER" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SPARK_CACHE_SERIALIZER:org.apache.spark.internal.config.ConfigEntry[String]"></a><a id="SPARK_CACHE_SERIALIZER:ConfigEntry[String]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#SPARK_CACHE_SERIALIZER:org.apache.spark.internal.config.ConfigEntry[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SPARK_CACHE_SERIALIZER</span><span class="result">: <span class="extype" name="org.apache.spark.internal.config.ConfigEntry">ConfigEntry</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.internal.StaticSQLConf#SPARK_SESSION_EXTENSIONS" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SPARK_SESSION_EXTENSIONS:org.apache.spark.internal.config.OptionalConfigEntry[Seq[String]]"></a><a id="SPARK_SESSION_EXTENSIONS:OptionalConfigEntry[Seq[String]]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#SPARK_SESSION_EXTENSIONS:org.apache.spark.internal.config.OptionalConfigEntry[Seq[String]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SPARK_SESSION_EXTENSIONS</span><span class="result">: <span class="extype" name="org.apache.spark.internal.config.OptionalConfigEntry">OptionalConfigEntry</span>[<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.internal.StaticSQLConf#SQL_EVENT_TRUNCATE_LENGTH" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SQL_EVENT_TRUNCATE_LENGTH:org.apache.spark.internal.config.ConfigEntry[Int]"></a><a id="SQL_EVENT_TRUNCATE_LENGTH:ConfigEntry[Int]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#SQL_EVENT_TRUNCATE_LENGTH:org.apache.spark.internal.config.ConfigEntry[Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SQL_EVENT_TRUNCATE_LENGTH</span><span class="result">: <span class="extype" name="org.apache.spark.internal.config.ConfigEntry">ConfigEntry</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.internal.StaticSQLConf#SQL_LEGACY_SESSION_INIT_WITH_DEFAULTS" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SQL_LEGACY_SESSION_INIT_WITH_DEFAULTS:org.apache.spark.internal.config.ConfigEntry[Boolean]"></a><a id="SQL_LEGACY_SESSION_INIT_WITH_DEFAULTS:ConfigEntry[Boolean]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#SQL_LEGACY_SESSION_INIT_WITH_DEFAULTS:org.apache.spark.internal.config.ConfigEntry[Boolean]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SQL_LEGACY_SESSION_INIT_WITH_DEFAULTS</span><span class="result">: <span class="extype" name="org.apache.spark.internal.config.ConfigEntry">ConfigEntry</span>[<span class="extype" name="scala.Boolean">Boolean</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.internal.StaticSQLConf#STREAMING_QUERY_LISTENERS" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="STREAMING_QUERY_LISTENERS:org.apache.spark.internal.config.OptionalConfigEntry[Seq[String]]"></a><a id="STREAMING_QUERY_LISTENERS:OptionalConfigEntry[Seq[String]]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#STREAMING_QUERY_LISTENERS:org.apache.spark.internal.config.OptionalConfigEntry[Seq[String]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">STREAMING_QUERY_LISTENERS</span><span class="result">: <span class="extype" name="org.apache.spark.internal.config.OptionalConfigEntry">OptionalConfigEntry</span>[<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.internal.StaticSQLConf#STREAMING_UI_ENABLED" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="STREAMING_UI_ENABLED:org.apache.spark.internal.config.ConfigEntry[Boolean]"></a><a id="STREAMING_UI_ENABLED:ConfigEntry[Boolean]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#STREAMING_UI_ENABLED:org.apache.spark.internal.config.ConfigEntry[Boolean]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">STREAMING_UI_ENABLED</span><span class="result">: <span class="extype" name="org.apache.spark.internal.config.ConfigEntry">ConfigEntry</span>[<span class="extype" name="scala.Boolean">Boolean</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.internal.StaticSQLConf#STREAMING_UI_RETAINED_PROGRESS_UPDATES" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="STREAMING_UI_RETAINED_PROGRESS_UPDATES:org.apache.spark.internal.config.ConfigEntry[Int]"></a><a id="STREAMING_UI_RETAINED_PROGRESS_UPDATES:ConfigEntry[Int]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#STREAMING_UI_RETAINED_PROGRESS_UPDATES:org.apache.spark.internal.config.ConfigEntry[Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">STREAMING_UI_RETAINED_PROGRESS_UPDATES</span><span class="result">: <span class="extype" name="org.apache.spark.internal.config.ConfigEntry">ConfigEntry</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.internal.StaticSQLConf#STREAMING_UI_RETAINED_QUERIES" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="STREAMING_UI_RETAINED_QUERIES:org.apache.spark.internal.config.ConfigEntry[Int]"></a><a id="STREAMING_UI_RETAINED_QUERIES:ConfigEntry[Int]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#STREAMING_UI_RETAINED_QUERIES:org.apache.spark.internal.config.ConfigEntry[Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">STREAMING_UI_RETAINED_QUERIES</span><span class="result">: <span class="extype" name="org.apache.spark.internal.config.ConfigEntry">ConfigEntry</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.internal.StaticSQLConf#SUBQUERY_MAX_THREAD_THRESHOLD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SUBQUERY_MAX_THREAD_THRESHOLD:org.apache.spark.internal.config.ConfigEntry[Int]"></a><a id="SUBQUERY_MAX_THREAD_THRESHOLD:ConfigEntry[Int]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#SUBQUERY_MAX_THREAD_THRESHOLD:org.apache.spark.internal.config.ConfigEntry[Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SUBQUERY_MAX_THREAD_THRESHOLD</span><span class="result">: <span class="extype" name="org.apache.spark.internal.config.ConfigEntry">ConfigEntry</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.internal.StaticSQLConf#UI_RETAINED_EXECUTIONS" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UI_RETAINED_EXECUTIONS:org.apache.spark.internal.config.ConfigEntry[Int]"></a><a id="UI_RETAINED_EXECUTIONS:ConfigEntry[Int]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#UI_RETAINED_EXECUTIONS:org.apache.spark.internal.config.ConfigEntry[Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">UI_RETAINED_EXECUTIONS</span><span class="result">: <span class="extype" name="org.apache.spark.internal.config.ConfigEntry">ConfigEntry</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.internal.StaticSQLConf#WAREHOUSE_PATH" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WAREHOUSE_PATH:org.apache.spark.internal.config.ConfigEntry[String]"></a><a id="WAREHOUSE_PATH:ConfigEntry[String]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#WAREHOUSE_PATH:org.apache.spark.internal.config.ConfigEntry[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">WAREHOUSE_PATH</span><span class="result">: <span class="extype" name="org.apache.spark.internal.config.ConfigEntry">ConfigEntry</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/StaticSQLConf$.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

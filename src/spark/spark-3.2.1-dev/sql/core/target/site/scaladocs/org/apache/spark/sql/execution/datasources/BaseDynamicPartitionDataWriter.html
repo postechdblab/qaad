@@ -1,0 +1,1512 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project SQL 3.2.1 API  - org.apache.spark.sql.execution.datasources.BaseDynamicPartitionDataWriter</title>
+          <meta name="description" content="Spark Project SQL 3.2.1 API - org.apache.spark.sql.execution.datasources.BaseDynamicPartitionDataWriter" />
+          <meta name="keywords" content="Spark Project SQL 3.2.1 API org.apache.spark.sql.execution.datasources.BaseDynamicPartitionDataWriter" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project SQL 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sql"></a><a id="sql:sql"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Allows the execution of relational queries, including those expressed in SQL using Spark." href="../../index.html"><span class="name">sql</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Allows the execution of relational queries, including those expressed in SQL using Spark.</p><div class="fullcomment"><div class="comment cmt"><p>Allows the execution of relational queries, including those expressed in SQL using Spark.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="execution"></a><a id="execution:execution"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="The physical execution component of Spark SQL." href="../index.html"><span class="name">execution</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">The physical execution component of Spark SQL.</p><div class="fullcomment"><div class="comment cmt"><p>The physical execution component of Spark SQL. Note that this is a private package.
+All classes in catalyst are considered an internal API to Spark SQL and are subject
+to change between minor releases.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="datasources"></a><a id="datasources:datasources"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="index.html"><span class="name">datasources</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.binaryfile" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="binaryfile"></a><a id="binaryfile:binaryfile"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/binaryfile/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="binaryfile/index.html"><span class="name">binaryfile</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution.datasources">datasources</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.csv" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="csv"></a><a id="csv:csv"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/csv/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="csv/index.html"><span class="name">csv</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution.datasources">datasources</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.jdbc" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="jdbc"></a><a id="jdbc:jdbc"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/jdbc/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="jdbc/index.html"><span class="name">jdbc</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution.datasources">datasources</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.json" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="json"></a><a id="json:json"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/json/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="json/index.html"><span class="name">json</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution.datasources">datasources</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.noop" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="noop"></a><a id="noop:noop"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/noop/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="noop/index.html"><span class="name">noop</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution.datasources">datasources</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.orc" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="orc"></a><a id="orc:orc"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/orc/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="orc/index.html"><span class="name">orc</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution.datasources">datasources</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.parquet" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="parquet"></a><a id="parquet:parquet"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/parquet/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="parquet/index.html"><span class="name">parquet</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution.datasources">datasources</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.text" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="text"></a><a id="text:text"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/text/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="text/index.html"><span class="name">text</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution.datasources">datasources</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="v2"></a><a id="v2:v2"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/v2/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="v2/index.html"><span class="name">v2</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.execution.datasources">datasources</a></dd></dl></div>
+    </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="" title="Holds common logic for writing data with dynamic partition writes, meaning it can write to multiple directories (partitions) or files (bucketing)."></a>
+                        <a href="" title="Holds common logic for writing data with dynamic partition writes, meaning it can write to multiple directories (partitions) or files (bucketing).">BaseDynamicPartitionDataWriter</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="BasicWriteJobStatsTracker$.html" title=""></a>
+                        <a class="class" href="BasicWriteJobStatsTracker.html" title="Simple WriteJobStatsTracker implementation that's serializable, capable of instantiating BasicWriteTaskStatsTracker on executors and processing the BasicWriteTaskStats they produce by aggregating the metrics and posting them as DriverMetricUpdates."></a>
+                        <a href="BasicWriteJobStatsTracker.html" title="Simple WriteJobStatsTracker implementation that's serializable, capable of instantiating BasicWriteTaskStatsTracker on executors and processing the BasicWriteTaskStats they produce by aggregating the metrics and posting them as DriverMetricUpdates.">BasicWriteJobStatsTracker</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="BasicWriteTaskStats.html" title="Simple metrics collected during an instance of FileFormatDataWriter."></a>
+                        <a href="BasicWriteTaskStats.html" title="Simple metrics collected during an instance of FileFormatDataWriter.">BasicWriteTaskStats</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="BasicWriteTaskStatsTracker.html" title="Simple WriteTaskStatsTracker implementation that produces BasicWriteTaskStats."></a>
+                        <a href="BasicWriteTaskStatsTracker.html" title="Simple WriteTaskStatsTracker implementation that produces BasicWriteTaskStats.">BasicWriteTaskStatsTracker</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="BucketingUtils$.html" title=""></a>
+                        <a href="BucketingUtils$.html" title="">BucketingUtils</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="CatalogFileIndex.html" title="A FileIndex for a metastore catalog table."></a>
+                        <a href="CatalogFileIndex.html" title="A FileIndex for a metastore catalog table.">CatalogFileIndex</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="CodecStreams$.html" title=""></a>
+                        <a href="CodecStreams$.html" title="">CodecStreams</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="CreateTable.html" title="Create a table and optionally insert some data into it."></a>
+                        <a href="CreateTable.html" title="Create a table and optionally insert some data into it.">CreateTable</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="CreateTempViewUsing.html" title="Create or replace a local/global temporary view with given data source."></a>
+                        <a href="CreateTempViewUsing.html" title="Create or replace a local/global temporary view with given data source.">CreateTempViewUsing</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="DataSource$.html" title=""></a>
+                        <a class="class" href="DataSource.html" title="The main class responsible for representing a pluggable Data Source in Spark SQL."></a>
+                        <a href="DataSource.html" title="The main class responsible for representing a pluggable Data Source in Spark SQL.">DataSource</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="DataSourceAnalysis$.html" title="Replaces generic operations with specific variants that are designed to work with Spark SQL Data Sources."></a>
+                        <a href="DataSourceAnalysis$.html" title="Replaces generic operations with specific variants that are designed to work with Spark SQL Data Sources.">DataSourceAnalysis</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="DataSourceStrategy$.html" title="A Strategy for planning scans over data sources defined using the sources API."></a>
+                        <a href="DataSourceStrategy$.html" title="A Strategy for planning scans over data sources defined using the sources API.">DataSourceStrategy</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="DataSourceUtils$.html" title=""></a>
+                        <a href="DataSourceUtils$.html" title="">DataSourceUtils</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="DaysWritable.html" title="The class accepts/returns days in Gregorian calendar and rebase them via conversion to local date in Julian calendar for dates before 1582-10-15 in read/write for backward compatibility with Spark 2.4 and earlier versions."></a>
+                        <a href="DaysWritable.html" title="The class accepts/returns days in Gregorian calendar and rebase them via conversion to local date in Julian calendar for dates before 1582-10-15 in read/write for backward compatibility with Spark 2.4 and earlier versions.">DaysWritable</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="DynamicPartitionDataConcurrentWriter.html" title="Dynamic partition writer with concurrent writers, meaning multiple concurrent writers are opened for writing."></a>
+                        <a href="DynamicPartitionDataConcurrentWriter.html" title="Dynamic partition writer with concurrent writers, meaning multiple concurrent writers are opened for writing.">DynamicPartitionDataConcurrentWriter</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="DynamicPartitionDataSingleWriter.html" title="Dynamic partition writer with single writer, meaning only one writer is opened at any time for writing."></a>
+                        <a href="DynamicPartitionDataSingleWriter.html" title="Dynamic partition writer with single writer, meaning only one writer is opened at any time for writing.">DynamicPartitionDataSingleWriter</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="EmptyDirectoryDataWriter.html" title="FileFormatWriteTask for empty partitions"></a>
+                        <a href="EmptyDirectoryDataWriter.html" title="FileFormatWriteTask for empty partitions">EmptyDirectoryDataWriter</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="ExecutedWriteSummary.html" title="Wrapper class for the metrics of writing data out."></a>
+                        <a href="ExecutedWriteSummary.html" title="Wrapper class for the metrics of writing data out.">ExecutedWriteSummary</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="FallBackFileSourceV2.html" title="Replace the File source V2 table in InsertIntoStatement to V1 FileFormat."></a>
+                        <a href="FallBackFileSourceV2.html" title="Replace the File source V2 table in InsertIntoStatement to V1 FileFormat.">FallBackFileSourceV2</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="FileFormat.html" title="Used to read and write data stored in files to/from the InternalRow format."></a>
+                        <a href="FileFormat.html" title="Used to read and write data stored in files to/from the InternalRow format.">FileFormat</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="FileFormatDataWriter.html" title="Abstract class for writing out data in a single Spark task."></a>
+                        <a href="FileFormatDataWriter.html" title="Abstract class for writing out data in a single Spark task.">FileFormatDataWriter</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="FileFormatWriter$.html" title="A helper object for writing FileFormat data out to a location."></a>
+                        <a href="FileFormatWriter$.html" title="A helper object for writing FileFormat data out to a location.">FileFormatWriter</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="FileIndex.html" title="An interface for objects capable of enumerating the root paths of a relation as well as the partitions of a relation subject to some pruning expressions."></a>
+                        <a href="FileIndex.html" title="An interface for objects capable of enumerating the root paths of a relation as well as the partitions of a relation subject to some pruning expressions.">FileIndex</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="FilePartition$.html" title=""></a>
+                        <a class="class" href="FilePartition.html" title="A collection of file blocks that should be read as a single task (possibly from multiple partitioned directories)."></a>
+                        <a href="FilePartition.html" title="A collection of file blocks that should be read as a single task (possibly from multiple partitioned directories).">FilePartition</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="FileScanRDD.html" title="An RDD that scans a list of file partitions."></a>
+                        <a href="FileScanRDD.html" title="An RDD that scans a list of file partitions.">FileScanRDD</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="FileSourceStrategy$.html" title="A strategy for planning scans over collections of files that might be partitioned or bucketed by user specified columns."></a>
+                        <a href="FileSourceStrategy$.html" title="A strategy for planning scans over collections of files that might be partitioned or bucketed by user specified columns.">FileSourceStrategy</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="FileStatusCache$.html" title="Use FileStatusCache.getOrCreate() to construct a globally shared file status cache."></a>
+                        <a class="class" href="FileStatusCache.html" title="A cache of the leaf files of partition directories."></a>
+                        <a href="FileStatusCache.html" title="A cache of the leaf files of partition directories.">FileStatusCache</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="FindDataSourceTable.html" title="Replaces UnresolvedCatalogRelation with concrete relation logical plans."></a>
+                        <a href="FindDataSourceTable.html" title="Replaces UnresolvedCatalogRelation with concrete relation logical plans.">FindDataSourceTable</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="HadoopFileLinesReader.html" title="An adaptor from a PartitionedFile to an Iterator of Text, which are all of the lines in that file."></a>
+                        <a href="HadoopFileLinesReader.html" title="An adaptor from a PartitionedFile to an Iterator of Text, which are all of the lines in that file.">HadoopFileLinesReader</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="HadoopFileWholeTextReader.html" title="An adaptor from a PartitionedFile to an Iterator of Text, which is all of the lines in that file."></a>
+                        <a href="HadoopFileWholeTextReader.html" title="An adaptor from a PartitionedFile to an Iterator of Text, which is all of the lines in that file.">HadoopFileWholeTextReader</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="HadoopFsRelation.html" title="Acts as a container for all of the metadata required to read from a datasource."></a>
+                        <a href="HadoopFsRelation.html" title="Acts as a container for all of the metadata required to read from a datasource.">HadoopFsRelation</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="HiveOnlyCheck$.html" title="A rule to check whether the functions are supported only when Hive support is enabled"></a>
+                        <a href="HiveOnlyCheck$.html" title="A rule to check whether the functions are supported only when Hive support is enabled">HiveOnlyCheck</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="InMemoryFileIndex$.html" title=""></a>
+                        <a class="class" href="InMemoryFileIndex.html" title="A FileIndex that generates the list of files to process by recursively listing all the files present in paths."></a>
+                        <a href="InMemoryFileIndex.html" title="A FileIndex that generates the list of files to process by recursively listing all the files present in paths.">InMemoryFileIndex</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="InsertIntoDataSourceCommand.html" title="Inserts the results of query in to a relation that extends InsertableRelation."></a>
+                        <a href="InsertIntoDataSourceCommand.html" title="Inserts the results of query in to a relation that extends InsertableRelation.">InsertIntoDataSourceCommand</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="InsertIntoHadoopFsRelationCommand.html" title="A command for writing data to a HadoopFsRelation."></a>
+                        <a href="InsertIntoHadoopFsRelationCommand.html" title="A command for writing data to a HadoopFsRelation.">InsertIntoHadoopFsRelationCommand</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="LogicalRelation$.html" title=""></a>
+                        <a class="class" href="LogicalRelation.html" title="Used to link a BaseRelation in to a logical query plan."></a>
+                        <a href="LogicalRelation.html" title="Used to link a BaseRelation in to a logical query plan.">LogicalRelation</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="ModifiedAfterFilter$.html" title=""></a>
+                        <a class="class" href="ModifiedAfterFilter.html" title="Filter used to determine whether file was modified after the provided timestamp."></a>
+                        <a href="ModifiedAfterFilter.html" title="Filter used to determine whether file was modified after the provided timestamp.">ModifiedAfterFilter</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="ModifiedBeforeFilter$.html" title=""></a>
+                        <a class="class" href="ModifiedBeforeFilter.html" title="Filter used to determine whether file was modified before the provided timestamp."></a>
+                        <a href="ModifiedBeforeFilter.html" title="Filter used to determine whether file was modified before the provided timestamp.">ModifiedBeforeFilter</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="ModifiedDateFilter$.html" title=""></a>
+                        <a class="class" href="ModifiedDateFilter.html" title="Provide modifiedAfter and modifiedBefore options when filtering from a batch-based file data source."></a>
+                        <a href="ModifiedDateFilter.html" title="Provide modifiedAfter and modifiedBefore options when filtering from a batch-based file data source.">ModifiedDateFilter</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="NoopCache$.html" title="A non-caching implementation used when partition file status caching is disabled."></a>
+                        <a href="NoopCache$.html" title="A non-caching implementation used when partition file status caching is disabled.">NoopCache</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="OutputWriter.html" title="OutputWriter is used together with HadoopFsRelation for persisting rows to the underlying file system."></a>
+                        <a href="OutputWriter.html" title="OutputWriter is used together with HadoopFsRelation for persisting rows to the underlying file system.">OutputWriter</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="OutputWriterFactory.html" title="A factory that produces OutputWriters."></a>
+                        <a href="OutputWriterFactory.html" title="A factory that produces OutputWriters.">OutputWriterFactory</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="PartitionDirectory.html" title="A collection of data files from a partitioned relation, along with the partition values in the form of an InternalRow."></a>
+                        <a href="PartitionDirectory.html" title="A collection of data files from a partitioned relation, along with the partition values in the form of an InternalRow.">PartitionDirectory</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="PartitionPath$.html" title=""></a>
+                        <a class="class" href="PartitionPath.html" title="Holds a directory in a partitioned collection of files as well as the partition values in the form of a Row."></a>
+                        <a href="PartitionPath.html" title="Holds a directory in a partitioned collection of files as well as the partition values in the form of a Row.">PartitionPath</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="PartitionSpec$.html" title=""></a>
+                        <a class="class" href="PartitionSpec.html" title=""></a>
+                        <a href="PartitionSpec.html" title="">PartitionSpec</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="PartitionedFile.html" title="A part (i.e."></a>
+                        <a href="PartitionedFile.html" title="A part (i.e.">PartitionedFile</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="PartitioningAwareFileIndex$.html" title=""></a>
+                        <a class="class" href="PartitioningAwareFileIndex.html" title="An abstract class that represents FileIndexs that are aware of partitioned tables."></a>
+                        <a href="PartitioningAwareFileIndex.html" title="An abstract class that represents FileIndexs that are aware of partitioned tables.">PartitioningAwareFileIndex</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="PartitioningUtils$.html" title=""></a>
+                        <a href="PartitioningUtils$.html" title="">PartitioningUtils</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="PathFilterFactory$.html" title=""></a>
+                        <a href="PathFilterFactory$.html" title="">PathFilterFactory</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="PathFilterStrategy.html" title=""></a>
+                        <a href="PathFilterStrategy.html" title="">PathFilterStrategy</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="PathGlobFilter$.html" title=""></a>
+                        <a class="class" href="PathGlobFilter.html" title=""></a>
+                        <a href="PathGlobFilter.html" title="">PathGlobFilter</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="PreReadCheck$.html" title="A rule to do various checks before reading a table."></a>
+                        <a href="PreReadCheck$.html" title="A rule to do various checks before reading a table.">PreReadCheck</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="PreWriteCheck$.html" title="A rule to do various checks before inserting into or writing to a data source table."></a>
+                        <a href="PreWriteCheck$.html" title="A rule to do various checks before inserting into or writing to a data source table.">PreWriteCheck</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="PreprocessTableCreation.html" title="Preprocess CreateTable, to do some normalization and checking."></a>
+                        <a href="PreprocessTableCreation.html" title="Preprocess CreateTable, to do some normalization and checking.">PreprocessTableCreation</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="PreprocessTableInsertion$.html" title="Preprocess the InsertIntoStatement plan."></a>
+                        <a href="PreprocessTableInsertion$.html" title="Preprocess the InsertIntoStatement plan.">PreprocessTableInsertion</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="PushableColumn$.html" title=""></a>
+                        <a href="PushableColumn$.html" title="">PushableColumn</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="PushableColumnAndNestedColumn$.html" title=""></a>
+                        <a href="PushableColumnAndNestedColumn$.html" title="">PushableColumnAndNestedColumn</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="PushableColumnBase.html" title="Find the column name of an expression that can be pushed down."></a>
+                        <a href="PushableColumnBase.html" title="Find the column name of an expression that can be pushed down.">PushableColumnBase</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="PushableColumnWithoutNestedColumn$.html" title=""></a>
+                        <a href="PushableColumnWithoutNestedColumn$.html" title="">PushableColumnWithoutNestedColumn</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="RecordReaderIterator.html" title="An adaptor from a Hadoop RecordReader to an Iterator over the values returned."></a>
+                        <a href="RecordReaderIterator.html" title="An adaptor from a Hadoop RecordReader to an Iterator over the values returned.">RecordReaderIterator</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="RefreshResource.html" title=""></a>
+                        <a href="RefreshResource.html" title="">RefreshResource</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="ResolveSQLOnFile.html" title="Replaces UnresolvedRelations if the plan is for direct query on files."></a>
+                        <a href="ResolveSQLOnFile.html" title="Replaces UnresolvedRelations if the plan is for direct query on files.">ResolveSQLOnFile</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="SQLHadoopMapReduceCommitProtocol.html" title="A variant of HadoopMapReduceCommitProtocol that allows specifying the actual Hadoop output committer using an option specified in SQLConf."></a>
+                        <a href="SQLHadoopMapReduceCommitProtocol.html" title="A variant of HadoopMapReduceCommitProtocol that allows specifying the actual Hadoop output committer using an option specified in SQLConf.">SQLHadoopMapReduceCommitProtocol</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="SaveIntoDataSourceCommand.html" title="Saves the results of query in to a data source."></a>
+                        <a href="SaveIntoDataSourceCommand.html" title="Saves the results of query in to a data source.">SaveIntoDataSourceCommand</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="SchemaColumnConvertNotSupportedException.html" title="Exception thrown when the parquet reader find column type mismatches."></a>
+                        <a href="SchemaColumnConvertNotSupportedException.html" title="Exception thrown when the parquet reader find column type mismatches.">SchemaColumnConvertNotSupportedException</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="SchemaMergeUtils$.html" title=""></a>
+                        <a href="SchemaMergeUtils$.html" title="">SchemaMergeUtils</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="SchemaPruning$.html" title="Prunes unnecessary physical columns given a PhysicalOperation over a data source relation."></a>
+                        <a href="SchemaPruning$.html" title="Prunes unnecessary physical columns given a PhysicalOperation over a data source relation.">SchemaPruning</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="SingleDirectoryDataWriter.html" title="Writes data to a single directory (used for non-dynamic-partition writes)."></a>
+                        <a href="SingleDirectoryDataWriter.html" title="Writes data to a single directory (used for non-dynamic-partition writes).">SingleDirectoryDataWriter</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="SourceOptions$.html" title=""></a>
+                        <a class="class" href="SourceOptions.html" title="Options for the data source."></a>
+                        <a href="SourceOptions.html" title="Options for the data source.">SourceOptions</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="StrategyBuilder.html" title=""></a>
+                        <a href="StrategyBuilder.html" title="">StrategyBuilder</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="TextBasedFileFormat.html" title="The base class file format that is based on text file."></a>
+                        <a href="TextBasedFileFormat.html" title="The base class file format that is based on text file.">TextBasedFileFormat</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="WriteJobDescription.html" title="A shared job description for all the write tasks."></a>
+                        <a href="WriteJobDescription.html" title="A shared job description for all the write tasks.">WriteJobDescription</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="WriteJobStatsTracker.html" title="A class implementing this trait is basically a collection of parameters that are necessary for instantiating a (derived type of) WriteTaskStatsTracker on all executors and then process the statistics produced by them (e.g."></a>
+                        <a href="WriteJobStatsTracker.html" title="A class implementing this trait is basically a collection of parameters that are necessary for instantiating a (derived type of) WriteTaskStatsTracker on all executors and then process the statistics produced by them (e.g.">WriteJobStatsTracker</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="WriteTaskResult.html" title="The result of a successful write task."></a>
+                        <a href="WriteTaskResult.html" title="The result of a successful write task.">WriteTaskResult</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="WriteTaskStats.html" title="To be implemented by classes that represent data statistics collected during a Write Task."></a>
+                        <a href="WriteTaskStats.html" title="To be implemented by classes that represent data statistics collected during a Write Task.">WriteTaskStats</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="WriteTaskStatsTracker.html" title="A trait for classes that are capable of collecting statistics on data that's being processed by a single write task in FileFormatWriter - i.e."></a>
+                        <a href="WriteTaskStatsTracker.html" title="A trait for classes that are capable of collecting statistics on data that's being processed by a single write task in FileFormatWriter - i.e.">WriteTaskStatsTracker</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="class type">
+      <div id="definition">
+        <div class="big-circle class">c</div>
+        <p id="owner"><a href="../../../../../index.html" class="extype" name="org">org</a>.<a href="../../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../../index.html" class="extype" name="org.apache.spark.sql">sql</a>.<a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a>.<a href="index.html" class="extype" name="org.apache.spark.sql.execution.datasources">datasources</a></p>
+        <h1>BaseDynamicPartitionDataWriter<span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BaseDynamicPartitionDataWriter</span><span class="result"> extends <a href="FileFormatDataWriter.html" class="extype" name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter">FileFormatDataWriter</a></span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Holds common logic for writing data with dynamic partition writes, meaning it can write to
+multiple directories (partitions) or files (bucketing).
+</p></div><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><a href="FileFormatDataWriter.html" class="extype" name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter">FileFormatDataWriter</a>, <span class="extype" name="org.apache.spark.sql.connector.write.DataWriter">DataWriter</span>[<span class="extype" name="org.apache.spark.sql.catalyst.InternalRow">InternalRow</span>], <span class="extype" name="java.io.Closeable">Closeable</span>, <span class="extype" name="java.lang.AutoCloseable">AutoCloseable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div><div class="toggleContainer block">
+            <span class="toggle">
+              Known Subclasses
+            </span>
+            <div class="subClasses hiddenContent"><a href="DynamicPartitionDataConcurrentWriter.html" class="extype" name="org.apache.spark.sql.execution.datasources.DynamicPartitionDataConcurrentWriter">DynamicPartitionDataConcurrentWriter</a>, <a href="DynamicPartitionDataSingleWriter.html" class="extype" name="org.apache.spark.sql.execution.datasources.DynamicPartitionDataSingleWriter">DynamicPartitionDataSingleWriter</a></div>
+          </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="org.apache.spark.sql.execution.datasources.BaseDynamicPartitionDataWriter"><span>BaseDynamicPartitionDataWriter</span></li><li class="in" name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter"><span>FileFormatDataWriter</span></li><li class="in" name="org.apache.spark.sql.connector.write.DataWriter"><span>DataWriter</span></li><li class="in" name="java.io.Closeable"><span>Closeable</span></li><li class="in" name="java.lang.AutoCloseable"><span>AutoCloseable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="org.apache.spark.sql.execution.datasources.BaseDynamicPartitionDataWriter#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(description:org.apache.spark.sql.execution.datasources.WriteJobDescription,taskAttemptContext:org.apache.hadoop.mapreduce.TaskAttemptContext,committer:org.apache.spark.internal.io.FileCommitProtocol,customMetrics:Map[String,org.apache.spark.sql.execution.metric.SQLMetric]):org.apache.spark.sql.execution.datasources.BaseDynamicPartitionDataWriter"></a><a id="&lt;init&gt;:BaseDynamicPartitionDataWriter"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#&lt;init&gt;(description:org.apache.spark.sql.execution.datasources.WriteJobDescription,taskAttemptContext:org.apache.hadoop.mapreduce.TaskAttemptContext,committer:org.apache.spark.internal.io.FileCommitProtocol,customMetrics:Map[String,org.apache.spark.sql.execution.metric.SQLMetric]):org.apache.spark.sql.execution.datasources.BaseDynamicPartitionDataWriter" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BaseDynamicPartitionDataWriter</span><span class="params">(<span name="description">description: <a href="WriteJobDescription.html" class="extype" name="org.apache.spark.sql.execution.datasources.WriteJobDescription">WriteJobDescription</a></span>, <span name="taskAttemptContext">taskAttemptContext: <span class="extype" name="org.apache.hadoop.mapreduce.TaskAttemptContext">TaskAttemptContext</span></span>, <span name="committer">committer: <span class="extype" name="org.apache.spark.internal.io.FileCommitProtocol">FileCommitProtocol</span></span>, <span name="customMetrics">customMetrics: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="../metric/SQLMetric.html" class="extype" name="org.apache.spark.sql.execution.metric.SQLMetric">SQLMetric</a>]</span>)</span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members">
+              <h3>Abstract Value Members</h3>
+              <ol><li name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter#write" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="write(record:org.apache.spark.sql.catalyst.InternalRow):Unit"></a><a id="write(InternalRow):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#write(record:org.apache.spark.sql.catalyst.InternalRow):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">write</span><span class="params">(<span name="record">record: <span class="extype" name="org.apache.spark.sql.catalyst.InternalRow">InternalRow</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Writes a record.</p><div class="fullcomment"><div class="comment cmt"><p>Writes a record.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FileFormatDataWriter.html" class="extype" name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter">FileFormatDataWriter</a> → DataWriter</dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div class="values members">
+              <h3>Concrete Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter#MAX_FILE_COUNTER" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="MAX_FILE_COUNTER:Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#MAX_FILE_COUNTER:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MAX_FILE_COUNTER</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Max number of files a single task writes out due to file size.</p><div class="fullcomment"><div class="comment cmt"><p>Max number of files a single task writes out due to file size. In most cases the number of
+files written should be very small. This is just a safe guard to protect some really bad
+settings, e.g. maxRecordsPerFile = 1.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="FileFormatDataWriter.html" class="extype" name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter">FileFormatDataWriter</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter#abort" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="abort():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#abort():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">abort</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FileFormatDataWriter.html" class="extype" name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter">FileFormatDataWriter</a> → DataWriter</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter#close" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="close():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#close():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">close</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FileFormatDataWriter.html" class="extype" name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter">FileFormatDataWriter</a> → Closeable → AutoCloseable</dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter#commit" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="commit():org.apache.spark.sql.execution.datasources.WriteTaskResult"></a><a id="commit():WriteTaskResult"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#commit():org.apache.spark.sql.execution.datasources.WriteTaskResult" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">commit</span><span class="params">()</span><span class="result">: <a href="WriteTaskResult.html" class="extype" name="org.apache.spark.sql.execution.datasources.WriteTaskResult">WriteTaskResult</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns the summary of relative information which
+includes the list of partition strings written out.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the summary of relative information which
+includes the list of partition strings written out. The list of partitions is sent back
+to the driver and used to update the catalog. Other information will be sent back to the
+driver too and used to e.g. update the metrics in UI.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FileFormatDataWriter.html" class="extype" name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter">FileFormatDataWriter</a> → DataWriter</dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.write.DataWriter#currentMetricsValues" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="currentMetricsValues():Array[org.apache.spark.sql.connector.metric.CustomTaskMetric]"></a><a id="currentMetricsValues():Array[CustomTaskMetric]"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#currentMetricsValues():Array[org.apache.spark.sql.connector.metric.CustomTaskMetric]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">currentMetricsValues</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="org.apache.spark.sql.connector.metric.CustomTaskMetric">CustomTaskMetric</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DataWriter</dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter#currentWriter" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="currentWriter:org.apache.spark.sql.execution.datasources.OutputWriter"></a><a id="currentWriter:OutputWriter"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#currentWriter:org.apache.spark.sql.execution.datasources.OutputWriter" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">currentWriter</span><span class="result">: <a href="OutputWriter.html" class="extype" name="org.apache.spark.sql.execution.datasources.OutputWriter">OutputWriter</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="FileFormatDataWriter.html" class="extype" name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter">FileFormatDataWriter</a></dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.BaseDynamicPartitionDataWriter#fileCounter" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fileCounter:Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#fileCounter:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fileCounter</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">File counter for writing current partition or bucket.</p><div class="fullcomment"><div class="comment cmt"><p>File counter for writing current partition or bucket. For same partition or bucket,
+we may have more than one file, due to number of records limit per file.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.BaseDynamicPartitionDataWriter#getBucketId" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getBucketId:org.apache.spark.sql.catalyst.InternalRow=&gt;Int"></a><a id="getBucketId:(InternalRow)⇒Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#getBucketId:org.apache.spark.sql.catalyst.InternalRow=&gt;Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getBucketId</span><span class="result">: (<span class="extype" name="org.apache.spark.sql.catalyst.InternalRow">InternalRow</span>) ⇒ <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Given an input row, returns the corresponding <code>bucketId</code></p><div class="fullcomment"><div class="comment cmt"><p>Given an input row, returns the corresponding <code>bucketId</code></p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.BaseDynamicPartitionDataWriter#getOutputRow" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getOutputRow:org.apache.spark.sql.catalyst.expressions.UnsafeProjection"></a><a id="getOutputRow:UnsafeProjection"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#getOutputRow:org.apache.spark.sql.catalyst.expressions.UnsafeProjection" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getOutputRow</span><span class="result">: <span class="extype" name="org.apache.spark.sql.catalyst.expressions.UnsafeProjection">UnsafeProjection</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns the data columns to be written given an input row</p><div class="fullcomment"><div class="comment cmt"><p>Returns the data columns to be written given an input row</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.BaseDynamicPartitionDataWriter#getPartitionValues" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getPartitionValues:org.apache.spark.sql.catalyst.InternalRow=&gt;org.apache.spark.sql.catalyst.expressions.UnsafeRow"></a><a id="getPartitionValues:(InternalRow)⇒UnsafeRow"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#getPartitionValues:org.apache.spark.sql.catalyst.InternalRow=&gt;org.apache.spark.sql.catalyst.expressions.UnsafeRow" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getPartitionValues</span><span class="result">: (<span class="extype" name="org.apache.spark.sql.catalyst.InternalRow">InternalRow</span>) ⇒ <span class="extype" name="org.apache.spark.sql.catalyst.expressions.UnsafeRow">UnsafeRow</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Extracts the partition values out of an input row.</p><div class="fullcomment"><div class="comment cmt"><p>Extracts the partition values out of an input row.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.BaseDynamicPartitionDataWriter#isBucketed" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isBucketed:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#isBucketed:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isBucketed</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Flag saying whether or not the data to be written out is bucketed.</p><div class="fullcomment"><div class="comment cmt"><p>Flag saying whether or not the data to be written out is bucketed.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.BaseDynamicPartitionDataWriter#isPartitioned" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isPartitioned:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#isPartitioned:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isPartitioned</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Flag saying whether or not the data to be written out is partitioned.</p><div class="fullcomment"><div class="comment cmt"><p>Flag saying whether or not the data to be written out is partitioned.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.BaseDynamicPartitionDataWriter#recordsInFile" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="recordsInFile:Long"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#recordsInFile:Long" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">recordsInFile</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Number of records in current file.</p><div class="fullcomment"><div class="comment cmt"><p>Number of records in current file.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter#releaseCurrentWriter" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="releaseCurrentWriter():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#releaseCurrentWriter():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">releaseCurrentWriter</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Release resources of <code>currentWriter</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Release resources of <code>currentWriter</code>.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="FileFormatDataWriter.html" class="extype" name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter">FileFormatDataWriter</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter#releaseResources" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="releaseResources():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#releaseResources():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">releaseResources</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Release all resources.</p><div class="fullcomment"><div class="comment cmt"><p>Release all resources.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="FileFormatDataWriter.html" class="extype" name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter">FileFormatDataWriter</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.BaseDynamicPartitionDataWriter#renewCurrentWriter" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="renewCurrentWriter(partitionValues:Option[org.apache.spark.sql.catalyst.InternalRow],bucketId:Option[Int],closeCurrentWriter:Boolean):Unit"></a><a id="renewCurrentWriter(Option[InternalRow],Option[Int],Boolean):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#renewCurrentWriter(partitionValues:Option[org.apache.spark.sql.catalyst.InternalRow],bucketId:Option[Int],closeCurrentWriter:Boolean):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">renewCurrentWriter</span><span class="params">(<span name="partitionValues">partitionValues: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="org.apache.spark.sql.catalyst.InternalRow">InternalRow</span>]</span>, <span name="bucketId">bucketId: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="closeCurrentWriter">closeCurrentWriter: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Opens a new OutputWriter given a partition key and/or a bucket id.</p><div class="fullcomment"><div class="comment cmt"><p>Opens a new OutputWriter given a partition key and/or a bucket id.
+If bucket id is specified, we will append it to the end of the file name, but before the
+file extension, e.g. part-r-00009-ea518ad4-455a-4431-b471-d24e03814677-00002.gz.parquet
+</p></div><dl class="paramcmts block"><dt class="param">partitionValues</dt><dd class="cmt"><p>the partition which all tuples being written by this OutputWriter
+                       belong to</p></dd><dt class="param">bucketId</dt><dd class="cmt"><p>the bucket which all tuples being written by this OutputWriter belong to</p></dd><dt class="param">closeCurrentWriter</dt><dd class="cmt"><p>close and release resource for current writer</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.BaseDynamicPartitionDataWriter#renewCurrentWriterIfTooManyRecords" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="renewCurrentWriterIfTooManyRecords(partitionValues:Option[org.apache.spark.sql.catalyst.InternalRow],bucketId:Option[Int]):Unit"></a><a id="renewCurrentWriterIfTooManyRecords(Option[InternalRow],Option[Int]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#renewCurrentWriterIfTooManyRecords(partitionValues:Option[org.apache.spark.sql.catalyst.InternalRow],bucketId:Option[Int]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">renewCurrentWriterIfTooManyRecords</span><span class="params">(<span name="partitionValues">partitionValues: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="org.apache.spark.sql.catalyst.InternalRow">InternalRow</span>]</span>, <span name="bucketId">bucketId: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Open a new output writer when number of records exceeding limit.</p><div class="fullcomment"><div class="comment cmt"><p>Open a new output writer when number of records exceeding limit.
+</p></div><dl class="paramcmts block"><dt class="param">partitionValues</dt><dd class="cmt"><p>the partition which all tuples being written by this <code>OutputWriter</code>
+                       belong to</p></dd><dt class="param">bucketId</dt><dd class="cmt"><p>the bucket which all tuples being written by this <code>OutputWriter</code> belong to</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter#statsTrackers" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="statsTrackers:Seq[org.apache.spark.sql.execution.datasources.WriteTaskStatsTracker]"></a><a id="statsTrackers:Seq[WriteTaskStatsTracker]"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#statsTrackers:Seq[org.apache.spark.sql.execution.datasources.WriteTaskStatsTracker]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">statsTrackers</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="WriteTaskStatsTracker.html" class="extype" name="org.apache.spark.sql.execution.datasources.WriteTaskStatsTracker">WriteTaskStatsTracker</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Trackers for computing various statistics on the data as it's being written out.</p><div class="fullcomment"><div class="comment cmt"><p>Trackers for computing various statistics on the data as it's being written out.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="FileFormatDataWriter.html" class="extype" name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter">FileFormatDataWriter</a></dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter#updatedPartitions" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="updatedPartitions:scala.collection.mutable.Set[String]"></a><a id="updatedPartitions:Set[String]"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#updatedPartitions:scala.collection.mutable.Set[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updatedPartitions</span><span class="result">: <span class="extype" name="scala.collection.mutable.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="FileFormatDataWriter.html" class="extype" name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter">FileFormatDataWriter</a></dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.BaseDynamicPartitionDataWriter#writeRecord" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="writeRecord(record:org.apache.spark.sql.catalyst.InternalRow):Unit"></a><a id="writeRecord(InternalRow):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#writeRecord(record:org.apache.spark.sql.catalyst.InternalRow):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">writeRecord</span><span class="params">(<span name="record">record: <span class="extype" name="org.apache.spark.sql.catalyst.InternalRow">InternalRow</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Writes the given record with current writer.</p><div class="fullcomment"><div class="comment cmt"><p>Writes the given record with current writer.
+</p></div><dl class="paramcmts block"><dt class="param">record</dt><dd class="cmt"><p>The record to write</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter#writeWithIterator" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="writeWithIterator(iterator:Iterator[org.apache.spark.sql.catalyst.InternalRow]):Unit"></a><a id="writeWithIterator(Iterator[InternalRow]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#writeWithIterator(iterator:Iterator[org.apache.spark.sql.catalyst.InternalRow]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">writeWithIterator</span><span class="params">(<span name="iterator">iterator: <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.sql.catalyst.InternalRow">InternalRow</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Write an iterator of records.</p><div class="fullcomment"><div class="comment cmt"><p>Write an iterator of records.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FileFormatDataWriter.html" class="extype" name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter">FileFormatDataWriter</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter#writeWithMetrics" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="writeWithMetrics(record:org.apache.spark.sql.catalyst.InternalRow,count:Long):Unit"></a><a id="writeWithMetrics(InternalRow,Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/BaseDynamicPartitionDataWriter.html#writeWithMetrics(record:org.apache.spark.sql.catalyst.InternalRow,count:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">writeWithMetrics</span><span class="params">(<span name="record">record: <span class="extype" name="org.apache.spark.sql.catalyst.InternalRow">InternalRow</span></span>, <span name="count">count: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FileFormatDataWriter.html" class="extype" name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter">FileFormatDataWriter</a></dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter">
+              <h3>Inherited from <a href="FileFormatDataWriter.html" class="extype" name="org.apache.spark.sql.execution.datasources.FileFormatDataWriter">FileFormatDataWriter</a></h3>
+            </div><div class="parent" name="org.apache.spark.sql.connector.write.DataWriter">
+              <h3>Inherited from <span class="extype" name="org.apache.spark.sql.connector.write.DataWriter">DataWriter</span>[<span class="extype" name="org.apache.spark.sql.catalyst.InternalRow">InternalRow</span>]</h3>
+            </div><div class="parent" name="java.io.Closeable">
+              <h3>Inherited from <span class="extype" name="java.io.Closeable">Closeable</span></h3>
+            </div><div class="parent" name="java.lang.AutoCloseable">
+              <h3>Inherited from <span class="extype" name="java.lang.AutoCloseable">AutoCloseable</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

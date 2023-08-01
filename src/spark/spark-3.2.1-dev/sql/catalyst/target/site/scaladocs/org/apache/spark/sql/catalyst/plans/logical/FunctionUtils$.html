@@ -1,0 +1,1483 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Catalyst 3.2.1 API  - org.apache.spark.sql.catalyst.plans.logical.FunctionUtils</title>
+          <meta name="description" content="Spark Project Catalyst 3.2.1 API - org.apache.spark.sql.catalyst.plans.logical.FunctionUtils" />
+          <meta name="keywords" content="Spark Project Catalyst 3.2.1 API org.apache.spark.sql.catalyst.plans.logical.FunctionUtils" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Catalyst 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sql"></a><a id="sql:sql"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">sql</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="catalyst"></a><a id="catalyst:catalyst"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/catalyst/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Catalyst is a library for manipulating relational query plans." href="../../index.html"><span class="name">catalyst</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Catalyst is a library for manipulating relational query plans.</p><div class="fullcomment"><div class="comment cmt"><p>Catalyst is a library for manipulating relational query plans.  All classes in catalyst are
+considered an internal API to Spark SQL and are subject to change between minor releases.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.plans" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="plans"></a><a id="plans:plans"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/catalyst/plans/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="A collection of common abstractions for query plans as well as a base logical plan representation." href="../index.html"><span class="name">plans</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">A collection of common abstractions for query plans as well as
+a base logical plan representation.</p><div class="fullcomment"><div class="comment cmt"><p>A collection of common abstractions for query plans as well as
+a base logical plan representation.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.plans.logical" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logical"></a><a id="logical:logical"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/catalyst/plans/logical/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="index.html"><span class="name">logical</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst.plans">plans</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.plans.logical.statsEstimation" visbl="pub" class="indented8 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="statsEstimation"></a><a id="statsEstimation:statsEstimation"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/catalyst/plans/logical/statsEstimation/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="statsEstimation/index.html"><span class="name">statsEstimation</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical">logical</a></dd></dl></div>
+    </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="AddColumns.html" title="The logical plan of the ALTER TABLE ..."></a>
+                        <a href="AddColumns.html" title="The logical plan of the ALTER TABLE ...">AddColumns</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="AddPartitions.html" title="The logical plan of the ALTER TABLE ADD PARTITION command."></a>
+                        <a href="AddPartitions.html" title="The logical plan of the ALTER TABLE ADD PARTITION command.">AddPartitions</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="Aggregate.html" title="This is a Group by operator with the aggregate functions and projections."></a>
+                        <a href="Aggregate.html" title="This is a Group by operator with the aggregate functions and projections.">Aggregate</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="AlterColumn.html" title="The logical plan of the ALTER TABLE ..."></a>
+                        <a href="AlterColumn.html" title="The logical plan of the ALTER TABLE ...">AlterColumn</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="AlterTableCommand.html" title="The base trait for commands that need to alter a v2 table with TableChanges."></a>
+                        <a href="AlterTableCommand.html" title="The base trait for commands that need to alter a v2 table with TableChanges.">AlterTableCommand</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="AlterViewAs.html" title="The logical plan of the ALTER VIEW ..."></a>
+                        <a href="AlterViewAs.html" title="The logical plan of the ALTER VIEW ...">AlterViewAs</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="AnalysisHelper$.html" title=""></a>
+                        <a class="trait" href="AnalysisHelper.html" title="AnalysisHelper defines some infrastructure for the query analyzer."></a>
+                        <a href="AnalysisHelper.html" title="AnalysisHelper defines some infrastructure for the query analyzer.">AnalysisHelper</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="AnalysisOnlyCommand.html" title="A logical node that can be used for a command that requires its children to be only analyzed, but not optimized."></a>
+                        <a href="AnalysisOnlyCommand.html" title="A logical node that can be used for a command that requires its children to be only analyzed, but not optimized.">AnalysisOnlyCommand</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="AnalyzeColumn.html" title="The logical plan of the ANALYZE TABLE FOR COLUMNS command."></a>
+                        <a href="AnalyzeColumn.html" title="The logical plan of the ANALYZE TABLE FOR COLUMNS command.">AnalyzeColumn</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="AnalyzeTable.html" title="The logical plan of the ANALYZE TABLE command."></a>
+                        <a href="AnalyzeTable.html" title="The logical plan of the ANALYZE TABLE command.">AnalyzeTable</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="AnalyzeTables.html" title="The logical plan of the ANALYZE TABLES command."></a>
+                        <a href="AnalyzeTables.html" title="The logical plan of the ANALYZE TABLES command.">AnalyzeTables</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="AppendColumns$.html" title="Factory for constructing new AppendColumn nodes."></a>
+                        <a class="class" href="AppendColumns.html" title="A relation produced by applying func to each element of the child, concatenating the resulting columns at the end of the input row."></a>
+                        <a href="AppendColumns.html" title="A relation produced by applying func to each element of the child, concatenating the resulting columns at the end of the input row.">AppendColumns</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="AppendColumnsWithObject.html" title="An optimized version of AppendColumns, that can be executed on deserialized object directly."></a>
+                        <a href="AppendColumnsWithObject.html" title="An optimized version of AppendColumns, that can be executed on deserialized object directly.">AppendColumnsWithObject</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="AppendData$.html" title=""></a>
+                        <a class="class" href="AppendData.html" title="Append data to an existing table."></a>
+                        <a href="AppendData.html" title="Append data to an existing table.">AppendData</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ArrowEvalPython.html" title="A logical plan that evaluates a PythonUDF with Apache Arrow."></a>
+                        <a href="ArrowEvalPython.html" title="A logical plan that evaluates a PythonUDF with Apache Arrow.">ArrowEvalPython</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="Assignment.html" title=""></a>
+                        <a href="Assignment.html" title="">Assignment</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="AttachDistributedSequence.html" title="A logical plan that adds a new long column with the name name that increases one by one."></a>
+                        <a href="AttachDistributedSequence.html" title="A logical plan that adds a new long column with the name name that increases one by one.">AttachDistributedSequence</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="object" href="BROADCAST$.html" title="The hint for broadcast hash join or broadcast nested loop join, depending on the availability of equi-join keys."></a>
+                        <a href="BROADCAST$.html" title="The hint for broadcast hash join or broadcast nested loop join, depending on the availability of equi-join keys.">BROADCAST</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="BaseEvalPython.html" title=""></a>
+                        <a href="BaseEvalPython.html" title="">BaseEvalPython</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="BatchEvalPython.html" title="A logical plan that evaluates a PythonUDF"></a>
+                        <a href="BatchEvalPython.html" title="A logical plan that evaluates a PythonUDF">BatchEvalPython</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="BinaryCommand.html" title=""></a>
+                        <a href="BinaryCommand.html" title="">BinaryCommand</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="BinaryNode.html" title="A logical plan node with a left and right child."></a>
+                        <a href="BinaryNode.html" title="A logical plan node with a left and right child.">BinaryNode</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="CTERelationDef$.html" title=""></a>
+                        <a class="class" href="CTERelationDef.html" title="A wrapper for CTE definition plan with a unique ID."></a>
+                        <a href="CTERelationDef.html" title="A wrapper for CTE definition plan with a unique ID.">CTERelationDef</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="CTERelationRef.html" title="Represents the relation of a CTE reference."></a>
+                        <a href="CTERelationRef.html" title="Represents the relation of a CTE reference.">CTERelationRef</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="CacheTable.html" title="The logical plan of the CACHE TABLE command."></a>
+                        <a href="CacheTable.html" title="The logical plan of the CACHE TABLE command.">CacheTable</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="CacheTableAsSelect.html" title="The logical plan of the CACHE TABLE ..."></a>
+                        <a href="CacheTableAsSelect.html" title="The logical plan of the CACHE TABLE ...">CacheTableAsSelect</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="object" href="CatalystSerde$.html" title=""></a>
+                        <a href="CatalystSerde$.html" title="">CatalystSerde</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="CoGroup$.html" title="Factory for constructing new CoGroup nodes."></a>
+                        <a class="class" href="CoGroup.html" title="A relation produced by applying func to each grouping key and associated values from left and right children."></a>
+                        <a href="CoGroup.html" title="A relation produced by applying func to each grouping key and associated values from left and right children.">CoGroup</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="CollectMetrics.html" title="Collect arbitrary (named) metrics from a dataset."></a>
+                        <a href="CollectMetrics.html" title="Collect arbitrary (named) metrics from a dataset.">CollectMetrics</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ColumnStat.html" title="Statistics collected for a column."></a>
+                        <a href="ColumnStat.html" title="Statistics collected for a column.">ColumnStat</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="Command.html" title="A logical node that represents a non-query command to be executed by the system."></a>
+                        <a href="Command.html" title="A logical node that represents a non-query command to be executed by the system.">Command</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="CommentOnNamespace.html" title="The logical plan that defines or changes the comment of an NAMESPACE for v2 catalogs."></a>
+                        <a href="CommentOnNamespace.html" title="The logical plan that defines or changes the comment of an NAMESPACE for v2 catalogs.">CommentOnNamespace</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="CommentOnTable.html" title="The logical plan that defines or changes the comment of an TABLE for v2 catalogs."></a>
+                        <a href="CommentOnTable.html" title="The logical plan that defines or changes the comment of an TABLE for v2 catalogs.">CommentOnTable</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="ConstraintHelper.html" title=""></a>
+                        <a href="ConstraintHelper.html" title="">ConstraintHelper</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="CreateFunctionStatement.html" title="CREATE FUNCTION statement, as parsed from SQL"></a>
+                        <a href="CreateFunctionStatement.html" title="CREATE FUNCTION statement, as parsed from SQL">CreateFunctionStatement</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="CreateNamespace.html" title="The logical plan of the CREATE NAMESPACE command."></a>
+                        <a href="CreateNamespace.html" title="The logical plan of the CREATE NAMESPACE command.">CreateNamespace</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="CreateNamespaceStatement.html" title="A CREATE NAMESPACE statement, as parsed from SQL."></a>
+                        <a href="CreateNamespaceStatement.html" title="A CREATE NAMESPACE statement, as parsed from SQL.">CreateNamespaceStatement</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="CreateTableAsSelect.html" title="Create a new table from a select query with a v2 catalog."></a>
+                        <a href="CreateTableAsSelect.html" title="Create a new table from a select query with a v2 catalog.">CreateTableAsSelect</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="CreateTableAsSelectStatement.html" title="A CREATE TABLE AS SELECT command, as parsed from SQL."></a>
+                        <a href="CreateTableAsSelectStatement.html" title="A CREATE TABLE AS SELECT command, as parsed from SQL.">CreateTableAsSelectStatement</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="CreateTableStatement.html" title="A CREATE TABLE command, as parsed from SQL."></a>
+                        <a href="CreateTableStatement.html" title="A CREATE TABLE command, as parsed from SQL.">CreateTableStatement</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="CreateV2Table.html" title="Create a new table with a v2 catalog."></a>
+                        <a href="CreateV2Table.html" title="Create a new table with a v2 catalog.">CreateV2Table</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="CreateViewStatement.html" title="A CREATE VIEW statement, as parsed from SQL."></a>
+                        <a href="CreateViewStatement.html" title="A CREATE VIEW statement, as parsed from SQL.">CreateViewStatement</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="Deduplicate.html" title="A logical plan for dropDuplicates."></a>
+                        <a href="Deduplicate.html" title="A logical plan for dropDuplicates.">Deduplicate</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="DeleteAction.html" title=""></a>
+                        <a href="DeleteAction.html" title="">DeleteAction</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="DeleteFromTable.html" title="The logical plan of the DELETE FROM command."></a>
+                        <a href="DeleteFromTable.html" title="The logical plan of the DELETE FROM command.">DeleteFromTable</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="DescribeColumn$.html" title=""></a>
+                        <a class="class" href="DescribeColumn.html" title="The logical plan of the DESCRIBE relation_name col_name command."></a>
+                        <a href="DescribeColumn.html" title="The logical plan of the DESCRIBE relation_name col_name command.">DescribeColumn</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="DescribeFunction.html" title="The logical plan of the DESCRIBE FUNCTION command."></a>
+                        <a href="DescribeFunction.html" title="The logical plan of the DESCRIBE FUNCTION command.">DescribeFunction</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="DescribeNamespace$.html" title=""></a>
+                        <a class="class" href="DescribeNamespace.html" title="The logical plan of the DESCRIBE NAMESPACE command."></a>
+                        <a href="DescribeNamespace.html" title="The logical plan of the DESCRIBE NAMESPACE command.">DescribeNamespace</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="DescribeRelation$.html" title=""></a>
+                        <a class="class" href="DescribeRelation.html" title="The logical plan of the DESCRIBE relation_name command."></a>
+                        <a href="DescribeRelation.html" title="The logical plan of the DESCRIBE relation_name command.">DescribeRelation</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="DeserializeToObject.html" title="Takes the input row from child and turns it into object using the given deserializer expression."></a>
+                        <a href="DeserializeToObject.html" title="Takes the input row from child and turns it into object using the given deserializer expression.">DeserializeToObject</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="Distinct.html" title="Returns a new logical plan that dedups input rows."></a>
+                        <a href="Distinct.html" title="Returns a new logical plan that dedups input rows.">Distinct</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="DomainJoin.html" title="A placeholder for domain join that can be added when decorrelating subqueries."></a>
+                        <a href="DomainJoin.html" title="A placeholder for domain join that can be added when decorrelating subqueries.">DomainJoin</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="DropColumns.html" title="The logical plan of the ALTER TABLE ..."></a>
+                        <a href="DropColumns.html" title="The logical plan of the ALTER TABLE ...">DropColumns</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="DropFunction.html" title="The logical plan of the DROP FUNCTION command."></a>
+                        <a href="DropFunction.html" title="The logical plan of the DROP FUNCTION command.">DropFunction</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="DropNamespace.html" title="The logical plan of the DROP NAMESPACE command."></a>
+                        <a href="DropNamespace.html" title="The logical plan of the DROP NAMESPACE command.">DropNamespace</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="DropPartitions.html" title="The logical plan of the ALTER TABLE DROP PARTITION command."></a>
+                        <a href="DropPartitions.html" title="The logical plan of the ALTER TABLE DROP PARTITION command.">DropPartitions</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="DropTable.html" title="The logical plan of the DROP TABLE command."></a>
+                        <a href="DropTable.html" title="The logical plan of the DROP TABLE command.">DropTable</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="DropView.html" title="The logical plan of the DROP VIEW command."></a>
+                        <a href="DropView.html" title="The logical plan of the DROP VIEW command.">DropView</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="object" href="EventTimeTimeout$.html" title=""></a>
+                        <a href="EventTimeTimeout$.html" title="">EventTimeTimeout</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="EventTimeWatermark$.html" title=""></a>
+                        <a class="class" href="EventTimeWatermark.html" title="Used to mark a user specified column as holding the event time for a row."></a>
+                        <a href="EventTimeWatermark.html" title="Used to mark a user specified column as holding the event time for a row.">EventTimeWatermark</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="Except.html" title=""></a>
+                        <a href="Except.html" title="">Except</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="Expand$.html" title=""></a>
+                        <a class="class" href="Expand.html" title="Apply a number of projections to every input row, hence we will get multiple output rows for an input row."></a>
+                        <a href="Expand.html" title="Apply a number of projections to every input row, hence we will get multiple output rows for an input row.">Expand</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="Filter.html" title=""></a>
+                        <a href="Filter.html" title="">Filter</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="FlatMapCoGroupsInPandas.html" title="Flatmap cogroups using a udf: pandas.Dataframe, pandas.Dataframe -&gt; pandas.Dataframe This is used by DataFrame.groupby().cogroup().apply()."></a>
+                        <a href="FlatMapCoGroupsInPandas.html" title="Flatmap cogroups using a udf: pandas.Dataframe, pandas.Dataframe -&gt; pandas.Dataframe This is used by DataFrame.groupby().cogroup().apply().">FlatMapCoGroupsInPandas</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="FlatMapGroupsInPandas.html" title="FlatMap groups using a udf: pandas.Dataframe -&gt; pandas.DataFrame."></a>
+                        <a href="FlatMapGroupsInPandas.html" title="FlatMap groups using a udf: pandas.Dataframe -&gt; pandas.DataFrame.">FlatMapGroupsInPandas</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="FlatMapGroupsInR$.html" title="Factory for constructing new FlatMapGroupsInR nodes."></a>
+                        <a class="class" href="FlatMapGroupsInR.html" title=""></a>
+                        <a href="FlatMapGroupsInR.html" title="">FlatMapGroupsInR</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="FlatMapGroupsInRWithArrow.html" title="Similar with FlatMapGroupsInR but serializes and deserializes input/output in Arrow format."></a>
+                        <a href="FlatMapGroupsInRWithArrow.html" title="Similar with FlatMapGroupsInR but serializes and deserializes input/output in Arrow format.">FlatMapGroupsInRWithArrow</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="FlatMapGroupsWithState$.html" title="Factory for constructing new MapGroupsWithState nodes."></a>
+                        <a class="class" href="FlatMapGroupsWithState.html" title="Applies func to each unique group in child, based on the evaluation of groupingAttributes, while using state data."></a>
+                        <a href="FlatMapGroupsWithState.html" title="Applies func to each unique group in child, based on the evaluation of groupingAttributes, while using state data.">FlatMapGroupsWithState</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="FormatClasses.html" title=""></a>
+                        <a href="FormatClasses.html" title="">FormatClasses</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="object" href="" title=""></a>
+                        <a href="" title="">FunctionUtils</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="Generate.html" title="Applies a Generator to a stream of input rows, combining the output of each into a new stream of rows."></a>
+                        <a href="Generate.html" title="Applies a Generator to a stream of input rows, combining the output of each into a new stream of rows.">Generate</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="GlobalLimit.html" title="A global (coordinated) limit."></a>
+                        <a href="GlobalLimit.html" title="A global (coordinated) limit.">GlobalLimit</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="HintErrorHandler.html" title="The callback for implementing customized strategies of handling hint errors."></a>
+                        <a href="HintErrorHandler.html" title="The callback for implementing customized strategies of handling hint errors.">HintErrorHandler</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="HintInfo.html" title="The hint attributes to be applied on a specific node."></a>
+                        <a href="HintInfo.html" title="The hint attributes to be applied on a specific node.">HintInfo</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="Histogram.html" title="This class is an implementation of equi-height histogram."></a>
+                        <a href="Histogram.html" title="This class is an implementation of equi-height histogram.">Histogram</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="HistogramBin.html" title="A bin in an equi-height histogram."></a>
+                        <a href="HistogramBin.html" title="A bin in an equi-height histogram.">HistogramBin</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="object" href="HistogramSerializer$.html" title=""></a>
+                        <a href="HistogramSerializer$.html" title="">HistogramSerializer</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="IgnoreCachedData.html" title="A LogicalPlan operator that does not use the cached results stored in CacheManager"></a>
+                        <a href="IgnoreCachedData.html" title="A LogicalPlan operator that does not use the cached results stored in CacheManager">IgnoreCachedData</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="InsertAction.html" title=""></a>
+                        <a href="InsertAction.html" title="">InsertAction</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="InsertIntoDir.html" title="Insert query result into a directory."></a>
+                        <a href="InsertIntoDir.html" title="Insert query result into a directory.">InsertIntoDir</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="InsertIntoStatement.html" title="An INSERT INTO statement, as parsed from SQL."></a>
+                        <a href="InsertIntoStatement.html" title="An INSERT INTO statement, as parsed from SQL.">InsertIntoStatement</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="InsertStarAction.html" title=""></a>
+                        <a href="InsertStarAction.html" title="">InsertStarAction</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="Intersect.html" title=""></a>
+                        <a href="Intersect.html" title="">Intersect</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="Join.html" title=""></a>
+                        <a href="Join.html" title="">Join</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="JoinHint$.html" title=""></a>
+                        <a class="class" href="JoinHint.html" title="Hint that is associated with a Join node, with HintInfo on its left child and on its right child respectively."></a>
+                        <a href="JoinHint.html" title="Hint that is associated with a Join node, with HintInfo on its left child and on its right child respectively.">JoinHint</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="JoinStrategyHint$.html" title="The enumeration of join strategy hints."></a>
+                        <a class="class" href="JoinStrategyHint.html" title=""></a>
+                        <a href="JoinStrategyHint.html" title="">JoinStrategyHint</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="LateralJoin.html" title="A logical plan for lateral join."></a>
+                        <a href="LateralJoin.html" title="A logical plan for lateral join.">LateralJoin</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="LeafCommand.html" title=""></a>
+                        <a href="LeafCommand.html" title="">LeafCommand</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="LeafNode.html" title="A logical plan node with no children."></a>
+                        <a href="LeafNode.html" title="A logical plan node with no children.">LeafNode</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="LeafParsedStatement.html" title=""></a>
+                        <a href="LeafParsedStatement.html" title="">LeafParsedStatement</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="object" href="Limit$.html" title="A constructor for creating a logical limit, which is split into two separate logical nodes: a LocalLimit, which is a partition local limit, followed by a GlobalLimit."></a>
+                        <a href="Limit$.html" title="A constructor for creating a logical limit, which is split into two separate logical nodes: a LocalLimit, which is a partition local limit, followed by a GlobalLimit.">Limit</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="LoadData.html" title="The logical plan of the LOAD DATA INTO TABLE command."></a>
+                        <a href="LoadData.html" title="The logical plan of the LOAD DATA INTO TABLE command.">LoadData</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="LocalLimit.html" title="A partition-local (non-coordinated) limit."></a>
+                        <a href="LocalLimit.html" title="A partition-local (non-coordinated) limit.">LocalLimit</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="LocalRelation$.html" title=""></a>
+                        <a class="class" href="LocalRelation.html" title="Logical plan node for scanning data from a local collection."></a>
+                        <a href="LocalRelation.html" title="Logical plan node for scanning data from a local collection.">LocalRelation</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="LogicalGroupState.html" title="Internal class representing State"></a>
+                        <a href="LogicalGroupState.html" title="Internal class representing State">LogicalGroupState</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="LogicalPlan.html" title=""></a>
+                        <a href="LogicalPlan.html" title="">LogicalPlan</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="object" href="LogicalPlanIntegrity$.html" title=""></a>
+                        <a href="LogicalPlanIntegrity$.html" title="">LogicalPlanIntegrity</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="LogicalPlanVisitor.html" title="A visitor pattern for traversing a LogicalPlan tree and computing some properties."></a>
+                        <a href="LogicalPlanVisitor.html" title="A visitor pattern for traversing a LogicalPlan tree and computing some properties.">LogicalPlanVisitor</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="MapElements$.html" title=""></a>
+                        <a class="class" href="MapElements.html" title="A relation produced by applying func to each element of the child."></a>
+                        <a href="MapElements.html" title="A relation produced by applying func to each element of the child.">MapElements</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="MapGroups$.html" title="Factory for constructing new MapGroups nodes."></a>
+                        <a class="class" href="MapGroups.html" title="Applies func to each unique group in child, based on the evaluation of groupingAttributes."></a>
+                        <a href="MapGroups.html" title="Applies func to each unique group in child, based on the evaluation of groupingAttributes.">MapGroups</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="MapInPandas.html" title="Map partitions using a udf: iter(pandas.Dataframe) -&gt; iter(pandas.DataFrame)."></a>
+                        <a href="MapInPandas.html" title="Map partitions using a udf: iter(pandas.Dataframe) -&gt; iter(pandas.DataFrame).">MapInPandas</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="MapPartitions$.html" title=""></a>
+                        <a class="class" href="MapPartitions.html" title="A relation produced by applying func to each partition of the child."></a>
+                        <a href="MapPartitions.html" title="A relation produced by applying func to each partition of the child.">MapPartitions</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="MapPartitionsInR$.html" title=""></a>
+                        <a class="class" href="MapPartitionsInR.html" title="A relation produced by applying a serialized R function func to each partition of the child."></a>
+                        <a href="MapPartitionsInR.html" title="A relation produced by applying a serialized R function func to each partition of the child.">MapPartitionsInR</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="MapPartitionsInRWithArrow.html" title="Similar with MapPartitionsInR but serializes and deserializes input/output in Arrow format."></a>
+                        <a href="MapPartitionsInRWithArrow.html" title="Similar with MapPartitionsInR but serializes and deserializes input/output in Arrow format.">MapPartitionsInRWithArrow</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="MergeAction.html" title=""></a>
+                        <a href="MergeAction.html" title="">MergeAction</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="MergeIntoTable.html" title="The logical plan of the MERGE INTO command."></a>
+                        <a href="MergeIntoTable.html" title="The logical plan of the MERGE INTO command.">MergeIntoTable</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="object" href="NO_BROADCAST_HASH$.html" title="An internal hint to discourage broadcast hash join, used by adaptive query execution."></a>
+                        <a href="NO_BROADCAST_HASH$.html" title="An internal hint to discourage broadcast hash join, used by adaptive query execution.">NO_BROADCAST_HASH</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="object" href="NoTimeout$.html" title="Types of timeouts used in FlatMapGroupsWithState"></a>
+                        <a href="NoTimeout$.html" title="Types of timeouts used in FlatMapGroupsWithState">NoTimeout</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="NoopCommand.html" title="The logical plan for no-op command handling non-existing table."></a>
+                        <a href="NoopCommand.html" title="The logical plan for no-op command handling non-existing table.">NoopCommand</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="ObjectConsumer.html" title="A trait for logical operators that consumes domain objects as input."></a>
+                        <a href="ObjectConsumer.html" title="A trait for logical operators that consumes domain objects as input.">ObjectConsumer</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="ObjectProducer.html" title="A trait for logical operators that produces domain objects as output."></a>
+                        <a href="ObjectProducer.html" title="A trait for logical operators that produces domain objects as output.">ObjectProducer</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="OneRowRelation.html" title="A relation with one row."></a>
+                        <a href="OneRowRelation.html" title="A relation with one row.">OneRowRelation</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="OrderPreservingUnaryNode.html" title=""></a>
+                        <a href="OrderPreservingUnaryNode.html" title="">OrderPreservingUnaryNode</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="OverwriteByExpression$.html" title=""></a>
+                        <a class="class" href="OverwriteByExpression.html" title="Overwrite data matching a filter in an existing table."></a>
+                        <a href="OverwriteByExpression.html" title="Overwrite data matching a filter in an existing table.">OverwriteByExpression</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="OverwritePartitionsDynamic$.html" title=""></a>
+                        <a class="class" href="OverwritePartitionsDynamic.html" title="Dynamically overwrite partitions in an existing table."></a>
+                        <a href="OverwritePartitionsDynamic.html" title="Dynamically overwrite partitions in an existing table.">OverwritePartitionsDynamic</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="object" href="PREFER_SHUFFLE_HASH$.html" title="An internal hint to encourage shuffle hash join, used by adaptive query execution."></a>
+                        <a href="PREFER_SHUFFLE_HASH$.html" title="An internal hint to encourage shuffle hash join, used by adaptive query execution.">PREFER_SHUFFLE_HASH</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ParsedStatement.html" title="A logical plan node that contains exactly what was parsed from SQL."></a>
+                        <a href="ParsedStatement.html" title="A logical plan node that contains exactly what was parsed from SQL.">ParsedStatement</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="Pivot.html" title="A constructor for creating a pivot, which will later be converted to a Project or an Aggregate during the query analysis."></a>
+                        <a href="Pivot.html" title="A constructor for creating a pivot, which will later be converted to a Project or an Aggregate during the query analysis.">Pivot</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="object" href="PlanHelper$.html" title="PlanHelper contains utility methods that can be used by Analyzer and Optimizer."></a>
+                        <a href="PlanHelper$.html" title="PlanHelper contains utility methods that can be used by Analyzer and Optimizer.">PlanHelper</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="object" href="ProcessingTimeTimeout$.html" title=""></a>
+                        <a href="ProcessingTimeTimeout$.html" title="">ProcessingTimeTimeout</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="Project$.html" title=""></a>
+                        <a class="class" href="Project.html" title=""></a>
+                        <a href="Project.html" title="">Project</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="QualifiedColType.html" title="Column data as parsed by ALTER TABLE ..."></a>
+                        <a href="QualifiedColType.html" title="Column data as parsed by ALTER TABLE ...">QualifiedColType</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="QueryPlanConstraints.html" title=""></a>
+                        <a href="QueryPlanConstraints.html" title="">QueryPlanConstraints</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="Range$.html" title="Factory for constructing new Range nodes."></a>
+                        <a class="class" href="Range.html" title=""></a>
+                        <a href="Range.html" title="">Range</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="RebalancePartitions.html" title="This operator is used to rebalance the output partitions of the given child, so that every partition is of a reasonable size (not too small and not too big)."></a>
+                        <a href="RebalancePartitions.html" title="This operator is used to rebalance the output partitions of the given child, so that every partition is of a reasonable size (not too small and not too big).">RebalancePartitions</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="RecoverPartitions.html" title="The logical plan of the ALTER TABLE ..."></a>
+                        <a href="RecoverPartitions.html" title="The logical plan of the ALTER TABLE ...">RecoverPartitions</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="RefreshFunction.html" title="The logical plan of the REFRESH FUNCTION command."></a>
+                        <a href="RefreshFunction.html" title="The logical plan of the REFRESH FUNCTION command.">RefreshFunction</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="RefreshTable.html" title="The logical plan of the REFRESH TABLE command."></a>
+                        <a href="RefreshTable.html" title="The logical plan of the REFRESH TABLE command.">RefreshTable</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="RenameColumn.html" title="The logical plan of the ALTER TABLE ..."></a>
+                        <a href="RenameColumn.html" title="The logical plan of the ALTER TABLE ...">RenameColumn</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="RenamePartitions.html" title="The logical plan of the ALTER TABLE ..."></a>
+                        <a href="RenamePartitions.html" title="The logical plan of the ALTER TABLE ...">RenamePartitions</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="RenameTable.html" title="The logical plan of the ALTER [TABLE|VIEW] ..."></a>
+                        <a href="RenameTable.html" title="The logical plan of the ALTER [TABLE|VIEW] ...">RenameTable</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="RepairTable.html" title="The logical plan of the MSCK REPAIR TABLE command."></a>
+                        <a href="RepairTable.html" title="The logical plan of the MSCK REPAIR TABLE command.">RepairTable</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="Repartition.html" title="Returns a new RDD that has exactly numPartitions partitions."></a>
+                        <a href="Repartition.html" title="Returns a new RDD that has exactly numPartitions partitions.">Repartition</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="RepartitionByExpression$.html" title=""></a>
+                        <a class="class" href="RepartitionByExpression.html" title="This method repartitions data using Expressions into optNumPartitions, and receives information about the number of partitions during execution."></a>
+                        <a href="RepartitionByExpression.html" title="This method repartitions data using Expressions into optNumPartitions, and receives information about the number of partitions during execution.">RepartitionByExpression</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="RepartitionOperation.html" title="A base interface for RepartitionByExpression and Repartition"></a>
+                        <a href="RepartitionOperation.html" title="A base interface for RepartitionByExpression and Repartition">RepartitionOperation</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ReplaceColumns.html" title="The logical plan of the ALTER TABLE ..."></a>
+                        <a href="ReplaceColumns.html" title="The logical plan of the ALTER TABLE ...">ReplaceColumns</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ReplaceTable.html" title="Replace a table with a v2 catalog."></a>
+                        <a href="ReplaceTable.html" title="Replace a table with a v2 catalog.">ReplaceTable</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ReplaceTableAsSelect.html" title="Replaces a table from a select query with a v2 catalog."></a>
+                        <a href="ReplaceTableAsSelect.html" title="Replaces a table from a select query with a v2 catalog.">ReplaceTableAsSelect</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ReplaceTableAsSelectStatement.html" title="A REPLACE TABLE AS SELECT command, as parsed from SQL."></a>
+                        <a href="ReplaceTableAsSelectStatement.html" title="A REPLACE TABLE AS SELECT command, as parsed from SQL.">ReplaceTableAsSelectStatement</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ReplaceTableStatement.html" title="A REPLACE TABLE command, as parsed from SQL."></a>
+                        <a href="ReplaceTableStatement.html" title="A REPLACE TABLE command, as parsed from SQL.">ReplaceTableStatement</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ResolvedHint.html" title="A resolved hint node."></a>
+                        <a href="ResolvedHint.html" title="A resolved hint node.">ResolvedHint</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ReturnAnswer.html" title="When planning take() or collect() operations, this special node is inserted at the top of the logical plan before invoking the query planner."></a>
+                        <a href="ReturnAnswer.html" title="When planning take() or collect() operations, this special node is inserted at the top of the logical plan before invoking the query planner.">ReturnAnswer</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="object" href="SHUFFLE_HASH$.html" title="The hint for shuffle hash join."></a>
+                        <a href="SHUFFLE_HASH$.html" title="The hint for shuffle hash join.">SHUFFLE_HASH</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="object" href="SHUFFLE_MERGE$.html" title="The hint for shuffle sort merge join."></a>
+                        <a href="SHUFFLE_MERGE$.html" title="The hint for shuffle sort merge join.">SHUFFLE_MERGE</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="object" href="SHUFFLE_REPLICATE_NL$.html" title="The hint for shuffle-and-replicate nested loop join, a.k.a."></a>
+                        <a href="SHUFFLE_REPLICATE_NL$.html" title="The hint for shuffle-and-replicate nested loop join, a.k.a.">SHUFFLE_REPLICATE_NL</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="Sample.html" title="Sample the dataset."></a>
+                        <a href="Sample.html" title="Sample the dataset.">Sample</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ScriptInputOutputSchema.html" title="Input and output properties when passing data to a script."></a>
+                        <a href="ScriptInputOutputSchema.html" title="Input and output properties when passing data to a script.">ScriptInputOutputSchema</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ScriptTransformation.html" title="Transforms the input by forking and running the specified script."></a>
+                        <a href="ScriptTransformation.html" title="Transforms the input by forking and running the specified script.">ScriptTransformation</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="SerdeInfo$.html" title=""></a>
+                        <a class="class" href="SerdeInfo.html" title="Type to keep track of Hive serde info"></a>
+                        <a href="SerdeInfo.html" title="Type to keep track of Hive serde info">SerdeInfo</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="SerializeFromObject.html" title="Takes the input object from child and turns it into unsafe row using the given serializer expression."></a>
+                        <a href="SerializeFromObject.html" title="Takes the input object from child and turns it into unsafe row using the given serializer expression.">SerializeFromObject</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="SetCatalogAndNamespace.html" title="The logical plan of the USE/USE NAMESPACE command."></a>
+                        <a href="SetCatalogAndNamespace.html" title="The logical plan of the USE/USE NAMESPACE command.">SetCatalogAndNamespace</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="SetNamespaceLocation.html" title="The logical plan of the ALTER (DATABASE|SCHEMA|NAMESPACE) ..."></a>
+                        <a href="SetNamespaceLocation.html" title="The logical plan of the ALTER (DATABASE|SCHEMA|NAMESPACE) ...">SetNamespaceLocation</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="SetNamespaceProperties.html" title="The logical plan of the ALTER (DATABASE|SCHEMA|NAMESPACE) ..."></a>
+                        <a href="SetNamespaceProperties.html" title="The logical plan of the ALTER (DATABASE|SCHEMA|NAMESPACE) ...">SetNamespaceProperties</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="SetOperation$.html" title=""></a>
+                        <a class="class" href="SetOperation.html" title=""></a>
+                        <a href="SetOperation.html" title="">SetOperation</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="SetTableLocation.html" title="The logical plan of the ALTER TABLE ..."></a>
+                        <a href="SetTableLocation.html" title="The logical plan of the ALTER TABLE ...">SetTableLocation</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="SetTableProperties.html" title="The logical plan of the ALTER TABLE ..."></a>
+                        <a href="SetTableProperties.html" title="The logical plan of the ALTER TABLE ...">SetTableProperties</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="SetTableSerDeProperties.html" title="The logical plan of the ALTER TABLE ..."></a>
+                        <a href="SetTableSerDeProperties.html" title="The logical plan of the ALTER TABLE ...">SetTableSerDeProperties</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="SetViewProperties.html" title="The logical plan of the ALTER VIEW ..."></a>
+                        <a href="SetViewProperties.html" title="The logical plan of the ALTER VIEW ...">SetViewProperties</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="ShowColumns$.html" title=""></a>
+                        <a class="class" href="ShowColumns.html" title="The logical plan of the SHOW COLUMN command."></a>
+                        <a href="ShowColumns.html" title="The logical plan of the SHOW COLUMN command.">ShowColumns</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="ShowCreateTable$.html" title=""></a>
+                        <a class="class" href="ShowCreateTable.html" title="The logical plan of the SHOW CREATE TABLE command."></a>
+                        <a href="ShowCreateTable.html" title="The logical plan of the SHOW CREATE TABLE command.">ShowCreateTable</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ShowCurrentNamespace.html" title="The logical plan of the SHOW CURRENT NAMESPACE command."></a>
+                        <a href="ShowCurrentNamespace.html" title="The logical plan of the SHOW CURRENT NAMESPACE command.">ShowCurrentNamespace</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ShowCurrentNamespaceStatement.html" title="A SHOW CURRENT NAMESPACE statement, as parsed from SQL"></a>
+                        <a href="ShowCurrentNamespaceStatement.html" title="A SHOW CURRENT NAMESPACE statement, as parsed from SQL">ShowCurrentNamespaceStatement</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="ShowFunctions$.html" title=""></a>
+                        <a class="class" href="ShowFunctions.html" title="The logical plan of the SHOW FUNCTIONS command."></a>
+                        <a href="ShowFunctions.html" title="The logical plan of the SHOW FUNCTIONS command.">ShowFunctions</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="ShowNamespaces$.html" title=""></a>
+                        <a class="class" href="ShowNamespaces.html" title="The logical plan of the SHOW NAMESPACES command."></a>
+                        <a href="ShowNamespaces.html" title="The logical plan of the SHOW NAMESPACES command.">ShowNamespaces</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="ShowPartitions$.html" title=""></a>
+                        <a class="class" href="ShowPartitions.html" title="The logical plan of the SHOW PARTITIONS command."></a>
+                        <a href="ShowPartitions.html" title="The logical plan of the SHOW PARTITIONS command.">ShowPartitions</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="ShowTableExtended$.html" title=""></a>
+                        <a class="class" href="ShowTableExtended.html" title="The logical plan of the SHOW TABLE EXTENDED command."></a>
+                        <a href="ShowTableExtended.html" title="The logical plan of the SHOW TABLE EXTENDED command.">ShowTableExtended</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="ShowTableProperties$.html" title=""></a>
+                        <a class="class" href="ShowTableProperties.html" title="The logical plan of the SHOW TBLPROPERTIES command."></a>
+                        <a href="ShowTableProperties.html" title="The logical plan of the SHOW TBLPROPERTIES command.">ShowTableProperties</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="ShowTables$.html" title=""></a>
+                        <a class="class" href="ShowTables.html" title="The logical plan of the SHOW TABLES command."></a>
+                        <a href="ShowTables.html" title="The logical plan of the SHOW TABLES command.">ShowTables</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="ShowViews$.html" title=""></a>
+                        <a class="class" href="ShowViews.html" title="The logical plan of the SHOW VIEWS command."></a>
+                        <a href="ShowViews.html" title="The logical plan of the SHOW VIEWS command.">ShowViews</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="Sort.html" title=""></a>
+                        <a href="Sort.html" title="">Sort</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="Statistics$.html" title=""></a>
+                        <a class="class" href="Statistics.html" title="Estimates of various statistics."></a>
+                        <a href="Statistics.html" title="Estimates of various statistics.">Statistics</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="Subquery$.html" title=""></a>
+                        <a class="class" href="Subquery.html" title="This node is inserted at the top of a subquery when it is optimized."></a>
+                        <a href="Subquery.html" title="This node is inserted at the top of a subquery when it is optimized.">Subquery</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="SubqueryAlias$.html" title=""></a>
+                        <a class="class" href="SubqueryAlias.html" title="Aliased subquery."></a>
+                        <a href="SubqueryAlias.html" title="Aliased subquery.">SubqueryAlias</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="SupportsSubquery.html" title="A trait to represent the commands that support subqueries."></a>
+                        <a href="SupportsSubquery.html" title="A trait to represent the commands that support subqueries.">SupportsSubquery</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="Tail.html" title="This is similar with Limit except:"></a>
+                        <a href="Tail.html" title="This is similar with Limit except:">Tail</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="TruncatePartition.html" title="The logical plan of the TRUNCATE TABLE ..."></a>
+                        <a href="TruncatePartition.html" title="The logical plan of the TRUNCATE TABLE ...">TruncatePartition</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="TruncateTable.html" title="The logical plan of the TRUNCATE TABLE command."></a>
+                        <a href="TruncateTable.html" title="The logical plan of the TRUNCATE TABLE command.">TruncateTable</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="TypedFilter$.html" title=""></a>
+                        <a class="class" href="TypedFilter.html" title="A relation produced by applying func to each element of the child and filter them by the resulting boolean value."></a>
+                        <a href="TypedFilter.html" title="A relation produced by applying func to each element of the child and filter them by the resulting boolean value.">TypedFilter</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="UnaryCommand.html" title=""></a>
+                        <a href="UnaryCommand.html" title="">UnaryCommand</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="UnaryNode.html" title="A logical plan node with single child."></a>
+                        <a href="UnaryNode.html" title="A logical plan node with single child.">UnaryNode</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="UnaryParsedStatement.html" title=""></a>
+                        <a href="UnaryParsedStatement.html" title="">UnaryParsedStatement</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="UncacheTable.html" title="The logical plan of the UNCACHE TABLE command."></a>
+                        <a href="UncacheTable.html" title="The logical plan of the UNCACHE TABLE command.">UncacheTable</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="Union$.html" title="Factory for constructing new Union nodes."></a>
+                        <a class="class" href="Union.html" title="Logical plan for unioning multiple plans, without a distinct."></a>
+                        <a href="Union.html" title="Logical plan for unioning multiple plans, without a distinct.">Union</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="UnresolvedHint.html" title="A general hint for the child that is not yet resolved."></a>
+                        <a href="UnresolvedHint.html" title="A general hint for the child that is not yet resolved.">UnresolvedHint</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="UnresolvedWith.html" title="A container for holding named common table expressions (CTEs) and a query plan."></a>
+                        <a href="UnresolvedWith.html" title="A container for holding named common table expressions (CTEs) and a query plan.">UnresolvedWith</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="UnsetTableProperties.html" title="The logical plan of the ALTER TABLE ..."></a>
+                        <a href="UnsetTableProperties.html" title="The logical plan of the ALTER TABLE ...">UnsetTableProperties</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="UnsetViewProperties.html" title="The logical plan of the ALTER VIEW ..."></a>
+                        <a href="UnsetViewProperties.html" title="The logical plan of the ALTER VIEW ...">UnsetViewProperties</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="UpdateAction.html" title=""></a>
+                        <a href="UpdateAction.html" title="">UpdateAction</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="UpdateStarAction.html" title=""></a>
+                        <a href="UpdateStarAction.html" title="">UpdateStarAction</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="UpdateTable.html" title="The logical plan of the UPDATE TABLE command."></a>
+                        <a href="UpdateTable.html" title="The logical plan of the UPDATE TABLE command.">UpdateTable</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="UseStatement.html" title="A USE statement, as parsed from SQL."></a>
+                        <a href="UseStatement.html" title="A USE statement, as parsed from SQL.">UseStatement</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="V2CreateTablePlan.html" title="A trait used for logical plan nodes that create or replace V2 table definitions."></a>
+                        <a href="V2CreateTablePlan.html" title="A trait used for logical plan nodes that create or replace V2 table definitions.">V2CreateTablePlan</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="V2PartitionCommand.html" title=""></a>
+                        <a href="V2PartitionCommand.html" title="">V2PartitionCommand</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="V2WriteCommand.html" title="Base trait for DataSourceV2 write commands"></a>
+                        <a href="V2WriteCommand.html" title="Base trait for DataSourceV2 write commands">V2WriteCommand</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="View$.html" title=""></a>
+                        <a class="class" href="View.html" title="A container for holding the view description(CatalogTable) and info whether the view is temporary or not."></a>
+                        <a href="View.html" title="A container for holding the view description(CatalogTable) and info whether the view is temporary or not.">View</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="Window.html" title=""></a>
+                        <a href="Window.html" title="">Window</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="WithCTE.html" title="The resolved version of UnresolvedWith with CTE referrences linked to CTE definitions through unique IDs instead of relation aliases."></a>
+                        <a href="WithCTE.html" title="The resolved version of UnresolvedWith with CTE referrences linked to CTE definitions through unique IDs instead of relation aliases.">WithCTE</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="WithWindowDefinition.html" title=""></a>
+                        <a href="WithWindowDefinition.html" title="">WithWindowDefinition</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="object value">
+      <div id="definition">
+        <div class="big-circle object">o</div>
+        <p id="owner"><a href="../../../../../../index.html" class="extype" name="org">org</a>.<a href="../../../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../../../index.html" class="extype" name="org.apache.spark.sql">sql</a>.<a href="../../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a>.<a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst.plans">plans</a>.<a href="index.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical">logical</a></p>
+        <h1>FunctionUtils<span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/catalyst/plans/logical/FunctionUtils$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <span class="name">FunctionUtils</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="org.apache.spark.sql.catalyst.plans.logical.FunctionUtils"><span>FunctionUtils</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/catalyst/plans/logical/FunctionUtils$.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/catalyst/plans/logical/FunctionUtils$.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/catalyst/plans/logical/FunctionUtils$.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/catalyst/plans/logical/FunctionUtils$.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/catalyst/plans/logical/FunctionUtils$.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/catalyst/plans/logical/FunctionUtils$.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/catalyst/plans/logical/FunctionUtils$.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/catalyst/plans/logical/FunctionUtils$.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/catalyst/plans/logical/FunctionUtils$.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.plans.logical.FunctionUtils#getFunctionOneName" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getFunctionOneName(outputDT:org.apache.spark.sql.types.DataType,inputDT:org.apache.spark.sql.types.DataType):(Class[Function1[_,_]],String)"></a><a id="getFunctionOneName(DataType,DataType):(Class[Function1[_,_]],String)"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/catalyst/plans/logical/FunctionUtils$.html#getFunctionOneName(outputDT:org.apache.spark.sql.types.DataType,inputDT:org.apache.spark.sql.types.DataType):(Class[Function1[_,_]],String)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getFunctionOneName</span><span class="params">(<span name="outputDT">outputDT: <a href="../../../types/DataType.html" class="extype" name="org.apache.spark.sql.types.DataType">DataType</a></span>, <span name="inputDT">inputDT: <a href="../../../types/DataType.html" class="extype" name="org.apache.spark.sql.types.DataType">DataType</a></span>)</span><span class="result">: (<span class="extype" name="scala.Predef.Class">Class</span>[<span class="extype" name="scala.Function1">Function1</span>[_, _]], <span class="extype" name="scala.Predef.String">String</span>)</span>
+      </span>
+      
+      
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/catalyst/plans/logical/FunctionUtils$.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/catalyst/plans/logical/FunctionUtils$.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/catalyst/plans/logical/FunctionUtils$.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/catalyst/plans/logical/FunctionUtils$.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/catalyst/plans/logical/FunctionUtils$.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/catalyst/plans/logical/FunctionUtils$.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/catalyst/plans/logical/FunctionUtils$.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/catalyst/plans/logical/FunctionUtils$.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/catalyst/plans/logical/FunctionUtils$.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/catalyst/plans/logical/FunctionUtils$.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Core 3.2.1 API  - org.apache.spark.util.collection</title>
+          <meta name="description" content="Spark Project Core 3.2.1 API - org.apache.spark.util.collection" />
+          <meta name="keywords" content="Spark Project Core 3.2.1 API org.apache.spark.util.collection" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Core 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Core Spark functionality." href="../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Core Spark functionality.</p><div class="fullcomment"><div class="comment cmt"><p>Core Spark functionality. <a href="../../SparkContext.html" class="extype" name="org.apache.spark.SparkContext">org.apache.spark.SparkContext</a> serves as the main entry point to
+Spark, while <a href="../../rdd/RDD.html" class="extype" name="org.apache.spark.rdd.RDD">org.apache.spark.rdd.RDD</a> is the data type representing a distributed collection,
+and provides most parallel operations.</p><p>In addition, <a href="../../rdd/PairRDDFunctions.html" class="extype" name="org.apache.spark.rdd.PairRDDFunctions">org.apache.spark.rdd.PairRDDFunctions</a> contains operations available only on RDDs
+of key-value pairs, such as <code>groupByKey</code> and <code>join</code>; <a href="../../rdd/DoubleRDDFunctions.html" class="extype" name="org.apache.spark.rdd.DoubleRDDFunctions">org.apache.spark.rdd.DoubleRDDFunctions</a>
+contains operations available only on RDDs of Doubles; and
+<a href="../../rdd/SequenceFileRDDFunctions.html" class="extype" name="org.apache.spark.rdd.SequenceFileRDDFunctions">org.apache.spark.rdd.SequenceFileRDDFunctions</a> contains operations available on RDDs that can
+be saved as SequenceFiles. These operations are automatically available on any RDD of the right
+type (e.g. RDD[(Int, Int)] through implicit conversions.</p><p>Java programmers should reference the <a href="../../api/java/index.html" class="extype" name="org.apache.spark.api.java">org.apache.spark.api.java</a> package
+for Spark programming APIs in Java.</p><p>Classes and methods marked with <span class="experimental badge" style="float: none;">
+Experimental</span> are user-facing features which have not been officially adopted by the
+Spark project. These are subject to change or removal in minor releases.</p><p>Classes and methods marked with <span class="developer badge" style="float: none;">
+Developer API</span> are intended for advanced users want to extend Spark through lower
+level interfaces. These are subject to changes or removal in minor releases.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.util" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="util"></a><a id="util:util"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/util/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Spark utilities." href="../index.html"><span class="name">util</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Spark utilities.</p><div class="fullcomment"><div class="comment cmt"><p>Spark utilities.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.util.collection" visbl="pub" class="indented5 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="collection"></a><a id="collection:collection"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/util/collection/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">collection</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.util">util</a></dd></dl></div>
+    </li><li name="org.apache.spark.util.collection.unsafe" visbl="pub" class="indented6 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="unsafe"></a><a id="unsafe:unsafe"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/util/collection/unsafe/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="unsafe/index.html"><span class="name">unsafe</span></a>
+      </span>
+      
+      
+    </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="AppendOnlyMap.html" title=":: DeveloperApi :: A simple open hash table optimized for the append-only use case, where keys are never removed, but the value for each key may be changed."></a>
+                        <a href="AppendOnlyMap.html" title=":: DeveloperApi :: A simple open hash table optimized for the append-only use case, where keys are never removed, but the value for each key may be changed.">AppendOnlyMap</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="BitSet.html" title="A simple, fixed-size bit set implementation."></a>
+                        <a href="BitSet.html" title="A simple, fixed-size bit set implementation.">BitSet</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ExternalAppendOnlyMap.html" title=":: DeveloperApi :: An append-only map that spills sorted content to disk when there is insufficient space for it to grow."></a>
+                        <a href="ExternalAppendOnlyMap.html" title=":: DeveloperApi :: An append-only map that spills sorted content to disk when there is insufficient space for it to grow.">ExternalAppendOnlyMap</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ImmutableBitSet.html" title=""></a>
+                        <a href="ImmutableBitSet.html" title="">ImmutableBitSet</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="OpenHashSet.html" title="A simple, fast hash set optimized for non-null insertion-only use case, where keys are never removed."></a>
+                        <a href="OpenHashSet.html" title="A simple, fast hash set optimized for non-null insertion-only use case, where keys are never removed.">OpenHashSet</a>
+                      </li><li name="org.apache.spark.util.random" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="random"></a><a id="random:random"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/util/random/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Utilities for random number generation." href="../random/index.html"><span class="name">random</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Utilities for random number generation.</p><div class="fullcomment"><div class="comment cmt"><p>Utilities for random number generation.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.util">util</a></dd></dl></div>
+    </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../../index.html" class="extype" name="org">org</a>.<a href="../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../index.html" class="extype" name="org.apache.spark.util">util</a></p>
+        <h1>collection<span class="permalink">
+      <a href="../../../../../org/apache/spark/util/collection/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">collection</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.spark.util.collection.AppendOnlyMap" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AppendOnlyMap[K,V]extendsIterable[(K,V)]withSerializable"></a><a id="AppendOnlyMap[K,V]:AppendOnlyMap[K,V]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/util/collection/AppendOnlyMap.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title=":: DeveloperApi :: A simple open hash table optimized for the append-only use case, where keys are never removed, but the value for each key may be changed." href="AppendOnlyMap.html"><span class="name">AppendOnlyMap</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <span class="extype" name="scala.Iterable">Iterable</span>[(<span class="extype" name="org.apache.spark.util.collection.AppendOnlyMap.K">K</span>, <span class="extype" name="org.apache.spark.util.collection.AppendOnlyMap.V">V</span>)] with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">:: DeveloperApi ::
+A simple open hash table optimized for the append-only use case, where keys
+are never removed, but the value for each key may be changed.</p><div class="fullcomment"><div class="comment cmt"><p>:: DeveloperApi ::
+A simple open hash table optimized for the append-only use case, where keys
+are never removed, but the value for each key may be changed.</p><p>This implementation uses quadratic probing with a power-of-2 hash table
+size, which is guaranteed to explore all spaces for each key (see
+http://en.wikipedia.org/wiki/Quadratic_probing).</p><p>The map can support up to <code>375809638 (0.7 * 2 ^ 29)<code> elements.</code></code></p><p>TODO: Cache the hash values of each key? java.util.HashMap does that.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@DeveloperApi</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.util.collection.BitSet" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BitSetextendsSerializable"></a><a id="BitSet:BitSet"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/util/collection/BitSet.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A simple, fixed-size bit set implementation." href="BitSet.html"><span class="name">BitSet</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A simple, fixed-size bit set implementation.</p><div class="fullcomment"><div class="comment cmt"><p>A simple, fixed-size bit set implementation. This implementation is fast because it avoids
+safety/bound checking.
+</p></div></div>
+    </li><li name="org.apache.spark.util.collection.ExternalAppendOnlyMap" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ExternalAppendOnlyMap[K,V,C]extendsSpillable[org.apache.spark.util.collection.SizeTracker]withSerializablewithLoggingwithIterable[(K,C)]"></a><a id="ExternalAppendOnlyMap[K,V,C]:ExternalAppendOnlyMap[K,V,C]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/util/collection/ExternalAppendOnlyMap.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title=":: DeveloperApi :: An append-only map that spills sorted content to disk when there is insufficient space for it to grow." href="ExternalAppendOnlyMap.html"><span class="name">ExternalAppendOnlyMap</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>, <span name="C">C</span>]</span><span class="result"> extends <span class="extype" name="org.apache.spark.util.collection.Spillable">Spillable</span>[<span class="extype" name="org.apache.spark.util.collection.SizeTracker">SizeTracker</span>] with <span class="extype" name="java.io.Serializable">Serializable</span> with <a href="../../internal/Logging.html" class="extype" name="org.apache.spark.internal.Logging">Logging</a> with <span class="extype" name="scala.Iterable">Iterable</span>[(<span class="extype" name="org.apache.spark.util.collection.ExternalAppendOnlyMap.K">K</span>, <span class="extype" name="org.apache.spark.util.collection.ExternalAppendOnlyMap.C">C</span>)]</span>
+      </span>
+      
+      <p class="shortcomment cmt">:: DeveloperApi ::
+An append-only map that spills sorted content to disk when there is insufficient space for it
+to grow.</p><div class="fullcomment"><div class="comment cmt"><p>:: DeveloperApi ::
+An append-only map that spills sorted content to disk when there is insufficient space for it
+to grow.</p><p>This map takes two passes over the data:</p><p>  (1) Values are merged into combiners, which are sorted and spilled to disk as necessary
+  (2) Combiners are read from disk and merged together</p><p>The setting of the spill threshold faces the following trade-off: If the spill threshold is
+too high, the in-memory map may occupy more memory than is available, resulting in OOM.
+However, if the spill threshold is too low, we spill frequently and incur unnecessary disk
+writes. This may lead to a performance regression compared to the normal case of using the
+non-spilling AppendOnlyMap.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@DeveloperApi</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.util.collection.ImmutableBitSet" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ImmutableBitSetextendsBitSet"></a><a id="ImmutableBitSet:ImmutableBitSet"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/util/collection/ImmutableBitSet.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ImmutableBitSet.html"><span class="name">ImmutableBitSet</span></a><span class="result"> extends <a href="BitSet.html" class="extype" name="org.apache.spark.util.collection.BitSet">BitSet</a></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.util.collection.OpenHashSet" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="OpenHashSet[T]extendsSerializable"></a><a id="OpenHashSet[T]:OpenHashSet[T]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/util/collection/OpenHashSet.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A simple, fast hash set optimized for non-null insertion-only use case, where keys are never removed." href="OpenHashSet.html"><span class="name">OpenHashSet</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A simple, fast hash set optimized for non-null insertion-only use case, where keys are never
+removed.</p><div class="fullcomment"><div class="comment cmt"><p>A simple, fast hash set optimized for non-null insertion-only use case, where keys are never
+removed.</p><p>The underlying implementation uses Scala compiler's specialization to generate optimized
+storage for four primitive types (Long, Int, Double, and Float). It is much faster than Java's
+standard HashSet while incurring much less memory overhead. This can serve as building blocks
+for higher level data structures such as an optimized HashMap.</p><p>This OpenHashSet is designed to serve as building blocks for higher level data structures
+such as an optimized hash map. Compared with standard hash set implementations, this class
+provides its various callbacks interfaces (e.g. allocateFunc, moveFunc) and interfaces to
+retrieve the position of a key in the underlying array.</p><p>It uses quadratic probing with a power-of-2 hash table size, which is guaranteed
+to explore all spaces for each key (see http://en.wikipedia.org/wiki/Quadratic_probing).
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Private</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

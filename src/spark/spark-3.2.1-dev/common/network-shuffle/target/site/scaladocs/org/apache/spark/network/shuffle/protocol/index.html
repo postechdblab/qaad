@@ -1,0 +1,702 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Shuffle Streaming Service 3.2.1 API  - org.apache.spark.network.shuffle.protocol</title>
+          <meta name="description" content="Spark Project Shuffle Streaming Service 3.2.1 API - org.apache.spark.network.shuffle.protocol" />
+          <meta name="keywords" content="Spark Project Shuffle Streaming Service 3.2.1 API org.apache.spark.network.shuffle.protocol" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Shuffle Streaming Service 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.network" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="network"></a><a id="network:network"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/network/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">network</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.shuffle" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="shuffle"></a><a id="shuffle:shuffle"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/network/shuffle/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">shuffle</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.shuffle.checksum" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="checksum"></a><a id="checksum:checksum"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/network/shuffle/checksum/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../checksum/index.html"><span class="name">checksum</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network.shuffle">shuffle</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.shuffle.protocol" visbl="pub" class="indented6 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="protocol"></a><a id="protocol:protocol"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/network/shuffle/protocol/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">protocol</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network.shuffle">shuffle</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.shuffle.protocol.mesos" visbl="pub" class="indented7 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="mesos"></a><a id="mesos:mesos"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/network/shuffle/protocol/mesos/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="mesos/index.html"><span class="name">mesos</span></a>
+      </span>
+      
+      
+    </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="AbstractFetchShuffleBlocks.html" title="Base class for fetch shuffle blocks and chunks."></a>
+                        <a href="AbstractFetchShuffleBlocks.html" title="Base class for fetch shuffle blocks and chunks.">AbstractFetchShuffleBlocks</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="BlockPushReturnCode.html" title="Error code indicating a non-fatal failure of a block push request."></a>
+                        <a href="BlockPushReturnCode.html" title="Error code indicating a non-fatal failure of a block push request.">BlockPushReturnCode</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="BlockTransferMessage.html" title="Messages handled by the ExternalBlockHandler, or by Spark's NettyBlockTransferService."></a>
+                        <a href="BlockTransferMessage.html" title="Messages handled by the ExternalBlockHandler, or by Spark's NettyBlockTransferService.">BlockTransferMessage</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="BlocksRemoved.html" title="The reply to remove blocks giving back the number of removed blocks."></a>
+                        <a href="BlocksRemoved.html" title="The reply to remove blocks giving back the number of removed blocks.">BlocksRemoved</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="CorruptionCause.html" title="Response to the DiagnoseCorruption"></a>
+                        <a href="CorruptionCause.html" title="Response to the DiagnoseCorruption">CorruptionCause</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="DiagnoseCorruption.html" title="Request to get the cause of a corrupted block."></a>
+                        <a href="DiagnoseCorruption.html" title="Request to get the cause of a corrupted block.">DiagnoseCorruption</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="ExecutorShuffleInfo.html" title="Contains all configuration necessary for locating the shuffle files of an executor."></a>
+                        <a href="ExecutorShuffleInfo.html" title="Contains all configuration necessary for locating the shuffle files of an executor.">ExecutorShuffleInfo</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="FetchShuffleBlockChunks.html" title="Request to read a set of block chunks."></a>
+                        <a href="FetchShuffleBlockChunks.html" title="Request to read a set of block chunks.">FetchShuffleBlockChunks</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="FetchShuffleBlocks.html" title="Request to read a set of blocks."></a>
+                        <a href="FetchShuffleBlocks.html" title="Request to read a set of blocks.">FetchShuffleBlocks</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="FinalizeShuffleMerge.html" title="Request to finalize merge for a given shuffle."></a>
+                        <a href="FinalizeShuffleMerge.html" title="Request to finalize merge for a given shuffle.">FinalizeShuffleMerge</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="GetLocalDirsForExecutors.html" title="Request to get the local dirs for the given executors."></a>
+                        <a href="GetLocalDirsForExecutors.html" title="Request to get the local dirs for the given executors.">GetLocalDirsForExecutors</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="LocalDirsForExecutors.html" title="The reply to get local dirs giving back the dirs for each of the requested executors."></a>
+                        <a href="LocalDirsForExecutors.html" title="The reply to get local dirs giving back the dirs for each of the requested executors.">LocalDirsForExecutors</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="MergeStatuses.html" title="Result returned by an ExternalShuffleService to the DAGScheduler."></a>
+                        <a href="MergeStatuses.html" title="Result returned by an ExternalShuffleService to the DAGScheduler.">MergeStatuses</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="OpenBlocks.html" title="Request to read a set of blocks."></a>
+                        <a href="OpenBlocks.html" title="Request to read a set of blocks.">OpenBlocks</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="PushBlockStream.html" title="Request to push a block to a remote shuffle service to be merged in push based shuffle."></a>
+                        <a href="PushBlockStream.html" title="Request to push a block to a remote shuffle service to be merged in push based shuffle.">PushBlockStream</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="RegisterExecutor.html" title="Initial registration message between an executor and its local shuffle server."></a>
+                        <a href="RegisterExecutor.html" title="Initial registration message between an executor and its local shuffle server.">RegisterExecutor</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="RemoveBlocks.html" title="Request to remove a set of blocks."></a>
+                        <a href="RemoveBlocks.html" title="Request to remove a set of blocks.">RemoveBlocks</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="StreamHandle.html" title="Identifier for a fixed number of chunks to read from a stream created by an &quot;open blocks&quot; message."></a>
+                        <a href="StreamHandle.html" title="Identifier for a fixed number of chunks to read from a stream created by an &quot;open blocks&quot; message.">StreamHandle</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="UploadBlock.html" title="Request to upload a block with a certain StorageLevel."></a>
+                        <a href="UploadBlock.html" title="Request to upload a block with a certain StorageLevel.">UploadBlock</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="UploadBlockStream.html" title="A request to Upload a block, which the destination should receive as a stream."></a>
+                        <a href="UploadBlockStream.html" title="A request to Upload a block, which the destination should receive as a stream.">UploadBlockStream</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../../../index.html" class="extype" name="org">org</a>.<a href="../../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../../index.html" class="extype" name="org.apache.spark.network">network</a>.<a href="../index.html" class="extype" name="org.apache.spark.network.shuffle">shuffle</a></p>
+        <h1>protocol<span class="permalink">
+      <a href="../../../../../../org/apache/spark/network/shuffle/protocol/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">protocol</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.spark.network.shuffle.protocol.AbstractFetchShuffleBlocks" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="AbstractFetchShuffleBlocksextendsBlockTransferMessage"></a><a id="AbstractFetchShuffleBlocks:AbstractFetchShuffleBlocks"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/network/shuffle/protocol/AbstractFetchShuffleBlocks.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Base class for fetch shuffle blocks and chunks." href="AbstractFetchShuffleBlocks.html"><span class="name">AbstractFetchShuffleBlocks</span></a><span class="result"> extends <a href="BlockTransferMessage.html" class="extype" name="org.apache.spark.network.shuffle.protocol.BlockTransferMessage">BlockTransferMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Base class for fetch shuffle blocks and chunks.</p><div class="fullcomment"><div class="comment cmt"><p>Base class for fetch shuffle blocks and chunks.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>3.2.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.network.shuffle.protocol.BlockPushReturnCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BlockPushReturnCodeextendsBlockTransferMessage"></a><a id="BlockPushReturnCode:BlockPushReturnCode"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/network/shuffle/protocol/BlockPushReturnCode.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Error code indicating a non-fatal failure of a block push request." href="BlockPushReturnCode.html"><span class="name">BlockPushReturnCode</span></a><span class="result"> extends <a href="BlockTransferMessage.html" class="extype" name="org.apache.spark.network.shuffle.protocol.BlockTransferMessage">BlockTransferMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Error code indicating a non-fatal failure of a block push request.</p><div class="fullcomment"><div class="comment cmt"><p>Error code indicating a non-fatal failure of a block push request.
+Due to the best-effort nature of push-based shuffle, these failures
+do not impact the completion of the block push process. The list of
+such errors is in
+<code><span class="extype" name="org.apache.spark.network.server.BlockPushNonFatalFailure.ReturnCode">org.apache.spark.network.server.BlockPushNonFatalFailure.ReturnCode</span></code>.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>3.2.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.network.shuffle.protocol.BlockTransferMessage" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="BlockTransferMessageextendsEncodable"></a><a id="BlockTransferMessage:BlockTransferMessage"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/network/shuffle/protocol/BlockTransferMessage.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Messages handled by the ExternalBlockHandler, or by Spark's NettyBlockTransferService." href="BlockTransferMessage.html"><span class="name">BlockTransferMessage</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.network.protocol.Encodable">Encodable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Messages handled by the <code><a href="../ExternalBlockHandler.html" class="extype" name="org.apache.spark.network.shuffle.ExternalBlockHandler">ExternalBlockHandler</a></code>, or
+by Spark's NettyBlockTransferService.</p><div class="fullcomment"><div class="comment cmt"><p>Messages handled by the <code><a href="../ExternalBlockHandler.html" class="extype" name="org.apache.spark.network.shuffle.ExternalBlockHandler">ExternalBlockHandler</a></code>, or
+by Spark's NettyBlockTransferService.</p><p>At a high level:</p><ul><li>OpenBlock is logically only handled by the NettyBlockTransferService, but for the capability
+    for old version Spark, we still keep it in external shuffle service.
+    It returns a StreamHandle.</li><li>UploadBlock is only handled by the NettyBlockTransferService.</li><li>RegisterExecutor is only handled by the external shuffle service.</li><li>RemoveBlocks is only handled by the external shuffle service.</li><li>FetchShuffleBlocks is handled by both services for shuffle files. It returns a StreamHandle.
+</li></ul></div></div>
+    </li><li name="org.apache.spark.network.shuffle.protocol.BlocksRemoved" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BlocksRemovedextendsBlockTransferMessage"></a><a id="BlocksRemoved:BlocksRemoved"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/network/shuffle/protocol/BlocksRemoved.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The reply to remove blocks giving back the number of removed blocks." href="BlocksRemoved.html"><span class="name">BlocksRemoved</span></a><span class="result"> extends <a href="BlockTransferMessage.html" class="extype" name="org.apache.spark.network.shuffle.protocol.BlockTransferMessage">BlockTransferMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The reply to remove blocks giving back the number of removed blocks.</p>
+    </li><li name="org.apache.spark.network.shuffle.protocol.CorruptionCause" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CorruptionCauseextendsBlockTransferMessage"></a><a id="CorruptionCause:CorruptionCause"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/network/shuffle/protocol/CorruptionCause.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Response to the DiagnoseCorruption" href="CorruptionCause.html"><span class="name">CorruptionCause</span></a><span class="result"> extends <a href="BlockTransferMessage.html" class="extype" name="org.apache.spark.network.shuffle.protocol.BlockTransferMessage">BlockTransferMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Response to the <code><a href="DiagnoseCorruption.html" class="extype" name="org.apache.spark.network.shuffle.protocol.DiagnoseCorruption">DiagnoseCorruption</a></code></p>
+    </li><li name="org.apache.spark.network.shuffle.protocol.DiagnoseCorruption" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DiagnoseCorruptionextendsBlockTransferMessage"></a><a id="DiagnoseCorruption:DiagnoseCorruption"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/network/shuffle/protocol/DiagnoseCorruption.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Request to get the cause of a corrupted block." href="DiagnoseCorruption.html"><span class="name">DiagnoseCorruption</span></a><span class="result"> extends <a href="BlockTransferMessage.html" class="extype" name="org.apache.spark.network.shuffle.protocol.BlockTransferMessage">BlockTransferMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Request to get the cause of a corrupted block.</p><div class="fullcomment"><div class="comment cmt"><p>Request to get the cause of a corrupted block. Returns <code><a href="CorruptionCause.html" class="extype" name="org.apache.spark.network.shuffle.protocol.CorruptionCause">CorruptionCause</a></code></p></div></div>
+    </li><li name="org.apache.spark.network.shuffle.protocol.ExecutorShuffleInfo" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ExecutorShuffleInfoextendsEncodable"></a><a id="ExecutorShuffleInfo:ExecutorShuffleInfo"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/network/shuffle/protocol/ExecutorShuffleInfo.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Contains all configuration necessary for locating the shuffle files of an executor." href="ExecutorShuffleInfo.html"><span class="name">ExecutorShuffleInfo</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.network.protocol.Encodable">Encodable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Contains all configuration necessary for locating the shuffle files of an executor.</p>
+    </li><li name="org.apache.spark.network.shuffle.protocol.FetchShuffleBlockChunks" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FetchShuffleBlockChunksextendsAbstractFetchShuffleBlocks"></a><a id="FetchShuffleBlockChunks:FetchShuffleBlockChunks"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/network/shuffle/protocol/FetchShuffleBlockChunks.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Request to read a set of block chunks." href="FetchShuffleBlockChunks.html"><span class="name">FetchShuffleBlockChunks</span></a><span class="result"> extends <a href="AbstractFetchShuffleBlocks.html" class="extype" name="org.apache.spark.network.shuffle.protocol.AbstractFetchShuffleBlocks">AbstractFetchShuffleBlocks</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Request to read a set of block chunks.</p><div class="fullcomment"><div class="comment cmt"><p>Request to read a set of block chunks. Returns <code><a href="StreamHandle.html" class="extype" name="org.apache.spark.network.shuffle.protocol.StreamHandle">StreamHandle</a></code>.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>3.2.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.network.shuffle.protocol.FetchShuffleBlocks" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FetchShuffleBlocksextendsAbstractFetchShuffleBlocks"></a><a id="FetchShuffleBlocks:FetchShuffleBlocks"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/network/shuffle/protocol/FetchShuffleBlocks.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Request to read a set of blocks." href="FetchShuffleBlocks.html"><span class="name">FetchShuffleBlocks</span></a><span class="result"> extends <a href="AbstractFetchShuffleBlocks.html" class="extype" name="org.apache.spark.network.shuffle.protocol.AbstractFetchShuffleBlocks">AbstractFetchShuffleBlocks</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Request to read a set of blocks.</p><div class="fullcomment"><div class="comment cmt"><p>Request to read a set of blocks. Returns <code><a href="StreamHandle.html" class="extype" name="org.apache.spark.network.shuffle.protocol.StreamHandle">StreamHandle</a></code>.</p></div></div>
+    </li><li name="org.apache.spark.network.shuffle.protocol.FinalizeShuffleMerge" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FinalizeShuffleMergeextendsBlockTransferMessage"></a><a id="FinalizeShuffleMerge:FinalizeShuffleMerge"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/network/shuffle/protocol/FinalizeShuffleMerge.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Request to finalize merge for a given shuffle." href="FinalizeShuffleMerge.html"><span class="name">FinalizeShuffleMerge</span></a><span class="result"> extends <a href="BlockTransferMessage.html" class="extype" name="org.apache.spark.network.shuffle.protocol.BlockTransferMessage">BlockTransferMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Request to finalize merge for a given shuffle.</p><div class="fullcomment"><div class="comment cmt"><p>Request to finalize merge for a given shuffle.
+Returns <code><a href="MergeStatuses.html" class="extype" name="org.apache.spark.network.shuffle.protocol.MergeStatuses">MergeStatuses</a></code>
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>3.1.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.network.shuffle.protocol.GetLocalDirsForExecutors" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GetLocalDirsForExecutorsextendsBlockTransferMessage"></a><a id="GetLocalDirsForExecutors:GetLocalDirsForExecutors"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/network/shuffle/protocol/GetLocalDirsForExecutors.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Request to get the local dirs for the given executors." href="GetLocalDirsForExecutors.html"><span class="name">GetLocalDirsForExecutors</span></a><span class="result"> extends <a href="BlockTransferMessage.html" class="extype" name="org.apache.spark.network.shuffle.protocol.BlockTransferMessage">BlockTransferMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Request to get the local dirs for the given executors.</p>
+    </li><li name="org.apache.spark.network.shuffle.protocol.LocalDirsForExecutors" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LocalDirsForExecutorsextendsBlockTransferMessage"></a><a id="LocalDirsForExecutors:LocalDirsForExecutors"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/network/shuffle/protocol/LocalDirsForExecutors.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The reply to get local dirs giving back the dirs for each of the requested executors." href="LocalDirsForExecutors.html"><span class="name">LocalDirsForExecutors</span></a><span class="result"> extends <a href="BlockTransferMessage.html" class="extype" name="org.apache.spark.network.shuffle.protocol.BlockTransferMessage">BlockTransferMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The reply to get local dirs giving back the dirs for each of the requested executors.</p>
+    </li><li name="org.apache.spark.network.shuffle.protocol.MergeStatuses" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="MergeStatusesextendsBlockTransferMessage"></a><a id="MergeStatuses:MergeStatuses"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/network/shuffle/protocol/MergeStatuses.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Result returned by an ExternalShuffleService to the DAGScheduler." href="MergeStatuses.html"><span class="name">MergeStatuses</span></a><span class="result"> extends <a href="BlockTransferMessage.html" class="extype" name="org.apache.spark.network.shuffle.protocol.BlockTransferMessage">BlockTransferMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Result returned by an ExternalShuffleService to the DAGScheduler.</p><div class="fullcomment"><div class="comment cmt"><p>Result returned by an ExternalShuffleService to the DAGScheduler. This represents the result
+of all the remote shuffle block merge operations performed by an ExternalShuffleService
+for a given shuffle ID. It includes the shuffle ID, an array of bitmaps each representing
+the set of mapper partition blocks that are merged for a given reducer partition, an array
+of reducer IDs, and an array of merged shuffle partition sizes. The 3 arrays list information
+about all the reducer partitions merged by the ExternalShuffleService in the same order.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>3.1.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.network.shuffle.protocol.OpenBlocks" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="OpenBlocksextendsBlockTransferMessage"></a><a id="OpenBlocks:OpenBlocks"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/network/shuffle/protocol/OpenBlocks.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Request to read a set of blocks." href="OpenBlocks.html"><span class="name">OpenBlocks</span></a><span class="result"> extends <a href="BlockTransferMessage.html" class="extype" name="org.apache.spark.network.shuffle.protocol.BlockTransferMessage">BlockTransferMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Request to read a set of blocks.</p><div class="fullcomment"><div class="comment cmt"><p>Request to read a set of blocks. Returns <code><a href="StreamHandle.html" class="extype" name="org.apache.spark.network.shuffle.protocol.StreamHandle">StreamHandle</a></code>.</p></div></div>
+    </li><li name="org.apache.spark.network.shuffle.protocol.PushBlockStream" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="PushBlockStreamextendsBlockTransferMessage"></a><a id="PushBlockStream:PushBlockStream"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/network/shuffle/protocol/PushBlockStream.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Request to push a block to a remote shuffle service to be merged in push based shuffle." href="PushBlockStream.html"><span class="name">PushBlockStream</span></a><span class="result"> extends <a href="BlockTransferMessage.html" class="extype" name="org.apache.spark.network.shuffle.protocol.BlockTransferMessage">BlockTransferMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Request to push a block to a remote shuffle service to be merged in push based shuffle.</p><div class="fullcomment"><div class="comment cmt"><p>Request to push a block to a remote shuffle service to be merged in push based shuffle.
+The remote shuffle service will also include this message when responding the push requests.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>3.1.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.network.shuffle.protocol.RegisterExecutor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="RegisterExecutorextendsBlockTransferMessage"></a><a id="RegisterExecutor:RegisterExecutor"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/network/shuffle/protocol/RegisterExecutor.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Initial registration message between an executor and its local shuffle server." href="RegisterExecutor.html"><span class="name">RegisterExecutor</span></a><span class="result"> extends <a href="BlockTransferMessage.html" class="extype" name="org.apache.spark.network.shuffle.protocol.BlockTransferMessage">BlockTransferMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Initial registration message between an executor and its local shuffle server.</p><div class="fullcomment"><div class="comment cmt"><p>Initial registration message between an executor and its local shuffle server.
+Returns nothing (empty byte array).
+</p></div></div>
+    </li><li name="org.apache.spark.network.shuffle.protocol.RemoveBlocks" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RemoveBlocksextendsBlockTransferMessage"></a><a id="RemoveBlocks:RemoveBlocks"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/network/shuffle/protocol/RemoveBlocks.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Request to remove a set of blocks." href="RemoveBlocks.html"><span class="name">RemoveBlocks</span></a><span class="result"> extends <a href="BlockTransferMessage.html" class="extype" name="org.apache.spark.network.shuffle.protocol.BlockTransferMessage">BlockTransferMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Request to remove a set of blocks.</p>
+    </li><li name="org.apache.spark.network.shuffle.protocol.StreamHandle" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="StreamHandleextendsBlockTransferMessage"></a><a id="StreamHandle:StreamHandle"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/network/shuffle/protocol/StreamHandle.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Identifier for a fixed number of chunks to read from a stream created by an &quot;open blocks&quot; message." href="StreamHandle.html"><span class="name">StreamHandle</span></a><span class="result"> extends <a href="BlockTransferMessage.html" class="extype" name="org.apache.spark.network.shuffle.protocol.BlockTransferMessage">BlockTransferMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Identifier for a fixed number of chunks to read from a stream created by an &quot;open blocks&quot;
+message.</p><div class="fullcomment"><div class="comment cmt"><p>Identifier for a fixed number of chunks to read from a stream created by an &quot;open blocks&quot;
+message. This is used by <code><a href="../OneForOneBlockFetcher.html" class="extype" name="org.apache.spark.network.shuffle.OneForOneBlockFetcher">org.apache.spark.network.shuffle.OneForOneBlockFetcher</a></code>.
+</p></div></div>
+    </li><li name="org.apache.spark.network.shuffle.protocol.UploadBlock" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="UploadBlockextendsBlockTransferMessage"></a><a id="UploadBlock:UploadBlock"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/network/shuffle/protocol/UploadBlock.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Request to upload a block with a certain StorageLevel." href="UploadBlock.html"><span class="name">UploadBlock</span></a><span class="result"> extends <a href="BlockTransferMessage.html" class="extype" name="org.apache.spark.network.shuffle.protocol.BlockTransferMessage">BlockTransferMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Request to upload a block with a certain StorageLevel.</p><div class="fullcomment"><div class="comment cmt"><p>Request to upload a block with a certain StorageLevel. Returns nothing (empty byte array).</p></div></div>
+    </li><li name="org.apache.spark.network.shuffle.protocol.UploadBlockStream" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="UploadBlockStreamextendsBlockTransferMessage"></a><a id="UploadBlockStream:UploadBlockStream"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/network/shuffle/protocol/UploadBlockStream.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A request to Upload a block, which the destination should receive as a stream." href="UploadBlockStream.html"><span class="name">UploadBlockStream</span></a><span class="result"> extends <a href="BlockTransferMessage.html" class="extype" name="org.apache.spark.network.shuffle.protocol.BlockTransferMessage">BlockTransferMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A request to Upload a block, which the destination should receive as a stream.</p><div class="fullcomment"><div class="comment cmt"><p>A request to Upload a block, which the destination should receive as a stream.</p><p>The actual block data is not contained here.  It will be passed to the StreamCallbackWithID
+that is returned from RpcHandler.receiveStream()
+</p></div></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

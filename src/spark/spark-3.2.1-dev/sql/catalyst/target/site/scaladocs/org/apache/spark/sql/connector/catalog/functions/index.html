@@ -1,0 +1,439 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Catalyst 3.2.1 API  - org.apache.spark.sql.connector.catalog.functions</title>
+          <meta name="description" content="Spark Project Catalyst 3.2.1 API - org.apache.spark.sql.connector.catalog.functions" />
+          <meta name="keywords" content="Spark Project Catalyst 3.2.1 API org.apache.spark.sql.connector.catalog.functions" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Catalyst 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sql"></a><a id="sql:sql"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">sql</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="connector"></a><a id="connector:connector"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">connector</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.catalog" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="catalog"></a><a id="catalog:catalog"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">catalog</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.catalog.functions" visbl="pub" class="indented7 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="functions"></a><a id="functions:functions"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">functions</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.connector.catalog">catalog</a></dd></dl></div>
+    </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="AggregateFunction.html" title="Interface for a function that produces a result value by aggregating over multiple input rows."></a>
+                        <a href="AggregateFunction.html" title="Interface for a function that produces a result value by aggregating over multiple input rows.">AggregateFunction</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="BoundFunction.html" title="Represents a function that is bound to an input type."></a>
+                        <a href="BoundFunction.html" title="Represents a function that is bound to an input type.">BoundFunction</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="Function.html" title="Base class for user-defined functions."></a>
+                        <a href="Function.html" title="Base class for user-defined functions.">Function</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="ScalarFunction.html" title="Interface for a function that produces a result value for each input row."></a>
+                        <a href="ScalarFunction.html" title="Interface for a function that produces a result value for each input row.">ScalarFunction</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="UnboundFunction.html" title="Represents a user-defined function that is not bound to input types."></a>
+                        <a href="UnboundFunction.html" title="Represents a user-defined function that is not bound to input types.">UnboundFunction</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../../../../index.html" class="extype" name="org">org</a>.<a href="../../../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../../../index.html" class="extype" name="org.apache.spark.sql">sql</a>.<a href="../../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a>.<a href="../index.html" class="extype" name="org.apache.spark.sql.connector.catalog">catalog</a></p>
+        <h1>functions<span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">functions</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.spark.sql.connector.catalog.functions.AggregateFunction" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="AggregateFunction[S&lt;:java.io.Serializable,R]extendsBoundFunction"></a><a id="AggregateFunction[S&lt;:Serializable,R]:AggregateFunction[S,R]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Interface for a function that produces a result value by aggregating over multiple input rows." href="AggregateFunction.html"><span class="name">AggregateFunction</span></a><span class="tparams">[<span name="S">S &lt;: <span class="extype" name="java.io.Serializable">Serializable</span></span>, <span name="R">R</span>]</span><span class="result"> extends <a href="BoundFunction.html" class="extype" name="org.apache.spark.sql.connector.catalog.functions.BoundFunction">BoundFunction</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Interface for a function that produces a result value by aggregating over multiple input rows.</p><div class="fullcomment"><div class="comment cmt"><p>Interface for a function that produces a result value by aggregating over multiple input rows.</p><p>For each input row, Spark will call the <code><a href="AggregateFunction.html#update(state:S,input:org.apache.spark.sql.catalyst.InternalRow):S" class="extmbr" name="org.apache.spark.sql.connector.catalog.functions.AggregateFunction#update">#update</a></code> method which should evaluate the row
+and update the aggregation state. The JVM type of result values produced by
+<code><a href="AggregateFunction.html#produceResult(state:S):R" class="extmbr" name="org.apache.spark.sql.connector.catalog.functions.AggregateFunction#produceResult">#produceResult</a></code> must be the type used by Spark's
+InternalRow API for the <code><span class="extype" name="DataType">SQL data type</span></code> returned by <code><span class="extype" name="#resultType()">#resultType()</span></code>.
+Please refer to class documentation of <code><a href="ScalarFunction.html" class="extype" name="org.apache.spark.sql.connector.catalog.functions.ScalarFunction">ScalarFunction</a></code> for the mapping between
+<code><span class="extype" name="DataType">DataType</span></code> and the JVM type.</p><p>All implementations must support partial aggregation by implementing merge so that Spark can
+partially aggregate and shuffle intermediate results, instead of shuffling all rows for an
+aggregate. This reduces the impact of data skew and the amount of data shuffled to produce the
+result.</p><p>Intermediate aggregation state must be <code><span class="extype" name="Serializable">Serializable</span></code> so that state produced by parallel
+tasks can be serialized, shuffled, and then merged to produce a final result.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.2.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.catalog.functions.BoundFunction" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="BoundFunctionextendsFunction"></a><a id="BoundFunction:BoundFunction"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/BoundFunction.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Represents a function that is bound to an input type." href="BoundFunction.html"><span class="name">BoundFunction</span></a><span class="result"> extends <a href="Function.html" class="extype" name="org.apache.spark.sql.connector.catalog.functions.Function">Function</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Represents a function that is bound to an input type.</p><div class="fullcomment"><div class="comment cmt"><p>Represents a function that is bound to an input type.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.2.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.catalog.functions.Function" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="FunctionextendsSerializable"></a><a id="Function:Function"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/Function.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Base class for user-defined functions." href="Function.html"><span class="name">Function</span></a><span class="result"> extends <span class="extype" name="java.io.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Base class for user-defined functions.</p><div class="fullcomment"><div class="comment cmt"><p>Base class for user-defined functions.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.2.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.catalog.functions.ScalarFunction" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ScalarFunction[R]extendsBoundFunction"></a><a id="ScalarFunction[R]:ScalarFunction[R]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/ScalarFunction.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Interface for a function that produces a result value for each input row." href="ScalarFunction.html"><span class="name">ScalarFunction</span></a><span class="tparams">[<span name="R">R</span>]</span><span class="result"> extends <a href="BoundFunction.html" class="extype" name="org.apache.spark.sql.connector.catalog.functions.BoundFunction">BoundFunction</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Interface for a function that produces a result value for each input row.</p><div class="fullcomment"><div class="comment cmt"><p>Interface for a function that produces a result value for each input row.</p><p>To evaluate each input row, Spark will first try to lookup and use a &quot;magic method&quot; (described
+below) through Java reflection. If the method is not found, Spark will call
+<code><span class="extype" name="#produceResult(InternalRow)">#produceResult(InternalRow)</span></code> as a fallback approach.</p><p>The JVM type of result values produced by this function must be the type used by Spark's
+InternalRow API for the <code><span class="extype" name="DataType">SQL data type</span></code> returned by <code><span class="extype" name="#resultType()">#resultType()</span></code>.
+The mapping between <code><span class="extype" name="DataType">DataType</span></code> and the corresponding JVM type is defined below.</p><h4>  Magic method  </h4><p><b>IMPORTANT</b>: the default implementation of <code><a href="ScalarFunction.html#produceResult(input:org.apache.spark.sql.catalyst.InternalRow):R" class="extmbr" name="org.apache.spark.sql.connector.catalog.functions.ScalarFunction#produceResult">#produceResult</a></code> throws
+<code><span class="extype" name="UnsupportedOperationException">UnsupportedOperationException</span></code>. Users must choose to either override this method, or
+implement a magic method with name <code><span class="extype" name="#MAGIC_METHOD_NAME">#MAGIC_METHOD_NAME</span></code>, which takes individual parameters
+instead of a <code><span class="extype" name="InternalRow">InternalRow</span></code>. The magic method approach is generally recommended because it
+provides better performance over the default <code><a href="ScalarFunction.html#produceResult(input:org.apache.spark.sql.catalyst.InternalRow):R" class="extmbr" name="org.apache.spark.sql.connector.catalog.functions.ScalarFunction#produceResult">#produceResult</a></code>, due to optimizations such
+as whole-stage codegen, elimination of Java boxing, etc.</p><p>The type parameters for the magic method <b>must match</b> those returned from
+<code><span class="extype" name="BoundFunction#inputTypes()">BoundFunction#inputTypes()</span></code>. Otherwise Spark will not be able to find the magic method.</p><p>In addition, for stateless Java functions, users can optionally define the
+<code><span class="extype" name="#MAGIC_METHOD_NAME">#MAGIC_METHOD_NAME</span></code> as a static method, which further avoids certain runtime costs such
+as Java dynamic dispatch.</p><p>For example, a scalar UDF for adding two integers can be defined as follow with the magic
+method approach:</p><p><pre>
+  public class IntegerAdd implements<code>ScalarFunction<Integer></code> {
+    public DataType[] inputTypes() {
+      return new DataType[] { DataTypes.IntegerType, DataTypes.IntegerType };
+    }
+    public int invoke(int left, int right) {
+      return left + right;
+    }
+  }
+</pre>
+In the above, since <code><span class="extype" name="#MAGIC_METHOD_NAME">#MAGIC_METHOD_NAME</span></code> is defined, and also that it has
+matching parameter types and return type, Spark will use it to evaluate inputs.</p><p>As another example, in the following:
+<pre>
+  public class IntegerAdd implements<code>ScalarFunction<Integer></code> {
+    public DataType[] inputTypes() {
+      return new DataType[] { DataTypes.IntegerType, DataTypes.IntegerType };
+    }
+    public static int invoke(int left, int right) {
+      return left + right;
+    }
+    public Integer produceResult(InternalRow input) {
+      return input.getInt(0) + input.getInt(1);
+    }
+  }
+</pre></p><p>the class defines both the magic method and the <code><a href="ScalarFunction.html#produceResult(input:org.apache.spark.sql.catalyst.InternalRow):R" class="extmbr" name="org.apache.spark.sql.connector.catalog.functions.ScalarFunction#produceResult">#produceResult</a></code>, and Spark will use
+<code><span class="extype" name="#MAGIC_METHOD_NAME">#MAGIC_METHOD_NAME</span></code> over the <code><span class="extype" name="#produceResult(InternalRow)">#produceResult(InternalRow)</span></code> as it takes higher
+precedence. Also note that the magic method is annotated as a static method in this case.</p><p>Resolution on magic method is done during query analysis, where Spark looks up the magic
+method by first converting the actual input SQL data types to their corresponding Java types
+following the mapping defined below, and then checking if there is a matching method from all the
+declared methods in the UDF class, using method name and the Java types.</p><h4>  Handling of nullable primitive arguments  </h4><p>The handling of null primitive arguments is different between the magic method approach and
+the <code><a href="ScalarFunction.html#produceResult(input:org.apache.spark.sql.catalyst.InternalRow):R" class="extmbr" name="org.apache.spark.sql.connector.catalog.functions.ScalarFunction#produceResult">#produceResult</a></code> approach. With the former, whenever any of the method arguments meet
+the following conditions:</p><ul><li>the argument is of primitive type</li><li>the argument is nullable</li><li>the value of the argument is null</li></ul><p>Spark will return null directly instead of calling the magic method. On the other hand, Spark
+will pass null primitive arguments to <code><a href="ScalarFunction.html#produceResult(input:org.apache.spark.sql.catalyst.InternalRow):R" class="extmbr" name="org.apache.spark.sql.connector.catalog.functions.ScalarFunction#produceResult">#produceResult</a></code> and it is user's responsibility to
+handle them in the function implementation.</p><p>Because of the difference, if Spark users want to implement special handling of nulls for
+nullable primitive arguments, they should override the <code><a href="ScalarFunction.html#produceResult(input:org.apache.spark.sql.catalyst.InternalRow):R" class="extmbr" name="org.apache.spark.sql.connector.catalog.functions.ScalarFunction#produceResult">#produceResult</a></code> method instead
+of using the magic method approach.</p><h4>  Spark data type to Java type mapping  </h4><p>The following are the mapping from <code><span class="extype" name="DataType">SQL data type</span></code> to Java type which is used
+by Spark to infer parameter types for the magic methods as well as return value type for
+<code><a href="ScalarFunction.html#produceResult(input:org.apache.spark.sql.catalyst.InternalRow):R" class="extmbr" name="org.apache.spark.sql.connector.catalog.functions.ScalarFunction#produceResult">#produceResult</a></code>:</p><ul><li><code><a href="../../../types/BooleanType.html" class="extype" name="org.apache.spark.sql.types.BooleanType">org.apache.spark.sql.types.BooleanType</a></code>: <code>boolean</code></li><li><code><a href="../../../types/ByteType.html" class="extype" name="org.apache.spark.sql.types.ByteType">org.apache.spark.sql.types.ByteType</a></code>: <code>byte</code></li><li><code><a href="../../../types/ShortType.html" class="extype" name="org.apache.spark.sql.types.ShortType">org.apache.spark.sql.types.ShortType</a></code>: <code>short</code></li><li><code><a href="../../../types/IntegerType.html" class="extype" name="org.apache.spark.sql.types.IntegerType">org.apache.spark.sql.types.IntegerType</a></code>: <code>int</code></li><li><code><a href="../../../types/LongType.html" class="extype" name="org.apache.spark.sql.types.LongType">org.apache.spark.sql.types.LongType</a></code>: <code>long</code></li><li><code><a href="../../../types/FloatType.html" class="extype" name="org.apache.spark.sql.types.FloatType">org.apache.spark.sql.types.FloatType</a></code>: <code>float</code></li><li><code><a href="../../../types/DoubleType.html" class="extype" name="org.apache.spark.sql.types.DoubleType">org.apache.spark.sql.types.DoubleType</a></code>: <code>double</code></li><li><code><a href="../../../types/StringType.html" class="extype" name="org.apache.spark.sql.types.StringType">org.apache.spark.sql.types.StringType</a></code>:
+      <code><span class="extype" name="org.apache.spark.unsafe.types.UTF8String">org.apache.spark.unsafe.types.UTF8String</span></code></li><li><code><a href="../../../types/DateType.html" class="extype" name="org.apache.spark.sql.types.DateType">org.apache.spark.sql.types.DateType</a></code>: <code>int</code></li><li><code><a href="../../../types/TimestampType.html" class="extype" name="org.apache.spark.sql.types.TimestampType">org.apache.spark.sql.types.TimestampType</a></code>: <code>long</code></li><li><code><a href="../../../types/BinaryType.html" class="extype" name="org.apache.spark.sql.types.BinaryType">org.apache.spark.sql.types.BinaryType</a></code>: <code>byte[]</code></li><li><code><a href="../../../types/DayTimeIntervalType.html" class="extype" name="org.apache.spark.sql.types.DayTimeIntervalType">org.apache.spark.sql.types.DayTimeIntervalType</a></code>: <code>long</code></li><li><code><a href="../../../types/YearMonthIntervalType.html" class="extype" name="org.apache.spark.sql.types.YearMonthIntervalType">org.apache.spark.sql.types.YearMonthIntervalType</a></code>: <code>int</code></li><li><code><a href="../../../types/DecimalType.html" class="extype" name="org.apache.spark.sql.types.DecimalType">org.apache.spark.sql.types.DecimalType</a></code>:
+      <code><a href="../../../types/Decimal.html" class="extype" name="org.apache.spark.sql.types.Decimal">org.apache.spark.sql.types.Decimal</a></code></li><li><code><a href="../../../types/StructType.html" class="extype" name="org.apache.spark.sql.types.StructType">org.apache.spark.sql.types.StructType</a></code>: <code><span class="extype" name="InternalRow">InternalRow</span></code></li><li><code><a href="../../../types/ArrayType.html" class="extype" name="org.apache.spark.sql.types.ArrayType">org.apache.spark.sql.types.ArrayType</a></code>:
+      <code><a href="../../../catalyst/util/ArrayData.html" class="extype" name="org.apache.spark.sql.catalyst.util.ArrayData">org.apache.spark.sql.catalyst.util.ArrayData</a></code></li><li><code><a href="../../../types/MapType.html" class="extype" name="org.apache.spark.sql.types.MapType">org.apache.spark.sql.types.MapType</a></code>:
+      <code><a href="../../../catalyst/util/MapData.html" class="extype" name="org.apache.spark.sql.catalyst.util.MapData">org.apache.spark.sql.catalyst.util.MapData</a></code></li></ul></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.2.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.catalog.functions.UnboundFunction" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UnboundFunctionextendsFunction"></a><a id="UnboundFunction:UnboundFunction"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/UnboundFunction.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Represents a user-defined function that is not bound to input types." href="UnboundFunction.html"><span class="name">UnboundFunction</span></a><span class="result"> extends <a href="Function.html" class="extype" name="org.apache.spark.sql.connector.catalog.functions.Function">Function</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Represents a user-defined function that is not bound to input types.</p><div class="fullcomment"><div class="comment cmt"><p>Represents a user-defined function that is not bound to input types.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.2.0</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

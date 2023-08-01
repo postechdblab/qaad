@@ -1,0 +1,1647 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Catalyst 3.2.1 API  - org.apache.spark.sql.catalyst.util.MicrosCalendar</title>
+          <meta name="description" content="Spark Project Catalyst 3.2.1 API - org.apache.spark.sql.catalyst.util.MicrosCalendar" />
+          <meta name="keywords" content="Spark Project Catalyst 3.2.1 API org.apache.spark.sql.catalyst.util.MicrosCalendar" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Catalyst 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sql"></a><a id="sql:sql"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">sql</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="catalyst"></a><a id="catalyst:catalyst"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Catalyst is a library for manipulating relational query plans." href="../index.html"><span class="name">catalyst</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Catalyst is a library for manipulating relational query plans.</p><div class="fullcomment"><div class="comment cmt"><p>Catalyst is a library for manipulating relational query plans.  All classes in catalyst are
+considered an internal API to Spark SQL and are subject to change between minor releases.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.util" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="util"></a><a id="util:util"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="index.html"><span class="name">util</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="ArrayBasedMapBuilder.html" title="A builder of ArrayBasedMapData, which fails if a null map key is detected, and removes duplicated map keys w.r.t."></a>
+                        <a href="ArrayBasedMapBuilder.html" title="A builder of ArrayBasedMapData, which fails if a null map key is detected, and removes duplicated map keys w.r.t.">ArrayBasedMapBuilder</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="ArrayBasedMapData$.html" title=""></a>
+                        <a class="class" href="ArrayBasedMapData.html" title="A simple MapData implementation which is backed by 2 arrays."></a>
+                        <a href="ArrayBasedMapData.html" title="A simple MapData implementation which is backed by 2 arrays.">ArrayBasedMapData</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="ArrayData$.html" title=""></a>
+                        <a class="class" href="ArrayData.html" title=""></a>
+                        <a href="ArrayData.html" title="">ArrayData</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="ArrayDataIndexedSeq.html" title="Implements an IndexedSeq interface for ArrayData."></a>
+                        <a href="ArrayDataIndexedSeq.html" title="Implements an IndexedSeq interface for ArrayData.">ArrayDataIndexedSeq</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="BadRecordException.html" title="Exception thrown when the underlying parser meet a bad record and can't parse it."></a>
+                        <a href="BadRecordException.html" title="Exception thrown when the underlying parser meet a bad record and can't parse it.">BadRecordException</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="CaseInsensitiveMap$.html" title=""></a>
+                        <a class="class" href="CaseInsensitiveMap.html" title="Builds a map in which keys are case insensitive."></a>
+                        <a href="CaseInsensitiveMap.html" title="Builds a map in which keys are case insensitive.">CaseInsensitiveMap</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="CharVarcharCodegenUtils.html" title=""></a>
+                        <a href="CharVarcharCodegenUtils.html" title="">CharVarcharCodegenUtils</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="CharVarcharUtils$.html" title=""></a>
+                        <a href="CharVarcharUtils$.html" title="">CharVarcharUtils</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="CompressionCodecs$.html" title=""></a>
+                        <a href="CompressionCodecs$.html" title="">CompressionCodecs</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="DataTypeJsonUtils$.html" title=""></a>
+                        <a href="DataTypeJsonUtils$.html" title="">DataTypeJsonUtils</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="DateFormatter$.html" title=""></a>
+                        <a class="trait" href="DateFormatter.html" title=""></a>
+                        <a href="DateFormatter.html" title="">DateFormatter</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="DateTimeFormatterHelper.html" title=""></a>
+                        <a href="DateTimeFormatterHelper.html" title="">DateTimeFormatterHelper</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="DateTimeUtils$.html" title="Helper functions for converting between internal and external date and time representations."></a>
+                        <a href="DateTimeUtils$.html" title="Helper functions for converting between internal and external date and time representations.">DateTimeUtils</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="DropMalformedMode$.html" title="This mode ignores the whole corrupted records."></a>
+                        <a href="DropMalformedMode$.html" title="This mode ignores the whole corrupted records.">DropMalformedMode</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="FailFastMode$.html" title="This mode throws an exception when it meets corrupted records."></a>
+                        <a href="FailFastMode$.html" title="This mode throws an exception when it meets corrupted records.">FailFastMode</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="FailureSafeParser.html" title=""></a>
+                        <a href="FailureSafeParser.html" title="">FailureSafeParser</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="FractionTimestampFormatter.html" title="The formatter parses/formats timestamps according to the pattern yyyy-MM-dd HH:mm:ss.[..fff..] where [..fff..] is a fraction of second up to microsecond resolution."></a>
+                        <a href="FractionTimestampFormatter.html" title="The formatter parses/formats timestamps according to the pattern yyyy-MM-dd HH:mm:ss.[..fff..] where [..fff..] is a fraction of second up to microsecond resolution.">FractionTimestampFormatter</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="GenericArrayData.html" title=""></a>
+                        <a href="GenericArrayData.html" title="">GenericArrayData</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="HyperLogLogPlusPlusHelper$.html" title="Constants used in the implementation of the HyperLogLogPlusPlus aggregate function."></a>
+                        <a class="class" href="HyperLogLogPlusPlusHelper.html" title=""></a>
+                        <a href="HyperLogLogPlusPlusHelper.html" title="">HyperLogLogPlusPlusHelper</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="IntervalStringStyles$.html" title=""></a>
+                        <a href="IntervalStringStyles$.html" title="">IntervalStringStyles</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="IntervalUtils$.html" title=""></a>
+                        <a href="IntervalUtils$.html" title="">IntervalUtils</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="Iso8601DateFormatter.html" title=""></a>
+                        <a href="Iso8601DateFormatter.html" title="">Iso8601DateFormatter</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="Iso8601TimestampFormatter.html" title=""></a>
+                        <a href="Iso8601TimestampFormatter.html" title="">Iso8601TimestampFormatter</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="LegacyDateFormats$.html" title=""></a>
+                        <a href="LegacyDateFormats$.html" title="">LegacyDateFormats</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="LegacyDateFormatter.html" title=""></a>
+                        <a href="LegacyDateFormatter.html" title="">LegacyDateFormatter</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="LegacyFastDateFormatter.html" title="The legacy formatter is based on Apache Commons FastDateFormat."></a>
+                        <a href="LegacyFastDateFormatter.html" title="The legacy formatter is based on Apache Commons FastDateFormat.">LegacyFastDateFormatter</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="LegacyFastTimestampFormatter.html" title=""></a>
+                        <a href="LegacyFastTimestampFormatter.html" title="">LegacyFastTimestampFormatter</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="LegacySimpleDateFormatter.html" title="The legacy formatter is based on java.text.SimpleDateFormat."></a>
+                        <a href="LegacySimpleDateFormatter.html" title="The legacy formatter is based on java.text.SimpleDateFormat.">LegacySimpleDateFormatter</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="LegacySimpleTimestampFormatter.html" title=""></a>
+                        <a href="LegacySimpleTimestampFormatter.html" title="">LegacySimpleTimestampFormatter</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="MapData.html" title="This is an internal data representation for map type in Spark SQL."></a>
+                        <a href="MapData.html" title="This is an internal data representation for map type in Spark SQL.">MapData</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$MetadataColumnHelper.html" title=""></a>
+                        <a href="package$$MetadataColumnHelper.html" title="">MetadataColumnHelper</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="" title="The custom sub-class of GregorianCalendar is needed to get access to protected fields immediately after parsing."></a>
+                        <a href="" title="The custom sub-class of GregorianCalendar is needed to get access to protected fields immediately after parsing.">MicrosCalendar</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="NumberConverter$.html" title=""></a>
+                        <a href="NumberConverter$.html" title="">NumberConverter</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="ParseMode$.html" title=""></a>
+                        <a class="trait" href="ParseMode.html" title=""></a>
+                        <a href="ParseMode.html" title="">ParseMode</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="PartialResultException.html" title="Exception thrown when the underlying parser returns a partial result of parsing."></a>
+                        <a href="PartialResultException.html" title="Exception thrown when the underlying parser returns a partial result of parsing.">PartialResultException</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="PermissiveMode$.html" title="This mode permissively parses the records."></a>
+                        <a href="PermissiveMode$.html" title="This mode permissively parses the records.">PermissiveMode</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="QuantileSummaries$.html" title=""></a>
+                        <a class="class" href="QuantileSummaries.html" title="Helper class to compute approximate quantile summary."></a>
+                        <a href="QuantileSummaries.html" title="Helper class to compute approximate quantile summary.">QuantileSummaries</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="RandomIndicesGenerator.html" title="This class is used to generate a random indices of given length."></a>
+                        <a href="RandomIndicesGenerator.html" title="This class is used to generate a random indices of given length.">RandomIndicesGenerator</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="RandomUUIDGenerator.html" title="This class is used to generate a UUID from Pseudo-Random Numbers."></a>
+                        <a href="RandomUUIDGenerator.html" title="This class is used to generate a UUID from Pseudo-Random Numbers.">RandomUUIDGenerator</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="RebaseDateTime$.html" title="The collection of functions for rebasing days and microseconds from/to the hybrid calendar (Julian + Gregorian since 1582-10-15) which is used by Spark 2.4 and earlier versions to/from Proleptic Gregorian calendar which is used by Spark since version 3.0."></a>
+                        <a href="RebaseDateTime$.html" title="The collection of functions for rebasing days and microseconds from/to the hybrid calendar (Julian + Gregorian since 1582-10-15) which is used by Spark 2.4 and earlier versions to/from Proleptic Gregorian calendar which is used by Spark since version 3.0.">RebaseDateTime</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="SQLOrderingUtil$.html" title=""></a>
+                        <a href="SQLOrderingUtil$.html" title="">SQLOrderingUtil</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="StringKeyHashMap$.html" title="Build a map with String type of key, and it also supports either key case sensitive or insensitive."></a>
+                        <a class="class" href="StringKeyHashMap.html" title=""></a>
+                        <a href="StringKeyHashMap.html" title="">StringKeyHashMap</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="StringUtils$.html" title=""></a>
+                        <a href="StringUtils$.html" title="">StringUtils</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="TimestampFormatter$.html" title=""></a>
+                        <a class="trait" href="TimestampFormatter.html" title=""></a>
+                        <a href="TimestampFormatter.html" title="">TimestampFormatter</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="TypeUtils$.html" title="Functions to help with checking for valid data types and value comparison of various types."></a>
+                        <a href="TypeUtils$.html" title="Functions to help with checking for valid data types and value comparison of various types.">TypeUtils</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="UnsafeRowUtils$.html" title=""></a>
+                        <a href="UnsafeRowUtils$.html" title="">UnsafeRowUtils</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="class type">
+      <div id="definition">
+        <div class="big-circle class">c</div>
+        <p id="owner"><a href="../../../../../index.html" class="extype" name="org">org</a>.<a href="../../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../../index.html" class="extype" name="org.apache.spark.sql">sql</a>.<a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a>.<a href="index.html" class="extype" name="org.apache.spark.sql.catalyst.util">util</a></p>
+        <h1>MicrosCalendar<span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MicrosCalendar</span><span class="result"> extends <span class="extype" name="java.util.GregorianCalendar">GregorianCalendar</span></span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The custom sub-class of <code>GregorianCalendar</code> is needed to get access to
+protected <code>fields</code> immediately after parsing. We cannot use
+the <code>get()</code> method because it performs normalization of the fraction
+part. Accordingly, the <code>MILLISECOND</code> field doesn't contain original value.</p><p>Also this class allows to set raw value to the <code>MILLISECOND</code> field
+directly before formatting.
+</p></div><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><span class="extype" name="java.util.GregorianCalendar">GregorianCalendar</span>, <span class="extype" name="java.util.Calendar">Calendar</span>, <span class="extype" name="java.lang.Comparable">Comparable</span>[<span class="extype" name="java.util.Calendar">Calendar</span>], <span class="extype" name="java.lang.Cloneable">Cloneable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="org.apache.spark.sql.catalyst.util.MicrosCalendar"><span>MicrosCalendar</span></li><li class="in" name="java.util.GregorianCalendar"><span>GregorianCalendar</span></li><li class="in" name="java.util.Calendar"><span>Calendar</span></li><li class="in" name="java.lang.Comparable"><span>Comparable</span></li><li class="in" name="java.lang.Cloneable"><span>Cloneable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="org.apache.spark.sql.catalyst.util.MicrosCalendar#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(tz:java.util.TimeZone,digitsInFraction:Int):org.apache.spark.sql.catalyst.util.MicrosCalendar"></a><a id="&lt;init&gt;:MicrosCalendar"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#&lt;init&gt;(tz:java.util.TimeZone,digitsInFraction:Int):org.apache.spark.sql.catalyst.util.MicrosCalendar" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MicrosCalendar</span><span class="params">(<span name="tz">tz: <span class="extype" name="java.util.TimeZone">TimeZone</span></span>, <span name="digitsInFraction">digitsInFraction: <span class="extype" name="scala.Int">Int</span></span>)</span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="java.util.GregorianCalendar#add" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="add(x$1:Int,x$2:Int):Unit"></a><a id="add(Int,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#add(x$1:Int,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">add</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GregorianCalendar → Calendar</dd></dl></div>
+    </li><li name="java.util.Calendar#after" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="after(x$1:Any):Boolean"></a><a id="after(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#after(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">after</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Calendar</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="java.util.Calendar#before" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="before(x$1:Any):Boolean"></a><a id="before(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#before(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">before</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Calendar</dd></dl></div>
+    </li><li name="java.util.Calendar#clear" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clear(x$1:Int):Unit"></a><a id="clear(Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#clear(x$1:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clear</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Calendar</dd></dl></div>
+    </li><li name="java.util.Calendar#clear" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clear():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#clear():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clear</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Calendar</dd></dl></div>
+    </li><li name="java.util.GregorianCalendar#clone" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GregorianCalendar → Calendar → AnyRef</dd></dl></div>
+    </li><li name="java.util.Calendar#compareTo" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="compareTo(x$1:java.util.Calendar):Int"></a><a id="compareTo(Calendar):Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#compareTo(x$1:java.util.Calendar):Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">compareTo</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.util.Calendar">Calendar</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Calendar → Comparable</dd></dl></div>
+    </li><li name="java.util.Calendar#complete" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="complete():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#complete():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">complete</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.util">java.util</span>] </dd><dt>Definition Classes</dt><dd>Calendar</dd></dl></div>
+    </li><li name="java.util.GregorianCalendar#computeFields" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="computeFields():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#computeFields():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">computeFields</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.util">java.util</span>] </dd><dt>Definition Classes</dt><dd>GregorianCalendar → Calendar</dd></dl></div>
+    </li><li name="java.util.GregorianCalendar#computeTime" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="computeTime():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#computeTime():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">computeTime</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.util">java.util</span>] </dd><dt>Definition Classes</dt><dd>GregorianCalendar → Calendar</dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="java.util.GregorianCalendar#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GregorianCalendar → Calendar → AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="java.util.Calendar#get" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="get(x$1:Int):Int"></a><a id="get(Int):Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#get(x$1:Int):Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">get</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Calendar</dd></dl></div>
+    </li><li name="java.util.GregorianCalendar#getActualMaximum" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getActualMaximum(x$1:Int):Int"></a><a id="getActualMaximum(Int):Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#getActualMaximum(x$1:Int):Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getActualMaximum</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GregorianCalendar → Calendar</dd></dl></div>
+    </li><li name="java.util.GregorianCalendar#getActualMinimum" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getActualMinimum(x$1:Int):Int"></a><a id="getActualMinimum(Int):Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#getActualMinimum(x$1:Int):Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getActualMinimum</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GregorianCalendar → Calendar</dd></dl></div>
+    </li><li name="java.util.GregorianCalendar#getCalendarType" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getCalendarType():String"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#getCalendarType():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getCalendarType</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GregorianCalendar → Calendar</dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="java.util.Calendar#getDisplayName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getDisplayName(x$1:Int,x$2:Int,x$3:java.util.Locale):String"></a><a id="getDisplayName(Int,Int,Locale):String"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#getDisplayName(x$1:Int,x$2:Int,x$3:java.util.Locale):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getDisplayName</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg2">arg2: <span class="extype" name="java.util.Locale">Locale</span></span>)</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Calendar</dd></dl></div>
+    </li><li name="java.util.Calendar#getDisplayNames" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getDisplayNames(x$1:Int,x$2:Int,x$3:java.util.Locale):java.util.Map[String,Integer]"></a><a id="getDisplayNames(Int,Int,Locale):Map[String,Integer]"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#getDisplayNames(x$1:Int,x$2:Int,x$3:java.util.Locale):java.util.Map[String,Integer]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getDisplayNames</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg2">arg2: <span class="extype" name="java.util.Locale">Locale</span></span>)</span><span class="result">: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <span class="extype" name="java.lang.Integer">Integer</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Calendar</dd></dl></div>
+    </li><li name="java.util.Calendar#getFirstDayOfWeek" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getFirstDayOfWeek():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#getFirstDayOfWeek():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getFirstDayOfWeek</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Calendar</dd></dl></div>
+    </li><li name="java.util.GregorianCalendar#getGreatestMinimum" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getGreatestMinimum(x$1:Int):Int"></a><a id="getGreatestMinimum(Int):Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#getGreatestMinimum(x$1:Int):Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getGreatestMinimum</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GregorianCalendar → Calendar</dd></dl></div>
+    </li><li name="java.util.GregorianCalendar#getGregorianChange" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getGregorianChange():java.util.Date"></a><a id="getGregorianChange():Date"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#getGregorianChange():java.util.Date" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getGregorianChange</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Date">Date</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GregorianCalendar</dd></dl></div>
+    </li><li name="java.util.GregorianCalendar#getLeastMaximum" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getLeastMaximum(x$1:Int):Int"></a><a id="getLeastMaximum(Int):Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#getLeastMaximum(x$1:Int):Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getLeastMaximum</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GregorianCalendar → Calendar</dd></dl></div>
+    </li><li name="java.util.GregorianCalendar#getMaximum" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getMaximum(x$1:Int):Int"></a><a id="getMaximum(Int):Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#getMaximum(x$1:Int):Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getMaximum</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GregorianCalendar → Calendar</dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.util.MicrosCalendar#getMicros" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getMicros():Long"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#getMicros():Long" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getMicros</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      
+      
+    </li><li name="java.util.Calendar#getMinimalDaysInFirstWeek" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getMinimalDaysInFirstWeek():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#getMinimalDaysInFirstWeek():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getMinimalDaysInFirstWeek</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Calendar</dd></dl></div>
+    </li><li name="java.util.GregorianCalendar#getMinimum" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getMinimum(x$1:Int):Int"></a><a id="getMinimum(Int):Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#getMinimum(x$1:Int):Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getMinimum</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GregorianCalendar → Calendar</dd></dl></div>
+    </li><li name="java.util.Calendar#getTime" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getTime():java.util.Date"></a><a id="getTime():Date"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#getTime():java.util.Date" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getTime</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Date">Date</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Calendar</dd></dl></div>
+    </li><li name="java.util.Calendar#getTimeInMillis" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getTimeInMillis():Long"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#getTimeInMillis():Long" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getTimeInMillis</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Calendar</dd></dl></div>
+    </li><li name="java.util.GregorianCalendar#getTimeZone" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getTimeZone():java.util.TimeZone"></a><a id="getTimeZone():TimeZone"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#getTimeZone():java.util.TimeZone" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getTimeZone</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.TimeZone">TimeZone</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GregorianCalendar → Calendar</dd></dl></div>
+    </li><li name="java.util.GregorianCalendar#getWeekYear" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getWeekYear():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#getWeekYear():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getWeekYear</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GregorianCalendar → Calendar</dd></dl></div>
+    </li><li name="java.util.GregorianCalendar#getWeeksInWeekYear" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getWeeksInWeekYear():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#getWeeksInWeekYear():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getWeeksInWeekYear</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GregorianCalendar → Calendar</dd></dl></div>
+    </li><li name="java.util.GregorianCalendar#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GregorianCalendar → Calendar → AnyRef → Any</dd></dl></div>
+    </li><li name="java.util.Calendar#internalGet" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="internalGet(x$1:Int):Int"></a><a id="internalGet(Int):Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#internalGet(x$1:Int):Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">internalGet</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.util">java.util</span>] </dd><dt>Definition Classes</dt><dd>Calendar</dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="java.util.GregorianCalendar#isLeapYear" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isLeapYear(x$1:Int):Boolean"></a><a id="isLeapYear(Int):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#isLeapYear(x$1:Int):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isLeapYear</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GregorianCalendar</dd></dl></div>
+    </li><li name="java.util.Calendar#isLenient" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isLenient():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#isLenient():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isLenient</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Calendar</dd></dl></div>
+    </li><li name="java.util.Calendar#isSet" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isSet(x$1:Int):Boolean"></a><a id="isSet(Int):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#isSet(x$1:Int):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isSet</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Calendar</dd></dl></div>
+    </li><li name="java.util.GregorianCalendar#isWeekDateSupported" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isWeekDateSupported():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#isWeekDateSupported():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isWeekDateSupported</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GregorianCalendar → Calendar</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="java.util.GregorianCalendar#roll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="roll(x$1:Int,x$2:Int):Unit"></a><a id="roll(Int,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#roll(x$1:Int,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">roll</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GregorianCalendar → Calendar</dd></dl></div>
+    </li><li name="java.util.GregorianCalendar#roll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="roll(x$1:Int,x$2:Boolean):Unit"></a><a id="roll(Int,Boolean):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#roll(x$1:Int,x$2:Boolean):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">roll</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GregorianCalendar → Calendar</dd></dl></div>
+    </li><li name="java.util.Calendar#set" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="set(x$1:Int,x$2:Int,x$3:Int,x$4:Int,x$5:Int,x$6:Int):Unit"></a><a id="set(Int,Int,Int,Int,Int,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#set(x$1:Int,x$2:Int,x$3:Int,x$4:Int,x$5:Int,x$6:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">set</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg2">arg2: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg3">arg3: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg4">arg4: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg5">arg5: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Calendar</dd></dl></div>
+    </li><li name="java.util.Calendar#set" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="set(x$1:Int,x$2:Int,x$3:Int,x$4:Int,x$5:Int):Unit"></a><a id="set(Int,Int,Int,Int,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#set(x$1:Int,x$2:Int,x$3:Int,x$4:Int,x$5:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">set</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg2">arg2: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg3">arg3: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg4">arg4: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Calendar</dd></dl></div>
+    </li><li name="java.util.Calendar#set" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="set(x$1:Int,x$2:Int,x$3:Int):Unit"></a><a id="set(Int,Int,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#set(x$1:Int,x$2:Int,x$3:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">set</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg2">arg2: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Calendar</dd></dl></div>
+    </li><li name="java.util.Calendar#set" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="set(x$1:Int,x$2:Int):Unit"></a><a id="set(Int,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#set(x$1:Int,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">set</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Calendar</dd></dl></div>
+    </li><li name="java.util.Calendar#setFirstDayOfWeek" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setFirstDayOfWeek(x$1:Int):Unit"></a><a id="setFirstDayOfWeek(Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#setFirstDayOfWeek(x$1:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setFirstDayOfWeek</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Calendar</dd></dl></div>
+    </li><li name="java.util.GregorianCalendar#setGregorianChange" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setGregorianChange(x$1:java.util.Date):Unit"></a><a id="setGregorianChange(Date):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#setGregorianChange(x$1:java.util.Date):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setGregorianChange</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.util.Date">Date</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GregorianCalendar</dd></dl></div>
+    </li><li name="java.util.Calendar#setLenient" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setLenient(x$1:Boolean):Unit"></a><a id="setLenient(Boolean):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#setLenient(x$1:Boolean):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setLenient</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Calendar</dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.util.MicrosCalendar#setMicros" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setMicros(micros:Long):Unit"></a><a id="setMicros(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#setMicros(micros:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setMicros</span><span class="params">(<span name="micros">micros: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="java.util.Calendar#setMinimalDaysInFirstWeek" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setMinimalDaysInFirstWeek(x$1:Int):Unit"></a><a id="setMinimalDaysInFirstWeek(Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#setMinimalDaysInFirstWeek(x$1:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setMinimalDaysInFirstWeek</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Calendar</dd></dl></div>
+    </li><li name="java.util.Calendar#setTime" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setTime(x$1:java.util.Date):Unit"></a><a id="setTime(Date):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#setTime(x$1:java.util.Date):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setTime</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.util.Date">Date</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Calendar</dd></dl></div>
+    </li><li name="java.util.Calendar#setTimeInMillis" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setTimeInMillis(x$1:Long):Unit"></a><a id="setTimeInMillis(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#setTimeInMillis(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setTimeInMillis</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Calendar</dd></dl></div>
+    </li><li name="java.util.GregorianCalendar#setTimeZone" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setTimeZone(x$1:java.util.TimeZone):Unit"></a><a id="setTimeZone(TimeZone):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#setTimeZone(x$1:java.util.TimeZone):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setTimeZone</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.util.TimeZone">TimeZone</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GregorianCalendar → Calendar</dd></dl></div>
+    </li><li name="java.util.GregorianCalendar#setWeekDate" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setWeekDate(x$1:Int,x$2:Int,x$3:Int):Unit"></a><a id="setWeekDate(Int,Int,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#setWeekDate(x$1:Int,x$2:Int,x$3:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setWeekDate</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg2">arg2: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GregorianCalendar → Calendar</dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="java.util.Calendar#toInstant" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toInstant():java.time.Instant"></a><a id="toInstant():Instant"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#toInstant():java.time.Instant" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toInstant</span><span class="params">()</span><span class="result">: <span class="extype" name="java.time.Instant">Instant</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Calendar</dd></dl></div>
+    </li><li name="java.util.Calendar#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Calendar → AnyRef → Any</dd></dl></div>
+    </li><li name="java.util.GregorianCalendar#toZonedDateTime" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toZonedDateTime():java.time.ZonedDateTime"></a><a id="toZonedDateTime():ZonedDateTime"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#toZonedDateTime():java.time.ZonedDateTime" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toZonedDateTime</span><span class="params">()</span><span class="result">: <span class="extype" name="java.time.ZonedDateTime">ZonedDateTime</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GregorianCalendar</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/util/MicrosCalendar.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="java.util.GregorianCalendar">
+              <h3>Inherited from <span class="extype" name="java.util.GregorianCalendar">GregorianCalendar</span></h3>
+            </div><div class="parent" name="java.util.Calendar">
+              <h3>Inherited from <span class="extype" name="java.util.Calendar">Calendar</span></h3>
+            </div><div class="parent" name="java.lang.Comparable">
+              <h3>Inherited from <span class="extype" name="java.lang.Comparable">Comparable</span>[<span class="extype" name="java.util.Calendar">Calendar</span>]</h3>
+            </div><div class="parent" name="java.lang.Cloneable">
+              <h3>Inherited from <span class="extype" name="java.lang.Cloneable">Cloneable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

@@ -1,0 +1,667 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Catalyst 3.2.1 API  - org.apache.spark.sql.connector.read.streaming</title>
+          <meta name="description" content="Spark Project Catalyst 3.2.1 API - org.apache.spark.sql.connector.read.streaming" />
+          <meta name="keywords" content="Spark Project Catalyst 3.2.1 API org.apache.spark.sql.connector.read.streaming" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Catalyst 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sql"></a><a id="sql:sql"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">sql</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="connector"></a><a id="connector:connector"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">connector</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="read"></a><a id="read:read"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/read/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">read</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.partitioning" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="partitioning"></a><a id="partitioning:partitioning"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/read/partitioning/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../partitioning/index.html"><span class="name">partitioning</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.connector.read">read</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.streaming" visbl="pub" class="indented7 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="streaming"></a><a id="streaming:streaming"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/read/streaming/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">streaming</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.connector.read">read</a></dd></dl></div>
+    </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="CompositeReadLimit.html" title="/** Represents a ReadLimit where the MicroBatchStream should scan approximately given maximum number of rows with at least the given minimum number of rows."></a>
+                        <a href="CompositeReadLimit.html" title="/** Represents a ReadLimit where the MicroBatchStream should scan approximately given maximum number of rows with at least the given minimum number of rows.">CompositeReadLimit</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="ContinuousPartitionReader.html" title="A variation on PartitionReader for use with continuous streaming processing."></a>
+                        <a href="ContinuousPartitionReader.html" title="A variation on PartitionReader for use with continuous streaming processing.">ContinuousPartitionReader</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="ContinuousPartitionReaderFactory.html" title="A variation on PartitionReaderFactory that returns ContinuousPartitionReader instead of PartitionReader."></a>
+                        <a href="ContinuousPartitionReaderFactory.html" title="A variation on PartitionReaderFactory that returns ContinuousPartitionReader instead of PartitionReader.">ContinuousPartitionReaderFactory</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="ContinuousStream.html" title="A SparkDataStream for streaming queries with continuous mode."></a>
+                        <a href="ContinuousStream.html" title="A SparkDataStream for streaming queries with continuous mode.">ContinuousStream</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="MicroBatchStream.html" title="A SparkDataStream for streaming queries with micro-batch mode."></a>
+                        <a href="MicroBatchStream.html" title="A SparkDataStream for streaming queries with micro-batch mode.">MicroBatchStream</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="Offset.html" title="An abstract representation of progress through a MicroBatchStream or ContinuousStream."></a>
+                        <a href="Offset.html" title="An abstract representation of progress through a MicroBatchStream or ContinuousStream.">Offset</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="PartitionOffset.html" title="Used for per-partition offsets in continuous processing."></a>
+                        <a href="PartitionOffset.html" title="Used for per-partition offsets in continuous processing.">PartitionOffset</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ReadAllAvailable.html" title="Represents a ReadLimit where the MicroBatchStream must scan all the data available at the streaming source."></a>
+                        <a href="ReadAllAvailable.html" title="Represents a ReadLimit where the MicroBatchStream must scan all the data available at the streaming source.">ReadAllAvailable</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="ReadLimit.html" title="Interface representing limits on how much to read from a MicroBatchStream when it implements SupportsAdmissionControl."></a>
+                        <a href="ReadLimit.html" title="Interface representing limits on how much to read from a MicroBatchStream when it implements SupportsAdmissionControl.">ReadLimit</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ReadMaxFiles.html" title="Represents a ReadLimit where the MicroBatchStream should scan approximately the given maximum number of files."></a>
+                        <a href="ReadMaxFiles.html" title="Represents a ReadLimit where the MicroBatchStream should scan approximately the given maximum number of files.">ReadMaxFiles</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ReadMaxRows.html" title="Represents a ReadLimit where the MicroBatchStream should scan approximately the given maximum number of rows."></a>
+                        <a href="ReadMaxRows.html" title="Represents a ReadLimit where the MicroBatchStream should scan approximately the given maximum number of rows.">ReadMaxRows</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ReadMinRows.html" title="Represents a ReadLimit where the MicroBatchStream should scan approximately at least the given minimum number of rows."></a>
+                        <a href="ReadMinRows.html" title="Represents a ReadLimit where the MicroBatchStream should scan approximately at least the given minimum number of rows.">ReadMinRows</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="ReportsSourceMetrics.html" title="A mix-in interface for SparkDataStream streaming sources to signal that they can report metrics."></a>
+                        <a href="ReportsSourceMetrics.html" title="A mix-in interface for SparkDataStream streaming sources to signal that they can report metrics.">ReportsSourceMetrics</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="SparkDataStream.html" title="The base interface representing a readable data stream in a Spark streaming query."></a>
+                        <a href="SparkDataStream.html" title="The base interface representing a readable data stream in a Spark streaming query.">SparkDataStream</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="SupportsAdmissionControl.html" title="A mix-in interface for SparkDataStream streaming sources to signal that they can control the rate of data ingested into the system."></a>
+                        <a href="SupportsAdmissionControl.html" title="A mix-in interface for SparkDataStream streaming sources to signal that they can control the rate of data ingested into the system.">SupportsAdmissionControl</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../../../../index.html" class="extype" name="org">org</a>.<a href="../../../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../../../index.html" class="extype" name="org.apache.spark.sql">sql</a>.<a href="../../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a>.<a href="../index.html" class="extype" name="org.apache.spark.sql.connector.read">read</a></p>
+        <h1>streaming<span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/read/streaming/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">streaming</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.spark.sql.connector.read.streaming.CompositeReadLimit" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="CompositeReadLimitextendsReadLimit"></a><a id="CompositeReadLimit:CompositeReadLimit"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/read/streaming/CompositeReadLimit.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="/** Represents a ReadLimit where the MicroBatchStream should scan approximately given maximum number of rows with at least the given minimum number of rows." href="CompositeReadLimit.html"><span class="name">CompositeReadLimit</span></a><span class="result"> extends <a href="ReadLimit.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.ReadLimit">ReadLimit</a></span>
+      </span>
+      
+      <p class="shortcomment cmt"> /**
+Represents a <code><a href="ReadLimit.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.ReadLimit">ReadLimit</a></code> where the <code><a href="MicroBatchStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.MicroBatchStream">MicroBatchStream</a></code> should scan approximately
+given maximum number of rows with at least the given minimum number of rows.</p><div class="fullcomment"><div class="comment cmt"><p> /**
+Represents a <code><a href="ReadLimit.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.ReadLimit">ReadLimit</a></code> where the <code><a href="MicroBatchStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.MicroBatchStream">MicroBatchStream</a></code> should scan approximately
+given maximum number of rows with at least the given minimum number of rows.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.2.0</p></dd><dt>See also</dt><dd><span class="cmt"><p>SupportsAdmissionControl#latestOffset(Offset, ReadLimit)</p></span></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.streaming.ContinuousPartitionReader" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ContinuousPartitionReader[T]extendsPartitionReader[T]"></a><a id="ContinuousPartitionReader[T]:ContinuousPartitionReader[T]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/read/streaming/ContinuousPartitionReader.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A variation on PartitionReader for use with continuous streaming processing." href="ContinuousPartitionReader.html"><span class="name">ContinuousPartitionReader</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../PartitionReader.html" class="extype" name="org.apache.spark.sql.connector.read.PartitionReader">PartitionReader</a>[<span class="extype" name="org.apache.spark.sql.connector.read.streaming.ContinuousPartitionReader.T">T</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">A variation on <code><a href="../PartitionReader.html" class="extype" name="org.apache.spark.sql.connector.read.PartitionReader">PartitionReader</a></code> for use with continuous streaming processing.</p><div class="fullcomment"><div class="comment cmt"><p>A variation on <code><a href="../PartitionReader.html" class="extype" name="org.apache.spark.sql.connector.read.PartitionReader">PartitionReader</a></code> for use with continuous streaming processing.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.streaming.ContinuousPartitionReaderFactory" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ContinuousPartitionReaderFactoryextendsPartitionReaderFactory"></a><a id="ContinuousPartitionReaderFactory:ContinuousPartitionReaderFactory"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/read/streaming/ContinuousPartitionReaderFactory.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A variation on PartitionReaderFactory that returns ContinuousPartitionReader instead of PartitionReader." href="ContinuousPartitionReaderFactory.html"><span class="name">ContinuousPartitionReaderFactory</span></a><span class="result"> extends <a href="../PartitionReaderFactory.html" class="extype" name="org.apache.spark.sql.connector.read.PartitionReaderFactory">PartitionReaderFactory</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A variation on <code><a href="../PartitionReaderFactory.html" class="extype" name="org.apache.spark.sql.connector.read.PartitionReaderFactory">PartitionReaderFactory</a></code> that returns <code><a href="ContinuousPartitionReader.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.ContinuousPartitionReader">ContinuousPartitionReader</a></code>
+instead of <code><a href="../PartitionReader.html" class="extype" name="org.apache.spark.sql.connector.read.PartitionReader">PartitionReader</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>A variation on <code><a href="../PartitionReaderFactory.html" class="extype" name="org.apache.spark.sql.connector.read.PartitionReaderFactory">PartitionReaderFactory</a></code> that returns <code><a href="ContinuousPartitionReader.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.ContinuousPartitionReader">ContinuousPartitionReader</a></code>
+instead of <code><a href="../PartitionReader.html" class="extype" name="org.apache.spark.sql.connector.read.PartitionReader">PartitionReader</a></code>. It's used for continuous streaming processing.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.streaming.ContinuousStream" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ContinuousStreamextendsSparkDataStream"></a><a id="ContinuousStream:ContinuousStream"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/read/streaming/ContinuousStream.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A SparkDataStream for streaming queries with continuous mode." href="ContinuousStream.html"><span class="name">ContinuousStream</span></a><span class="result"> extends <a href="SparkDataStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.SparkDataStream">SparkDataStream</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A <code><a href="SparkDataStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.SparkDataStream">SparkDataStream</a></code> for streaming queries with continuous mode.</p><div class="fullcomment"><div class="comment cmt"><p>A <code><a href="SparkDataStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.SparkDataStream">SparkDataStream</a></code> for streaming queries with continuous mode.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.streaming.MicroBatchStream" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="MicroBatchStreamextendsSparkDataStream"></a><a id="MicroBatchStream:MicroBatchStream"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/read/streaming/MicroBatchStream.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A SparkDataStream for streaming queries with micro-batch mode." href="MicroBatchStream.html"><span class="name">MicroBatchStream</span></a><span class="result"> extends <a href="SparkDataStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.SparkDataStream">SparkDataStream</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A <code><a href="SparkDataStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.SparkDataStream">SparkDataStream</a></code> for streaming queries with micro-batch mode.</p><div class="fullcomment"><div class="comment cmt"><p>A <code><a href="SparkDataStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.SparkDataStream">SparkDataStream</a></code> for streaming queries with micro-batch mode.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.streaming.Offset" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="OffsetextendsObject"></a><a id="Offset:Offset"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/read/streaming/Offset.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="An abstract representation of progress through a MicroBatchStream or ContinuousStream." href="Offset.html"><span class="name">Offset</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">An abstract representation of progress through a <code><a href="MicroBatchStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.MicroBatchStream">MicroBatchStream</a></code> or
+<code><a href="ContinuousStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.ContinuousStream">ContinuousStream</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>An abstract representation of progress through a <code><a href="MicroBatchStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.MicroBatchStream">MicroBatchStream</a></code> or
+<code><a href="ContinuousStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.ContinuousStream">ContinuousStream</a></code>.</p><p>During execution, offsets provided by the data source implementation will be logged and used as
+restart checkpoints. Each source should provide an offset implementation which the source can use
+to reconstruct a position in the stream up to which data has been seen/processed.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.streaming.PartitionOffset" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="PartitionOffsetextendsSerializable"></a><a id="PartitionOffset:PartitionOffset"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/read/streaming/PartitionOffset.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Used for per-partition offsets in continuous processing." href="PartitionOffset.html"><span class="name">PartitionOffset</span></a><span class="result"> extends <span class="extype" name="java.io.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Used for per-partition offsets in continuous processing.</p><div class="fullcomment"><div class="comment cmt"><p>Used for per-partition offsets in continuous processing. ContinuousReader implementations will
+provide a method to merge these into a global Offset.</p><p>These offsets must be serializable.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.streaming.ReadAllAvailable" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ReadAllAvailableextendsReadLimit"></a><a id="ReadAllAvailable:ReadAllAvailable"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/read/streaming/ReadAllAvailable.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Represents a ReadLimit where the MicroBatchStream must scan all the data available at the streaming source." href="ReadAllAvailable.html"><span class="name">ReadAllAvailable</span></a><span class="result"> extends <a href="ReadLimit.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.ReadLimit">ReadLimit</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Represents a <code><a href="ReadLimit.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.ReadLimit">ReadLimit</a></code> where the <code><a href="MicroBatchStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.MicroBatchStream">MicroBatchStream</a></code> must scan all the data
+available at the streaming source.</p><div class="fullcomment"><div class="comment cmt"><p>Represents a <code><a href="ReadLimit.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.ReadLimit">ReadLimit</a></code> where the <code><a href="MicroBatchStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.MicroBatchStream">MicroBatchStream</a></code> must scan all the data
+available at the streaming source. This is meant to be a hard specification as being able
+to return all available data is necessary for <code>Trigger.Once()</code> to work correctly.
+If a source is unable to scan all available data, then it must throw an error.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd><dt>See also</dt><dd><span class="cmt"><p>SupportsAdmissionControl#latestOffset(Offset, ReadLimit)</p></span></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.streaming.ReadLimit" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ReadLimitextendsObject"></a><a id="ReadLimit:ReadLimit"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/read/streaming/ReadLimit.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Interface representing limits on how much to read from a MicroBatchStream when it implements SupportsAdmissionControl." href="ReadLimit.html"><span class="name">ReadLimit</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Interface representing limits on how much to read from a <code><a href="MicroBatchStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.MicroBatchStream">MicroBatchStream</a></code> when it
+implements <code><a href="SupportsAdmissionControl.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.SupportsAdmissionControl">SupportsAdmissionControl</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Interface representing limits on how much to read from a <code><a href="MicroBatchStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.MicroBatchStream">MicroBatchStream</a></code> when it
+implements <code><a href="SupportsAdmissionControl.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.SupportsAdmissionControl">SupportsAdmissionControl</a></code>. There are several child interfaces representing
+various kinds of limits.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd><dt>See also</dt><dd><span class="cmt"><p>SupportsAdmissionControl#latestOffset(Offset, ReadLimit)</p></span><span class="cmt"><p>ReadAllAvailable</p></span><span class="cmt"><p>ReadMaxRows</p></span></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.streaming.ReadMaxFiles" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ReadMaxFilesextendsReadLimit"></a><a id="ReadMaxFiles:ReadMaxFiles"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/read/streaming/ReadMaxFiles.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Represents a ReadLimit where the MicroBatchStream should scan approximately the given maximum number of files." href="ReadMaxFiles.html"><span class="name">ReadMaxFiles</span></a><span class="result"> extends <a href="ReadLimit.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.ReadLimit">ReadLimit</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Represents a <code><a href="ReadLimit.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.ReadLimit">ReadLimit</a></code> where the <code><a href="MicroBatchStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.MicroBatchStream">MicroBatchStream</a></code> should scan approximately the
+given maximum number of files.</p><div class="fullcomment"><div class="comment cmt"><p>Represents a <code><a href="ReadLimit.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.ReadLimit">ReadLimit</a></code> where the <code><a href="MicroBatchStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.MicroBatchStream">MicroBatchStream</a></code> should scan approximately the
+given maximum number of files.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd><dt>See also</dt><dd><span class="cmt"><p>SupportsAdmissionControl#latestOffset(Offset, ReadLimit)</p></span></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.streaming.ReadMaxRows" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ReadMaxRowsextendsReadLimit"></a><a id="ReadMaxRows:ReadMaxRows"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/read/streaming/ReadMaxRows.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Represents a ReadLimit where the MicroBatchStream should scan approximately the given maximum number of rows." href="ReadMaxRows.html"><span class="name">ReadMaxRows</span></a><span class="result"> extends <a href="ReadLimit.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.ReadLimit">ReadLimit</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Represents a <code><a href="ReadLimit.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.ReadLimit">ReadLimit</a></code> where the <code><a href="MicroBatchStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.MicroBatchStream">MicroBatchStream</a></code> should scan approximately the
+given maximum number of rows.</p><div class="fullcomment"><div class="comment cmt"><p>Represents a <code><a href="ReadLimit.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.ReadLimit">ReadLimit</a></code> where the <code><a href="MicroBatchStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.MicroBatchStream">MicroBatchStream</a></code> should scan approximately the
+given maximum number of rows.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd><dt>See also</dt><dd><span class="cmt"><p>SupportsAdmissionControl#latestOffset(Offset, ReadLimit)</p></span></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.streaming.ReadMinRows" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ReadMinRowsextendsReadLimit"></a><a id="ReadMinRows:ReadMinRows"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/read/streaming/ReadMinRows.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Represents a ReadLimit where the MicroBatchStream should scan approximately at least the given minimum number of rows." href="ReadMinRows.html"><span class="name">ReadMinRows</span></a><span class="result"> extends <a href="ReadLimit.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.ReadLimit">ReadLimit</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Represents a <code><a href="ReadLimit.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.ReadLimit">ReadLimit</a></code> where the <code><a href="MicroBatchStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.MicroBatchStream">MicroBatchStream</a></code> should scan approximately
+at least the given minimum number of rows.</p><div class="fullcomment"><div class="comment cmt"><p>Represents a <code><a href="ReadLimit.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.ReadLimit">ReadLimit</a></code> where the <code><a href="MicroBatchStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.MicroBatchStream">MicroBatchStream</a></code> should scan approximately
+at least the given minimum number of rows.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.2.0</p></dd><dt>See also</dt><dd><span class="cmt"><p>SupportsAdmissionControl#latestOffset(Offset, ReadLimit)</p></span></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.streaming.ReportsSourceMetrics" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ReportsSourceMetricsextendsSparkDataStream"></a><a id="ReportsSourceMetrics:ReportsSourceMetrics"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/read/streaming/ReportsSourceMetrics.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A mix-in interface for SparkDataStream streaming sources to signal that they can report metrics." href="ReportsSourceMetrics.html"><span class="name">ReportsSourceMetrics</span></a><span class="result"> extends <a href="SparkDataStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.SparkDataStream">SparkDataStream</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A mix-in interface for <code><a href="SparkDataStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.SparkDataStream">SparkDataStream</a></code> streaming sources to signal that they can report
+metrics.</p><div class="fullcomment"><div class="comment cmt"><p>A mix-in interface for <code><a href="SparkDataStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.SparkDataStream">SparkDataStream</a></code> streaming sources to signal that they can report
+metrics.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.2.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.streaming.SparkDataStream" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="SparkDataStreamextendsObject"></a><a id="SparkDataStream:SparkDataStream"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/read/streaming/SparkDataStream.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="The base interface representing a readable data stream in a Spark streaming query." href="SparkDataStream.html"><span class="name">SparkDataStream</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The base interface representing a readable data stream in a Spark streaming query.</p><div class="fullcomment"><div class="comment cmt"><p>The base interface representing a readable data stream in a Spark streaming query. It's
+responsible to manage the offsets of the streaming source in the streaming query.</p><p>Data sources should implement concrete data stream interfaces:
+<code><a href="MicroBatchStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.MicroBatchStream">MicroBatchStream</a></code> and <code><a href="ContinuousStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.ContinuousStream">ContinuousStream</a></code>.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read.streaming.SupportsAdmissionControl" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="SupportsAdmissionControlextendsSparkDataStream"></a><a id="SupportsAdmissionControl:SupportsAdmissionControl"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/read/streaming/SupportsAdmissionControl.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A mix-in interface for SparkDataStream streaming sources to signal that they can control the rate of data ingested into the system." href="SupportsAdmissionControl.html"><span class="name">SupportsAdmissionControl</span></a><span class="result"> extends <a href="SparkDataStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.SparkDataStream">SparkDataStream</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A mix-in interface for <code><a href="SparkDataStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.SparkDataStream">SparkDataStream</a></code> streaming sources to signal that they can control
+the rate of data ingested into the system.</p><div class="fullcomment"><div class="comment cmt"><p>A mix-in interface for <code><a href="SparkDataStream.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.SparkDataStream">SparkDataStream</a></code> streaming sources to signal that they can control
+the rate of data ingested into the system. These rate limits can come implicitly from the
+contract of triggers, e.g. Trigger.Once() requires that a micro-batch process all data
+available to the system at the start of the micro-batch. Alternatively, sources can decide to
+limit ingest through data source options.</p><p>Through this interface, a MicroBatchStream should be able to return the next offset that it will
+process until given a <code><a href="ReadLimit.html" class="extype" name="org.apache.spark.sql.connector.read.streaming.ReadLimit">ReadLimit</a></code>.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

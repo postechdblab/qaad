@@ -1,0 +1,664 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Networking 3.2.1 API  - org.apache.spark.network.util</title>
+          <meta name="description" content="Spark Project Networking 3.2.1 API - org.apache.spark.network.util" />
+          <meta name="keywords" content="Spark Project Networking 3.2.1 API org.apache.spark.network.util" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Networking 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.network" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="network"></a><a id="network:network"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">network</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.buffer" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="buffer"></a><a id="buffer:buffer"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/buffer/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../buffer/index.html"><span class="name">buffer</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.client" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="client"></a><a id="client:client"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/client/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../client/index.html"><span class="name">client</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.crypto" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="crypto"></a><a id="crypto:crypto"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/crypto/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../crypto/index.html"><span class="name">crypto</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.protocol" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="protocol"></a><a id="protocol:protocol"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../protocol/index.html"><span class="name">protocol</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.sasl" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sasl"></a><a id="sasl:sasl"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/sasl/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../sasl/index.html"><span class="name">sasl</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.server" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="server"></a><a id="server:server"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../server/index.html"><span class="name">server</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.util" visbl="pub" class="indented5 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="util"></a><a id="util:util"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">util</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="AbstractFileRegion.html" title=""></a>
+                        <a href="AbstractFileRegion.html" title="">AbstractFileRegion</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ByteArrayReadableChannel.html" title=""></a>
+                        <a href="ByteArrayReadableChannel.html" title="">ByteArrayReadableChannel</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ByteArrayWritableChannel.html" title="A writable channel that stores the written data in a byte array in memory."></a>
+                        <a href="ByteArrayWritableChannel.html" title="A writable channel that stores the written data in a byte array in memory.">ByteArrayWritableChannel</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ByteUnit.html" title=""></a>
+                        <a href="ByteUnit.html" title="">ByteUnit</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ConfigProvider.html" title="Provides a mechanism for constructing a TransportConf using some sort of configuration."></a>
+                        <a href="ConfigProvider.html" title="Provides a mechanism for constructing a TransportConf using some sort of configuration.">ConfigProvider</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="CryptoUtils.html" title="Utility methods related to the commons-crypto library."></a>
+                        <a href="CryptoUtils.html" title="Utility methods related to the commons-crypto library.">CryptoUtils</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="IOMode.html" title="Selector for which form of low-level IO we should use."></a>
+                        <a href="IOMode.html" title="Selector for which form of low-level IO we should use.">IOMode</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="JavaUtils.html" title="General utilities available in the network package."></a>
+                        <a href="JavaUtils.html" title="General utilities available in the network package.">JavaUtils</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="LevelDBProvider.html" title="LevelDB utility class available in the network package."></a>
+                        <a href="LevelDBProvider.html" title="LevelDB utility class available in the network package.">LevelDBProvider</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="LimitedInputStream.html" title="Wraps a InputStream, limiting the number of bytes which can be read."></a>
+                        <a href="LimitedInputStream.html" title="Wraps a InputStream, limiting the number of bytes which can be read.">LimitedInputStream</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="MapConfigProvider.html" title="ConfigProvider based on a Map (copied in the constructor)."></a>
+                        <a href="MapConfigProvider.html" title="ConfigProvider based on a Map (copied in the constructor).">MapConfigProvider</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="NettyMemoryMetrics.html" title="A Netty memory metrics class to collect metrics from Netty PooledByteBufAllocator."></a>
+                        <a href="NettyMemoryMetrics.html" title="A Netty memory metrics class to collect metrics from Netty PooledByteBufAllocator.">NettyMemoryMetrics</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="NettyUtils.html" title="Utilities for creating various Netty constructs based on whether we're using EPOLL or NIO."></a>
+                        <a href="NettyUtils.html" title="Utilities for creating various Netty constructs based on whether we're using EPOLL or NIO.">NettyUtils</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TimerWithCustomTimeUnit.html" title="A custom version of a Timer which allows for specifying a specific TimeUnit to be used when accessing timing values via #getSnapshot()."></a>
+                        <a href="TimerWithCustomTimeUnit.html" title="A custom version of a Timer which allows for specifying a specific TimeUnit to be used when accessing timing values via #getSnapshot().">TimerWithCustomTimeUnit</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TransportConf.html" title="A central location that tracks all the settings we expose to users."></a>
+                        <a href="TransportConf.html" title="A central location that tracks all the settings we expose to users.">TransportConf</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TransportFrameDecoder.html" title="A customized frame decoder that allows intercepting raw data."></a>
+                        <a href="TransportFrameDecoder.html" title="A customized frame decoder that allows intercepting raw data.">TransportFrameDecoder</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../../index.html" class="extype" name="org">org</a>.<a href="../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../index.html" class="extype" name="org.apache.spark.network">network</a></p>
+        <h1>util<span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">util</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.spark.network.util.AbstractFileRegion" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AbstractFileRegionextendsAbstractReferenceCountedwithFileRegion"></a><a id="AbstractFileRegion:AbstractFileRegion"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/AbstractFileRegion.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="AbstractFileRegion.html"><span class="name">AbstractFileRegion</span></a><span class="result"> extends <span class="extype" name="io.netty.util.AbstractReferenceCounted">AbstractReferenceCounted</span> with <span class="extype" name="io.netty.channel.FileRegion">FileRegion</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.network.util.ByteArrayReadableChannel" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ByteArrayReadableChannelextendsReadableByteChannel"></a><a id="ByteArrayReadableChannel:ByteArrayReadableChannel"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/ByteArrayReadableChannel.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ByteArrayReadableChannel.html"><span class="name">ByteArrayReadableChannel</span></a><span class="result"> extends <span class="extype" name="java.nio.channels.ReadableByteChannel">ReadableByteChannel</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.network.util.ByteArrayWritableChannel" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ByteArrayWritableChannelextendsWritableByteChannel"></a><a id="ByteArrayWritableChannel:ByteArrayWritableChannel"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/ByteArrayWritableChannel.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A writable channel that stores the written data in a byte array in memory." href="ByteArrayWritableChannel.html"><span class="name">ByteArrayWritableChannel</span></a><span class="result"> extends <span class="extype" name="java.nio.channels.WritableByteChannel">WritableByteChannel</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A writable channel that stores the written data in a byte array in memory.</p>
+    </li><li name="org.apache.spark.network.util.ByteUnit" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ByteUnitextendsEnum[org.apache.spark.network.util.ByteUnit]"></a><a id="ByteUnit:ByteUnit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/ByteUnit.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ByteUnit.html"><span class="name">ByteUnit</span></a><span class="result"> extends <span class="extype" name="java.lang.Enum">Enum</span>[<a href="ByteUnit.html" class="extype" name="org.apache.spark.network.util.ByteUnit">ByteUnit</a>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.network.util.ConfigProvider" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ConfigProviderextendsObject"></a><a id="ConfigProvider:ConfigProvider"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/ConfigProvider.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Provides a mechanism for constructing a TransportConf using some sort of configuration." href="ConfigProvider.html"><span class="name">ConfigProvider</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Provides a mechanism for constructing a <code><a href="TransportConf.html" class="extype" name="org.apache.spark.network.util.TransportConf">TransportConf</a></code> using some sort of configuration.</p>
+    </li><li name="org.apache.spark.network.util.CryptoUtils" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CryptoUtilsextendsObject"></a><a id="CryptoUtils:CryptoUtils"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/CryptoUtils.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Utility methods related to the commons-crypto library." href="CryptoUtils.html"><span class="name">CryptoUtils</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Utility methods related to the commons-crypto library.</p>
+    </li><li name="org.apache.spark.network.util.IOMode" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="IOModeextendsEnum[org.apache.spark.network.util.IOMode]"></a><a id="IOMode:IOMode"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/IOMode.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Selector for which form of low-level IO we should use." href="IOMode.html"><span class="name">IOMode</span></a><span class="result"> extends <span class="extype" name="java.lang.Enum">Enum</span>[<a href="IOMode.html" class="extype" name="org.apache.spark.network.util.IOMode">IOMode</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Selector for which form of low-level IO we should use.</p><div class="fullcomment"><div class="comment cmt"><p>Selector for which form of low-level IO we should use.
+NIO is always available, while EPOLL is only available on Linux.
+AUTO is used to select EPOLL if it's available, or NIO otherwise.
+</p></div></div>
+    </li><li name="org.apache.spark.network.util.JavaUtils" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="JavaUtilsextendsObject"></a><a id="JavaUtils:JavaUtils"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/JavaUtils.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="General utilities available in the network package." href="JavaUtils.html"><span class="name">JavaUtils</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">General utilities available in the network package.</p><div class="fullcomment"><div class="comment cmt"><p>General utilities available in the network package. Many of these are sourced from Spark's
+own Utils, just accessible within this package.
+</p></div></div>
+    </li><li name="org.apache.spark.network.util.LevelDBProvider" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LevelDBProviderextendsObject"></a><a id="LevelDBProvider:LevelDBProvider"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/LevelDBProvider.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="LevelDB utility class available in the network package." href="LevelDBProvider.html"><span class="name">LevelDBProvider</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">LevelDB utility class available in the network package.</p>
+    </li><li name="org.apache.spark.network.util.LimitedInputStream" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LimitedInputStreamextendsFilterInputStream"></a><a id="LimitedInputStream:LimitedInputStream"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/LimitedInputStream.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Wraps a InputStream, limiting the number of bytes which can be read." href="LimitedInputStream.html"><span class="name">LimitedInputStream</span></a><span class="result"> extends <span class="extype" name="java.io.FilterInputStream">FilterInputStream</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Wraps a <code><span class="extype" name="InputStream">InputStream</span></code>, limiting the number of bytes which can be read.</p><div class="fullcomment"><div class="comment cmt"><p>Wraps a <code><span class="extype" name="InputStream">InputStream</span></code>, limiting the number of bytes which can be read.</p><p>This code is from Guava's 14.0 source code, because there is no compatible way to
+use this functionality in both a Guava 11 environment and a Guava &gt;14 environment.
+</p></div></div>
+    </li><li name="org.apache.spark.network.util.MapConfigProvider" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MapConfigProviderextendsConfigProvider"></a><a id="MapConfigProvider:MapConfigProvider"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/MapConfigProvider.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="ConfigProvider based on a Map (copied in the constructor)." href="MapConfigProvider.html"><span class="name">MapConfigProvider</span></a><span class="result"> extends <a href="ConfigProvider.html" class="extype" name="org.apache.spark.network.util.ConfigProvider">ConfigProvider</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">ConfigProvider based on a Map (copied in the constructor).</p>
+    </li><li name="org.apache.spark.network.util.NettyMemoryMetrics" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NettyMemoryMetricsextendsMetricSet"></a><a id="NettyMemoryMetrics:NettyMemoryMetrics"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/NettyMemoryMetrics.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A Netty memory metrics class to collect metrics from Netty PooledByteBufAllocator." href="NettyMemoryMetrics.html"><span class="name">NettyMemoryMetrics</span></a><span class="result"> extends <span class="extype" name="com.codahale.metrics.MetricSet">MetricSet</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A Netty memory metrics class to collect metrics from Netty PooledByteBufAllocator.</p>
+    </li><li name="org.apache.spark.network.util.NettyUtils" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NettyUtilsextendsObject"></a><a id="NettyUtils:NettyUtils"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/NettyUtils.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Utilities for creating various Netty constructs based on whether we're using EPOLL or NIO." href="NettyUtils.html"><span class="name">NettyUtils</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Utilities for creating various Netty constructs based on whether we're using EPOLL or NIO.</p>
+    </li><li name="org.apache.spark.network.util.TimerWithCustomTimeUnit" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TimerWithCustomTimeUnitextendsTimer"></a><a id="TimerWithCustomTimeUnit:TimerWithCustomTimeUnit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TimerWithCustomTimeUnit.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A custom version of a Timer which allows for specifying a specific TimeUnit to be used when accessing timing values via #getSnapshot()." href="TimerWithCustomTimeUnit.html"><span class="name">TimerWithCustomTimeUnit</span></a><span class="result"> extends <span class="extype" name="com.codahale.metrics.Timer">Timer</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A custom version of a <code><span class="extype" name="Timer">Timer</span></code> which allows for specifying a specific <code><span class="extype" name="TimeUnit">TimeUnit</span></code> to
+be used when accessing timing values via <code><span class="extype" name="#getSnapshot()">#getSnapshot()</span></code>.</p><div class="fullcomment"><div class="comment cmt"><p>A custom version of a <code><span class="extype" name="Timer">Timer</span></code> which allows for specifying a specific <code><span class="extype" name="TimeUnit">TimeUnit</span></code> to
+be used when accessing timing values via <code><span class="extype" name="#getSnapshot()">#getSnapshot()</span></code>. Normally, though the
+<code><span class="extype" name="#update(long,">TimeUnit)</span></code> method requires a unit, the extraction methods on the snapshot
+do not specify a unit, and always return nanoseconds. It can be useful to specify that a timer
+should use a different unit for its snapshot. Note that internally, all values are still stored
+with nanosecond-precision; it is only before being returned to the caller that the nanosecond
+value is converted to the custom time unit.
+</p></div></div>
+    </li><li name="org.apache.spark.network.util.TransportConf" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TransportConfextendsObject"></a><a id="TransportConf:TransportConf"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A central location that tracks all the settings we expose to users." href="TransportConf.html"><span class="name">TransportConf</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A central location that tracks all the settings we expose to users.</p>
+    </li><li name="org.apache.spark.network.util.TransportFrameDecoder" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TransportFrameDecoderextendsChannelInboundHandlerAdapter"></a><a id="TransportFrameDecoder:TransportFrameDecoder"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportFrameDecoder.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A customized frame decoder that allows intercepting raw data." href="TransportFrameDecoder.html"><span class="name">TransportFrameDecoder</span></a><span class="result"> extends <span class="extype" name="io.netty.channel.ChannelInboundHandlerAdapter">ChannelInboundHandlerAdapter</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A customized frame decoder that allows intercepting raw data.</p><div class="fullcomment"><div class="comment cmt"><p>A customized frame decoder that allows intercepting raw data.</p><p>This behaves like Netty's frame decoder (with hard coded parameters that match this library's
+needs), except it allows an interceptor to be installed to read data directly before it's
+framed.</p><p>Unlike Netty's frame decoder, each frame is dispatched to child handlers as soon as it's
+decoded, instead of building as many frames as the current buffer allows and dispatching
+all of them. This allows a child handler to install an interceptor if needed.</p><p>If an interceptor is installed, framing stops, and data is instead fed directly to the
+interceptor. When the interceptor indicates that it doesn't need to read any more data,
+framing resumes. Interceptors should not hold references to the data buffers provided
+to their handle() method.
+</p></div></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

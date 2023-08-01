@@ -1,0 +1,527 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Catalyst 3.2.1 API  - org.apache.spark.sql.vectorized</title>
+          <meta name="description" content="Spark Project Catalyst 3.2.1 API - org.apache.spark.sql.vectorized" />
+          <meta name="keywords" content="Spark Project Catalyst 3.2.1 API org.apache.spark.sql.vectorized" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Catalyst 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sql"></a><a id="sql:sql"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">sql</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="catalyst"></a><a id="catalyst:catalyst"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/catalyst/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Catalyst is a library for manipulating relational query plans." href="../catalyst/index.html"><span class="name">catalyst</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Catalyst is a library for manipulating relational query plans.</p><div class="fullcomment"><div class="comment cmt"><p>Catalyst is a library for manipulating relational query plans.  All classes in catalyst are
+considered an internal API to Spark SQL and are subject to change between minor releases.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="connector"></a><a id="connector:connector"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/connector/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../connector/index.html"><span class="name">connector</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.errors" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="errors"></a><a id="errors:errors"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/errors/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../errors/index.html"><span class="name">errors</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="execution"></a><a id="execution:execution"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/execution/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../execution/index.html"><span class="name">execution</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.internal" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="internal"></a><a id="internal:internal"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/internal/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../internal/index.html"><span class="name">internal</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.sources" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sources"></a><a id="sources:sources"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/sources/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../sources/index.html"><span class="name">sources</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.streaming" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="streaming"></a><a id="streaming:streaming"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/streaming/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../streaming/index.html"><span class="name">streaming</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.types" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="types"></a><a id="types:types"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/types/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Contains a type system for attributes produced by relations, including complex types like structs, arrays and maps." href="../types/index.html"><span class="name">types</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Contains a type system for attributes produced by relations, including complex types like
+structs, arrays and maps.</p><div class="fullcomment"><div class="comment cmt"><p>Contains a type system for attributes produced by relations, including complex types like
+structs, arrays and maps.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.util" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="util"></a><a id="util:util"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/util/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../util/index.html"><span class="name">util</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.vectorized" visbl="pub" class="indented5 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="vectorized"></a><a id="vectorized:vectorized"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/vectorized/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">vectorized</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ArrowColumnVector.html" title="A column vector backed by Apache Arrow."></a>
+                        <a href="ArrowColumnVector.html" title="A column vector backed by Apache Arrow.">ArrowColumnVector</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ColumnVector.html" title="An interface representing in-memory columnar data in Spark."></a>
+                        <a href="ColumnVector.html" title="An interface representing in-memory columnar data in Spark.">ColumnVector</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ColumnarArray.html" title="Array abstraction in ColumnVector."></a>
+                        <a href="ColumnarArray.html" title="Array abstraction in ColumnVector.">ColumnarArray</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ColumnarBatch.html" title="This class wraps multiple ColumnVectors as a row-wise table."></a>
+                        <a href="ColumnarBatch.html" title="This class wraps multiple ColumnVectors as a row-wise table.">ColumnarBatch</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ColumnarMap.html" title="Map abstraction in ColumnVector."></a>
+                        <a href="ColumnarMap.html" title="Map abstraction in ColumnVector.">ColumnarMap</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ColumnarRow.html" title="Row abstraction in ColumnVector."></a>
+                        <a href="ColumnarRow.html" title="Row abstraction in ColumnVector.">ColumnarRow</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../../index.html" class="extype" name="org">org</a>.<a href="../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../index.html" class="extype" name="org.apache.spark.sql">sql</a></p>
+        <h1>vectorized<span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/vectorized/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">vectorized</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.spark.sql.vectorized.ArrowColumnVector" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ArrowColumnVectorextendsColumnVector"></a><a id="ArrowColumnVector:ArrowColumnVector"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/vectorized/ArrowColumnVector.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A column vector backed by Apache Arrow." href="ArrowColumnVector.html"><span class="name">ArrowColumnVector</span></a><span class="result"> extends <a href="ColumnVector.html" class="extype" name="org.apache.spark.sql.vectorized.ColumnVector">ColumnVector</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A column vector backed by Apache Arrow.</p><div class="fullcomment"><div class="comment cmt"><p>A column vector backed by Apache Arrow. Currently calendar interval type and map type are not
+supported.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.vectorized.ColumnVector" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ColumnVectorextendsAutoCloseable"></a><a id="ColumnVector:ColumnVector"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/vectorized/ColumnVector.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="An interface representing in-memory columnar data in Spark." href="ColumnVector.html"><span class="name">ColumnVector</span></a><span class="result"> extends <span class="extype" name="java.lang.AutoCloseable">AutoCloseable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">An interface representing in-memory columnar data in Spark.</p><div class="fullcomment"><div class="comment cmt"><p>An interface representing in-memory columnar data in Spark. This interface defines the main APIs
+to access the data, as well as their batched versions. The batched versions are considered to be
+faster and preferable whenever possible.</p><p>Most of the APIs take the rowId as a parameter. This is the batch local 0-based row id for values
+in this ColumnVector.</p><p>Spark only calls specific <code>get</code> method according to the data type of this
+<code><a href="ColumnVector.html" class="extype" name="org.apache.spark.sql.vectorized.ColumnVector">ColumnVector</a></code>,
+e.g. if it's int type, Spark is guaranteed to only call <code><span class="extype" name="#getInt(int)">#getInt(int)</span></code> or
+<code><span class="extype" name="#getInts(int,">int)</span></code>.</p><p>ColumnVector supports all the data types including nested types. To handle nested types,
+ColumnVector can have children and is a tree structure. Please refer to <code><span class="extype" name="#getStruct(int)">#getStruct(int)</span></code>,
+<code><span class="extype" name="#getArray(int)">#getArray(int)</span></code> and <code><span class="extype" name="#getMap(int)">#getMap(int)</span></code> for the details about how to implement nested
+types.</p><p>ColumnVector is expected to be reused during the entire data loading process, to avoid allocating
+memory again and again.</p><p>ColumnVector is meant to maximize CPU efficiency but not to minimize storage footprint.
+Implementations should prefer computing efficiency over storage efficiency when design the
+format. Since it is expected to reuse the ColumnVector instance while loading data, the storage
+footprint is negligible.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.sql.vectorized.ColumnarArray" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ColumnarArrayextendsArrayData"></a><a id="ColumnarArray:ColumnarArray"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/vectorized/ColumnarArray.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Array abstraction in ColumnVector." href="ColumnarArray.html"><span class="name">ColumnarArray</span></a><span class="result"> extends <a href="../catalyst/util/ArrayData.html" class="extype" name="org.apache.spark.sql.catalyst.util.ArrayData">ArrayData</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Array abstraction in <code><a href="ColumnVector.html" class="extype" name="org.apache.spark.sql.vectorized.ColumnVector">ColumnVector</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Array abstraction in <code><a href="ColumnVector.html" class="extype" name="org.apache.spark.sql.vectorized.ColumnVector">ColumnVector</a></code>.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.sql.vectorized.ColumnarBatch" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ColumnarBatchextendsAutoCloseable"></a><a id="ColumnarBatch:ColumnarBatch"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/vectorized/ColumnarBatch.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="This class wraps multiple ColumnVectors as a row-wise table." href="ColumnarBatch.html"><span class="name">ColumnarBatch</span></a><span class="result"> extends <span class="extype" name="java.lang.AutoCloseable">AutoCloseable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">This class wraps multiple ColumnVectors as a row-wise table.</p><div class="fullcomment"><div class="comment cmt"><p>This class wraps multiple ColumnVectors as a row-wise table. It provides a row view of this
+batch so that Spark can access the data row by row. Instance of it is meant to be reused during
+the entire data loading process.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.sql.vectorized.ColumnarMap" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ColumnarMapextendsMapData"></a><a id="ColumnarMap:ColumnarMap"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/vectorized/ColumnarMap.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Map abstraction in ColumnVector." href="ColumnarMap.html"><span class="name">ColumnarMap</span></a><span class="result"> extends <a href="../catalyst/util/MapData.html" class="extype" name="org.apache.spark.sql.catalyst.util.MapData">MapData</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Map abstraction in <code><a href="ColumnVector.html" class="extype" name="org.apache.spark.sql.vectorized.ColumnVector">ColumnVector</a></code>.</p>
+    </li><li name="org.apache.spark.sql.vectorized.ColumnarRow" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ColumnarRowextendsInternalRow"></a><a id="ColumnarRow:ColumnarRow"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/sql/vectorized/ColumnarRow.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Row abstraction in ColumnVector." href="ColumnarRow.html"><span class="name">ColumnarRow</span></a><span class="result"> extends <a href="../catalyst/InternalRow.html" class="extype" name="org.apache.spark.sql.catalyst.InternalRow">InternalRow</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Row abstraction in <code><a href="ColumnVector.html" class="extype" name="org.apache.spark.sql.vectorized.ColumnVector">ColumnVector</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Row abstraction in <code><a href="ColumnVector.html" class="extype" name="org.apache.spark.sql.vectorized.ColumnVector">ColumnVector</a></code>.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

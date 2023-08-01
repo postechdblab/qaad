@@ -1,0 +1,813 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Networking 3.2.1 API  - org.apache.spark.network.protocol</title>
+          <meta name="description" content="Spark Project Networking 3.2.1 API - org.apache.spark.network.protocol" />
+          <meta name="keywords" content="Spark Project Networking 3.2.1 API org.apache.spark.network.protocol" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Networking 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.network" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="network"></a><a id="network:network"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">network</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.buffer" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="buffer"></a><a id="buffer:buffer"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/buffer/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../buffer/index.html"><span class="name">buffer</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.client" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="client"></a><a id="client:client"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/client/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../client/index.html"><span class="name">client</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.crypto" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="crypto"></a><a id="crypto:crypto"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/crypto/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../crypto/index.html"><span class="name">crypto</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.protocol" visbl="pub" class="indented5 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="protocol"></a><a id="protocol:protocol"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">protocol</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="AbstractMessage.html" title="Abstract class for messages which optionally contain a body kept in a separate buffer."></a>
+                        <a href="AbstractMessage.html" title="Abstract class for messages which optionally contain a body kept in a separate buffer.">AbstractMessage</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="AbstractResponseMessage.html" title="Abstract class for response messages."></a>
+                        <a href="AbstractResponseMessage.html" title="Abstract class for response messages.">AbstractResponseMessage</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ChunkFetchFailure.html" title="Response to ChunkFetchRequest when there is an error fetching the chunk."></a>
+                        <a href="ChunkFetchFailure.html" title="Response to ChunkFetchRequest when there is an error fetching the chunk.">ChunkFetchFailure</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ChunkFetchRequest.html" title="Request to fetch a sequence of a single chunk of a stream."></a>
+                        <a href="ChunkFetchRequest.html" title="Request to fetch a sequence of a single chunk of a stream.">ChunkFetchRequest</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ChunkFetchSuccess.html" title="Response to ChunkFetchRequest when a chunk exists and has been successfully fetched."></a>
+                        <a href="ChunkFetchSuccess.html" title="Response to ChunkFetchRequest when a chunk exists and has been successfully fetched.">ChunkFetchSuccess</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="Encodable.html" title="Interface for an object which can be encoded into a ByteBuf."></a>
+                        <a href="Encodable.html" title="Interface for an object which can be encoded into a ByteBuf.">Encodable</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="Encoders.html" title="Provides a canonical set of Encoders for simple types."></a>
+                        <a href="Encoders.html" title="Provides a canonical set of Encoders for simple types.">Encoders</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="MergedBlockMetaRequest.html" title="Request to find the meta information for the specified merged block."></a>
+                        <a href="MergedBlockMetaRequest.html" title="Request to find the meta information for the specified merged block.">MergedBlockMetaRequest</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="MergedBlockMetaSuccess.html" title="Response to MergedBlockMetaRequest request."></a>
+                        <a href="MergedBlockMetaSuccess.html" title="Response to MergedBlockMetaRequest request.">MergedBlockMetaSuccess</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="Message.html" title="An on-the-wire transmittable message."></a>
+                        <a href="Message.html" title="An on-the-wire transmittable message.">Message</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="MessageDecoder.html" title="Decoder used by the client side to encode server-to-client responses."></a>
+                        <a href="MessageDecoder.html" title="Decoder used by the client side to encode server-to-client responses.">MessageDecoder</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="MessageEncoder.html" title="Encoder used by the server side to encode server-to-client responses."></a>
+                        <a href="MessageEncoder.html" title="Encoder used by the server side to encode server-to-client responses.">MessageEncoder</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="OneWayMessage.html" title="A RPC that does not expect a reply, which is handled by a remote org.apache.spark.network.server.RpcHandler."></a>
+                        <a href="OneWayMessage.html" title="A RPC that does not expect a reply, which is handled by a remote org.apache.spark.network.server.RpcHandler.">OneWayMessage</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="RequestMessage.html" title="Messages from the client to the server."></a>
+                        <a href="RequestMessage.html" title="Messages from the client to the server.">RequestMessage</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="ResponseMessage.html" title="Messages from the server to the client."></a>
+                        <a href="ResponseMessage.html" title="Messages from the server to the client.">ResponseMessage</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="RpcFailure.html" title="Response to RpcRequest for a failed RPC."></a>
+                        <a href="RpcFailure.html" title="Response to RpcRequest for a failed RPC.">RpcFailure</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="RpcRequest.html" title="A generic RPC which is handled by a remote org.apache.spark.network.server.RpcHandler."></a>
+                        <a href="RpcRequest.html" title="A generic RPC which is handled by a remote org.apache.spark.network.server.RpcHandler.">RpcRequest</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="RpcResponse.html" title="Response to RpcRequest for a successful RPC."></a>
+                        <a href="RpcResponse.html" title="Response to RpcRequest for a successful RPC.">RpcResponse</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="StreamChunkId.html" title="Encapsulates a request for a particular chunk of a stream."></a>
+                        <a href="StreamChunkId.html" title="Encapsulates a request for a particular chunk of a stream.">StreamChunkId</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="StreamFailure.html" title="Message indicating an error when transferring a stream."></a>
+                        <a href="StreamFailure.html" title="Message indicating an error when transferring a stream.">StreamFailure</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="StreamRequest.html" title="Request to stream data from the remote end."></a>
+                        <a href="StreamRequest.html" title="Request to stream data from the remote end.">StreamRequest</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="StreamResponse.html" title="Response to StreamRequest when the stream has been successfully opened."></a>
+                        <a href="StreamResponse.html" title="Response to StreamRequest when the stream has been successfully opened.">StreamResponse</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="UploadStream.html" title="An RPC with data that is sent outside of the frame, so it can be read as a stream."></a>
+                        <a href="UploadStream.html" title="An RPC with data that is sent outside of the frame, so it can be read as a stream.">UploadStream</a>
+                      </li><li name="org.apache.spark.network.sasl" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sasl"></a><a id="sasl:sasl"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/sasl/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../sasl/index.html"><span class="name">sasl</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.server" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="server"></a><a id="server:server"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/server/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../server/index.html"><span class="name">server</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.util" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="util"></a><a id="util:util"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../util/index.html"><span class="name">util</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../../index.html" class="extype" name="org">org</a>.<a href="../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../index.html" class="extype" name="org.apache.spark.network">network</a></p>
+        <h1>protocol<span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">protocol</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.spark.network.protocol.AbstractMessage" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AbstractMessageextendsMessage"></a><a id="AbstractMessage:AbstractMessage"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/AbstractMessage.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Abstract class for messages which optionally contain a body kept in a separate buffer." href="AbstractMessage.html"><span class="name">AbstractMessage</span></a><span class="result"> extends <a href="Message.html" class="extype" name="org.apache.spark.network.protocol.Message">Message</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Abstract class for messages which optionally contain a body kept in a separate buffer.</p>
+    </li><li name="org.apache.spark.network.protocol.AbstractResponseMessage" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AbstractResponseMessageextendsAbstractMessagewithResponseMessage"></a><a id="AbstractResponseMessage:AbstractResponseMessage"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/AbstractResponseMessage.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Abstract class for response messages." href="AbstractResponseMessage.html"><span class="name">AbstractResponseMessage</span></a><span class="result"> extends <a href="AbstractMessage.html" class="extype" name="org.apache.spark.network.protocol.AbstractMessage">AbstractMessage</a> with <a href="ResponseMessage.html" class="extype" name="org.apache.spark.network.protocol.ResponseMessage">ResponseMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Abstract class for response messages.</p>
+    </li><li name="org.apache.spark.network.protocol.ChunkFetchFailure" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ChunkFetchFailureextendsAbstractMessagewithResponseMessage"></a><a id="ChunkFetchFailure:ChunkFetchFailure"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/ChunkFetchFailure.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Response to ChunkFetchRequest when there is an error fetching the chunk." href="ChunkFetchFailure.html"><span class="name">ChunkFetchFailure</span></a><span class="result"> extends <a href="AbstractMessage.html" class="extype" name="org.apache.spark.network.protocol.AbstractMessage">AbstractMessage</a> with <a href="ResponseMessage.html" class="extype" name="org.apache.spark.network.protocol.ResponseMessage">ResponseMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Response to <code><a href="ChunkFetchRequest.html" class="extype" name="org.apache.spark.network.protocol.ChunkFetchRequest">ChunkFetchRequest</a></code> when there is an error fetching the chunk.</p>
+    </li><li name="org.apache.spark.network.protocol.ChunkFetchRequest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ChunkFetchRequestextendsAbstractMessagewithRequestMessage"></a><a id="ChunkFetchRequest:ChunkFetchRequest"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/ChunkFetchRequest.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Request to fetch a sequence of a single chunk of a stream." href="ChunkFetchRequest.html"><span class="name">ChunkFetchRequest</span></a><span class="result"> extends <a href="AbstractMessage.html" class="extype" name="org.apache.spark.network.protocol.AbstractMessage">AbstractMessage</a> with <a href="RequestMessage.html" class="extype" name="org.apache.spark.network.protocol.RequestMessage">RequestMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Request to fetch a sequence of a single chunk of a stream.</p><div class="fullcomment"><div class="comment cmt"><p>Request to fetch a sequence of a single chunk of a stream. This will correspond to a single
+<code><a href="ResponseMessage.html" class="extype" name="org.apache.spark.network.protocol.ResponseMessage">org.apache.spark.network.protocol.ResponseMessage</a></code> (either success or failure).
+</p></div></div>
+    </li><li name="org.apache.spark.network.protocol.ChunkFetchSuccess" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ChunkFetchSuccessextendsAbstractResponseMessage"></a><a id="ChunkFetchSuccess:ChunkFetchSuccess"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/ChunkFetchSuccess.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Response to ChunkFetchRequest when a chunk exists and has been successfully fetched." href="ChunkFetchSuccess.html"><span class="name">ChunkFetchSuccess</span></a><span class="result"> extends <a href="AbstractResponseMessage.html" class="extype" name="org.apache.spark.network.protocol.AbstractResponseMessage">AbstractResponseMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Response to <code><a href="ChunkFetchRequest.html" class="extype" name="org.apache.spark.network.protocol.ChunkFetchRequest">ChunkFetchRequest</a></code> when a chunk exists and has been successfully fetched.</p><div class="fullcomment"><div class="comment cmt"><p>Response to <code><a href="ChunkFetchRequest.html" class="extype" name="org.apache.spark.network.protocol.ChunkFetchRequest">ChunkFetchRequest</a></code> when a chunk exists and has been successfully fetched.</p><p>Note that the server-side encoding of this messages does NOT include the buffer itself, as this
+may be written by Netty in a more efficient manner (i.e., zero-copy write).
+Similarly, the client-side decoding will reuse the Netty ByteBuf as the buffer.
+</p></div></div>
+    </li><li name="org.apache.spark.network.protocol.Encodable" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="EncodableextendsObject"></a><a id="Encodable:Encodable"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/Encodable.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Interface for an object which can be encoded into a ByteBuf." href="Encodable.html"><span class="name">Encodable</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Interface for an object which can be encoded into a ByteBuf.</p><div class="fullcomment"><div class="comment cmt"><p>Interface for an object which can be encoded into a ByteBuf. Multiple Encodable objects are
+stored in a single, pre-allocated ByteBuf, so Encodables must also provide their length.</p><p>Encodable objects should provide a static &quot;decode(ByteBuf)&quot; method which is invoked by
+<code><a href="MessageDecoder.html" class="extype" name="org.apache.spark.network.protocol.MessageDecoder">MessageDecoder</a></code>. During decoding, if the object uses the ByteBuf as its data (rather than
+just copying data from it), then you must retain() the ByteBuf.</p><p>Additionally, when adding a new Encodable Message, add it to <code><span class="extype" name="Message.Type">Message.Type</span></code>.
+</p></div></div>
+    </li><li name="org.apache.spark.network.protocol.Encoders" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EncodersextendsObject"></a><a id="Encoders:Encoders"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/Encoders.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Provides a canonical set of Encoders for simple types." href="Encoders.html"><span class="name">Encoders</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Provides a canonical set of Encoders for simple types.</p>
+    </li><li name="org.apache.spark.network.protocol.MergedBlockMetaRequest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="MergedBlockMetaRequestextendsAbstractMessagewithRequestMessage"></a><a id="MergedBlockMetaRequest:MergedBlockMetaRequest"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/MergedBlockMetaRequest.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Request to find the meta information for the specified merged block." href="MergedBlockMetaRequest.html"><span class="name">MergedBlockMetaRequest</span></a><span class="result"> extends <a href="AbstractMessage.html" class="extype" name="org.apache.spark.network.protocol.AbstractMessage">AbstractMessage</a> with <a href="RequestMessage.html" class="extype" name="org.apache.spark.network.protocol.RequestMessage">RequestMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Request to find the meta information for the specified merged block.</p><div class="fullcomment"><div class="comment cmt"><p>Request to find the meta information for the specified merged block. The meta information
+contains the number of chunks in the merged blocks and the maps ids in each chunk.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>3.2.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.network.protocol.MergedBlockMetaSuccess" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="MergedBlockMetaSuccessextendsAbstractResponseMessage"></a><a id="MergedBlockMetaSuccess:MergedBlockMetaSuccess"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/MergedBlockMetaSuccess.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Response to MergedBlockMetaRequest request." href="MergedBlockMetaSuccess.html"><span class="name">MergedBlockMetaSuccess</span></a><span class="result"> extends <a href="AbstractResponseMessage.html" class="extype" name="org.apache.spark.network.protocol.AbstractResponseMessage">AbstractResponseMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Response to <code><a href="MergedBlockMetaRequest.html" class="extype" name="org.apache.spark.network.protocol.MergedBlockMetaRequest">MergedBlockMetaRequest</a></code> request.</p><div class="fullcomment"><div class="comment cmt"><p>Response to <code><a href="MergedBlockMetaRequest.html" class="extype" name="org.apache.spark.network.protocol.MergedBlockMetaRequest">MergedBlockMetaRequest</a></code> request.
+Note that the server-side encoding of this messages does NOT include the buffer itself.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>3.2.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.network.protocol.Message" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MessageextendsEncodable"></a><a id="Message:Message"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/Message.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="An on-the-wire transmittable message." href="Message.html"><span class="name">Message</span></a><span class="result"> extends <a href="Encodable.html" class="extype" name="org.apache.spark.network.protocol.Encodable">Encodable</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">An on-the-wire transmittable message.</p>
+    </li><li name="org.apache.spark.network.protocol.MessageDecoder" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="MessageDecoderextendsMessageToMessageDecoder[io.netty.buffer.ByteBuf]"></a><a id="MessageDecoder:MessageDecoder"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/MessageDecoder.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Decoder used by the client side to encode server-to-client responses." href="MessageDecoder.html"><span class="name">MessageDecoder</span></a><span class="result"> extends <span class="extype" name="io.netty.handler.codec.MessageToMessageDecoder">MessageToMessageDecoder</span>[<span class="extype" name="io.netty.buffer.ByteBuf">ByteBuf</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Decoder used by the client side to encode server-to-client responses.</p><div class="fullcomment"><div class="comment cmt"><p>Decoder used by the client side to encode server-to-client responses.
+This encoder is stateless so it is safe to be shared by multiple threads.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Sharable</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.network.protocol.MessageEncoder" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="MessageEncoderextendsMessageToMessageEncoder[org.apache.spark.network.protocol.Message]"></a><a id="MessageEncoder:MessageEncoder"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/MessageEncoder.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Encoder used by the server side to encode server-to-client responses." href="MessageEncoder.html"><span class="name">MessageEncoder</span></a><span class="result"> extends <span class="extype" name="io.netty.handler.codec.MessageToMessageEncoder">MessageToMessageEncoder</span>[<a href="Message.html" class="extype" name="org.apache.spark.network.protocol.Message">Message</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Encoder used by the server side to encode server-to-client responses.</p><div class="fullcomment"><div class="comment cmt"><p>Encoder used by the server side to encode server-to-client responses.
+This encoder is stateless so it is safe to be shared by multiple threads.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Sharable</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.network.protocol.OneWayMessage" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="OneWayMessageextendsAbstractMessagewithRequestMessage"></a><a id="OneWayMessage:OneWayMessage"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/OneWayMessage.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A RPC that does not expect a reply, which is handled by a remote org.apache.spark.network.server.RpcHandler." href="OneWayMessage.html"><span class="name">OneWayMessage</span></a><span class="result"> extends <a href="AbstractMessage.html" class="extype" name="org.apache.spark.network.protocol.AbstractMessage">AbstractMessage</a> with <a href="RequestMessage.html" class="extype" name="org.apache.spark.network.protocol.RequestMessage">RequestMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A RPC that does not expect a reply, which is handled by a remote
+<code><a href="../server/RpcHandler.html" class="extype" name="org.apache.spark.network.server.RpcHandler">org.apache.spark.network.server.RpcHandler</a></code>.</p>
+    </li><li name="org.apache.spark.network.protocol.RequestMessage" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="RequestMessageextendsMessage"></a><a id="RequestMessage:RequestMessage"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RequestMessage.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Messages from the client to the server." href="RequestMessage.html"><span class="name">RequestMessage</span></a><span class="result"> extends <a href="Message.html" class="extype" name="org.apache.spark.network.protocol.Message">Message</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Messages from the client to the server.</p>
+    </li><li name="org.apache.spark.network.protocol.ResponseMessage" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ResponseMessageextendsMessage"></a><a id="ResponseMessage:ResponseMessage"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/ResponseMessage.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Messages from the server to the client." href="ResponseMessage.html"><span class="name">ResponseMessage</span></a><span class="result"> extends <a href="Message.html" class="extype" name="org.apache.spark.network.protocol.Message">Message</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Messages from the server to the client.</p>
+    </li><li name="org.apache.spark.network.protocol.RpcFailure" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RpcFailureextendsAbstractMessagewithResponseMessage"></a><a id="RpcFailure:RpcFailure"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcFailure.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Response to RpcRequest for a failed RPC." href="RpcFailure.html"><span class="name">RpcFailure</span></a><span class="result"> extends <a href="AbstractMessage.html" class="extype" name="org.apache.spark.network.protocol.AbstractMessage">AbstractMessage</a> with <a href="ResponseMessage.html" class="extype" name="org.apache.spark.network.protocol.ResponseMessage">ResponseMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Response to <code><a href="RpcRequest.html" class="extype" name="org.apache.spark.network.protocol.RpcRequest">RpcRequest</a></code> for a failed RPC.</p>
+    </li><li name="org.apache.spark.network.protocol.RpcRequest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="RpcRequestextendsAbstractMessagewithRequestMessage"></a><a id="RpcRequest:RpcRequest"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcRequest.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A generic RPC which is handled by a remote org.apache.spark.network.server.RpcHandler." href="RpcRequest.html"><span class="name">RpcRequest</span></a><span class="result"> extends <a href="AbstractMessage.html" class="extype" name="org.apache.spark.network.protocol.AbstractMessage">AbstractMessage</a> with <a href="RequestMessage.html" class="extype" name="org.apache.spark.network.protocol.RequestMessage">RequestMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A generic RPC which is handled by a remote <code><a href="../server/RpcHandler.html" class="extype" name="org.apache.spark.network.server.RpcHandler">org.apache.spark.network.server.RpcHandler</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>A generic RPC which is handled by a remote <code><a href="../server/RpcHandler.html" class="extype" name="org.apache.spark.network.server.RpcHandler">org.apache.spark.network.server.RpcHandler</a></code>.
+This will correspond to a single
+<code><a href="ResponseMessage.html" class="extype" name="org.apache.spark.network.protocol.ResponseMessage">org.apache.spark.network.protocol.ResponseMessage</a></code> (either success or failure).
+</p></div></div>
+    </li><li name="org.apache.spark.network.protocol.RpcResponse" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RpcResponseextendsAbstractResponseMessage"></a><a id="RpcResponse:RpcResponse"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/RpcResponse.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Response to RpcRequest for a successful RPC." href="RpcResponse.html"><span class="name">RpcResponse</span></a><span class="result"> extends <a href="AbstractResponseMessage.html" class="extype" name="org.apache.spark.network.protocol.AbstractResponseMessage">AbstractResponseMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Response to <code><a href="RpcRequest.html" class="extype" name="org.apache.spark.network.protocol.RpcRequest">RpcRequest</a></code> for a successful RPC.</p>
+    </li><li name="org.apache.spark.network.protocol.StreamChunkId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StreamChunkIdextendsEncodable"></a><a id="StreamChunkId:StreamChunkId"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/StreamChunkId.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Encapsulates a request for a particular chunk of a stream." href="StreamChunkId.html"><span class="name">StreamChunkId</span></a><span class="result"> extends <a href="Encodable.html" class="extype" name="org.apache.spark.network.protocol.Encodable">Encodable</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Encapsulates a request for a particular chunk of a stream.</p>
+    </li><li name="org.apache.spark.network.protocol.StreamFailure" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StreamFailureextendsAbstractMessagewithResponseMessage"></a><a id="StreamFailure:StreamFailure"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/StreamFailure.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Message indicating an error when transferring a stream." href="StreamFailure.html"><span class="name">StreamFailure</span></a><span class="result"> extends <a href="AbstractMessage.html" class="extype" name="org.apache.spark.network.protocol.AbstractMessage">AbstractMessage</a> with <a href="ResponseMessage.html" class="extype" name="org.apache.spark.network.protocol.ResponseMessage">ResponseMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Message indicating an error when transferring a stream.</p>
+    </li><li name="org.apache.spark.network.protocol.StreamRequest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="StreamRequestextendsAbstractMessagewithRequestMessage"></a><a id="StreamRequest:StreamRequest"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/StreamRequest.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Request to stream data from the remote end." href="StreamRequest.html"><span class="name">StreamRequest</span></a><span class="result"> extends <a href="AbstractMessage.html" class="extype" name="org.apache.spark.network.protocol.AbstractMessage">AbstractMessage</a> with <a href="RequestMessage.html" class="extype" name="org.apache.spark.network.protocol.RequestMessage">RequestMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Request to stream data from the remote end.</p><div class="fullcomment"><div class="comment cmt"><p>Request to stream data from the remote end.</p><p>The stream ID is an arbitrary string that needs to be negotiated between the two endpoints before
+the data can be streamed.
+</p></div></div>
+    </li><li name="org.apache.spark.network.protocol.StreamResponse" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="StreamResponseextendsAbstractResponseMessage"></a><a id="StreamResponse:StreamResponse"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/StreamResponse.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Response to StreamRequest when the stream has been successfully opened." href="StreamResponse.html"><span class="name">StreamResponse</span></a><span class="result"> extends <a href="AbstractResponseMessage.html" class="extype" name="org.apache.spark.network.protocol.AbstractResponseMessage">AbstractResponseMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Response to <code><a href="StreamRequest.html" class="extype" name="org.apache.spark.network.protocol.StreamRequest">StreamRequest</a></code> when the stream has been successfully opened.</p><div class="fullcomment"><div class="comment cmt"><p>Response to <code><a href="StreamRequest.html" class="extype" name="org.apache.spark.network.protocol.StreamRequest">StreamRequest</a></code> when the stream has been successfully opened.</p><p>Note the message itself does not contain the stream data. That is written separately by the
+sender. The receiver is expected to set a temporary channel handler that will consume the
+number of bytes this message says the stream has.
+</p></div></div>
+    </li><li name="org.apache.spark.network.protocol.UploadStream" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UploadStreamextendsAbstractMessagewithRequestMessage"></a><a id="UploadStream:UploadStream"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/protocol/UploadStream.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="An RPC with data that is sent outside of the frame, so it can be read as a stream." href="UploadStream.html"><span class="name">UploadStream</span></a><span class="result"> extends <a href="AbstractMessage.html" class="extype" name="org.apache.spark.network.protocol.AbstractMessage">AbstractMessage</a> with <a href="RequestMessage.html" class="extype" name="org.apache.spark.network.protocol.RequestMessage">RequestMessage</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">An RPC with data that is sent outside of the frame, so it can be read as a stream.</p>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

@@ -1,0 +1,881 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Catalyst 3.2.1 API  - org.apache.spark.sql.connector.catalog.functions.AggregateFunction</title>
+          <meta name="description" content="Spark Project Catalyst 3.2.1 API - org.apache.spark.sql.connector.catalog.functions.AggregateFunction" />
+          <meta name="keywords" content="Spark Project Catalyst 3.2.1 API org.apache.spark.sql.connector.catalog.functions.AggregateFunction" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Catalyst 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sql"></a><a id="sql:sql"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">sql</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="connector"></a><a id="connector:connector"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">connector</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.catalog" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="catalog"></a><a id="catalog:catalog"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">catalog</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.catalog.functions" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="functions"></a><a id="functions:functions"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="index.html"><span class="name">functions</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.connector.catalog">catalog</a></dd></dl></div>
+    </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="" title="Interface for a function that produces a result value by aggregating over multiple input rows."></a>
+                        <a href="" title="Interface for a function that produces a result value by aggregating over multiple input rows.">AggregateFunction</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="BoundFunction.html" title="Represents a function that is bound to an input type."></a>
+                        <a href="BoundFunction.html" title="Represents a function that is bound to an input type.">BoundFunction</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="Function.html" title="Base class for user-defined functions."></a>
+                        <a href="Function.html" title="Base class for user-defined functions.">Function</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="ScalarFunction.html" title="Interface for a function that produces a result value for each input row."></a>
+                        <a href="ScalarFunction.html" title="Interface for a function that produces a result value for each input row.">ScalarFunction</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="UnboundFunction.html" title="Represents a user-defined function that is not bound to input types."></a>
+                        <a href="UnboundFunction.html" title="Represents a user-defined function that is not bound to input types.">UnboundFunction</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="trait type">
+      <div id="definition">
+        <div class="big-circle trait">t</div>
+        <p id="owner"><a href="../../../../../../index.html" class="extype" name="org">org</a>.<a href="../../../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../../../index.html" class="extype" name="org.apache.spark.sql">sql</a>.<a href="../../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a>.<a href="../index.html" class="extype" name="org.apache.spark.sql.connector.catalog">catalog</a>.<a href="index.html" class="extype" name="org.apache.spark.sql.connector.catalog.functions">functions</a></p>
+        <h1>AggregateFunction<span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <span class="name">AggregateFunction</span><span class="tparams">[<span name="S">S &lt;: <span class="extype" name="java.io.Serializable">Serializable</span></span>, <span name="R">R</span>]</span><span class="result"> extends <a href="BoundFunction.html" class="extype" name="org.apache.spark.sql.connector.catalog.functions.BoundFunction">BoundFunction</a></span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Interface for a function that produces a result value by aggregating over multiple input rows.</p><p>For each input row, Spark will call the <code><a href="#update(state:S,input:org.apache.spark.sql.catalyst.InternalRow):S" class="extmbr" name="org.apache.spark.sql.connector.catalog.functions.AggregateFunction#update">#update</a></code> method which should evaluate the row
+and update the aggregation state. The JVM type of result values produced by
+<code><a href="#produceResult(state:S):R" class="extmbr" name="org.apache.spark.sql.connector.catalog.functions.AggregateFunction#produceResult">#produceResult</a></code> must be the type used by Spark's
+InternalRow API for the <code><span class="extype" name="DataType">SQL data type</span></code> returned by <code><span class="extype" name="#resultType()">#resultType()</span></code>.
+Please refer to class documentation of <code><a href="ScalarFunction.html" class="extype" name="org.apache.spark.sql.connector.catalog.functions.ScalarFunction">ScalarFunction</a></code> for the mapping between
+<code><span class="extype" name="DataType">DataType</span></code> and the JVM type.</p><p>All implementations must support partial aggregation by implementing merge so that Spark can
+partially aggregate and shuffle intermediate results, instead of shuffling all rows for an
+aggregate. This reduces the impact of data skew and the amount of data shuffled to produce the
+result.</p><p>Intermediate aggregation state must be <code><span class="extype" name="Serializable">Serializable</span></code> so that state produced by parallel
+tasks can be serialized, shuffled, and then merged to produce a final result.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.2.0</p></dd></dl><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><a href="BoundFunction.html" class="extype" name="org.apache.spark.sql.connector.catalog.functions.BoundFunction">BoundFunction</a>, <a href="Function.html" class="extype" name="org.apache.spark.sql.connector.catalog.functions.Function">Function</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="org.apache.spark.sql.connector.catalog.functions.AggregateFunction"><span>AggregateFunction</span></li><li class="in" name="org.apache.spark.sql.connector.catalog.functions.BoundFunction"><span>BoundFunction</span></li><li class="in" name="org.apache.spark.sql.connector.catalog.functions.Function"><span>Function</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        
+
+        <div class="values members">
+              <h3>Abstract Value Members</h3>
+              <ol><li name="org.apache.spark.sql.connector.catalog.functions.BoundFunction#inputTypes" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="inputTypes():Array[org.apache.spark.sql.types.DataType]"></a><a id="inputTypes():Array[DataType]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#inputTypes():Array[org.apache.spark.sql.types.DataType]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">inputTypes</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<a href="../../../types/DataType.html" class="extype" name="org.apache.spark.sql.types.DataType">DataType</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns the required <code><span class="extype" name="DataType">data types</span></code> of the input values to this function.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the required <code><span class="extype" name="DataType">data types</span></code> of the input values to this function.</p><p>If the types returned differ from the types passed to <code><span class="extype" name="UnboundFunction#bind(StructType)">UnboundFunction#bind(StructType)</span></code>,
+Spark will cast input values to the required data types. This allows implementations to
+delegate input value casting to Spark.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>an array of input value data types</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BoundFunction.html" class="extype" name="org.apache.spark.sql.connector.catalog.functions.BoundFunction">BoundFunction</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.catalog.functions.AggregateFunction#merge" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="merge(leftState:S,rightState:S):S"></a><a id="merge(S,S):S"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#merge(leftState:S,rightState:S):S" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">merge</span><span class="params">(<span name="leftState">leftState: <span class="extype" name="org.apache.spark.sql.connector.catalog.functions.AggregateFunction.S">S</span></span>, <span name="rightState">rightState: <span class="extype" name="org.apache.spark.sql.connector.catalog.functions.AggregateFunction.S">S</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.connector.catalog.functions.AggregateFunction.S">S</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Merge two partial aggregation states.</p><div class="fullcomment"><div class="comment cmt"><p>Merge two partial aggregation states.</p><p>This is called to merge intermediate aggregation states that were produced by parallel tasks.
+</p></div><dl class="paramcmts block"><dt class="param">leftState</dt><dd class="cmt"><p>intermediate aggregation state</p></dd><dt class="param">rightState</dt><dd class="cmt"><p>intermediate aggregation state</p></dd><dt>returns</dt><dd class="cmt"><p>combined aggregation state</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.catalog.functions.Function#name" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="name():String"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#name():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">name</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A name to identify this function.</p><div class="fullcomment"><div class="comment cmt"><p>A name to identify this function. Implementations should provide a meaningful name, like the
+database and function name from the catalog.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Function.html" class="extype" name="org.apache.spark.sql.connector.catalog.functions.Function">Function</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.catalog.functions.AggregateFunction#newAggregationState" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="newAggregationState():S"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#newAggregationState():S" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">newAggregationState</span><span class="params">()</span><span class="result">: <span class="extype" name="org.apache.spark.sql.connector.catalog.functions.AggregateFunction.S">S</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Initialize state for an aggregation.</p><div class="fullcomment"><div class="comment cmt"><p>Initialize state for an aggregation.</p><p>This method is called one or more times for every group of values to initialize intermediate
+aggregation state. More than one intermediate aggregation state variable may be used when the
+aggregation is run in parallel tasks.</p><p>Implementations that return null must support null state passed into all other methods.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a state instance or null</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.catalog.functions.AggregateFunction#produceResult" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="produceResult(state:S):R"></a><a id="produceResult(S):R"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#produceResult(state:S):R" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">produceResult</span><span class="params">(<span name="state">state: <span class="extype" name="org.apache.spark.sql.connector.catalog.functions.AggregateFunction.S">S</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.connector.catalog.functions.AggregateFunction.R">R</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Produce the aggregation result based on intermediate state.</p><div class="fullcomment"><div class="comment cmt"><p>Produce the aggregation result based on intermediate state.
+</p></div><dl class="paramcmts block"><dt class="param">state</dt><dd class="cmt"><p>intermediate aggregation state</p></dd><dt>returns</dt><dd class="cmt"><p>a result value</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.catalog.functions.BoundFunction#resultType" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="resultType():org.apache.spark.sql.types.DataType"></a><a id="resultType():DataType"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#resultType():org.apache.spark.sql.types.DataType" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">resultType</span><span class="params">()</span><span class="result">: <a href="../../../types/DataType.html" class="extype" name="org.apache.spark.sql.types.DataType">DataType</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns the <code><span class="extype" name="DataType">data type</span></code> of values produced by this function.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the <code><span class="extype" name="DataType">data type</span></code> of values produced by this function.</p><p>For example, a &quot;plus&quot; function may return <code><span class="extype" name="IntegerType">IntegerType</span></code> when it is bound to arguments
+that are also <code><span class="extype" name="IntegerType">IntegerType</span></code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a data type for values produced by this function</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BoundFunction.html" class="extype" name="org.apache.spark.sql.connector.catalog.functions.BoundFunction">BoundFunction</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.catalog.functions.AggregateFunction#update" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="update(state:S,input:org.apache.spark.sql.catalyst.InternalRow):S"></a><a id="update(S,InternalRow):S"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#update(state:S,input:org.apache.spark.sql.catalyst.InternalRow):S" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">update</span><span class="params">(<span name="state">state: <span class="extype" name="org.apache.spark.sql.connector.catalog.functions.AggregateFunction.S">S</span></span>, <span name="input">input: <a href="../../../catalyst/InternalRow.html" class="extype" name="org.apache.spark.sql.catalyst.InternalRow">InternalRow</a></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.connector.catalog.functions.AggregateFunction.S">S</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Update the aggregation state with a new row.</p><div class="fullcomment"><div class="comment cmt"><p>Update the aggregation state with a new row.</p><p>This is called for each row in a group to update an intermediate aggregation state.
+</p></div><dl class="paramcmts block"><dt class="param">state</dt><dd class="cmt"><p>intermediate aggregation state</p></dd><dt class="param">input</dt><dd class="cmt"><p>an input row</p></dd><dt>returns</dt><dd class="cmt"><p>updated aggregation state</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div class="values members">
+              <h3>Concrete Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.catalog.functions.BoundFunction#canonicalName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="canonicalName():String"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#canonicalName():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">canonicalName</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns the canonical name of this function, used to determine if functions are equivalent.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the canonical name of this function, used to determine if functions are equivalent.</p><p>The canonical name is used to determine whether two functions are the same when loaded by
+different catalogs. For example, the same catalog implementation may be used for by two
+environments, &quot;prod&quot; and &quot;test&quot;. Functions produced by the catalogs may be equivalent, but
+loaded using different names, like &quot;test.func_name&quot; and &quot;prod.func_name&quot;.</p><p>Names returned by this function should be unique and unlikely to conflict with similar
+functions in other catalogs. For example, many catalogs may define a &quot;bucket&quot; function with a
+different implementation. Adding context, like &quot;com.mycompany.bucket(string)&quot;, is recommended
+to avoid unintentional collisions.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a canonical name for this function</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BoundFunction.html" class="extype" name="org.apache.spark.sql.connector.catalog.functions.BoundFunction">BoundFunction</a></dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.catalog.functions.BoundFunction#isDeterministic" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isDeterministic():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#isDeterministic():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isDeterministic</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns whether this function result is deterministic.</p><div class="fullcomment"><div class="comment cmt"><p>Returns whether this function result is deterministic.</p><p>By default, functions are assumed to be deterministic. Functions that are not deterministic
+should override this method so that Spark can ensure the function runs only once for a given
+input.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>true if this function is deterministic, false otherwise</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BoundFunction.html" class="extype" name="org.apache.spark.sql.connector.catalog.functions.BoundFunction">BoundFunction</a></dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.catalog.functions.BoundFunction#isResultNullable" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isResultNullable():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#isResultNullable():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isResultNullable</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns whether the values produced by this function may be null.</p><div class="fullcomment"><div class="comment cmt"><p>Returns whether the values produced by this function may be null.</p><p>For example, a &quot;plus&quot; function may return false when it is bound to arguments that are always
+non-null, but true when either argument may be null.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>true if values produced by this function may be null, false otherwise</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BoundFunction.html" class="extype" name="org.apache.spark.sql.connector.catalog.functions.BoundFunction">BoundFunction</a></dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/connector/catalog/functions/AggregateFunction.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="org.apache.spark.sql.connector.catalog.functions.BoundFunction">
+              <h3>Inherited from <a href="BoundFunction.html" class="extype" name="org.apache.spark.sql.connector.catalog.functions.BoundFunction">BoundFunction</a></h3>
+            </div><div class="parent" name="org.apache.spark.sql.connector.catalog.functions.Function">
+              <h3>Inherited from <a href="Function.html" class="extype" name="org.apache.spark.sql.connector.catalog.functions.Function">Function</a></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

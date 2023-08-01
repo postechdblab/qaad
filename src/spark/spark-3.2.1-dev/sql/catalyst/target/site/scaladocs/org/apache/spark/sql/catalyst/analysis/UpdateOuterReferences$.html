@@ -1,0 +1,1449 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Catalyst 3.2.1 API  - org.apache.spark.sql.catalyst.analysis.UpdateOuterReferences</title>
+          <meta name="description" content="Spark Project Catalyst 3.2.1 API - org.apache.spark.sql.catalyst.analysis.UpdateOuterReferences" />
+          <meta name="keywords" content="Spark Project Catalyst 3.2.1 API org.apache.spark.sql.catalyst.analysis.UpdateOuterReferences" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Catalyst 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sql"></a><a id="sql:sql"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">sql</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="catalyst"></a><a id="catalyst:catalyst"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Catalyst is a library for manipulating relational query plans." href="../index.html"><span class="name">catalyst</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Catalyst is a library for manipulating relational query plans.</p><div class="fullcomment"><div class="comment cmt"><p>Catalyst is a library for manipulating relational query plans.  All classes in catalyst are
+considered an internal API to Spark SQL and are subject to change between minor releases.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.analysis" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="analysis"></a><a id="analysis:analysis"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Provides a logical query plan Analyzer and supporting classes for performing analysis." href="index.html"><span class="name">analysis</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Provides a logical query plan <a href="Analyzer.html" class="extype" name="org.apache.spark.sql.catalyst.analysis.Analyzer">Analyzer</a> and supporting classes for performing analysis.</p><div class="fullcomment"><div class="comment cmt"><p>Provides a logical query plan <a href="Analyzer.html" class="extype" name="org.apache.spark.sql.catalyst.analysis.Analyzer">Analyzer</a> and supporting classes for performing analysis.
+Analysis consists of translating <a href="UnresolvedAttribute.html" class="extype" name="org.apache.spark.sql.catalyst.analysis.UnresolvedAttribute">UnresolvedAttribute</a>s and <a href="UnresolvedRelation.html" class="extype" name="org.apache.spark.sql.catalyst.analysis.UnresolvedRelation">UnresolvedRelation</a>s
+into fully typed objects using information in a schema <span class="extype" name="Catalog">Catalog</span>.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li class="current-entities indented6">
+                        <a class="object" href="AnalysisContext$.html" title=""></a>
+                        <a class="class" href="AnalysisContext.html" title="Provides a way to keep state during the analysis, mostly for resolving views and subqueries."></a>
+                        <a href="AnalysisContext.html" title="Provides a way to keep state during the analysis, mostly for resolving views and subqueries.">AnalysisContext</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$AnalysisErrorAt.html" title=""></a>
+                        <a href="package$$AnalysisErrorAt.html" title="">AnalysisErrorAt</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="Analyzer.html" title="Provides a logical query plan analyzer, which translates UnresolvedAttributes and UnresolvedRelations into fully typed objects using information in a SessionCatalog."></a>
+                        <a href="Analyzer.html" title="Provides a logical query plan analyzer, which translates UnresolvedAttributes and UnresolvedRelations into fully typed objects using information in a SessionCatalog.">Analyzer</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="AnsiTypeCoercion$.html" title="In Spark ANSI mode, the type coercion rules are based on the type precedence lists of the input data types."></a>
+                        <a href="AnsiTypeCoercion$.html" title="In Spark ANSI mode, the type coercion rules are based on the type precedence lists of the input data types.">AnsiTypeCoercion</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ApplyCharTypePadding$.html" title="This rule performs string padding for char type comparison."></a>
+                        <a href="ApplyCharTypePadding$.html" title="This rule performs string padding for char type comparison.">ApplyCharTypePadding</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="CTESubstitution$.html" title="Analyze WITH nodes and substitute child plan with CTE references or CTE definitions depending on the conditions below: 1."></a>
+                        <a href="CTESubstitution$.html" title="Analyze WITH nodes and substitute child plan with CTE references or CTE definitions depending on the conditions below: 1.">CTESubstitution</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="CannotReplaceMissingTableException.html" title=""></a>
+                        <a href="CannotReplaceMissingTableException.html" title="">CannotReplaceMissingTableException</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="CastSupport.html" title="Mix-in trait for constructing valid Cast expressions."></a>
+                        <a href="CastSupport.html" title="Mix-in trait for constructing valid Cast expressions.">CastSupport</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="CheckAnalysis.html" title="Throws user facing errors when passed invalid queries that fail to analyze."></a>
+                        <a href="CheckAnalysis.html" title="Throws user facing errors when passed invalid queries that fail to analyze.">CheckAnalysis</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="CleanupAliases$.html" title="Cleans up unnecessary Aliases inside the plan."></a>
+                        <a href="CleanupAliases$.html" title="Cleans up unnecessary Aliases inside the plan.">CleanupAliases</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="DatabaseAlreadyExistsException.html" title="Thrown by a catalog when an item already exists."></a>
+                        <a href="DatabaseAlreadyExistsException.html" title="Thrown by a catalog when an item already exists.">DatabaseAlreadyExistsException</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="DecimalPrecision$.html" title="Calculates and propagates precision for fixed-precision decimals."></a>
+                        <a href="DecimalPrecision$.html" title="Calculates and propagates precision for fixed-precision decimals.">DecimalPrecision</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="DeduplicateRelations$.html" title=""></a>
+                        <a href="DeduplicateRelations$.html" title="">DeduplicateRelations</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="EliminateEventTimeWatermark$.html" title="Ignore event time watermark in batch query, which is only supported in Structured Streaming."></a>
+                        <a href="EliminateEventTimeWatermark$.html" title="Ignore event time watermark in batch query, which is only supported in Structured Streaming.">EliminateEventTimeWatermark</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="EliminateSubqueryAliases$.html" title="Removes SubqueryAlias operators from the plan."></a>
+                        <a href="EliminateSubqueryAliases$.html" title="Removes SubqueryAlias operators from the plan.">EliminateSubqueryAliases</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="EliminateUnions$.html" title="Removes Union operators from the plan if it just has one child."></a>
+                        <a href="EliminateUnions$.html" title="Removes Union operators from the plan if it just has one child.">EliminateUnions</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="EliminateView$.html" title="This rule removes View operators from the plan."></a>
+                        <a href="EliminateView$.html" title="This rule removes View operators from the plan.">EliminateView</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="EmptyFunctionRegistry$.html" title=""></a>
+                        <a href="EmptyFunctionRegistry$.html" title="">EmptyFunctionRegistry</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="EmptyFunctionRegistryBase.html" title="A trivial catalog that returns an error when a function is requested."></a>
+                        <a href="EmptyFunctionRegistryBase.html" title="A trivial catalog that returns an error when a function is requested.">EmptyFunctionRegistryBase</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="EmptyTableFunctionRegistry$.html" title=""></a>
+                        <a href="EmptyTableFunctionRegistry$.html" title="">EmptyTableFunctionRegistry</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="FakeV2SessionCatalog$.html" title=""></a>
+                        <a href="FakeV2SessionCatalog$.html" title="">FakeV2SessionCatalog</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="FieldName.html" title=""></a>
+                        <a href="FieldName.html" title="">FieldName</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="FieldPosition.html" title=""></a>
+                        <a href="FieldPosition.html" title="">FieldPosition</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="FunctionAlreadyExistsException.html" title=""></a>
+                        <a href="FunctionAlreadyExistsException.html" title="">FunctionAlreadyExistsException</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="FunctionRegistry$.html" title=""></a>
+                        <a class="trait" href="FunctionRegistry.html" title=""></a>
+                        <a href="FunctionRegistry.html" title="">FunctionRegistry</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="FunctionRegistryBase$.html" title=""></a>
+                        <a class="trait" href="FunctionRegistryBase.html" title="A catalog for looking up user defined functions, used by an Analyzer."></a>
+                        <a href="FunctionRegistryBase.html" title="A catalog for looking up user defined functions, used by an Analyzer.">FunctionRegistryBase</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="GetColumnByOrdinal.html" title=""></a>
+                        <a href="GetColumnByOrdinal.html" title="">GetColumnByOrdinal</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="GetViewColumnByNameAndOrdinal.html" title=""></a>
+                        <a href="GetViewColumnByNameAndOrdinal.html" title="">GetViewColumnByNameAndOrdinal</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="GlobalTempView$.html" title="GlobalTempView means cross-session global temporary views."></a>
+                        <a href="GlobalTempView$.html" title="GlobalTempView means cross-session global temporary views.">GlobalTempView</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="HintErrorLogger$.html" title="The hint error handler that logs warnings for each hint error."></a>
+                        <a href="HintErrorLogger$.html" title="The hint error handler that logs warnings for each hint error.">HintErrorLogger</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="LocalTempView$.html" title="LocalTempView means session-scoped local temporary views."></a>
+                        <a href="LocalTempView$.html" title="LocalTempView means session-scoped local temporary views.">LocalTempView</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="MultiAlias.html" title="Used to assign new names to Generator's output, such as hive udtf."></a>
+                        <a href="MultiAlias.html" title="Used to assign new names to Generator's output, such as hive udtf.">MultiAlias</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="MultiInstanceRelation.html" title="A trait that should be mixed into query operators where a single instance might appear multiple times in a logical query plan."></a>
+                        <a href="MultiInstanceRelation.html" title="A trait that should be mixed into query operators where a single instance might appear multiple times in a logical query plan.">MultiInstanceRelation</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="NamedRelation.html" title=""></a>
+                        <a href="NamedRelation.html" title="">NamedRelation</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="NamespaceAlreadyExistsException.html" title=""></a>
+                        <a href="NamespaceAlreadyExistsException.html" title="">NamespaceAlreadyExistsException</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="NoSuchDatabaseException.html" title="Thrown by a catalog when an item cannot be found."></a>
+                        <a href="NoSuchDatabaseException.html" title="Thrown by a catalog when an item cannot be found.">NoSuchDatabaseException</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="NoSuchFunctionException.html" title=""></a>
+                        <a href="NoSuchFunctionException.html" title="">NoSuchFunctionException</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="NoSuchNamespaceException.html" title=""></a>
+                        <a href="NoSuchNamespaceException.html" title="">NoSuchNamespaceException</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="NoSuchPartitionException.html" title=""></a>
+                        <a href="NoSuchPartitionException.html" title="">NoSuchPartitionException</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="NoSuchPartitionsException.html" title=""></a>
+                        <a href="NoSuchPartitionsException.html" title="">NoSuchPartitionsException</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="NoSuchPermanentFunctionException.html" title=""></a>
+                        <a href="NoSuchPermanentFunctionException.html" title="">NoSuchPermanentFunctionException</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="NoSuchTableException.html" title=""></a>
+                        <a href="NoSuchTableException.html" title="">NoSuchTableException</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="NoSuchTempFunctionException.html" title=""></a>
+                        <a href="NoSuchTempFunctionException.html" title="">NoSuchTempFunctionException</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="PartitionAlreadyExistsException.html" title=""></a>
+                        <a href="PartitionAlreadyExistsException.html" title="">PartitionAlreadyExistsException</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="PartitionSpec.html" title=""></a>
+                        <a href="PartitionSpec.html" title="">PartitionSpec</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="PartitionsAlreadyExistException.html" title=""></a>
+                        <a href="PartitionsAlreadyExistException.html" title="">PartitionsAlreadyExistException</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="PersistedView$.html" title="PersistedView means cross-session persisted views."></a>
+                        <a href="PersistedView$.html" title="PersistedView means cross-session persisted views.">PersistedView</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="PullOutNondeterministic$.html" title="Pulls out nondeterministic expressions from LogicalPlan which is not Project or Filter, put them into an inner Project and finally project them away at the outer Project."></a>
+                        <a href="PullOutNondeterministic$.html" title="Pulls out nondeterministic expressions from LogicalPlan which is not Project or Filter, put them into an inner Project and finally project them away at the outer Project.">PullOutNondeterministic</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="ReferenceEqualPlanWrapper.html" title="A helper class used to detect duplicate relations fast in DeduplicateRelations"></a>
+                        <a href="ReferenceEqualPlanWrapper.html" title="A helper class used to detect duplicate relations fast in DeduplicateRelations">ReferenceEqualPlanWrapper</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="RemoveTempResolvedColumn$.html" title="Removes all TempResolvedColumns in the query plan."></a>
+                        <a href="RemoveTempResolvedColumn$.html" title="Removes all TempResolvedColumns in the query plan.">RemoveTempResolvedColumn</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="ResolveCatalogs.html" title="Resolves catalogs from the multi-part identifiers in SQL statements, and convert the statements to the corresponding v2 commands if the resolved catalog is not the session catalog."></a>
+                        <a href="ResolveCatalogs.html" title="Resolves catalogs from the multi-part identifiers in SQL statements, and convert the statements to the corresponding v2 commands if the resolved catalog is not the session catalog.">ResolveCatalogs</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ResolveCommandsWithIfExists$.html" title="A rule for handling commands when the table or temp view is not resolved."></a>
+                        <a href="ResolveCommandsWithIfExists$.html" title="A rule for handling commands when the table or temp view is not resolved.">ResolveCommandsWithIfExists</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ResolveExpressionsWithNamePlaceholders$.html" title="Resolve expressions if they contains NamePlaceholders."></a>
+                        <a href="ResolveExpressionsWithNamePlaceholders$.html" title="Resolve expressions if they contains NamePlaceholders.">ResolveExpressionsWithNamePlaceholders</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="ResolveHigherOrderFunctions.html" title="Resolve a higher order functions from the catalog."></a>
+                        <a href="ResolveHigherOrderFunctions.html" title="Resolve a higher order functions from the catalog.">ResolveHigherOrderFunctions</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ResolveHints$.html" title="Collection of rules related to hints."></a>
+                        <a href="ResolveHints$.html" title="Collection of rules related to hints.">ResolveHints</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ResolveInlineTables$.html" title="An analyzer rule that replaces UnresolvedInlineTable with LocalRelation."></a>
+                        <a href="ResolveInlineTables$.html" title="An analyzer rule that replaces UnresolvedInlineTable with LocalRelation.">ResolveInlineTables</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ResolveLambdaVariables$.html" title="Resolve the lambda variables exposed by a higher order functions."></a>
+                        <a href="ResolveLambdaVariables$.html" title="Resolve the lambda variables exposed by a higher order functions.">ResolveLambdaVariables</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ResolvePartitionSpec$.html" title="Resolve UnresolvedPartitionSpec to ResolvedPartitionSpec in partition related commands."></a>
+                        <a href="ResolvePartitionSpec$.html" title="Resolve UnresolvedPartitionSpec to ResolvedPartitionSpec in partition related commands.">ResolvePartitionSpec</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="ResolveTableValuedFunctions.html" title="Rule that resolves table-valued function references."></a>
+                        <a href="ResolveTableValuedFunctions.html" title="Rule that resolves table-valued function references.">ResolveTableValuedFunctions</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ResolveTimeZone$.html" title="Replace TimeZoneAwareExpression without timezone id by its copy with session local time zone."></a>
+                        <a href="ResolveTimeZone$.html" title="Replace TimeZoneAwareExpression without timezone id by its copy with session local time zone.">ResolveTimeZone</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ResolveUnion$.html" title="Resolves different children of Union to a common set of columns."></a>
+                        <a href="ResolveUnion$.html" title="Resolves different children of Union to a common set of columns.">ResolveUnion</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ResolveWithCTE$.html" title="Updates CTE references with the resolve output attributes of corresponding CTE definitions."></a>
+                        <a href="ResolveWithCTE$.html" title="Updates CTE references with the resolve output attributes of corresponding CTE definitions.">ResolveWithCTE</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="ResolvedFieldName.html" title=""></a>
+                        <a href="ResolvedFieldName.html" title="">ResolvedFieldName</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="ResolvedFieldPosition.html" title=""></a>
+                        <a href="ResolvedFieldPosition.html" title="">ResolvedFieldPosition</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="ResolvedFunc.html" title="A plan containing resolved function."></a>
+                        <a href="ResolvedFunc.html" title="A plan containing resolved function.">ResolvedFunc</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="ResolvedNamespace.html" title="A plan containing resolved namespace."></a>
+                        <a href="ResolvedNamespace.html" title="A plan containing resolved namespace.">ResolvedNamespace</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="ResolvedPartitionSpec.html" title=""></a>
+                        <a href="ResolvedPartitionSpec.html" title="">ResolvedPartitionSpec</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="ResolvedStar.html" title="Represents all the resolved input attributes to a given relational operator."></a>
+                        <a href="ResolvedStar.html" title="Represents all the resolved input attributes to a given relational operator.">ResolvedStar</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="ResolvedTable$.html" title=""></a>
+                        <a class="class" href="ResolvedTable.html" title="A plan containing resolved table."></a>
+                        <a href="ResolvedTable.html" title="A plan containing resolved table.">ResolvedTable</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="ResolvedView.html" title="A plan containing resolved (temp) views."></a>
+                        <a href="ResolvedView.html" title="A plan containing resolved (temp) views.">ResolvedView</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="SessionWindowing$.html" title="Maps a time column to a session window."></a>
+                        <a href="SessionWindowing$.html" title="Maps a time column to a session window.">SessionWindowing</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="SimpleAnalyzer$.html" title="A trivial Analyzer with a dummy SessionCatalog, EmptyFunctionRegistry and EmptyTableFunctionRegistry."></a>
+                        <a href="SimpleAnalyzer$.html" title="A trivial Analyzer with a dummy SessionCatalog, EmptyFunctionRegistry and EmptyTableFunctionRegistry.">SimpleAnalyzer</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="SimpleFunctionRegistry.html" title=""></a>
+                        <a href="SimpleFunctionRegistry.html" title="">SimpleFunctionRegistry</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="SimpleFunctionRegistryBase.html" title=""></a>
+                        <a href="SimpleFunctionRegistryBase.html" title="">SimpleFunctionRegistryBase</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="SimpleTableFunctionRegistry.html" title=""></a>
+                        <a href="SimpleTableFunctionRegistry.html" title="">SimpleTableFunctionRegistry</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="Star.html" title="Represents all of the input attributes to a given relational operator, for example in &quot;SELECT * FROM ...&quot;."></a>
+                        <a href="Star.html" title="Represents all of the input attributes to a given relational operator, for example in &quot;SELECT * FROM ...&quot;.">Star</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="StreamingJoinHelper$.html" title="Helper object for stream joins."></a>
+                        <a href="StreamingJoinHelper$.html" title="Helper object for stream joins.">StreamingJoinHelper</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="SubstituteUnresolvedOrdinals$.html" title="Replaces ordinal in 'order by' or 'group by' with UnresolvedOrdinal expression."></a>
+                        <a href="SubstituteUnresolvedOrdinals$.html" title="Replaces ordinal in 'order by' or 'group by' with UnresolvedOrdinal expression.">SubstituteUnresolvedOrdinals</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="TableAlreadyExistsException.html" title=""></a>
+                        <a href="TableAlreadyExistsException.html" title="">TableAlreadyExistsException</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="TableFunctionRegistry$.html" title=""></a>
+                        <a class="trait" href="TableFunctionRegistry.html" title="A catalog for looking up table functions."></a>
+                        <a href="TableFunctionRegistry.html" title="A catalog for looking up table functions.">TableFunctionRegistry</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="TableOutputResolver$.html" title=""></a>
+                        <a href="TableOutputResolver$.html" title="">TableOutputResolver</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="TempResolvedColumn.html" title="An intermediate expression to hold a resolved (nested) column."></a>
+                        <a href="TempResolvedColumn.html" title="An intermediate expression to hold a resolved (nested) column.">TempResolvedColumn</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="TempTableAlreadyExistsException.html" title=""></a>
+                        <a href="TempTableAlreadyExistsException.html" title="">TempTableAlreadyExistsException</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="TimeWindowing$.html" title="Maps a time column to multiple time windows using the Expand operator."></a>
+                        <a href="TimeWindowing$.html" title="Maps a time column to multiple time windows using the Expand operator.">TimeWindowing</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="TypeCheckResult$.html" title=""></a>
+                        <a class="trait" href="TypeCheckResult.html" title="Represents the result of Expression.checkInputDataTypes."></a>
+                        <a href="TypeCheckResult.html" title="Represents the result of Expression.checkInputDataTypes.">TypeCheckResult</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="TypeCoercion$.html" title="A collection of Rule that can be used to coerce differing types that participate in operations into compatible ones."></a>
+                        <a href="TypeCoercion$.html" title="A collection of Rule that can be used to coerce differing types that participate in operations into compatible ones.">TypeCoercion</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="TypeCoercionBase.html" title=""></a>
+                        <a href="TypeCoercionBase.html" title="">TypeCoercionBase</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="TypeCoercionRule.html" title=""></a>
+                        <a href="TypeCoercionRule.html" title="">TypeCoercionRule</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="UnresolvedAlias.html" title="Holds the expression that has yet to be aliased."></a>
+                        <a href="UnresolvedAlias.html" title="Holds the expression that has yet to be aliased.">UnresolvedAlias</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="UnresolvedAttribute$.html" title=""></a>
+                        <a class="class" href="UnresolvedAttribute.html" title="Holds the name of an attribute that has yet to be resolved."></a>
+                        <a href="UnresolvedAttribute.html" title="Holds the name of an attribute that has yet to be resolved.">UnresolvedAttribute</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="UnresolvedDeserializer.html" title="Holds the deserializer expression and the attributes that are available during the resolution for it."></a>
+                        <a href="UnresolvedDeserializer.html" title="Holds the deserializer expression and the attributes that are available during the resolution for it.">UnresolvedDeserializer</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="UnresolvedException.html" title="Thrown when an invalid attempt is made to access a property of a tree that has yet to be fully resolved."></a>
+                        <a href="UnresolvedException.html" title="Thrown when an invalid attempt is made to access a property of a tree that has yet to be fully resolved.">UnresolvedException</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="UnresolvedExtractValue.html" title="Extracts a value or values from an Expression"></a>
+                        <a href="UnresolvedExtractValue.html" title="Extracts a value or values from an Expression">UnresolvedExtractValue</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="UnresolvedFieldName.html" title=""></a>
+                        <a href="UnresolvedFieldName.html" title="">UnresolvedFieldName</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="UnresolvedFieldPosition.html" title=""></a>
+                        <a href="UnresolvedFieldPosition.html" title="">UnresolvedFieldPosition</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="UnresolvedFunc.html" title="Holds the name of a function that has yet to be looked up in a catalog."></a>
+                        <a href="UnresolvedFunc.html" title="Holds the name of a function that has yet to be looked up in a catalog.">UnresolvedFunc</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="UnresolvedFunction$.html" title=""></a>
+                        <a class="class" href="UnresolvedFunction.html" title=""></a>
+                        <a href="UnresolvedFunction.html" title="">UnresolvedFunction</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="UnresolvedGenerator.html" title="Represents an unresolved generator, which will be created by the parser for the org.apache.spark.sql.catalyst.plans.logical.Generate operator."></a>
+                        <a href="UnresolvedGenerator.html" title="Represents an unresolved generator, which will be created by the parser for the org.apache.spark.sql.catalyst.plans.logical.Generate operator.">UnresolvedGenerator</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="UnresolvedHaving.html" title="Represents unresolved having clause, the child for it can be Aggregate, GroupingSets, Rollup and Cube."></a>
+                        <a href="UnresolvedHaving.html" title="Represents unresolved having clause, the child for it can be Aggregate, GroupingSets, Rollup and Cube.">UnresolvedHaving</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="UnresolvedInlineTable.html" title="An inline table that has not been resolved yet."></a>
+                        <a href="UnresolvedInlineTable.html" title="An inline table that has not been resolved yet.">UnresolvedInlineTable</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="UnresolvedNamespace.html" title="Holds the name of a namespace that has yet to be looked up in a catalog."></a>
+                        <a href="UnresolvedNamespace.html" title="Holds the name of a namespace that has yet to be looked up in a catalog.">UnresolvedNamespace</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="UnresolvedOrdinal.html" title="Represents unresolved ordinal used in order by or group by."></a>
+                        <a href="UnresolvedOrdinal.html" title="Represents unresolved ordinal used in order by or group by.">UnresolvedOrdinal</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="UnresolvedPartitionSpec.html" title=""></a>
+                        <a href="UnresolvedPartitionSpec.html" title="">UnresolvedPartitionSpec</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="UnresolvedRegex.html" title="Represents all of the input attributes to a given relational operator, for example in &quot;SELECT (id)?+.+ FROM ...&quot;."></a>
+                        <a href="UnresolvedRegex.html" title="Represents all of the input attributes to a given relational operator, for example in &quot;SELECT (id)?+.+ FROM ...&quot;.">UnresolvedRegex</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="UnresolvedRelation$.html" title=""></a>
+                        <a class="class" href="UnresolvedRelation.html" title="Holds the name of a relation that has yet to be looked up in a catalog."></a>
+                        <a href="UnresolvedRelation.html" title="Holds the name of a relation that has yet to be looked up in a catalog.">UnresolvedRelation</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="UnresolvedSeed$.html" title="A place holder expression used in random functions, will be replaced after analyze."></a>
+                        <a href="UnresolvedSeed$.html" title="A place holder expression used in random functions, will be replaced after analyze.">UnresolvedSeed</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="UnresolvedStar.html" title="Represents all of the input attributes to a given relational operator, for example in &quot;SELECT * FROM ...&quot;."></a>
+                        <a href="UnresolvedStar.html" title="Represents all of the input attributes to a given relational operator, for example in &quot;SELECT * FROM ...&quot;.">UnresolvedStar</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="UnresolvedSubqueryColumnAliases.html" title="Aliased column names resolved by positions for subquery."></a>
+                        <a href="UnresolvedSubqueryColumnAliases.html" title="Aliased column names resolved by positions for subquery.">UnresolvedSubqueryColumnAliases</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="UnresolvedTable.html" title="Holds the name of a table that has yet to be looked up in a catalog."></a>
+                        <a href="UnresolvedTable.html" title="Holds the name of a table that has yet to be looked up in a catalog.">UnresolvedTable</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="UnresolvedTableOrView.html" title="Holds the name of a table or view that has yet to be looked up in a catalog."></a>
+                        <a href="UnresolvedTableOrView.html" title="Holds the name of a table or view that has yet to be looked up in a catalog.">UnresolvedTableOrView</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="UnresolvedTableValuedFunction$.html" title=""></a>
+                        <a class="class" href="UnresolvedTableValuedFunction.html" title="A table-valued function, e.g."></a>
+                        <a href="UnresolvedTableValuedFunction.html" title="A table-valued function, e.g.">UnresolvedTableValuedFunction</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="UnresolvedV2Relation.html" title="A variant of UnresolvedRelation which can only be resolved to a v2 relation (DataSourceV2Relation), not v1 relation or temp view."></a>
+                        <a href="UnresolvedV2Relation.html" title="A variant of UnresolvedRelation which can only be resolved to a v2 relation (DataSourceV2Relation), not v1 relation or temp view.">UnresolvedV2Relation</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="UnresolvedView.html" title="Holds the name of a view that has yet to be looked up in a catalog."></a>
+                        <a href="UnresolvedView.html" title="Holds the name of a view that has yet to be looked up in a catalog.">UnresolvedView</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="UnsupportedOperationChecker$.html" title="Analyzes the presence of unsupported operations in a logical plan."></a>
+                        <a href="UnsupportedOperationChecker$.html" title="Analyzes the presence of unsupported operations in a logical plan.">UnsupportedOperationChecker</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="UpdateAttributeNullability$.html" title="Updates nullability of Attributes in a resolved LogicalPlan by using the nullability of corresponding Attributes of its children output Attributes."></a>
+                        <a href="UpdateAttributeNullability$.html" title="Updates nullability of Attributes in a resolved LogicalPlan by using the nullability of corresponding Attributes of its children output Attributes.">UpdateAttributeNullability</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="" title="The aggregate expressions from subquery referencing outer query block are pushed down to the outer query block for evaluation."></a>
+                        <a href="" title="The aggregate expressions from subquery referencing outer query block are pushed down to the outer query block for evaluation.">UpdateOuterReferences</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="ViewType.html" title="ViewType is used to specify the expected view type when we want to create or replace a view in CreateViewStatement."></a>
+                        <a href="ViewType.html" title="ViewType is used to specify the expected view type when we want to create or replace a view in CreateViewStatement.">ViewType</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="object value">
+      <div id="definition">
+        <div class="big-circle object">o</div>
+        <p id="owner"><a href="../../../../../index.html" class="extype" name="org">org</a>.<a href="../../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../../index.html" class="extype" name="org.apache.spark.sql">sql</a>.<a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a>.<a href="index.html" class="extype" name="org.apache.spark.sql.catalyst.analysis">analysis</a></p>
+        <h1>UpdateOuterReferences<span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <span class="name">UpdateOuterReferences</span><span class="result"> extends <a href="../rules/Rule.html" class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</a>[<a href="../plans/logical/LogicalPlan.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</a>]</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The aggregate expressions from subquery referencing outer query block are pushed
+down to the outer query block for evaluation. This rule below updates such outer references
+as AttributeReference referring attributes from the parent/outer query block.</p><p>For example (SQL):</p><pre>SELECT l.a FROM l GROUP BY <span class="num">1</span> HAVING EXISTS (SELECT <span class="num">1</span> FROM r WHERE r.d &lt; min(l.b))</pre><p>Plan before the rule.
+   Project [a#226]
+   +- Filter exists#245 [min(b#227)#249]
+      :  +- Project [1 AS 1#247]
+      :     +- Filter (d#238 &lt; min(outer(b#227)))       &lt;-----
+      :        +- SubqueryAlias r
+      :           +- Project [_1#234 AS c#237, _2#235 AS d#238]
+      :              +- LocalRelation [_1#234, _2#235]
+      +- Aggregate [a#226], [a#226, min(b#227) AS min(b#227)#249]
+         +- SubqueryAlias l
+            +- Project [_1#223 AS a#226, _2#224 AS b#227]
+               +- LocalRelation [_1#223, _2#224]
+Plan after the rule.
+   Project [a#226]
+   +- Filter exists#245 [min(b#227)#249]
+      :  +- Project [1 AS 1#247]
+      :     +- Filter (d#238 &lt; outer(min(b#227)#249))   &lt;-----
+      :        +- SubqueryAlias r
+      :           +- Project [_1#234 AS c#237, _2#235 AS d#238]
+      :              +- LocalRelation [_1#234, _2#235]
+      +- Aggregate [a#226], [a#226, min(b#227) AS min(b#227)#249]
+         +- SubqueryAlias l
+            +- Project [_1#223 AS a#226, _2#224 AS b#227]
+               +- LocalRelation [_1#223, _2#224]
+</p></div><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><a href="../rules/Rule.html" class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</a>[<a href="../plans/logical/LogicalPlan.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</a>], <span class="extype" name="org.apache.spark.internal.Logging">Logging</span>, <a href="../SQLConfHelper.html" class="extype" name="org.apache.spark.sql.catalyst.SQLConfHelper">SQLConfHelper</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="org.apache.spark.sql.catalyst.analysis.UpdateOuterReferences"><span>UpdateOuterReferences</span></li><li class="in" name="org.apache.spark.sql.catalyst.rules.Rule"><span>Rule</span></li><li class="in" name="org.apache.spark.internal.Logging"><span>Logging</span></li><li class="in" name="org.apache.spark.sql.catalyst.SQLConfHelper"><span>SQLConfHelper</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.analysis.UpdateOuterReferences#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply(plan:org.apache.spark.sql.catalyst.plans.logical.LogicalPlan):org.apache.spark.sql.catalyst.plans.logical.LogicalPlan"></a><a id="apply(LogicalPlan):LogicalPlan"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#apply(plan:org.apache.spark.sql.catalyst.plans.logical.LogicalPlan):org.apache.spark.sql.catalyst.plans.logical.LogicalPlan" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="plan">plan: <a href="../plans/logical/LogicalPlan.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</a></span>)</span><span class="result">: <a href="../plans/logical/LogicalPlan.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.sql.catalyst.analysis.UpdateOuterReferences">UpdateOuterReferences</a> → <a href="../rules/Rule.html" class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</a></dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.SQLConfHelper#conf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="conf:org.apache.spark.sql.internal.SQLConf"></a><a id="conf:SQLConf"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#conf:org.apache.spark.sql.internal.SQLConf" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">conf</span><span class="result">: <a href="../../internal/SQLConf.html" class="extype" name="org.apache.spark.sql.internal.SQLConf">SQLConf</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The active config object within the current scope.</p><div class="fullcomment"><div class="comment cmt"><p>The active config object within the current scope.
+See <span class="extype" name="SQLConf.get">SQLConf.get</span> for more information.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../SQLConfHelper.html" class="extype" name="org.apache.spark.sql.catalyst.SQLConfHelper">SQLConfHelper</a></dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#initializeLogIfNecessary" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="initializeLogIfNecessary(isInterpreter:Boolean,silent:Boolean):Boolean"></a><a id="initializeLogIfNecessary(Boolean,Boolean):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#initializeLogIfNecessary(isInterpreter:Boolean,silent:Boolean):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">initializeLogIfNecessary</span><span class="params">(<span name="isInterpreter">isInterpreter: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="silent">silent: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#initializeLogIfNecessary" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="initializeLogIfNecessary(isInterpreter:Boolean):Unit"></a><a id="initializeLogIfNecessary(Boolean):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#initializeLogIfNecessary(isInterpreter:Boolean):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">initializeLogIfNecessary</span><span class="params">(<span name="isInterpreter">isInterpreter: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#isTraceEnabled" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isTraceEnabled():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#isTraceEnabled():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isTraceEnabled</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#log" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="log:org.slf4j.Logger"></a><a id="log:Logger"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#log:org.slf4j.Logger" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">log</span><span class="result">: <span class="extype" name="org.slf4j.Logger">Logger</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logDebug" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logDebug(msg:=&gt;String,throwable:Throwable):Unit"></a><a id="logDebug(⇒String,Throwable):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#logDebug(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logDebug</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logDebug" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logDebug(msg:=&gt;String):Unit"></a><a id="logDebug(⇒String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#logDebug(msg:=&gt;String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logDebug</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logError" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logError(msg:=&gt;String,throwable:Throwable):Unit"></a><a id="logError(⇒String,Throwable):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#logError(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logError</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logError" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logError(msg:=&gt;String):Unit"></a><a id="logError(⇒String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#logError(msg:=&gt;String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logError</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logInfo" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logInfo(msg:=&gt;String,throwable:Throwable):Unit"></a><a id="logInfo(⇒String,Throwable):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#logInfo(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logInfo</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logInfo" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logInfo(msg:=&gt;String):Unit"></a><a id="logInfo(⇒String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#logInfo(msg:=&gt;String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logInfo</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logName" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logName:String"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#logName:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logName</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logTrace" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logTrace(msg:=&gt;String,throwable:Throwable):Unit"></a><a id="logTrace(⇒String,Throwable):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#logTrace(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logTrace</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logTrace" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logTrace(msg:=&gt;String):Unit"></a><a id="logTrace(⇒String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#logTrace(msg:=&gt;String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logTrace</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logWarning" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logWarning(msg:=&gt;String,throwable:Throwable):Unit"></a><a id="logWarning(⇒String,Throwable):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#logWarning(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logWarning</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logWarning" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logWarning(msg:=&gt;String):Unit"></a><a id="logWarning(⇒String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#logWarning(msg:=&gt;String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logWarning</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.rules.Rule#ruleId" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ruleId:org.apache.spark.sql.catalyst.rules.RuleId"></a><a id="ruleId:RuleId"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#ruleId:org.apache.spark.sql.catalyst.rules.RuleId" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ruleId</span><span class="result">: <a href="../rules/RuleId.html" class="extype" name="org.apache.spark.sql.catalyst.rules.RuleId">RuleId</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../rules/Rule.html" class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.rules.Rule#ruleName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ruleName:String"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#ruleName:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ruleName</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Name for this rule, automatically inferred based on class name.</p><div class="fullcomment"><div class="comment cmt"><p>Name for this rule, automatically inferred based on class name.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../rules/Rule.html" class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</a></dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/catalyst/analysis/UpdateOuterReferences$.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="org.apache.spark.sql.catalyst.rules.Rule">
+              <h3>Inherited from <a href="../rules/Rule.html" class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</a>[<a href="../plans/logical/LogicalPlan.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</a>]</h3>
+            </div><div class="parent" name="org.apache.spark.internal.Logging">
+              <h3>Inherited from <span class="extype" name="org.apache.spark.internal.Logging">Logging</span></h3>
+            </div><div class="parent" name="org.apache.spark.sql.catalyst.SQLConfHelper">
+              <h3>Inherited from <a href="../SQLConfHelper.html" class="extype" name="org.apache.spark.sql.catalyst.SQLConfHelper">SQLConfHelper</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

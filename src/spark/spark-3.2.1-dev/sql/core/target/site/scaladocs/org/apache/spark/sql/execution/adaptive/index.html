@@ -1,0 +1,1334 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project SQL 3.2.1 API  - org.apache.spark.sql.execution.adaptive</title>
+          <meta name="description" content="Spark Project SQL 3.2.1 API - org.apache.spark.sql.execution.adaptive" />
+          <meta name="keywords" content="Spark Project SQL 3.2.1 API org.apache.spark.sql.execution.adaptive" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project SQL 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sql"></a><a id="sql:sql"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Allows the execution of relational queries, including those expressed in SQL using Spark." href="../../index.html"><span class="name">sql</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Allows the execution of relational queries, including those expressed in SQL using Spark.</p><div class="fullcomment"><div class="comment cmt"><p>Allows the execution of relational queries, including those expressed in SQL using Spark.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="execution"></a><a id="execution:execution"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="The physical execution component of Spark SQL." href="../index.html"><span class="name">execution</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">The physical execution component of Spark SQL.</p><div class="fullcomment"><div class="comment cmt"><p>The physical execution component of Spark SQL. Note that this is a private package.
+All classes in catalyst are considered an internal API to Spark SQL and are subject
+to change between minor releases.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.adaptive" visbl="pub" class="indented6 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="adaptive"></a><a id="adaptive:adaptive"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">adaptive</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="AQEOptimizer.html" title="The optimizer for re-optimizing the logical plan used by AdaptiveSparkPlanExec."></a>
+                        <a href="AQEOptimizer.html" title="The optimizer for re-optimizing the logical plan used by AdaptiveSparkPlanExec.">AQEOptimizer</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="AQEPropagateEmptyRelation$.html" title="This rule runs in the AQE optimizer and optimizes more cases compared to PropagateEmptyRelationBase: 1."></a>
+                        <a href="AQEPropagateEmptyRelation$.html" title="This rule runs in the AQE optimizer and optimizes more cases compared to PropagateEmptyRelationBase: 1.">AQEPropagateEmptyRelation</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="AQEShuffleReadExec.html" title="A wrapper of shuffle query stage, which follows the given partition arrangement."></a>
+                        <a href="AQEShuffleReadExec.html" title="A wrapper of shuffle query stage, which follows the given partition arrangement.">AQEShuffleReadExec</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="AQEShuffleReadRule.html" title="A rule that may create AQEShuffleReadExec on top of ShuffleQueryStageExec and change the plan output partitioning."></a>
+                        <a href="AQEShuffleReadRule.html" title="A rule that may create AQEShuffleReadExec on top of ShuffleQueryStageExec and change the plan output partitioning.">AQEShuffleReadRule</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="AQEUtils$.html" title=""></a>
+                        <a href="AQEUtils$.html" title="">AQEUtils</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="AdaptiveExecutionContext.html" title="The execution context shared between the main query and all sub-queries."></a>
+                        <a href="AdaptiveExecutionContext.html" title="The execution context shared between the main query and all sub-queries.">AdaptiveExecutionContext</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="AdaptiveSparkPlanExec$.html" title=""></a>
+                        <a class="class" href="AdaptiveSparkPlanExec.html" title="A root node to execute the query plan adaptively."></a>
+                        <a href="AdaptiveSparkPlanExec.html" title="A root node to execute the query plan adaptively.">AdaptiveSparkPlanExec</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="AdaptiveSparkPlanHelper.html" title="This class provides utility methods related to tree traversal of an AdaptiveSparkPlanExec plan."></a>
+                        <a href="AdaptiveSparkPlanHelper.html" title="This class provides utility methods related to tree traversal of an AdaptiveSparkPlanExec plan.">AdaptiveSparkPlanHelper</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="BroadcastQueryStageExec.html" title="A broadcast query stage whose child is a BroadcastExchangeLike or ReusedExchangeExec."></a>
+                        <a href="BroadcastQueryStageExec.html" title="A broadcast query stage whose child is a BroadcastExchangeLike or ReusedExchangeExec.">BroadcastQueryStageExec</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="CoalesceShufflePartitions.html" title="A rule to coalesce the shuffle partitions based on the map output statistics, which can avoid many small reduce tasks that hurt performance."></a>
+                        <a href="CoalesceShufflePartitions.html" title="A rule to coalesce the shuffle partitions based on the map output statistics, which can avoid many small reduce tasks that hurt performance.">CoalesceShufflePartitions</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="Cost.html" title="An interface to represent the cost of a plan."></a>
+                        <a href="Cost.html" title="An interface to represent the cost of a plan.">Cost</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="CostEvaluator$.html" title=""></a>
+                        <a class="trait" href="CostEvaluator.html" title="An interface to evaluate the cost of a physical plan."></a>
+                        <a href="CostEvaluator.html" title="An interface to evaluate the cost of a physical plan.">CostEvaluator</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="DynamicJoinSelection$.html" title="This optimization rule includes three join selection:"></a>
+                        <a href="DynamicJoinSelection$.html" title="This optimization rule includes three join selection:">DynamicJoinSelection</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="InsertAdaptiveSparkPlan.html" title="This rule wraps the query plan with an AdaptiveSparkPlanExec, which executes the query plan and re-optimize the plan during execution based on runtime data statistics."></a>
+                        <a href="InsertAdaptiveSparkPlan.html" title="This rule wraps the query plan with an AdaptiveSparkPlanExec, which executes the query plan and re-optimize the plan during execution based on runtime data statistics.">InsertAdaptiveSparkPlan</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="LogicalQueryStage.html" title="The LogicalPlan wrapper for a QueryStageExec, or a snippet of physical plan containing a QueryStageExec, in which all ancestor nodes of the QueryStageExec are linked to the same logical node."></a>
+                        <a href="LogicalQueryStage.html" title="The LogicalPlan wrapper for a QueryStageExec, or a snippet of physical plan containing a QueryStageExec, in which all ancestor nodes of the QueryStageExec are linked to the same logical node.">LogicalQueryStage</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="LogicalQueryStageStrategy$.html" title="Strategy for plans containing LogicalQueryStage nodes: 1."></a>
+                        <a href="LogicalQueryStageStrategy$.html" title="Strategy for plans containing LogicalQueryStage nodes: 1.">LogicalQueryStageStrategy</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="OptimizeShuffleWithLocalRead$.html" title="A rule to optimize the shuffle read to local read iff no additional shuffles will be introduced: 1."></a>
+                        <a href="OptimizeShuffleWithLocalRead$.html" title="A rule to optimize the shuffle read to local read iff no additional shuffles will be introduced: 1.">OptimizeShuffleWithLocalRead</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="OptimizeSkewInRebalancePartitions$.html" title="A rule to optimize the skewed shuffle partitions in RebalancePartitions based on the map output statistics, which can avoid data skew that hurt performance."></a>
+                        <a href="OptimizeSkewInRebalancePartitions$.html" title="A rule to optimize the skewed shuffle partitions in RebalancePartitions based on the map output statistics, which can avoid data skew that hurt performance.">OptimizeSkewInRebalancePartitions</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="OptimizeSkewedJoin$.html" title="A rule to optimize skewed joins to avoid straggler tasks whose share of data are significantly larger than those of the rest of the tasks."></a>
+                        <a href="OptimizeSkewedJoin$.html" title="A rule to optimize skewed joins to avoid straggler tasks whose share of data are significantly larger than those of the rest of the tasks.">OptimizeSkewedJoin</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="PlanAdaptiveDynamicPruningFilters.html" title="A rule to insert dynamic pruning predicates in order to reuse the results of broadcast."></a>
+                        <a href="PlanAdaptiveDynamicPruningFilters.html" title="A rule to insert dynamic pruning predicates in order to reuse the results of broadcast.">PlanAdaptiveDynamicPruningFilters</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="PlanAdaptiveSubqueries.html" title=""></a>
+                        <a href="PlanAdaptiveSubqueries.html" title="">PlanAdaptiveSubqueries</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="QueryStageExec.html" title="A query stage is an independent subgraph of the query plan."></a>
+                        <a href="QueryStageExec.html" title="A query stage is an independent subgraph of the query plan.">QueryStageExec</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="ReuseAdaptiveSubquery.html" title=""></a>
+                        <a href="ReuseAdaptiveSubquery.html" title="">ReuseAdaptiveSubquery</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="ShufflePartitionsUtil$.html" title=""></a>
+                        <a href="ShufflePartitionsUtil$.html" title="">ShufflePartitionsUtil</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="ShuffleQueryStageExec.html" title="A shuffle query stage whose child is a ShuffleExchangeLike or ReusedExchangeExec."></a>
+                        <a href="ShuffleQueryStageExec.html" title="A shuffle query stage whose child is a ShuffleExchangeLike or ReusedExchangeExec.">ShuffleQueryStageExec</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="SimpleCost.html" title="A simple implementation of Cost, which takes a number of Long as the cost value."></a>
+                        <a href="SimpleCost.html" title="A simple implementation of Cost, which takes a number of Long as the cost value.">SimpleCost</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="SimpleCostEvaluator$.html" title="A simple implementation of CostEvaluator, which counts the number of ShuffleExchangeLike nodes in the plan."></a>
+                        <a href="SimpleCostEvaluator$.html" title="A simple implementation of CostEvaluator, which counts the number of ShuffleExchangeLike nodes in the plan.">SimpleCostEvaluator</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="StageFailure.html" title="The materialization of a query stage hit an error and failed."></a>
+                        <a href="StageFailure.html" title="The materialization of a query stage hit an error and failed.">StageFailure</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="StageMaterializationEvent.html" title="The event type for stage materialization."></a>
+                        <a href="StageMaterializationEvent.html" title="The event type for stage materialization.">StageMaterializationEvent</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="StageSuccess.html" title="The materialization of a query stage completed with success."></a>
+                        <a href="StageSuccess.html" title="The materialization of a query stage completed with success.">StageSuccess</a>
+                      </li><li name="org.apache.spark.sql.execution.aggregate" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="aggregate"></a><a id="aggregate:aggregate"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/aggregate/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../aggregate/index.html"><span class="name">aggregate</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.analysis" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="analysis"></a><a id="analysis:analysis"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/analysis/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../analysis/index.html"><span class="name">analysis</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.arrow" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="arrow"></a><a id="arrow:arrow"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/arrow/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../arrow/index.html"><span class="name">arrow</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.bucketing" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="bucketing"></a><a id="bucketing:bucketing"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/bucketing/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../bucketing/index.html"><span class="name">bucketing</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.columnar" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="columnar"></a><a id="columnar:columnar"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/columnar/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../columnar/index.html"><span class="name">columnar</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.command" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="command"></a><a id="command:command"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/command/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../command/index.html"><span class="name">command</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="datasources"></a><a id="datasources:datasources"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/datasources/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../datasources/index.html"><span class="name">datasources</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.debug" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="debug"></a><a id="debug:debug"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/debug/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Contains methods for debugging query execution." href="../debug/index.html"><span class="name">debug</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Contains methods for debugging query execution.</p><div class="fullcomment"><div class="comment cmt"><p>Contains methods for debugging query execution.</p><p>Usage:</p><pre><span class="kw">import</span> org.apache.spark.sql.execution.debug._
+sql(<span class="lit">"SELECT 1"</span>).debug()
+sql(<span class="lit">"SELECT 1"</span>).debugCodegen()</pre><p>or for streaming case (structured streaming):</p><pre><span class="kw">import</span> org.apache.spark.sql.execution.debug._
+<span class="kw">val</span> query = df.writeStream.&lt;...&gt;.start()
+query.debugCodegen()</pre><p>Note that debug in structured streaming is not supported, because it doesn't make sense for
+streaming to execute batch once while main query is running concurrently.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.dynamicpruning" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dynamicpruning"></a><a id="dynamicpruning:dynamicpruning"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/dynamicpruning/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../dynamicpruning/index.html"><span class="name">dynamicpruning</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.exchange" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="exchange"></a><a id="exchange:exchange"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/exchange/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../exchange/index.html"><span class="name">exchange</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.joins" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="joins"></a><a id="joins:joins"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/joins/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../joins/index.html"><span class="name">joins</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.metric" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="metric"></a><a id="metric:metric"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/metric/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../metric/index.html"><span class="name">metric</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.python" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="python"></a><a id="python:python"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/python/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../python/index.html"><span class="name">python</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.r" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="r"></a><a id="r:r"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/r/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../r/index.html"><span class="name">r</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.reuse" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="reuse"></a><a id="reuse:reuse"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/reuse/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../reuse/index.html"><span class="name">reuse</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.stat" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="stat"></a><a id="stat:stat"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/stat/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../stat/index.html"><span class="name">stat</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.streaming" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="streaming"></a><a id="streaming:streaming"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/streaming/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../streaming/index.html"><span class="name">streaming</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.ui" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ui"></a><a id="ui:ui"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/ui/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../ui/index.html"><span class="name">ui</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.vectorized" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="vectorized"></a><a id="vectorized:vectorized"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/vectorized/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../vectorized/index.html"><span class="name">vectorized</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.window" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="window"></a><a id="window:window"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/window/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../window/index.html"><span class="name">window</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../../../index.html" class="extype" name="org">org</a>.<a href="../../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../../index.html" class="extype" name="org.apache.spark.sql">sql</a>.<a href="../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></p>
+        <h1>adaptive<span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">adaptive</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              
+            </ol>
+          </div>
+          
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.spark.sql.execution.adaptive.AQEOptimizer" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AQEOptimizerextendsRuleExecutor[org.apache.spark.sql.catalyst.plans.logical.LogicalPlan]"></a><a id="AQEOptimizer:AQEOptimizer"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/AQEOptimizer.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The optimizer for re-optimizing the logical plan used by AdaptiveSparkPlanExec." href="AQEOptimizer.html"><span class="name">AQEOptimizer</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.rules.RuleExecutor">RuleExecutor</span>[<span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">The optimizer for re-optimizing the logical plan used by AdaptiveSparkPlanExec.</p>
+    </li><li name="org.apache.spark.sql.execution.adaptive.AQEShuffleReadExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AQEShuffleReadExecextendsSparkPlanwithUnaryExecNodewithProductwithSerializable"></a><a id="AQEShuffleReadExec:AQEShuffleReadExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/AQEShuffleReadExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="A wrapper of shuffle query stage, which follows the given partition arrangement." href="AQEShuffleReadExec.html"><span class="name">AQEShuffleReadExec</span></a><span class="result"> extends <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a> with <a href="../UnaryExecNode.html" class="extype" name="org.apache.spark.sql.execution.UnaryExecNode">UnaryExecNode</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A wrapper of shuffle query stage, which follows the given partition arrangement.</p>
+    </li><li name="org.apache.spark.sql.execution.adaptive.AQEShuffleReadRule" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="AQEShuffleReadRuleextendsRule[org.apache.spark.sql.execution.SparkPlan]"></a><a id="AQEShuffleReadRule:AQEShuffleReadRule"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/AQEShuffleReadRule.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A rule that may create AQEShuffleReadExec on top of ShuffleQueryStageExec and change the plan output partitioning." href="AQEShuffleReadRule.html"><span class="name">AQEShuffleReadRule</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</span>[<a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">A rule that may create <a href="AQEShuffleReadExec.html" class="extype" name="org.apache.spark.sql.execution.adaptive.AQEShuffleReadExec">AQEShuffleReadExec</a> on top of <a href="ShuffleQueryStageExec.html" class="extype" name="org.apache.spark.sql.execution.adaptive.ShuffleQueryStageExec">ShuffleQueryStageExec</a> and change the
+plan output partitioning.</p><div class="fullcomment"><div class="comment cmt"><p>A rule that may create <a href="AQEShuffleReadExec.html" class="extype" name="org.apache.spark.sql.execution.adaptive.AQEShuffleReadExec">AQEShuffleReadExec</a> on top of <a href="ShuffleQueryStageExec.html" class="extype" name="org.apache.spark.sql.execution.adaptive.ShuffleQueryStageExec">ShuffleQueryStageExec</a> and change the
+plan output partitioning. The AQE framework will skip the rule if it leads to extra shuffles.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.adaptive.AdaptiveExecutionContext" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AdaptiveExecutionContextextendsProductwithSerializable"></a><a id="AdaptiveExecutionContext:AdaptiveExecutionContext"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/AdaptiveExecutionContext.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="The execution context shared between the main query and all sub-queries." href="AdaptiveExecutionContext.html"><span class="name">AdaptiveExecutionContext</span></a><span class="params">(<span name="session">session: <a href="../../SparkSession.html" class="extype" name="org.apache.spark.sql.SparkSession">SparkSession</a></span>, <span name="qe">qe: <a href="../QueryExecution.html" class="extype" name="org.apache.spark.sql.execution.QueryExecution">QueryExecution</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The execution context shared between the main query and all sub-queries.</p>
+    </li><li name="org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AdaptiveSparkPlanExecextendsSparkPlanwithLeafExecNodewithProductwithSerializable"></a><a id="AdaptiveSparkPlanExec:AdaptiveSparkPlanExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/AdaptiveSparkPlanExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="A root node to execute the query plan adaptively." href="AdaptiveSparkPlanExec.html"><span class="name">AdaptiveSparkPlanExec</span></a><span class="params">(<span name="inputPlan">inputPlan: <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>, <span name="context">context: <a href="AdaptiveExecutionContext.html" class="extype" name="org.apache.spark.sql.execution.adaptive.AdaptiveExecutionContext">AdaptiveExecutionContext</a></span>, <span name="preprocessingRules">preprocessingRules: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</span>[<a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a>]]</span>, <span name="isSubquery">isSubquery: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="supportsColumnar">supportsColumnar: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result"> extends <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a> with <a href="../LeafExecNode.html" class="extype" name="org.apache.spark.sql.execution.LeafExecNode">LeafExecNode</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A root node to execute the query plan adaptively.</p><div class="fullcomment"><div class="comment cmt"><p>A root node to execute the query plan adaptively. It splits the query plan into independent
+stages and executes them in order according to their dependencies. The query stage
+materializes its output at the end. When one stage completes, the data statistics of the
+materialized output will be used to optimize the remainder of the query.</p><p>To create query stages, we traverse the query tree bottom up. When we hit an exchange node,
+and if all the child query stages of this exchange node are materialized, we create a new
+query stage for this exchange node. The new stage is then materialized asynchronously once it
+is created.</p><p>When one query stage finishes materialization, the rest query is re-optimized and planned based
+on the latest statistics provided by all materialized stages. Then we traverse the query plan
+again and create more stages if possible. After all stages have been materialized, we execute
+the rest of the plan.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanHelper" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="AdaptiveSparkPlanHelperextendsAnyRef"></a><a id="AdaptiveSparkPlanHelper:AdaptiveSparkPlanHelper"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/AdaptiveSparkPlanHelper.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="This class provides utility methods related to tree traversal of an AdaptiveSparkPlanExec plan." href="AdaptiveSparkPlanHelper.html"><span class="name">AdaptiveSparkPlanHelper</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">This class provides utility methods related to tree traversal of an <a href="AdaptiveSparkPlanExec.html" class="extype" name="org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec">AdaptiveSparkPlanExec</a>
+plan.</p><div class="fullcomment"><div class="comment cmt"><p>This class provides utility methods related to tree traversal of an <a href="AdaptiveSparkPlanExec.html" class="extype" name="org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec">AdaptiveSparkPlanExec</a>
+plan. Unlike their counterparts in <span class="extype" name="org.apache.spark.sql.catalyst.trees.TreeNode">org.apache.spark.sql.catalyst.trees.TreeNode</span> or
+<span class="extype" name="org.apache.spark.sql.catalyst.plans.QueryPlan">org.apache.spark.sql.catalyst.plans.QueryPlan</span>, these methods traverse down leaf nodes of
+adaptive plans, i.e., <a href="AdaptiveSparkPlanExec.html" class="extype" name="org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec">AdaptiveSparkPlanExec</a> and <a href="QueryStageExec.html" class="extype" name="org.apache.spark.sql.execution.adaptive.QueryStageExec">QueryStageExec</a>.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.adaptive.BroadcastQueryStageExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BroadcastQueryStageExecextendsQueryStageExecwithProductwithSerializable"></a><a id="BroadcastQueryStageExec:BroadcastQueryStageExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/BroadcastQueryStageExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="A broadcast query stage whose child is a BroadcastExchangeLike or ReusedExchangeExec." href="BroadcastQueryStageExec.html"><span class="name">BroadcastQueryStageExec</span></a><span class="params">(<span name="id">id: <span class="extype" name="scala.Int">Int</span></span>, <span name="plan">plan: <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>, <span name="_canonicalized">_canonicalized: <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>)</span><span class="result"> extends <a href="QueryStageExec.html" class="extype" name="org.apache.spark.sql.execution.adaptive.QueryStageExec">QueryStageExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A broadcast query stage whose child is a <span class="extype" name="BroadcastExchangeLike">BroadcastExchangeLike</span> or <span class="extype" name="ReusedExchangeExec">ReusedExchangeExec</span>.</p><div class="fullcomment"><div class="comment cmt"><p>A broadcast query stage whose child is a <span class="extype" name="BroadcastExchangeLike">BroadcastExchangeLike</span> or <span class="extype" name="ReusedExchangeExec">ReusedExchangeExec</span>.
+</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>the query stage id.</p></dd><dt class="param">plan</dt><dd class="cmt"><p>the underlying plan.</p></dd><dt class="param">_canonicalized</dt><dd class="cmt"><p>the canonicalized plan before applying query stage optimizer rules.</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.adaptive.CoalesceShufflePartitions" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CoalesceShufflePartitionsextendsRule[org.apache.spark.sql.execution.SparkPlan]withAQEShuffleReadRulewithProductwithSerializable"></a><a id="CoalesceShufflePartitions:CoalesceShufflePartitions"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/CoalesceShufflePartitions.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="A rule to coalesce the shuffle partitions based on the map output statistics, which can avoid many small reduce tasks that hurt performance." href="CoalesceShufflePartitions.html"><span class="name">CoalesceShufflePartitions</span></a><span class="params">(<span name="session">session: <a href="../../SparkSession.html" class="extype" name="org.apache.spark.sql.SparkSession">SparkSession</a></span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</span>[<a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a>] with <a href="AQEShuffleReadRule.html" class="extype" name="org.apache.spark.sql.execution.adaptive.AQEShuffleReadRule">AQEShuffleReadRule</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A rule to coalesce the shuffle partitions based on the map output statistics, which can
+avoid many small reduce tasks that hurt performance.</p>
+    </li><li name="org.apache.spark.sql.execution.adaptive.Cost" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="CostextendsOrdered[org.apache.spark.sql.execution.adaptive.Cost]"></a><a id="Cost:Cost"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/Cost.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="An interface to represent the cost of a plan." href="Cost.html"><span class="name">Cost</span></a><span class="result"> extends <span class="extype" name="scala.Ordered">Ordered</span>[<a href="Cost.html" class="extype" name="org.apache.spark.sql.execution.adaptive.Cost">Cost</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">An interface to represent the cost of a plan.</p><div class="fullcomment"><div class="comment cmt"><p>An interface to represent the cost of a plan.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Unstable</span><span class="args">()</span>
+              
+        </dd><dt>Note</dt><dd><span class="cmt"><p>This class is subject to be changed and/or moved in the near future.</p></span></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.adaptive.CostEvaluator" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="CostEvaluatorextendsAnyRef"></a><a id="CostEvaluator:CostEvaluator"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/CostEvaluator.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="An interface to evaluate the cost of a physical plan." href="CostEvaluator.html"><span class="name">CostEvaluator</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">An interface to evaluate the cost of a physical plan.</p><div class="fullcomment"><div class="comment cmt"><p>An interface to evaluate the cost of a physical plan.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Unstable</span><span class="args">()</span>
+              
+        </dd><dt>Note</dt><dd><span class="cmt"><p>This class is subject to be changed and/or moved in the near future.</p></span></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.adaptive.InsertAdaptiveSparkPlan" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="InsertAdaptiveSparkPlanextendsRule[org.apache.spark.sql.execution.SparkPlan]withProductwithSerializable"></a><a id="InsertAdaptiveSparkPlan:InsertAdaptiveSparkPlan"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/InsertAdaptiveSparkPlan.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="This rule wraps the query plan with an AdaptiveSparkPlanExec, which executes the query plan and re-optimize the plan during execution based on runtime data statistics." href="InsertAdaptiveSparkPlan.html"><span class="name">InsertAdaptiveSparkPlan</span></a><span class="params">(<span name="adaptiveExecutionContext">adaptiveExecutionContext: <a href="AdaptiveExecutionContext.html" class="extype" name="org.apache.spark.sql.execution.adaptive.AdaptiveExecutionContext">AdaptiveExecutionContext</a></span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</span>[<a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">This rule wraps the query plan with an <a href="AdaptiveSparkPlanExec.html" class="extype" name="org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec">AdaptiveSparkPlanExec</a>, which executes the query plan
+and re-optimize the plan during execution based on runtime data statistics.</p><div class="fullcomment"><div class="comment cmt"><p>This rule wraps the query plan with an <a href="AdaptiveSparkPlanExec.html" class="extype" name="org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec">AdaptiveSparkPlanExec</a>, which executes the query plan
+and re-optimize the plan during execution based on runtime data statistics.</p><p>Note that this rule is stateful and thus should not be reused across query executions.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.adaptive.LogicalQueryStage" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LogicalQueryStageextendsLogicalPlanwithLeafNodewithProductwithSerializable"></a><a id="LogicalQueryStage:LogicalQueryStage"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/LogicalQueryStage.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="The LogicalPlan wrapper for a QueryStageExec, or a snippet of physical plan containing a QueryStageExec, in which all ancestor nodes of the QueryStageExec are linked to the same logical node." href="LogicalQueryStage.html"><span class="name">LogicalQueryStage</span></a><span class="params">(<span name="logicalPlan">logicalPlan: <span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</span></span>, <span name="physicalPlan">physicalPlan: <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</span> with <span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LeafNode">LeafNode</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The LogicalPlan wrapper for a <a href="QueryStageExec.html" class="extype" name="org.apache.spark.sql.execution.adaptive.QueryStageExec">QueryStageExec</a>, or a snippet of physical plan containing
+a <a href="QueryStageExec.html" class="extype" name="org.apache.spark.sql.execution.adaptive.QueryStageExec">QueryStageExec</a>, in which all ancestor nodes of the <a href="QueryStageExec.html" class="extype" name="org.apache.spark.sql.execution.adaptive.QueryStageExec">QueryStageExec</a> are linked to
+the same logical node.</p><div class="fullcomment"><div class="comment cmt"><p>The LogicalPlan wrapper for a <a href="QueryStageExec.html" class="extype" name="org.apache.spark.sql.execution.adaptive.QueryStageExec">QueryStageExec</a>, or a snippet of physical plan containing
+a <a href="QueryStageExec.html" class="extype" name="org.apache.spark.sql.execution.adaptive.QueryStageExec">QueryStageExec</a>, in which all ancestor nodes of the <a href="QueryStageExec.html" class="extype" name="org.apache.spark.sql.execution.adaptive.QueryStageExec">QueryStageExec</a> are linked to
+the same logical node.</p><p>For example, a logical Aggregate can be transformed into FinalAgg - Shuffle - PartialAgg, in
+which the Shuffle will be wrapped into a <a href="QueryStageExec.html" class="extype" name="org.apache.spark.sql.execution.adaptive.QueryStageExec">QueryStageExec</a>, thus the <a href="LogicalQueryStage.html" class="extype" name="org.apache.spark.sql.execution.adaptive.LogicalQueryStage">LogicalQueryStage</a>
+will have FinalAgg - QueryStageExec as its physical plan.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.adaptive.PlanAdaptiveDynamicPruningFilters" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PlanAdaptiveDynamicPruningFiltersextendsRule[org.apache.spark.sql.execution.SparkPlan]withAdaptiveSparkPlanHelperwithProductwithSerializable"></a><a id="PlanAdaptiveDynamicPruningFilters:PlanAdaptiveDynamicPruningFilters"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/PlanAdaptiveDynamicPruningFilters.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="A rule to insert dynamic pruning predicates in order to reuse the results of broadcast." href="PlanAdaptiveDynamicPruningFilters.html"><span class="name">PlanAdaptiveDynamicPruningFilters</span></a><span class="params">(<span name="rootPlan">rootPlan: <a href="AdaptiveSparkPlanExec.html" class="extype" name="org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec">AdaptiveSparkPlanExec</a></span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</span>[<a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a>] with <a href="AdaptiveSparkPlanHelper.html" class="extype" name="org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanHelper">AdaptiveSparkPlanHelper</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A rule to insert dynamic pruning predicates in order to reuse the results of broadcast.</p>
+    </li><li name="org.apache.spark.sql.execution.adaptive.PlanAdaptiveSubqueries" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PlanAdaptiveSubqueriesextendsRule[org.apache.spark.sql.execution.SparkPlan]withProductwithSerializable"></a><a id="PlanAdaptiveSubqueries:PlanAdaptiveSubqueries"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/PlanAdaptiveSubqueries.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="PlanAdaptiveSubqueries.html"><span class="name">PlanAdaptiveSubqueries</span></a><span class="params">(<span name="subqueryMap">subqueryMap: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Long">Long</span>, <a href="../BaseSubqueryExec.html" class="extype" name="org.apache.spark.sql.execution.BaseSubqueryExec">BaseSubqueryExec</a>]</span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</span>[<a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.adaptive.QueryStageExec" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="QueryStageExecextendsSparkPlanwithLeafExecNode"></a><a id="QueryStageExec:QueryStageExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/QueryStageExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A query stage is an independent subgraph of the query plan." href="QueryStageExec.html"><span class="name">QueryStageExec</span></a><span class="result"> extends <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a> with <a href="../LeafExecNode.html" class="extype" name="org.apache.spark.sql.execution.LeafExecNode">LeafExecNode</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A query stage is an independent subgraph of the query plan.</p><div class="fullcomment"><div class="comment cmt"><p>A query stage is an independent subgraph of the query plan. Query stage materializes its output
+before proceeding with further operators of the query plan. The data statistics of the
+materialized output can be used to optimize subsequent query stages.</p><p>There are 2 kinds of query stages:</p><ol class="decimal"><li>Shuffle query stage. This stage materializes its output to shuffle files, and Spark launches
+     another job to execute the further operators.
+  2. Broadcast query stage. This stage materializes its output to an array in driver JVM. Spark
+     broadcasts the array before executing the further operators.
+</li></ol></div></div>
+    </li><li name="org.apache.spark.sql.execution.adaptive.ReuseAdaptiveSubquery" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReuseAdaptiveSubqueryextendsRule[org.apache.spark.sql.execution.SparkPlan]withProductwithSerializable"></a><a id="ReuseAdaptiveSubquery:ReuseAdaptiveSubquery"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/ReuseAdaptiveSubquery.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ReuseAdaptiveSubquery.html"><span class="name">ReuseAdaptiveSubquery</span></a><span class="params">(<span name="reuseMap">reuseMap: <span class="extype" name="scala.collection.concurrent.TrieMap">TrieMap</span>[<a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a>, <a href="../BaseSubqueryExec.html" class="extype" name="org.apache.spark.sql.execution.BaseSubqueryExec">BaseSubqueryExec</a>]</span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</span>[<a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.adaptive.ShuffleQueryStageExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ShuffleQueryStageExecextendsQueryStageExecwithProductwithSerializable"></a><a id="ShuffleQueryStageExec:ShuffleQueryStageExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/ShuffleQueryStageExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="A shuffle query stage whose child is a ShuffleExchangeLike or ReusedExchangeExec." href="ShuffleQueryStageExec.html"><span class="name">ShuffleQueryStageExec</span></a><span class="params">(<span name="id">id: <span class="extype" name="scala.Int">Int</span></span>, <span name="plan">plan: <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>, <span name="_canonicalized">_canonicalized: <a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>)</span><span class="result"> extends <a href="QueryStageExec.html" class="extype" name="org.apache.spark.sql.execution.adaptive.QueryStageExec">QueryStageExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A shuffle query stage whose child is a <span class="extype" name="ShuffleExchangeLike">ShuffleExchangeLike</span> or <span class="extype" name="ReusedExchangeExec">ReusedExchangeExec</span>.</p><div class="fullcomment"><div class="comment cmt"><p>A shuffle query stage whose child is a <span class="extype" name="ShuffleExchangeLike">ShuffleExchangeLike</span> or <span class="extype" name="ReusedExchangeExec">ReusedExchangeExec</span>.
+</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>the query stage id.</p></dd><dt class="param">plan</dt><dd class="cmt"><p>the underlying plan.</p></dd><dt class="param">_canonicalized</dt><dd class="cmt"><p>the canonicalized plan before applying query stage optimizer rules.</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.adaptive.SimpleCost" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SimpleCostextendsCostwithProductwithSerializable"></a><a id="SimpleCost:SimpleCost"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/SimpleCost.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="A simple implementation of Cost, which takes a number of Long as the cost value." href="SimpleCost.html"><span class="name">SimpleCost</span></a><span class="params">(<span name="value">value: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result"> extends <a href="Cost.html" class="extype" name="org.apache.spark.sql.execution.adaptive.Cost">Cost</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A simple implementation of <a href="Cost.html" class="extype" name="org.apache.spark.sql.execution.adaptive.Cost">Cost</a>, which takes a number of <span class="extype" name="Long">Long</span> as the cost value.</p>
+    </li><li name="org.apache.spark.sql.execution.adaptive.StageFailure" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StageFailureextendsStageMaterializationEventwithProductwithSerializable"></a><a id="StageFailure:StageFailure"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/StageFailure.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="The materialization of a query stage hit an error and failed." href="StageFailure.html"><span class="name">StageFailure</span></a><span class="params">(<span name="stage">stage: <a href="QueryStageExec.html" class="extype" name="org.apache.spark.sql.execution.adaptive.QueryStageExec">QueryStageExec</a></span>, <span name="error">error: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result"> extends <a href="StageMaterializationEvent.html" class="extype" name="org.apache.spark.sql.execution.adaptive.StageMaterializationEvent">StageMaterializationEvent</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The materialization of a query stage hit an error and failed.</p>
+    </li><li name="org.apache.spark.sql.execution.adaptive.StageMaterializationEvent" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="StageMaterializationEventextendsAnyRef"></a><a id="StageMaterializationEvent:StageMaterializationEvent"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/StageMaterializationEvent.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="The event type for stage materialization." href="StageMaterializationEvent.html"><span class="name">StageMaterializationEvent</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The event type for stage materialization.</p>
+    </li><li name="org.apache.spark.sql.execution.adaptive.StageSuccess" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StageSuccessextendsStageMaterializationEventwithProductwithSerializable"></a><a id="StageSuccess:StageSuccess"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/StageSuccess.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="The materialization of a query stage completed with success." href="StageSuccess.html"><span class="name">StageSuccess</span></a><span class="params">(<span name="stage">stage: <a href="QueryStageExec.html" class="extype" name="org.apache.spark.sql.execution.adaptive.QueryStageExec">QueryStageExec</a></span>, <span name="result">result: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result"> extends <a href="StageMaterializationEvent.html" class="extype" name="org.apache.spark.sql.execution.adaptive.StageMaterializationEvent">StageMaterializationEvent</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The materialization of a query stage completed with success.</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="org.apache.spark.sql.execution.adaptive.AQEPropagateEmptyRelation" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AQEPropagateEmptyRelation"></a><a id="AQEPropagateEmptyRelation:AQEPropagateEmptyRelation"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/AQEPropagateEmptyRelation$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="This rule runs in the AQE optimizer and optimizes more cases compared to PropagateEmptyRelationBase: 1." href="AQEPropagateEmptyRelation$.html"><span class="name">AQEPropagateEmptyRelation</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.optimizer.PropagateEmptyRelationBase">PropagateEmptyRelationBase</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">This rule runs in the AQE optimizer and optimizes more cases
+compared to <span class="extype" name="PropagateEmptyRelationBase">PropagateEmptyRelationBase</span>:
+1.</p><div class="fullcomment"><div class="comment cmt"><p>This rule runs in the AQE optimizer and optimizes more cases
+compared to <span class="extype" name="PropagateEmptyRelationBase">PropagateEmptyRelationBase</span>:
+1. Join is single column NULL-aware anti join (NAAJ)
+   Broadcasted <span class="extype" name="HashedRelation">HashedRelation</span> is <span class="extype" name="HashedRelationWithAllNullKeys">HashedRelationWithAllNullKeys</span>. Eliminate join to an
+   empty <span class="extype" name="LocalRelation">LocalRelation</span>.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.adaptive.AQEUtils" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AQEUtils"></a><a id="AQEUtils:AQEUtils"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/AQEUtils$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="AQEUtils$.html"><span class="name">AQEUtils</span></a>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AdaptiveSparkPlanExec"></a><a id="AdaptiveSparkPlanExec:AdaptiveSparkPlanExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/AdaptiveSparkPlanExec$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="AdaptiveSparkPlanExec$.html"><span class="name">AdaptiveSparkPlanExec</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.adaptive.CostEvaluator" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CostEvaluator"></a><a id="CostEvaluator:CostEvaluator"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/CostEvaluator$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CostEvaluator$.html"><span class="name">CostEvaluator</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.internal.Logging">Logging</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.adaptive.DynamicJoinSelection" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DynamicJoinSelection"></a><a id="DynamicJoinSelection:DynamicJoinSelection"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/DynamicJoinSelection$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="This optimization rule includes three join selection:" href="DynamicJoinSelection$.html"><span class="name">DynamicJoinSelection</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</span>[<span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">This optimization rule includes three join selection:</p><div class="fullcomment"><div class="comment cmt"><p>This optimization rule includes three join selection:</p><ol class="decimal"><li>detects a join child that has a high ratio of empty partitions and adds a
+     NO_BROADCAST_HASH hint to avoid it being broadcast, as shuffle join is faster in this case:
+     many tasks complete immediately since one join side is empty.
+  2. detects a join child that every partition size is less than local map threshold and adds a
+     PREFER_SHUFFLE_HASH hint to encourage being shuffle hash join instead of sort merge join.
+  3. if a join satisfies both NO_BROADCAST_HASH and PREFER_SHUFFLE_HASH,
+     then add a SHUFFLE_HASH hint.
+</li></ol></div></div>
+    </li><li name="org.apache.spark.sql.execution.adaptive.LogicalQueryStageStrategy" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LogicalQueryStageStrategy"></a><a id="LogicalQueryStageStrategy:LogicalQueryStageStrategy"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/LogicalQueryStageStrategy$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Strategy for plans containing LogicalQueryStage nodes: 1." href="LogicalQueryStageStrategy$.html"><span class="name">LogicalQueryStageStrategy</span></a><span class="result"> extends <a href="../../index.html#Strategy=org.apache.spark.sql.execution.SparkStrategy" class="extmbr" name="org.apache.spark.sql.Strategy">Strategy</a> with <span class="extype" name="org.apache.spark.sql.catalyst.expressions.PredicateHelper">PredicateHelper</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Strategy for plans containing <a href="LogicalQueryStage.html" class="extype" name="org.apache.spark.sql.execution.adaptive.LogicalQueryStage">LogicalQueryStage</a> nodes:
+1.</p><div class="fullcomment"><div class="comment cmt"><p>Strategy for plans containing <a href="LogicalQueryStage.html" class="extype" name="org.apache.spark.sql.execution.adaptive.LogicalQueryStage">LogicalQueryStage</a> nodes:
+1. Transforms <a href="LogicalQueryStage.html" class="extype" name="org.apache.spark.sql.execution.adaptive.LogicalQueryStage">LogicalQueryStage</a> to its corresponding physical plan that is either being
+   executed or has already completed execution.
+2. Transforms <span class="extype" name="Join">Join</span> which has one child relation already planned and executed as a
+   <a href="BroadcastQueryStageExec.html" class="extype" name="org.apache.spark.sql.execution.adaptive.BroadcastQueryStageExec">BroadcastQueryStageExec</a>. This is to prevent reversing a broadcast stage into a shuffle
+   stage in case of the larger join child relation finishes before the smaller relation. Note
+   that this rule needs to applied before regular join strategies.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.adaptive.OptimizeShuffleWithLocalRead" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="OptimizeShuffleWithLocalRead"></a><a id="OptimizeShuffleWithLocalRead:OptimizeShuffleWithLocalRead"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/OptimizeShuffleWithLocalRead$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="A rule to optimize the shuffle read to local read iff no additional shuffles will be introduced: 1." href="OptimizeShuffleWithLocalRead$.html"><span class="name">OptimizeShuffleWithLocalRead</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</span>[<a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a>] with <a href="AQEShuffleReadRule.html" class="extype" name="org.apache.spark.sql.execution.adaptive.AQEShuffleReadRule">AQEShuffleReadRule</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A rule to optimize the shuffle read to local read iff no additional shuffles
+will be introduced:
+1.</p><div class="fullcomment"><div class="comment cmt"><p>A rule to optimize the shuffle read to local read iff no additional shuffles
+will be introduced:
+1. if the input plan is a shuffle, add local read directly as we can never introduce
+extra shuffles in this case.
+2. otherwise, add local read to the probe side of broadcast hash join and
+then run <code>EnsureRequirements</code> to check whether additional shuffle introduced.
+If introduced, we will revert all the local reads.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.adaptive.OptimizeSkewInRebalancePartitions" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="OptimizeSkewInRebalancePartitions"></a><a id="OptimizeSkewInRebalancePartitions:OptimizeSkewInRebalancePartitions"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/OptimizeSkewInRebalancePartitions$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="A rule to optimize the skewed shuffle partitions in RebalancePartitions based on the map output statistics, which can avoid data skew that hurt performance." href="OptimizeSkewInRebalancePartitions$.html"><span class="name">OptimizeSkewInRebalancePartitions</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</span>[<a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a>] with <a href="AQEShuffleReadRule.html" class="extype" name="org.apache.spark.sql.execution.adaptive.AQEShuffleReadRule">AQEShuffleReadRule</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A rule to optimize the skewed shuffle partitions in <span class="extype" name="RebalancePartitions">RebalancePartitions</span> based on the map
+output statistics, which can avoid data skew that hurt performance.</p><div class="fullcomment"><div class="comment cmt"><p>A rule to optimize the skewed shuffle partitions in <span class="extype" name="RebalancePartitions">RebalancePartitions</span> based on the map
+output statistics, which can avoid data skew that hurt performance.</p><p>We use ADVISORY_PARTITION_SIZE_IN_BYTES size to decide if a partition should be optimized.
+Let's say we have 3 maps with 3 shuffle partitions, and assuming r1 has data skew issue.
+the map side looks like:
+  m0:[b0, b1, b2], m1:[b0, b1, b2], m2:[b0, b1, b2]
+and the reduce side looks like:
+                           (without this rule) r1[m0-b1, m1-b1, m2-b1]
+                             /                                     \
+  r0:[m0-b0, m1-b0, m2-b0], r1-0:[m0-b1], r1-1:[m1-b1], r1-2:[m2-b1], r2[m0-b2, m1-b2, m2-b2]</p><p>Note that, this rule is only applied with the SparkPlan whose top-level node is
+ShuffleQueryStageExec.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.adaptive.OptimizeSkewedJoin" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="OptimizeSkewedJoin"></a><a id="OptimizeSkewedJoin:OptimizeSkewedJoin"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/OptimizeSkewedJoin$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="A rule to optimize skewed joins to avoid straggler tasks whose share of data are significantly larger than those of the rest of the tasks." href="OptimizeSkewedJoin$.html"><span class="name">OptimizeSkewedJoin</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</span>[<a href="../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a>] with <a href="AQEShuffleReadRule.html" class="extype" name="org.apache.spark.sql.execution.adaptive.AQEShuffleReadRule">AQEShuffleReadRule</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A rule to optimize skewed joins to avoid straggler tasks whose share of data are significantly
+larger than those of the rest of the tasks.</p><div class="fullcomment"><div class="comment cmt"><p>A rule to optimize skewed joins to avoid straggler tasks whose share of data are significantly
+larger than those of the rest of the tasks.</p><p>The general idea is to divide each skew partition into smaller partitions and replicate its
+matching partition on the other side of the join so that they can run in parallel tasks.
+Note that when matching partitions from the left side and the right side both have skew,
+it will become a cartesian product of splits from left and right joining together.</p><p>For example, assume the Sort-Merge join has 4 partitions:
+left:  [L1, L2, L3, L4]
+right: [R1, R2, R3, R4]</p><p>Let's say L2, L4 and R3, R4 are skewed, and each of them get split into 2 sub-partitions. This
+is scheduled to run 4 tasks at the beginning: (L1, R1), (L2, R2), (L3, R3), (L4, R4).
+This rule expands it to 9 tasks to increase parallelism:
+(L1, R1),
+(L2-1, R2), (L2-2, R2),
+(L3, R3-1), (L3, R3-2),
+(L4-1, R4-1), (L4-2, R4-1), (L4-1, R4-2), (L4-2, R4-2)
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.adaptive.ShufflePartitionsUtil" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ShufflePartitionsUtil"></a><a id="ShufflePartitionsUtil:ShufflePartitionsUtil"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/ShufflePartitionsUtil$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ShufflePartitionsUtil$.html"><span class="name">ShufflePartitionsUtil</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.internal.Logging">Logging</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.adaptive.SimpleCostEvaluator" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SimpleCostEvaluator"></a><a id="SimpleCostEvaluator:SimpleCostEvaluator"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/execution/adaptive/SimpleCostEvaluator$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="A simple implementation of CostEvaluator, which counts the number of ShuffleExchangeLike nodes in the plan." href="SimpleCostEvaluator$.html"><span class="name">SimpleCostEvaluator</span></a><span class="result"> extends <a href="CostEvaluator.html" class="extype" name="org.apache.spark.sql.execution.adaptive.CostEvaluator">CostEvaluator</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A simple implementation of <a href="CostEvaluator.html" class="extype" name="org.apache.spark.sql.execution.adaptive.CostEvaluator">CostEvaluator</a>, which counts the number of
+<span class="extype" name="ShuffleExchangeLike">ShuffleExchangeLike</span> nodes in the plan.</p>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

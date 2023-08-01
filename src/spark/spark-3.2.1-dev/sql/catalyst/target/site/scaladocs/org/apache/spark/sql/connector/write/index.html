@@ -1,0 +1,678 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Catalyst 3.2.1 API  - org.apache.spark.sql.connector.write</title>
+          <meta name="description" content="Spark Project Catalyst 3.2.1 API - org.apache.spark.sql.connector.write" />
+          <meta name="keywords" content="Spark Project Catalyst 3.2.1 API org.apache.spark.sql.connector.write" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Catalyst 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sql"></a><a id="sql:sql"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">sql</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="connector"></a><a id="connector:connector"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">connector</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.catalog" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="catalog"></a><a id="catalog:catalog"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/catalog/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../catalog/index.html"><span class="name">catalog</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.distributions" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="distributions"></a><a id="distributions:distributions"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/distributions/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../distributions/index.html"><span class="name">distributions</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.expressions" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="expressions"></a><a id="expressions:expressions"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/expressions/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../expressions/index.html"><span class="name">expressions</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.metric" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="metric"></a><a id="metric:metric"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/metric/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../metric/index.html"><span class="name">metric</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.read" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="read"></a><a id="read:read"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/read/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../read/index.html"><span class="name">read</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.write" visbl="pub" class="indented6 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="write"></a><a id="write:write"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/write/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">write</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.write.streaming" visbl="pub" class="indented7 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="streaming"></a><a id="streaming:streaming"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/write/streaming/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="streaming/index.html"><span class="name">streaming</span></a>
+      </span>
+      
+      
+    </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="BatchWrite.html" title="An interface that defines how to write the data to data source for batch processing."></a>
+                        <a href="BatchWrite.html" title="An interface that defines how to write the data to data source for batch processing.">BatchWrite</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="DataWriter.html" title="A data writer returned by long) and is responsible for writing data for an input RDD partition."></a>
+                        <a href="DataWriter.html" title="A data writer returned by long) and is responsible for writing data for an input RDD partition.">DataWriter</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="DataWriterFactory.html" title="A factory of DataWriter returned by BatchWrite#createBatchWriterFactory(PhysicalWriteInfo), which is responsible for creating and initializing the actual data writer at executor side."></a>
+                        <a href="DataWriterFactory.html" title="A factory of DataWriter returned by BatchWrite#createBatchWriterFactory(PhysicalWriteInfo), which is responsible for creating and initializing the actual data writer at executor side.">DataWriterFactory</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="LogicalWriteInfo.html" title="This interface contains logical write information that data sources can use when generating a WriteBuilder."></a>
+                        <a href="LogicalWriteInfo.html" title="This interface contains logical write information that data sources can use when generating a WriteBuilder.">LogicalWriteInfo</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="PhysicalWriteInfo.html" title="This interface contains physical write information that data sources can use when generating a DataWriterFactory or a StreamingDataWriterFactory."></a>
+                        <a href="PhysicalWriteInfo.html" title="This interface contains physical write information that data sources can use when generating a DataWriterFactory or a StreamingDataWriterFactory.">PhysicalWriteInfo</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="RequiresDistributionAndOrdering.html" title="A write that requires a specific distribution and ordering of data."></a>
+                        <a href="RequiresDistributionAndOrdering.html" title="A write that requires a specific distribution and ordering of data.">RequiresDistributionAndOrdering</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="SupportsDynamicOverwrite.html" title="Write builder trait for tables that support dynamic partition overwrite."></a>
+                        <a href="SupportsDynamicOverwrite.html" title="Write builder trait for tables that support dynamic partition overwrite.">SupportsDynamicOverwrite</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="SupportsOverwrite.html" title="Write builder trait for tables that support overwrite by filter."></a>
+                        <a href="SupportsOverwrite.html" title="Write builder trait for tables that support overwrite by filter.">SupportsOverwrite</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="SupportsTruncate.html" title="Write builder trait for tables that support truncation."></a>
+                        <a href="SupportsTruncate.html" title="Write builder trait for tables that support truncation.">SupportsTruncate</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="Write.html" title="A logical representation of a data source write."></a>
+                        <a href="Write.html" title="A logical representation of a data source write.">Write</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="WriteBuilder.html" title="An interface for building the Write."></a>
+                        <a href="WriteBuilder.html" title="An interface for building the Write.">WriteBuilder</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="WriterCommitMessage.html" title="A commit message returned by DataWriter#commit() and will be sent back to the driver side as the input parameter of BatchWrite#commit(WriterCommitMessage[]) or WriterCommitMessage[])."></a>
+                        <a href="WriterCommitMessage.html" title="A commit message returned by DataWriter#commit() and will be sent back to the driver side as the input parameter of BatchWrite#commit(WriterCommitMessage[]) or WriterCommitMessage[]).">WriterCommitMessage</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../../../index.html" class="extype" name="org">org</a>.<a href="../../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../../index.html" class="extype" name="org.apache.spark.sql">sql</a>.<a href="../index.html" class="extype" name="org.apache.spark.sql.connector">connector</a></p>
+        <h1>write<span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/write/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">write</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.spark.sql.connector.write.BatchWrite" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="BatchWriteextendsObject"></a><a id="BatchWrite:BatchWrite"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/write/BatchWrite.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="An interface that defines how to write the data to data source for batch processing." href="BatchWrite.html"><span class="name">BatchWrite</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">An interface that defines how to write the data to data source for batch processing.</p><div class="fullcomment"><div class="comment cmt"><p>An interface that defines how to write the data to data source for batch processing.</p><p>The writing procedure is:</p><ul><li>Create a writer factory by <code><span class="extype" name="#createBatchWriterFactory(PhysicalWriteInfo)">#createBatchWriterFactory(PhysicalWriteInfo)</span></code>, serialize
+    and send it to all the partitions of the input data(RDD).</li><li>For each partition, create the data writer, and write the data of the partition with this
+    writer. If all the data are written successfully, call <code><span class="extype" name="DataWriter#commit()">DataWriter#commit()</span></code>. If
+    exception happens during the writing, call <code><span class="extype" name="DataWriter#abort()">DataWriter#abort()</span></code>.</li><li>If all writers are successfully committed, call <code><span class="extype" name="#commit(WriterCommitMessage[])">#commit(WriterCommitMessage[])</span></code>. If
+    some writers are aborted, or the job failed with an unknown reason, call
+    <code><span class="extype" name="#abort(WriterCommitMessage[])">#abort(WriterCommitMessage[])</span></code>.</li></ul><p>While Spark will retry failed writing tasks, Spark won't retry failed writing jobs. Users should
+do it manually in their Spark applications if they want to retry.</p><p>Please refer to the documentation of commit/abort methods for detailed specifications.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.write.DataWriter" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="DataWriter[T]extendsCloseable"></a><a id="DataWriter[T]:DataWriter[T]"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/write/DataWriter.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A data writer returned by long) and is responsible for writing data for an input RDD partition." href="DataWriter.html"><span class="name">DataWriter</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="java.io.Closeable">Closeable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A data writer returned by <code><span class="extype" name="DataWriterFactory#createWriter(int,">long)</span></code> and is
+responsible for writing data for an input RDD partition.</p><div class="fullcomment"><div class="comment cmt"><p>A data writer returned by <code><span class="extype" name="DataWriterFactory#createWriter(int,">long)</span></code> and is
+responsible for writing data for an input RDD partition.</p><p>One Spark task has one exclusive data writer, so there is no thread-safe concern.</p><p><code><span class="extype" name="#write(Object)">#write(Object)</span></code> is called for each record in the input RDD partition. If one record fails
+the <code><span class="extype" name="#write(Object)">#write(Object)</span></code>, <code><span class="extype" name="#abort()">#abort()</span></code> is called afterwards and the remaining records will
+not be processed. If all records are successfully written, <code><span class="extype" name="#commit()">#commit()</span></code> is called.</p><p>Once a data writer returns successfully from <code><span class="extype" name="#commit()">#commit()</span></code> or <code><span class="extype" name="#abort()">#abort()</span></code>, Spark will
+call <code><span class="extype" name="#close()">#close()</span></code> to let DataWriter doing resource cleanup. After calling <code><span class="extype" name="#close()">#close()</span></code>,
+its lifecycle is over and Spark will not use it again.</p><p>If this data writer succeeds(all records are successfully written and <code><span class="extype" name="#commit()">#commit()</span></code>
+succeeds), a <code><a href="WriterCommitMessage.html" class="extype" name="org.apache.spark.sql.connector.write.WriterCommitMessage">WriterCommitMessage</a></code> will be sent to the driver side and pass to
+<code><span class="extype" name="BatchWrite#commit(WriterCommitMessage[])">BatchWrite#commit(WriterCommitMessage[])</span></code> with commit messages from other data
+writers. If this data writer fails(one record fails to write or <code><span class="extype" name="#commit()">#commit()</span></code> fails), an
+exception will be sent to the driver side, and Spark may retry this writing task a few times.
+In each retry, <code><span class="extype" name="DataWriterFactory#createWriter(int,">long)</span></code> will receive a
+different <code>taskId</code>. Spark will call <code><span class="extype" name="BatchWrite#abort(WriterCommitMessage[])">BatchWrite#abort(WriterCommitMessage[])</span></code>
+when the configured number of retries is exhausted.</p><p>Besides the retry mechanism, Spark may launch speculative tasks if the existing writing task
+takes too long to finish. Different from retried tasks, which are launched one by one after the
+previous one fails, speculative tasks are running simultaneously. It's possible that one input
+RDD partition has multiple data writers with different <code>taskId</code> running at the same time,
+and data sources should guarantee that these data writers don't conflict and can work together.
+Implementations can coordinate with driver during <code><span class="extype" name="#commit()">#commit()</span></code> to make sure only one of
+these data writers can commit successfully. Or implementations can allow all of them to commit
+successfully, and have a way to revert committed data writers without the commit message, because
+Spark only accepts the commit message that arrives first and ignore others.</p><p>Note that, Currently the type <code>T</code> can only be
+<code><a href="../../catalyst/InternalRow.html" class="extype" name="org.apache.spark.sql.catalyst.InternalRow">org.apache.spark.sql.catalyst.InternalRow</a></code>.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.write.DataWriterFactory" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="DataWriterFactoryextendsSerializable"></a><a id="DataWriterFactory:DataWriterFactory"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/write/DataWriterFactory.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A factory of DataWriter returned by BatchWrite#createBatchWriterFactory(PhysicalWriteInfo), which is responsible for creating and initializing the actual data writer at executor side." href="DataWriterFactory.html"><span class="name">DataWriterFactory</span></a><span class="result"> extends <span class="extype" name="java.io.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A factory of <code><a href="DataWriter.html" class="extype" name="org.apache.spark.sql.connector.write.DataWriter">DataWriter</a></code> returned by
+<code><span class="extype" name="BatchWrite#createBatchWriterFactory(PhysicalWriteInfo)">BatchWrite#createBatchWriterFactory(PhysicalWriteInfo)</span></code>, which is responsible for
+creating and initializing the actual data writer at executor side.</p><div class="fullcomment"><div class="comment cmt"><p>A factory of <code><a href="DataWriter.html" class="extype" name="org.apache.spark.sql.connector.write.DataWriter">DataWriter</a></code> returned by
+<code><span class="extype" name="BatchWrite#createBatchWriterFactory(PhysicalWriteInfo)">BatchWrite#createBatchWriterFactory(PhysicalWriteInfo)</span></code>, which is responsible for
+creating and initializing the actual data writer at executor side.</p><p>Note that, the writer factory will be serialized and sent to executors, then the data writer
+will be created on executors and do the actual writing. So this interface must be
+serializable and <code><a href="DataWriter.html" class="extype" name="org.apache.spark.sql.connector.write.DataWriter">DataWriter</a></code> doesn't need to be.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.write.LogicalWriteInfo" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="LogicalWriteInfoextendsObject"></a><a id="LogicalWriteInfo:LogicalWriteInfo"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/write/LogicalWriteInfo.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="This interface contains logical write information that data sources can use when generating a WriteBuilder." href="LogicalWriteInfo.html"><span class="name">LogicalWriteInfo</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">This interface contains logical write information that data sources can use when generating a
+<code><a href="WriteBuilder.html" class="extype" name="org.apache.spark.sql.connector.write.WriteBuilder">WriteBuilder</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>This interface contains logical write information that data sources can use when generating a
+<code><a href="WriteBuilder.html" class="extype" name="org.apache.spark.sql.connector.write.WriteBuilder">WriteBuilder</a></code>.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.write.PhysicalWriteInfo" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="PhysicalWriteInfoextendsObject"></a><a id="PhysicalWriteInfo:PhysicalWriteInfo"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/write/PhysicalWriteInfo.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="This interface contains physical write information that data sources can use when generating a DataWriterFactory or a StreamingDataWriterFactory." href="PhysicalWriteInfo.html"><span class="name">PhysicalWriteInfo</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">This interface contains physical write information that data sources can use when
+generating a <code><a href="DataWriterFactory.html" class="extype" name="org.apache.spark.sql.connector.write.DataWriterFactory">DataWriterFactory</a></code> or a <code><span class="extype" name="StreamingDataWriterFactory">StreamingDataWriterFactory</span></code>.</p><div class="fullcomment"><div class="comment cmt"><p>This interface contains physical write information that data sources can use when
+generating a <code><a href="DataWriterFactory.html" class="extype" name="org.apache.spark.sql.connector.write.DataWriterFactory">DataWriterFactory</a></code> or a <code><span class="extype" name="StreamingDataWriterFactory">StreamingDataWriterFactory</span></code>.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.write.RequiresDistributionAndOrdering" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="RequiresDistributionAndOrderingextendsWrite"></a><a id="RequiresDistributionAndOrdering:RequiresDistributionAndOrdering"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/write/RequiresDistributionAndOrdering.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A write that requires a specific distribution and ordering of data." href="RequiresDistributionAndOrdering.html"><span class="name">RequiresDistributionAndOrdering</span></a><span class="result"> extends <a href="Write.html" class="extype" name="org.apache.spark.sql.connector.write.Write">Write</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A write that requires a specific distribution and ordering of data.</p><div class="fullcomment"><div class="comment cmt"><p>A write that requires a specific distribution and ordering of data.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Experimental</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.2.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.write.SupportsDynamicOverwrite" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="SupportsDynamicOverwriteextendsWriteBuilder"></a><a id="SupportsDynamicOverwrite:SupportsDynamicOverwrite"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/write/SupportsDynamicOverwrite.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Write builder trait for tables that support dynamic partition overwrite." href="SupportsDynamicOverwrite.html"><span class="name">SupportsDynamicOverwrite</span></a><span class="result"> extends <a href="WriteBuilder.html" class="extype" name="org.apache.spark.sql.connector.write.WriteBuilder">WriteBuilder</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Write builder trait for tables that support dynamic partition overwrite.</p><div class="fullcomment"><div class="comment cmt"><p>Write builder trait for tables that support dynamic partition overwrite.</p><p>A write that dynamically overwrites partitions removes all existing data in each logical
+partition for which the write will commit new data. Any existing logical partition for which the
+write does not contain data will remain unchanged.</p><p>This is provided to implement SQL compatible with Hive table operations but is not recommended.
+Instead, use the <code><a href="SupportsOverwrite.html" class="extype" name="org.apache.spark.sql.connector.write.SupportsOverwrite">overwrite by filter API</a></code> to explicitly replace data.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.write.SupportsOverwrite" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="SupportsOverwriteextendsWriteBuilderwithSupportsTruncate"></a><a id="SupportsOverwrite:SupportsOverwrite"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/write/SupportsOverwrite.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Write builder trait for tables that support overwrite by filter." href="SupportsOverwrite.html"><span class="name">SupportsOverwrite</span></a><span class="result"> extends <a href="WriteBuilder.html" class="extype" name="org.apache.spark.sql.connector.write.WriteBuilder">WriteBuilder</a> with <a href="SupportsTruncate.html" class="extype" name="org.apache.spark.sql.connector.write.SupportsTruncate">SupportsTruncate</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Write builder trait for tables that support overwrite by filter.</p><div class="fullcomment"><div class="comment cmt"><p>Write builder trait for tables that support overwrite by filter.</p><p>Overwriting data by filter will delete any data that matches the filter and replace it with data
+that is committed in the write.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.write.SupportsTruncate" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="SupportsTruncateextendsWriteBuilder"></a><a id="SupportsTruncate:SupportsTruncate"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/write/SupportsTruncate.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Write builder trait for tables that support truncation." href="SupportsTruncate.html"><span class="name">SupportsTruncate</span></a><span class="result"> extends <a href="WriteBuilder.html" class="extype" name="org.apache.spark.sql.connector.write.WriteBuilder">WriteBuilder</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Write builder trait for tables that support truncation.</p><div class="fullcomment"><div class="comment cmt"><p>Write builder trait for tables that support truncation.</p><p>Truncation removes all data in a table and replaces it with data that is committed in the write.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.write.Write" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="WriteextendsObject"></a><a id="Write:Write"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/write/Write.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A logical representation of a data source write." href="Write.html"><span class="name">Write</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A logical representation of a data source write.</p><div class="fullcomment"><div class="comment cmt"><p>A logical representation of a data source write.</p><p>This logical representation is shared between batch and streaming write. Data sources must
+implement the corresponding methods in this interface to match what the table promises
+to support. For example, <code><span class="extype" name="#toBatch()">#toBatch()</span></code> must be implemented if the <code><span class="extype" name="Table">Table</span></code> that
+creates this <code><a href="Write.html" class="extype" name="org.apache.spark.sql.connector.write.Write">Write</a></code> returns <code><span class="extype" name="TableCapability#BATCH_WRITE">TableCapability#BATCH_WRITE</span></code> support in its
+<code><span class="extype" name="Table#capabilities()">Table#capabilities()</span></code>.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.2.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.write.WriteBuilder" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="WriteBuilderextendsObject"></a><a id="WriteBuilder:WriteBuilder"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/write/WriteBuilder.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="An interface for building the Write." href="WriteBuilder.html"><span class="name">WriteBuilder</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">An interface for building the <code><a href="Write.html" class="extype" name="org.apache.spark.sql.connector.write.Write">Write</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>An interface for building the <code><a href="Write.html" class="extype" name="org.apache.spark.sql.connector.write.Write">Write</a></code>. Implementations can mix in some interfaces to
+support different ways to write data to data sources.</p><p>Unless modified by a mixin interface, the <code><a href="Write.html" class="extype" name="org.apache.spark.sql.connector.write.Write">Write</a></code> configured by this builder is to
+append data without affecting existing data.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.connector.write.WriterCommitMessage" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="WriterCommitMessageextendsSerializable"></a><a id="WriterCommitMessage:WriterCommitMessage"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/apache/spark/sql/connector/write/WriterCommitMessage.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A commit message returned by DataWriter#commit() and will be sent back to the driver side as the input parameter of BatchWrite#commit(WriterCommitMessage[]) or WriterCommitMessage[])." href="WriterCommitMessage.html"><span class="name">WriterCommitMessage</span></a><span class="result"> extends <span class="extype" name="java.io.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A commit message returned by <code><span class="extype" name="DataWriter#commit()">DataWriter#commit()</span></code> and will be sent back to the driver side
+as the input parameter of <code><span class="extype" name="BatchWrite#commit(WriterCommitMessage[])">BatchWrite#commit(WriterCommitMessage[])</span></code> or
+<code><span class="extype" name="StreamingWrite#commit(long,">WriterCommitMessage[])</span></code>.</p><div class="fullcomment"><div class="comment cmt"><p>A commit message returned by <code><span class="extype" name="DataWriter#commit()">DataWriter#commit()</span></code> and will be sent back to the driver side
+as the input parameter of <code><span class="extype" name="BatchWrite#commit(WriterCommitMessage[])">BatchWrite#commit(WriterCommitMessage[])</span></code> or
+<code><span class="extype" name="StreamingWrite#commit(long,">WriterCommitMessage[])</span></code>.</p><p>This is an empty interface, data sources should define their own message class and use it when
+generating messages at executor side and handling the messages at driver side.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.0.0</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

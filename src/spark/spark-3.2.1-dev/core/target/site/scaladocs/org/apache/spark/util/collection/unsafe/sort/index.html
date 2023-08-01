@@ -1,0 +1,511 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Core 3.2.1 API  - org.apache.spark.util.collection.unsafe.sort</title>
+          <meta name="description" content="Spark Project Core 3.2.1 API - org.apache.spark.util.collection.unsafe.sort" />
+          <meta name="keywords" content="Spark Project Core 3.2.1 API org.apache.spark.util.collection.unsafe.sort" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Core 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Core Spark functionality." href="../../../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Core Spark functionality.</p><div class="fullcomment"><div class="comment cmt"><p>Core Spark functionality. <a href="../../../../SparkContext.html" class="extype" name="org.apache.spark.SparkContext">org.apache.spark.SparkContext</a> serves as the main entry point to
+Spark, while <a href="../../../../rdd/RDD.html" class="extype" name="org.apache.spark.rdd.RDD">org.apache.spark.rdd.RDD</a> is the data type representing a distributed collection,
+and provides most parallel operations.</p><p>In addition, <a href="../../../../rdd/PairRDDFunctions.html" class="extype" name="org.apache.spark.rdd.PairRDDFunctions">org.apache.spark.rdd.PairRDDFunctions</a> contains operations available only on RDDs
+of key-value pairs, such as <code>groupByKey</code> and <code>join</code>; <a href="../../../../rdd/DoubleRDDFunctions.html" class="extype" name="org.apache.spark.rdd.DoubleRDDFunctions">org.apache.spark.rdd.DoubleRDDFunctions</a>
+contains operations available only on RDDs of Doubles; and
+<a href="../../../../rdd/SequenceFileRDDFunctions.html" class="extype" name="org.apache.spark.rdd.SequenceFileRDDFunctions">org.apache.spark.rdd.SequenceFileRDDFunctions</a> contains operations available on RDDs that can
+be saved as SequenceFiles. These operations are automatically available on any RDD of the right
+type (e.g. RDD[(Int, Int)] through implicit conversions.</p><p>Java programmers should reference the <a href="../../../../api/java/index.html" class="extype" name="org.apache.spark.api.java">org.apache.spark.api.java</a> package
+for Spark programming APIs in Java.</p><p>Classes and methods marked with <span class="experimental badge" style="float: none;">
+Experimental</span> are user-facing features which have not been officially adopted by the
+Spark project. These are subject to change or removal in minor releases.</p><p>Classes and methods marked with <span class="developer badge" style="float: none;">
+Developer API</span> are intended for advanced users want to extend Spark through lower
+level interfaces. These are subject to changes or removal in minor releases.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.util" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="util"></a><a id="util:util"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/util/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Spark utilities." href="../../../index.html"><span class="name">util</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Spark utilities.</p><div class="fullcomment"><div class="comment cmt"><p>Spark utilities.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.util.collection" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="collection"></a><a id="collection:collection"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/util/collection/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">collection</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache.spark.util">util</a></dd></dl></div>
+    </li><li name="org.apache.spark.util.collection.unsafe" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="unsafe"></a><a id="unsafe:unsafe"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/util/collection/unsafe/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">unsafe</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark.util.collection">collection</a></dd></dl></div>
+    </li><li name="org.apache.spark.util.collection.unsafe.sort" visbl="pub" class="indented7 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sort"></a><a id="sort:sort"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/util/collection/unsafe/sort/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sort</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.util.collection.unsafe">unsafe</a></dd></dl></div>
+    </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="PrefixComparator.html" title="Compares 8-byte key prefixes in prefix sort."></a>
+                        <a href="PrefixComparator.html" title="Compares 8-byte key prefixes in prefix sort.">PrefixComparator</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="PrefixComparators.html" title=""></a>
+                        <a href="PrefixComparators.html" title="">PrefixComparators</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="RadixSort.html" title=""></a>
+                        <a href="RadixSort.html" title="">RadixSort</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="RecordComparator.html" title="Compares records for ordering."></a>
+                        <a href="RecordComparator.html" title="Compares records for ordering.">RecordComparator</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="RecordPointerAndKeyPrefix.html" title=""></a>
+                        <a href="RecordPointerAndKeyPrefix.html" title="">RecordPointerAndKeyPrefix</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="UnsafeExternalSorter.html" title="External sorter based on UnsafeInMemorySorter."></a>
+                        <a href="UnsafeExternalSorter.html" title="External sorter based on UnsafeInMemorySorter.">UnsafeExternalSorter</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="UnsafeInMemorySorter.html" title="Sorts records using an AlphaSort-style key-prefix sort."></a>
+                        <a href="UnsafeInMemorySorter.html" title="Sorts records using an AlphaSort-style key-prefix sort.">UnsafeInMemorySorter</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="UnsafeSortDataFormat.html" title="Supports sorting an array of (record pointer, key prefix) pairs."></a>
+                        <a href="UnsafeSortDataFormat.html" title="Supports sorting an array of (record pointer, key prefix) pairs.">UnsafeSortDataFormat</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="UnsafeSorterIterator.html" title=""></a>
+                        <a href="UnsafeSorterIterator.html" title="">UnsafeSorterIterator</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="UnsafeSorterSpillReader.html" title="Reads spill files written by UnsafeSorterSpillWriter (see that class for a description of the file format)."></a>
+                        <a href="UnsafeSorterSpillReader.html" title="Reads spill files written by UnsafeSorterSpillWriter (see that class for a description of the file format).">UnsafeSorterSpillReader</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="UnsafeSorterSpillWriter.html" title="Spills a list of sorted records to disk."></a>
+                        <a href="UnsafeSorterSpillWriter.html" title="Spills a list of sorted records to disk.">UnsafeSorterSpillWriter</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../../../../index.html" class="extype" name="org">org</a>.<a href="../../../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../../../index.html" class="extype" name="org.apache.spark.util">util</a>.<a href="../../index.html" class="extype" name="org.apache.spark.util.collection">collection</a>.<a href="../index.html" class="extype" name="org.apache.spark.util.collection.unsafe">unsafe</a></p>
+        <h1>sort<span class="permalink">
+      <a href="../../../../../../../org/apache/spark/util/collection/unsafe/sort/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sort</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.spark.util.collection.unsafe.sort.PrefixComparator" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="PrefixComparatorextendsObject"></a><a id="PrefixComparator:PrefixComparator"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/util/collection/unsafe/sort/PrefixComparator.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Compares 8-byte key prefixes in prefix sort." href="PrefixComparator.html"><span class="name">PrefixComparator</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Compares 8-byte key prefixes in prefix sort.</p><div class="fullcomment"><div class="comment cmt"><p>Compares 8-byte key prefixes in prefix sort. Subclasses may implement type-specific
+comparisons, such as lexicographic comparison for strings.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Private</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.util.collection.unsafe.sort.PrefixComparators" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="PrefixComparatorsextendsObject"></a><a id="PrefixComparators:PrefixComparators"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/util/collection/unsafe/sort/PrefixComparators.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="PrefixComparators.html"><span class="name">PrefixComparators</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Private</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.util.collection.unsafe.sort.RadixSort" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RadixSortextendsObject"></a><a id="RadixSort:RadixSort"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/util/collection/unsafe/sort/RadixSort.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="RadixSort.html"><span class="name">RadixSort</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.util.collection.unsafe.sort.RecordComparator" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="RecordComparatorextendsObject"></a><a id="RecordComparator:RecordComparator"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/util/collection/unsafe/sort/RecordComparator.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Compares records for ordering." href="RecordComparator.html"><span class="name">RecordComparator</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Compares records for ordering.</p><div class="fullcomment"><div class="comment cmt"><p>Compares records for ordering. In cases where the entire sorting key can fit in the 8-byte
+prefix, this may simply return 0.
+</p></div></div>
+    </li><li name="org.apache.spark.util.collection.unsafe.sort.RecordPointerAndKeyPrefix" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RecordPointerAndKeyPrefixextendsObject"></a><a id="RecordPointerAndKeyPrefix:RecordPointerAndKeyPrefix"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/util/collection/unsafe/sort/RecordPointerAndKeyPrefix.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="RecordPointerAndKeyPrefix.html"><span class="name">RecordPointerAndKeyPrefix</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.util.collection.unsafe.sort.UnsafeExternalSorter" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UnsafeExternalSorterextendsMemoryConsumer"></a><a id="UnsafeExternalSorter:UnsafeExternalSorter"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/util/collection/unsafe/sort/UnsafeExternalSorter.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="External sorter based on UnsafeInMemorySorter." href="UnsafeExternalSorter.html"><span class="name">UnsafeExternalSorter</span></a><span class="result"> extends <a href="../../../../memory/MemoryConsumer.html" class="extype" name="org.apache.spark.memory.MemoryConsumer">MemoryConsumer</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">External sorter based on <code><a href="UnsafeInMemorySorter.html" class="extype" name="org.apache.spark.util.collection.unsafe.sort.UnsafeInMemorySorter">UnsafeInMemorySorter</a></code>.</p>
+    </li><li name="org.apache.spark.util.collection.unsafe.sort.UnsafeInMemorySorter" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="UnsafeInMemorySorterextendsObject"></a><a id="UnsafeInMemorySorter:UnsafeInMemorySorter"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/util/collection/unsafe/sort/UnsafeInMemorySorter.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Sorts records using an AlphaSort-style key-prefix sort." href="UnsafeInMemorySorter.html"><span class="name">UnsafeInMemorySorter</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Sorts records using an AlphaSort-style key-prefix sort.</p><div class="fullcomment"><div class="comment cmt"><p>Sorts records using an AlphaSort-style key-prefix sort. This sort stores pointers to records
+alongside a user-defined prefix of the record's sorting key. When the underlying sort algorithm
+compares records, it will first compare the stored key prefixes; if the prefixes are not equal,
+then we do not need to traverse the record pointers to compare the actual records. Avoiding these
+random memory accesses improves cache hit rates.
+</p></div></div>
+    </li><li name="org.apache.spark.util.collection.unsafe.sort.UnsafeSortDataFormat" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="UnsafeSortDataFormatextendsSortDataFormat[org.apache.spark.util.collection.unsafe.sort.RecordPointerAndKeyPrefix,org.apache.spark.unsafe.array.LongArray]"></a><a id="UnsafeSortDataFormat:UnsafeSortDataFormat"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/util/collection/unsafe/sort/UnsafeSortDataFormat.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Supports sorting an array of (record pointer, key prefix) pairs." href="UnsafeSortDataFormat.html"><span class="name">UnsafeSortDataFormat</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.util.collection.SortDataFormat">SortDataFormat</span>[<a href="RecordPointerAndKeyPrefix.html" class="extype" name="org.apache.spark.util.collection.unsafe.sort.RecordPointerAndKeyPrefix">RecordPointerAndKeyPrefix</a>, <span class="extype" name="org.apache.spark.unsafe.array.LongArray">LongArray</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Supports sorting an array of (record pointer, key prefix) pairs.</p><div class="fullcomment"><div class="comment cmt"><p>Supports sorting an array of (record pointer, key prefix) pairs.
+Used in <code><a href="UnsafeInMemorySorter.html" class="extype" name="org.apache.spark.util.collection.unsafe.sort.UnsafeInMemorySorter">UnsafeInMemorySorter</a></code>.</p><p>Within each long[] buffer, position <code>2 * i</code> holds a pointer to the record at
+index <code>i</code>, while position <code>2 * i + 1</code> in the array holds an 8-byte key prefix.
+</p></div></div>
+    </li><li name="org.apache.spark.util.collection.unsafe.sort.UnsafeSorterIterator" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="UnsafeSorterIteratorextendsObject"></a><a id="UnsafeSorterIterator:UnsafeSorterIterator"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/util/collection/unsafe/sort/UnsafeSorterIterator.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="UnsafeSorterIterator.html"><span class="name">UnsafeSorterIterator</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.util.collection.unsafe.sort.UnsafeSorterSpillReader" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UnsafeSorterSpillReaderextendsUnsafeSorterIteratorwithCloseable"></a><a id="UnsafeSorterSpillReader:UnsafeSorterSpillReader"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/util/collection/unsafe/sort/UnsafeSorterSpillReader.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Reads spill files written by UnsafeSorterSpillWriter (see that class for a description of the file format)." href="UnsafeSorterSpillReader.html"><span class="name">UnsafeSorterSpillReader</span></a><span class="result"> extends <a href="UnsafeSorterIterator.html" class="extype" name="org.apache.spark.util.collection.unsafe.sort.UnsafeSorterIterator">UnsafeSorterIterator</a> with <span class="extype" name="java.io.Closeable">Closeable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Reads spill files written by <code><a href="UnsafeSorterSpillWriter.html" class="extype" name="org.apache.spark.util.collection.unsafe.sort.UnsafeSorterSpillWriter">UnsafeSorterSpillWriter</a></code> (see that class for a description
+of the file format).</p>
+    </li><li name="org.apache.spark.util.collection.unsafe.sort.UnsafeSorterSpillWriter" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="UnsafeSorterSpillWriterextendsObject"></a><a id="UnsafeSorterSpillWriter:UnsafeSorterSpillWriter"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/util/collection/unsafe/sort/UnsafeSorterSpillWriter.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Spills a list of sorted records to disk." href="UnsafeSorterSpillWriter.html"><span class="name">UnsafeSorterSpillWriter</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Spills a list of sorted records to disk.</p><div class="fullcomment"><div class="comment cmt"><p>Spills a list of sorted records to disk. Spill files have the following format:</p><p>  [# of records (int)] <span class="extype" name="len">(int)][prefix (long)][data (bytes)]...]
+</span></p></div></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

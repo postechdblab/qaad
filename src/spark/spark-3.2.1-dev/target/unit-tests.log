@@ -1,0 +1,57 @@
+23/07/31 11:01:17.714 main INFO Master: Started daemon with process name: 19393@master
+23/07/31 11:01:17.722 main INFO SignalUtils: Registering signal handler for TERM
+23/07/31 11:01:17.723 main INFO SignalUtils: Registering signal handler for HUP
+23/07/31 11:01:17.723 main INFO SignalUtils: Registering signal handler for INT
+23/07/31 11:01:18.228 main WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/07/31 11:01:18.307 main INFO SecurityManager: Changing view acls to: root
+23/07/31 11:01:18.308 main INFO SecurityManager: Changing modify acls to: root
+23/07/31 11:01:18.309 main INFO SecurityManager: Changing view acls groups to: 
+23/07/31 11:01:18.309 main INFO SecurityManager: Changing modify acls groups to: 
+23/07/31 11:01:18.310 main INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+23/07/31 11:01:18.775 main INFO Utils: Successfully started service 'sparkMaster' on port 7077.
+23/07/31 11:01:18.817 dispatcher-event-loop-1 INFO Master: Starting Spark master at spark://master:7077
+23/07/31 11:01:18.823 dispatcher-event-loop-1 INFO Master: Running Spark version 3.2.1
+23/07/31 11:01:18.981 dispatcher-event-loop-1 INFO Utils: Successfully started service 'MasterUI' on port 8080.
+23/07/31 11:01:19.029 dispatcher-event-loop-1 INFO MasterWebUI: Bound MasterWebUI to 0.0.0.0, and started at http://master:8080
+23/07/31 11:01:19.240 dispatcher-event-loop-1 INFO Master: I have been elected leader! New state: ALIVE
+23/07/31 11:01:22.432 dispatcher-event-loop-10 INFO Master: Registering worker 10.0.0.2:53499 with 16 cores, 172.0 GiB RAM
+23/07/31 11:07:58.060 dispatcher-event-loop-13 INFO Master: 10.0.0.2:57638 got disassociated, removing it.
+23/07/31 11:07:58.062 dispatcher-event-loop-13 INFO Master: 10.0.0.2:53499 got disassociated, removing it.
+23/07/31 11:07:58.064 dispatcher-event-loop-13 INFO Master: Removing worker worker-20230731110121-10.0.0.2-53499 on 10.0.0.2:53499
+23/07/31 11:07:58.070 dispatcher-event-loop-13 INFO Master: Telling app of lost worker: worker-20230731110121-10.0.0.2-53499
+23/07/31 11:08:09.638 SIGTERM handler ERROR Master: RECEIVED SIGNAL TERM
+23/07/31 11:10:18.508 main INFO Master: Started daemon with process name: 20486@master
+23/07/31 11:10:18.514 main INFO SignalUtils: Registering signal handler for TERM
+23/07/31 11:10:18.515 main INFO SignalUtils: Registering signal handler for HUP
+23/07/31 11:10:18.516 main INFO SignalUtils: Registering signal handler for INT
+23/07/31 11:10:19.009 main WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/07/31 11:10:19.089 main INFO SecurityManager: Changing view acls to: root
+23/07/31 11:10:19.090 main INFO SecurityManager: Changing modify acls to: root
+23/07/31 11:10:19.090 main INFO SecurityManager: Changing view acls groups to: 
+23/07/31 11:10:19.091 main INFO SecurityManager: Changing modify acls groups to: 
+23/07/31 11:10:19.091 main INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+23/07/31 11:10:19.536 main INFO Utils: Successfully started service 'sparkMaster' on port 7077.
+23/07/31 11:10:19.575 dispatcher-event-loop-1 INFO Master: Starting Spark master at spark://master:7077
+23/07/31 11:10:19.581 dispatcher-event-loop-1 INFO Master: Running Spark version 3.2.1
+23/07/31 11:10:19.735 dispatcher-event-loop-1 INFO Utils: Successfully started service 'MasterUI' on port 8080.
+23/07/31 11:10:19.781 dispatcher-event-loop-1 INFO MasterWebUI: Bound MasterWebUI to 0.0.0.0, and started at http://master:8080
+23/07/31 11:10:19.987 dispatcher-event-loop-1 INFO Master: I have been elected leader! New state: ALIVE
+23/07/31 11:10:23.437 dispatcher-event-loop-10 INFO Master: Registering worker 10.0.0.2:46834 with 16 cores, 172.0 GiB RAM
+23/07/31 11:10:55.390 SIGTERM handler ERROR Master: RECEIVED SIGNAL TERM
+23/07/31 11:10:56.706 main INFO Master: Started daemon with process name: 20990@master
+23/07/31 11:10:56.715 main INFO SignalUtils: Registering signal handler for TERM
+23/07/31 11:10:56.716 main INFO SignalUtils: Registering signal handler for HUP
+23/07/31 11:10:56.716 main INFO SignalUtils: Registering signal handler for INT
+23/07/31 11:10:57.219 main WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/07/31 11:10:57.298 main INFO SecurityManager: Changing view acls to: root
+23/07/31 11:10:57.299 main INFO SecurityManager: Changing modify acls to: root
+23/07/31 11:10:57.299 main INFO SecurityManager: Changing view acls groups to: 
+23/07/31 11:10:57.300 main INFO SecurityManager: Changing modify acls groups to: 
+23/07/31 11:10:57.300 main INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+23/07/31 11:10:57.739 main INFO Utils: Successfully started service 'sparkMaster' on port 7077.
+23/07/31 11:10:57.787 dispatcher-event-loop-1 INFO Master: Starting Spark master at spark://master:7077
+23/07/31 11:10:57.794 dispatcher-event-loop-1 INFO Master: Running Spark version 3.2.1
+23/07/31 11:10:58.002 dispatcher-event-loop-1 INFO Utils: Successfully started service 'MasterUI' on port 8080.
+23/07/31 11:10:58.062 dispatcher-event-loop-1 INFO MasterWebUI: Bound MasterWebUI to 0.0.0.0, and started at http://master:8080
+23/07/31 11:10:58.362 dispatcher-event-loop-1 INFO Master: I have been elected leader! New state: ALIVE
+23/07/31 11:11:01.629 dispatcher-event-loop-10 INFO Master: Registering worker 10.0.0.2:33239 with 16 cores, 172.0 GiB RAM

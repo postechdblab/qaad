@@ -1,0 +1,1207 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Core 3.2.1 API  - org.apache.spark.deploy.history.SingleEventLogFileWriter</title>
+          <meta name="description" content="Spark Project Core 3.2.1 API - org.apache.spark.deploy.history.SingleEventLogFileWriter" />
+          <meta name="keywords" content="Spark Project Core 3.2.1 API org.apache.spark.deploy.history.SingleEventLogFileWriter" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Core 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Core Spark functionality." href="../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Core Spark functionality.</p><div class="fullcomment"><div class="comment cmt"><p>Core Spark functionality. <a href="../../SparkContext.html" class="extype" name="org.apache.spark.SparkContext">org.apache.spark.SparkContext</a> serves as the main entry point to
+Spark, while <a href="../../rdd/RDD.html" class="extype" name="org.apache.spark.rdd.RDD">org.apache.spark.rdd.RDD</a> is the data type representing a distributed collection,
+and provides most parallel operations.</p><p>In addition, <a href="../../rdd/PairRDDFunctions.html" class="extype" name="org.apache.spark.rdd.PairRDDFunctions">org.apache.spark.rdd.PairRDDFunctions</a> contains operations available only on RDDs
+of key-value pairs, such as <code>groupByKey</code> and <code>join</code>; <a href="../../rdd/DoubleRDDFunctions.html" class="extype" name="org.apache.spark.rdd.DoubleRDDFunctions">org.apache.spark.rdd.DoubleRDDFunctions</a>
+contains operations available only on RDDs of Doubles; and
+<a href="../../rdd/SequenceFileRDDFunctions.html" class="extype" name="org.apache.spark.rdd.SequenceFileRDDFunctions">org.apache.spark.rdd.SequenceFileRDDFunctions</a> contains operations available on RDDs that can
+be saved as SequenceFiles. These operations are automatically available on any RDD of the right
+type (e.g. RDD[(Int, Int)] through implicit conversions.</p><p>Java programmers should reference the <a href="../../api/java/index.html" class="extype" name="org.apache.spark.api.java">org.apache.spark.api.java</a> package
+for Spark programming APIs in Java.</p><p>Classes and methods marked with <span class="experimental badge" style="float: none;">
+Experimental</span> are user-facing features which have not been officially adopted by the
+Spark project. These are subject to change or removal in minor releases.</p><p>Classes and methods marked with <span class="developer badge" style="float: none;">
+Developer API</span> are intended for advanced users want to extend Spark through lower
+level interfaces. These are subject to changes or removal in minor releases.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.deploy" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="deploy"></a><a id="deploy:deploy"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">deploy</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.deploy.history" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="history"></a><a id="history:history"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="index.html"><span class="name">history</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.deploy">deploy</a></dd></dl></div>
+    </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="CompactionResult.html" title="Describes the result of compaction."></a>
+                        <a href="CompactionResult.html" title="Describes the result of compaction.">CompactionResult</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="CompactionResultCode$.html" title=""></a>
+                        <a href="CompactionResultCode$.html" title="">CompactionResultCode</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="EventLogFileCompactor.html" title="This class compacts the old event log files into one compact file, via two phases reading:"></a>
+                        <a href="EventLogFileCompactor.html" title="This class compacts the old event log files into one compact file, via two phases reading:">EventLogFileCompactor</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="EventLogFileReader$.html" title=""></a>
+                        <a class="class" href="EventLogFileReader.html" title="The base class of reader which will read the information of event log file(s)."></a>
+                        <a href="EventLogFileReader.html" title="The base class of reader which will read the information of event log file(s).">EventLogFileReader</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="EventLogFileWriter$.html" title=""></a>
+                        <a class="class" href="EventLogFileWriter.html" title="The base class of writer which will write event logs into file."></a>
+                        <a href="EventLogFileWriter.html" title="The base class of writer which will write event logs into file.">EventLogFileWriter</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="HistoryServer$.html" title="The recommended way of starting and stopping a HistoryServer is through the scripts start-history-server.sh and stop-history-server.sh."></a>
+                        <a class="class" href="HistoryServer.html" title="A web server that renders SparkUIs of completed applications."></a>
+                        <a href="HistoryServer.html" title="A web server that renders SparkUIs of completed applications.">HistoryServer</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="RollingEventLogFilesWriter$.html" title=""></a>
+                        <a class="class" href="RollingEventLogFilesWriter.html" title="The writer to write event logs into multiple log files, rolled over via configured size."></a>
+                        <a href="RollingEventLogFilesWriter.html" title="The writer to write event logs into multiple log files, rolled over via configured size.">RollingEventLogFilesWriter</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="SingleEventLogFileWriter$.html" title=""></a>
+                        <a class="class" href="" title="The writer to write event logs into single file."></a>
+                        <a href="" title="The writer to write event logs into single file.">SingleEventLogFileWriter</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="class type">
+      <div id="definition">
+        <a href="SingleEventLogFileWriter$.html" title="See companion object"><div class="big-circle class-companion-object">c</div></a>
+        <p id="owner"><a href="../../../../index.html" class="extype" name="org">org</a>.<a href="../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../index.html" class="extype" name="org.apache.spark.deploy">deploy</a>.<a href="index.html" class="extype" name="org.apache.spark.deploy.history">history</a></p>
+        <h1><a href="SingleEventLogFileWriter$.html" title="See companion object">SingleEventLogFileWriter</a><span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"><div>
+            Companion <a href="SingleEventLogFileWriter$.html" title="See companion object">object SingleEventLogFileWriter</a>
+          </div></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SingleEventLogFileWriter</span><span class="result"> extends <a href="EventLogFileWriter.html" class="extype" name="org.apache.spark.deploy.history.EventLogFileWriter">EventLogFileWriter</a></span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The writer to write event logs into single file.
+</p></div><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><a href="EventLogFileWriter.html" class="extype" name="org.apache.spark.deploy.history.EventLogFileWriter">EventLogFileWriter</a>, <a href="../../internal/Logging.html" class="extype" name="org.apache.spark.internal.Logging">Logging</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="org.apache.spark.deploy.history.SingleEventLogFileWriter"><span>SingleEventLogFileWriter</span></li><li class="in" name="org.apache.spark.deploy.history.EventLogFileWriter"><span>EventLogFileWriter</span></li><li class="in" name="org.apache.spark.internal.Logging"><span>Logging</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="org.apache.spark.deploy.history.SingleEventLogFileWriter#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(appId:String,appAttemptId:Option[String],logBaseDir:java.net.URI,sparkConf:org.apache.spark.SparkConf,hadoopConf:org.apache.hadoop.conf.Configuration):org.apache.spark.deploy.history.SingleEventLogFileWriter"></a><a id="&lt;init&gt;:SingleEventLogFileWriter"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#&lt;init&gt;(appId:String,appAttemptId:Option[String],logBaseDir:java.net.URI,sparkConf:org.apache.spark.SparkConf,hadoopConf:org.apache.hadoop.conf.Configuration):org.apache.spark.deploy.history.SingleEventLogFileWriter" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SingleEventLogFileWriter</span><span class="params">(<span name="appId">appId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="appAttemptId">appAttemptId: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="logBaseDir">logBaseDir: <span class="extype" name="java.net.URI">URI</span></span>, <span name="sparkConf">sparkConf: <a href="../../SparkConf.html" class="extype" name="org.apache.spark.SparkConf">SparkConf</a></span>, <span name="hadoopConf">hadoopConf: <span class="extype" name="org.apache.hadoop.conf.Configuration">Configuration</span></span>)</span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.deploy.history.EventLogFileWriter#closeWriter" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="closeWriter():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#closeWriter():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">closeWriter</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="EventLogFileWriter.html" class="extype" name="org.apache.spark.deploy.history.EventLogFileWriter">EventLogFileWriter</a></dd></dl></div>
+    </li><li name="org.apache.spark.deploy.history.EventLogFileWriter#compressionCodec" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="compressionCodec:Option[org.apache.spark.io.CompressionCodec]"></a><a id="compressionCodec:Option[CompressionCodec]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#compressionCodec:Option[org.apache.spark.io.CompressionCodec]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">compressionCodec</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="../../io/CompressionCodec.html" class="extype" name="org.apache.spark.io.CompressionCodec">CompressionCodec</a>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="EventLogFileWriter.html" class="extype" name="org.apache.spark.deploy.history.EventLogFileWriter">EventLogFileWriter</a></dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.spark.deploy.history.EventLogFileWriter#fileSystem" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fileSystem:org.apache.hadoop.fs.FileSystem"></a><a id="fileSystem:FileSystem"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#fileSystem:org.apache.hadoop.fs.FileSystem" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fileSystem</span><span class="result">: <span class="extype" name="org.apache.hadoop.fs.FileSystem">FileSystem</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="EventLogFileWriter.html" class="extype" name="org.apache.spark.deploy.history.EventLogFileWriter">EventLogFileWriter</a></dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.deploy.history.EventLogFileWriter#hadoopDataStream" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hadoopDataStream:Option[org.apache.hadoop.fs.FSDataOutputStream]"></a><a id="hadoopDataStream:Option[FSDataOutputStream]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#hadoopDataStream:Option[org.apache.hadoop.fs.FSDataOutputStream]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hadoopDataStream</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="org.apache.hadoop.fs.FSDataOutputStream">FSDataOutputStream</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="EventLogFileWriter.html" class="extype" name="org.apache.spark.deploy.history.EventLogFileWriter">EventLogFileWriter</a></dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.deploy.history.SingleEventLogFileWriter#inProgressPath" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="inProgressPath:String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#inProgressPath:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">inProgressPath</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="org.apache.spark.deploy.history.EventLogFileWriter#initLogFile" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="initLogFile(path:org.apache.hadoop.fs.Path)(fnSetupWriter:java.io.OutputStream=&gt;java.io.PrintWriter):Unit"></a><a id="initLogFile(Path)((OutputStream)⇒PrintWriter):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#initLogFile(path:org.apache.hadoop.fs.Path)(fnSetupWriter:java.io.OutputStream=&gt;java.io.PrintWriter):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">initLogFile</span><span class="params">(<span name="path">path: <span class="extype" name="org.apache.hadoop.fs.Path">Path</span></span>)</span><span class="params">(<span name="fnSetupWriter">fnSetupWriter: (<span class="extype" name="java.io.OutputStream">OutputStream</span>) ⇒ <span class="extype" name="java.io.PrintWriter">PrintWriter</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="EventLogFileWriter.html" class="extype" name="org.apache.spark.deploy.history.EventLogFileWriter">EventLogFileWriter</a></dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#initializeLogIfNecessary" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="initializeLogIfNecessary(isInterpreter:Boolean,silent:Boolean):Boolean"></a><a id="initializeLogIfNecessary(Boolean,Boolean):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#initializeLogIfNecessary(isInterpreter:Boolean,silent:Boolean):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">initializeLogIfNecessary</span><span class="params">(<span name="isInterpreter">isInterpreter: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="silent">silent: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../../internal/Logging.html" class="extype" name="org.apache.spark.internal.Logging">Logging</a></dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#initializeLogIfNecessary" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="initializeLogIfNecessary(isInterpreter:Boolean):Unit"></a><a id="initializeLogIfNecessary(Boolean):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#initializeLogIfNecessary(isInterpreter:Boolean):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">initializeLogIfNecessary</span><span class="params">(<span name="isInterpreter">isInterpreter: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../../internal/Logging.html" class="extype" name="org.apache.spark.internal.Logging">Logging</a></dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#isTraceEnabled" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isTraceEnabled():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#isTraceEnabled():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isTraceEnabled</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../../internal/Logging.html" class="extype" name="org.apache.spark.internal.Logging">Logging</a></dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#log" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="log:org.slf4j.Logger"></a><a id="log:Logger"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#log:org.slf4j.Logger" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">log</span><span class="result">: <span class="extype" name="org.slf4j.Logger">Logger</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../../internal/Logging.html" class="extype" name="org.apache.spark.internal.Logging">Logging</a></dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logDebug" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logDebug(msg:=&gt;String,throwable:Throwable):Unit"></a><a id="logDebug(⇒String,Throwable):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#logDebug(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logDebug</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../../internal/Logging.html" class="extype" name="org.apache.spark.internal.Logging">Logging</a></dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logDebug" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logDebug(msg:=&gt;String):Unit"></a><a id="logDebug(⇒String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#logDebug(msg:=&gt;String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logDebug</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../../internal/Logging.html" class="extype" name="org.apache.spark.internal.Logging">Logging</a></dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logError" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logError(msg:=&gt;String,throwable:Throwable):Unit"></a><a id="logError(⇒String,Throwable):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#logError(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logError</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../../internal/Logging.html" class="extype" name="org.apache.spark.internal.Logging">Logging</a></dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logError" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logError(msg:=&gt;String):Unit"></a><a id="logError(⇒String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#logError(msg:=&gt;String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logError</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../../internal/Logging.html" class="extype" name="org.apache.spark.internal.Logging">Logging</a></dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logInfo" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logInfo(msg:=&gt;String,throwable:Throwable):Unit"></a><a id="logInfo(⇒String,Throwable):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#logInfo(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logInfo</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../../internal/Logging.html" class="extype" name="org.apache.spark.internal.Logging">Logging</a></dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logInfo" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logInfo(msg:=&gt;String):Unit"></a><a id="logInfo(⇒String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#logInfo(msg:=&gt;String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logInfo</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../../internal/Logging.html" class="extype" name="org.apache.spark.internal.Logging">Logging</a></dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logName" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logName:String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#logName:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logName</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../../internal/Logging.html" class="extype" name="org.apache.spark.internal.Logging">Logging</a></dd></dl></div>
+    </li><li name="org.apache.spark.deploy.history.SingleEventLogFileWriter#logPath" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logPath:String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#logPath:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logPath</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">returns representative path of log.</p><div class="fullcomment"><div class="comment cmt"><p>returns representative path of log. for tests only.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.deploy.history.SingleEventLogFileWriter">SingleEventLogFileWriter</a> → <a href="EventLogFileWriter.html" class="extype" name="org.apache.spark.deploy.history.EventLogFileWriter">EventLogFileWriter</a></dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logTrace" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logTrace(msg:=&gt;String,throwable:Throwable):Unit"></a><a id="logTrace(⇒String,Throwable):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#logTrace(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logTrace</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../../internal/Logging.html" class="extype" name="org.apache.spark.internal.Logging">Logging</a></dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logTrace" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logTrace(msg:=&gt;String):Unit"></a><a id="logTrace(⇒String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#logTrace(msg:=&gt;String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logTrace</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../../internal/Logging.html" class="extype" name="org.apache.spark.internal.Logging">Logging</a></dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logWarning" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logWarning(msg:=&gt;String,throwable:Throwable):Unit"></a><a id="logWarning(⇒String,Throwable):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#logWarning(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logWarning</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../../internal/Logging.html" class="extype" name="org.apache.spark.internal.Logging">Logging</a></dd></dl></div>
+    </li><li name="org.apache.spark.internal.Logging#logWarning" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logWarning(msg:=&gt;String):Unit"></a><a id="logWarning(⇒String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#logWarning(msg:=&gt;String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logWarning</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../../internal/Logging.html" class="extype" name="org.apache.spark.internal.Logging">Logging</a></dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.deploy.history.EventLogFileWriter#outputBufferSize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="outputBufferSize:Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#outputBufferSize:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">outputBufferSize</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="EventLogFileWriter.html" class="extype" name="org.apache.spark.deploy.history.EventLogFileWriter">EventLogFileWriter</a></dd></dl></div>
+    </li><li name="org.apache.spark.deploy.history.EventLogFileWriter#renameFile" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="renameFile(src:org.apache.hadoop.fs.Path,dest:org.apache.hadoop.fs.Path,overwrite:Boolean):Unit"></a><a id="renameFile(Path,Path,Boolean):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#renameFile(src:org.apache.hadoop.fs.Path,dest:org.apache.hadoop.fs.Path,overwrite:Boolean):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">renameFile</span><span class="params">(<span name="src">src: <span class="extype" name="org.apache.hadoop.fs.Path">Path</span></span>, <span name="dest">dest: <span class="extype" name="org.apache.hadoop.fs.Path">Path</span></span>, <span name="overwrite">overwrite: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="EventLogFileWriter.html" class="extype" name="org.apache.spark.deploy.history.EventLogFileWriter">EventLogFileWriter</a></dd></dl></div>
+    </li><li name="org.apache.spark.deploy.history.EventLogFileWriter#requireLogBaseDirAsDirectory" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="requireLogBaseDirAsDirectory():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#requireLogBaseDirAsDirectory():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">requireLogBaseDirAsDirectory</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="EventLogFileWriter.html" class="extype" name="org.apache.spark.deploy.history.EventLogFileWriter">EventLogFileWriter</a></dd></dl></div>
+    </li><li name="org.apache.spark.deploy.history.EventLogFileWriter#shouldCompress" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="shouldCompress:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#shouldCompress:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">shouldCompress</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="EventLogFileWriter.html" class="extype" name="org.apache.spark.deploy.history.EventLogFileWriter">EventLogFileWriter</a></dd></dl></div>
+    </li><li name="org.apache.spark.deploy.history.EventLogFileWriter#shouldOverwrite" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="shouldOverwrite:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#shouldOverwrite:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">shouldOverwrite</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="EventLogFileWriter.html" class="extype" name="org.apache.spark.deploy.history.EventLogFileWriter">EventLogFileWriter</a></dd></dl></div>
+    </li><li name="org.apache.spark.deploy.history.SingleEventLogFileWriter#start" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="start():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#start():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">start</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">initialize writer for event logging</p><div class="fullcomment"><div class="comment cmt"><p>initialize writer for event logging</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.deploy.history.SingleEventLogFileWriter">SingleEventLogFileWriter</a> → <a href="EventLogFileWriter.html" class="extype" name="org.apache.spark.deploy.history.EventLogFileWriter">EventLogFileWriter</a></dd></dl></div>
+    </li><li name="org.apache.spark.deploy.history.SingleEventLogFileWriter#stop" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="stop():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#stop():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">stop</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Stop logging events.</p><div class="fullcomment"><div class="comment cmt"><p>Stop logging events. The event log file will be renamed so that it loses the
+&quot;.inprogress&quot; suffix.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.deploy.history.SingleEventLogFileWriter">SingleEventLogFileWriter</a> → <a href="EventLogFileWriter.html" class="extype" name="org.apache.spark.deploy.history.EventLogFileWriter">EventLogFileWriter</a></dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.deploy.history.SingleEventLogFileWriter#writeEvent" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="writeEvent(eventJson:String,flushLogger:Boolean):Unit"></a><a id="writeEvent(String,Boolean):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#writeEvent(eventJson:String,flushLogger:Boolean):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">writeEvent</span><span class="params">(<span name="eventJson">eventJson: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="flushLogger">flushLogger: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">writes JSON format of event to file</p><div class="fullcomment"><div class="comment cmt"><p>writes JSON format of event to file</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.spark.deploy.history.SingleEventLogFileWriter">SingleEventLogFileWriter</a> → <a href="EventLogFileWriter.html" class="extype" name="org.apache.spark.deploy.history.EventLogFileWriter">EventLogFileWriter</a></dd></dl></div>
+    </li><li name="org.apache.spark.deploy.history.EventLogFileWriter#writeLine" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="writeLine(line:String,flushLogger:Boolean):Unit"></a><a id="writeLine(String,Boolean):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#writeLine(line:String,flushLogger:Boolean):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">writeLine</span><span class="params">(<span name="line">line: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="flushLogger">flushLogger: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="EventLogFileWriter.html" class="extype" name="org.apache.spark.deploy.history.EventLogFileWriter">EventLogFileWriter</a></dd></dl></div>
+    </li><li name="org.apache.spark.deploy.history.EventLogFileWriter#writer" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="writer:Option[java.io.PrintWriter]"></a><a id="writer:Option[PrintWriter]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/deploy/history/SingleEventLogFileWriter.html#writer:Option[java.io.PrintWriter]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">writer</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="java.io.PrintWriter">PrintWriter</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="EventLogFileWriter.html" class="extype" name="org.apache.spark.deploy.history.EventLogFileWriter">EventLogFileWriter</a></dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="org.apache.spark.deploy.history.EventLogFileWriter">
+              <h3>Inherited from <a href="EventLogFileWriter.html" class="extype" name="org.apache.spark.deploy.history.EventLogFileWriter">EventLogFileWriter</a></h3>
+            </div><div class="parent" name="org.apache.spark.internal.Logging">
+              <h3>Inherited from <a href="../../internal/Logging.html" class="extype" name="org.apache.spark.internal.Logging">Logging</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

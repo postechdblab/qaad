@@ -1,0 +1,852 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Shuffle Streaming Service 3.2.1 API  - org.apache.spark.network.shuffle</title>
+          <meta name="description" content="Spark Project Shuffle Streaming Service 3.2.1 API - org.apache.spark.network.shuffle" />
+          <meta name="keywords" content="Spark Project Shuffle Streaming Service 3.2.1 API org.apache.spark.network.shuffle" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Shuffle Streaming Service 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.network" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="network"></a><a id="network:network"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">network</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.sasl" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sasl"></a><a id="sasl:sasl"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/sasl/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../sasl/index.html"><span class="name">sasl</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.shuffle" visbl="pub" class="indented5 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="shuffle"></a><a id="shuffle:shuffle"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">shuffle</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.shuffle.checksum" visbl="pub" class="indented6 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="checksum"></a><a id="checksum:checksum"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/checksum/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="checksum/index.html"><span class="name">checksum</span></a>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.network.shuffle.protocol" visbl="pub" class="indented6 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="protocol"></a><a id="protocol:protocol"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/protocol/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="protocol/index.html"><span class="name">protocol</span></a>
+      </span>
+      
+      
+    </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="BlockFetchingListener.html" title=""></a>
+                        <a href="BlockFetchingListener.html" title="">BlockFetchingListener</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="BlockPushingListener.html" title="Callback to handle block push success and failure."></a>
+                        <a href="BlockPushingListener.html" title="Callback to handle block push success and failure.">BlockPushingListener</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="BlockStoreClient.html" title="Provides an interface for reading both shuffle files and RDD blocks, either from an Executor or external service."></a>
+                        <a href="BlockStoreClient.html" title="Provides an interface for reading both shuffle files and RDD blocks, either from an Executor or external service.">BlockStoreClient</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="BlockTransferListener.html" title="This interface unifies both BlockFetchingListener and BlockPushingListener under a single interface to allow code reuse, while also keeping the existing public interface to facilitate backward compatibility."></a>
+                        <a href="BlockTransferListener.html" title="This interface unifies both BlockFetchingListener and BlockPushingListener under a single interface to allow code reuse, while also keeping the existing public interface to facilitate backward compatibility.">BlockTransferListener</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="Constants.html" title=""></a>
+                        <a href="Constants.html" title="">Constants</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="DownloadFile.html" title="A handle on the file used when fetching remote data to disk."></a>
+                        <a href="DownloadFile.html" title="A handle on the file used when fetching remote data to disk.">DownloadFile</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="DownloadFileManager.html" title="A manager to create temp block files used when fetching remote data to reduce the memory usage."></a>
+                        <a href="DownloadFileManager.html" title="A manager to create temp block files used when fetching remote data to reduce the memory usage.">DownloadFileManager</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="DownloadFileWritableChannel.html" title="A channel for writing data which is fetched to disk, which allows access to the written data only after the writer has been closed."></a>
+                        <a href="DownloadFileWritableChannel.html" title="A channel for writing data which is fetched to disk, which allows access to the written data only after the writer has been closed.">DownloadFileWritableChannel</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="ErrorHandler.html" title="Plugs into RetryingBlockTransferor to further control when an exception should be retried and logged."></a>
+                        <a href="ErrorHandler.html" title="Plugs into RetryingBlockTransferor to further control when an exception should be retried and logged.">ErrorHandler</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ExecutorDiskUtils.html" title=""></a>
+                        <a href="ExecutorDiskUtils.html" title="">ExecutorDiskUtils</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ExternalBlockHandler.html" title="RPC Handler for a server which can serve both RDD blocks and shuffle blocks from outside of an Executor process."></a>
+                        <a href="ExternalBlockHandler.html" title="RPC Handler for a server which can serve both RDD blocks and shuffle blocks from outside of an Executor process.">ExternalBlockHandler</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ExternalBlockStoreClient.html" title="Client for reading both RDD blocks and shuffle blocks which points to an external (outside of executor) server."></a>
+                        <a href="ExternalBlockStoreClient.html" title="Client for reading both RDD blocks and shuffle blocks which points to an external (outside of executor) server.">ExternalBlockStoreClient</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ExternalShuffleBlockResolver.html" title="Manages converting shuffle BlockIds into physical segments of local files, from a process outside of Executors."></a>
+                        <a href="ExternalShuffleBlockResolver.html" title="Manages converting shuffle BlockIds into physical segments of local files, from a process outside of Executors.">ExternalShuffleBlockResolver</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="MergeFinalizerListener.html" title=":: DeveloperApi ::"></a>
+                        <a href="MergeFinalizerListener.html" title=":: DeveloperApi ::">MergeFinalizerListener</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="MergedBlockMeta.html" title="Contains meta information for a merged block."></a>
+                        <a href="MergedBlockMeta.html" title="Contains meta information for a merged block.">MergedBlockMeta</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="MergedBlocksMetaListener.html" title="Listener for receiving success or failure events when fetching meta of merged blocks."></a>
+                        <a href="MergedBlocksMetaListener.html" title="Listener for receiving success or failure events when fetching meta of merged blocks.">MergedBlocksMetaListener</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="MergedShuffleFileManager.html" title="The MergedShuffleFileManager is used to process push based shuffle when enabled."></a>
+                        <a href="MergedShuffleFileManager.html" title="The MergedShuffleFileManager is used to process push based shuffle when enabled.">MergedShuffleFileManager</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="NoOpMergedShuffleFileManager.html" title="Dummy implementation of merged shuffle file manager."></a>
+                        <a href="NoOpMergedShuffleFileManager.html" title="Dummy implementation of merged shuffle file manager.">NoOpMergedShuffleFileManager</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="OneForOneBlockFetcher.html" title="Simple wrapper on top of a TransportClient which interprets each chunk as a whole block, and invokes the BlockFetchingListener appropriately."></a>
+                        <a href="OneForOneBlockFetcher.html" title="Simple wrapper on top of a TransportClient which interprets each chunk as a whole block, and invokes the BlockFetchingListener appropriately.">OneForOneBlockFetcher</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="OneForOneBlockPusher.html" title="Similar to OneForOneBlockFetcher, but for pushing blocks to remote shuffle service to be merged instead of for fetching them from remote shuffle services."></a>
+                        <a href="OneForOneBlockPusher.html" title="Similar to OneForOneBlockFetcher, but for pushing blocks to remote shuffle service to be merged instead of for fetching them from remote shuffle services.">OneForOneBlockPusher</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="RemoteBlockPushResolver.html" title="An implementation of MergedShuffleFileManager that provides the most essential shuffle service processing logic to support push based shuffle."></a>
+                        <a href="RemoteBlockPushResolver.html" title="An implementation of MergedShuffleFileManager that provides the most essential shuffle service processing logic to support push based shuffle.">RemoteBlockPushResolver</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="RetryingBlockTransferor.html" title="Wraps another BlockFetcher or BlockPusher with the ability to automatically retry block transfers which fail due to IOExceptions, which we hope are due to transient network conditions."></a>
+                        <a href="RetryingBlockTransferor.html" title="Wraps another BlockFetcher or BlockPusher with the ability to automatically retry block transfers which fail due to IOExceptions, which we hope are due to transient network conditions.">RetryingBlockTransferor</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ShuffleIndexInformation.html" title="Keeps the index information for a particular map output as an in-memory LongBuffer."></a>
+                        <a href="ShuffleIndexInformation.html" title="Keeps the index information for a particular map output as an in-memory LongBuffer.">ShuffleIndexInformation</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ShuffleIndexRecord.html" title="Contains offset and length of the shuffle block data."></a>
+                        <a href="ShuffleIndexRecord.html" title="Contains offset and length of the shuffle block data.">ShuffleIndexRecord</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="SimpleDownloadFile.html" title="A DownloadFile that does not take any encryption settings into account for reading and writing data."></a>
+                        <a href="SimpleDownloadFile.html" title="A DownloadFile that does not take any encryption settings into account for reading and writing data.">SimpleDownloadFile</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../../index.html" class="extype" name="org">org</a>.<a href="../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../index.html" class="extype" name="org.apache.spark.network">network</a></p>
+        <h1>shuffle<span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">shuffle</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.spark.network.shuffle.BlockFetchingListener" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="BlockFetchingListenerextendsBlockTransferListener"></a><a id="BlockFetchingListener:BlockFetchingListener"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/BlockFetchingListener.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="BlockFetchingListener.html"><span class="name">BlockFetchingListener</span></a><span class="result"> extends <a href="BlockTransferListener.html" class="extype" name="org.apache.spark.network.shuffle.BlockTransferListener">BlockTransferListener</a></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.network.shuffle.BlockPushingListener" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="BlockPushingListenerextendsBlockTransferListener"></a><a id="BlockPushingListener:BlockPushingListener"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/BlockPushingListener.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Callback to handle block push success and failure." href="BlockPushingListener.html"><span class="name">BlockPushingListener</span></a><span class="result"> extends <a href="BlockTransferListener.html" class="extype" name="org.apache.spark.network.shuffle.BlockTransferListener">BlockTransferListener</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Callback to handle block push success and failure.</p><div class="fullcomment"><div class="comment cmt"><p>Callback to handle block push success and failure. This interface and
+<code><a href="BlockFetchingListener.html" class="extype" name="org.apache.spark.network.shuffle.BlockFetchingListener">BlockFetchingListener</a></code> are unified under <code><a href="BlockTransferListener.html" class="extype" name="org.apache.spark.network.shuffle.BlockTransferListener">BlockTransferListener</a></code> to allow
+code reuse for handling block push and fetch retry.
+</p></div></div>
+    </li><li name="org.apache.spark.network.shuffle.BlockStoreClient" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="BlockStoreClientextendsCloseable"></a><a id="BlockStoreClient:BlockStoreClient"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/BlockStoreClient.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Provides an interface for reading both shuffle files and RDD blocks, either from an Executor or external service." href="BlockStoreClient.html"><span class="name">BlockStoreClient</span></a><span class="result"> extends <span class="extype" name="java.io.Closeable">Closeable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Provides an interface for reading both shuffle files and RDD blocks, either from an Executor
+or external service.</p>
+    </li><li name="org.apache.spark.network.shuffle.BlockTransferListener" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="BlockTransferListenerextendsEventListener"></a><a id="BlockTransferListener:BlockTransferListener"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/BlockTransferListener.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="This interface unifies both BlockFetchingListener and BlockPushingListener under a single interface to allow code reuse, while also keeping the existing public interface to facilitate backward compatibility." href="BlockTransferListener.html"><span class="name">BlockTransferListener</span></a><span class="result"> extends <span class="extype" name="java.util.EventListener">EventListener</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">This interface unifies both <code><a href="BlockFetchingListener.html" class="extype" name="org.apache.spark.network.shuffle.BlockFetchingListener">BlockFetchingListener</a></code> and <code><a href="BlockPushingListener.html" class="extype" name="org.apache.spark.network.shuffle.BlockPushingListener">BlockPushingListener</a></code>
+under a single interface to allow code reuse, while also keeping the existing public interface
+to facilitate backward compatibility.</p>
+    </li><li name="org.apache.spark.network.shuffle.Constants" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ConstantsextendsObject"></a><a id="Constants:Constants"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/Constants.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Constants.html"><span class="name">Constants</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.network.shuffle.DownloadFile" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="DownloadFileextendsObject"></a><a id="DownloadFile:DownloadFile"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/DownloadFile.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A handle on the file used when fetching remote data to disk." href="DownloadFile.html"><span class="name">DownloadFile</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A handle on the file used when fetching remote data to disk.</p><div class="fullcomment"><div class="comment cmt"><p>A handle on the file used when fetching remote data to disk.  Used to ensure the lifecycle of
+writing the data, reading it back, and then cleaning it up is followed.  Specific implementations
+may also handle encryption.  The data can be read only via DownloadFileWritableChannel,
+which ensures data is not read until after the writer is closed.
+</p></div></div>
+    </li><li name="org.apache.spark.network.shuffle.DownloadFileManager" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="DownloadFileManagerextendsObject"></a><a id="DownloadFileManager:DownloadFileManager"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/DownloadFileManager.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A manager to create temp block files used when fetching remote data to reduce the memory usage." href="DownloadFileManager.html"><span class="name">DownloadFileManager</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A manager to create temp block files used when fetching remote data to reduce the memory usage.</p><div class="fullcomment"><div class="comment cmt"><p>A manager to create temp block files used when fetching remote data to reduce the memory usage.
+It will clean files when they won't be used any more.
+</p></div></div>
+    </li><li name="org.apache.spark.network.shuffle.DownloadFileWritableChannel" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="DownloadFileWritableChannelextendsWritableByteChannel"></a><a id="DownloadFileWritableChannel:DownloadFileWritableChannel"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/DownloadFileWritableChannel.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A channel for writing data which is fetched to disk, which allows access to the written data only after the writer has been closed." href="DownloadFileWritableChannel.html"><span class="name">DownloadFileWritableChannel</span></a><span class="result"> extends <span class="extype" name="java.nio.channels.WritableByteChannel">WritableByteChannel</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A channel for writing data which is fetched to disk, which allows access to the written data only
+after the writer has been closed.</p><div class="fullcomment"><div class="comment cmt"><p>A channel for writing data which is fetched to disk, which allows access to the written data only
+after the writer has been closed.  Used with DownloadFile and DownloadFileManager.
+</p></div></div>
+    </li><li name="org.apache.spark.network.shuffle.ErrorHandler" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ErrorHandlerextendsObject"></a><a id="ErrorHandler:ErrorHandler"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/ErrorHandler.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Plugs into RetryingBlockTransferor to further control when an exception should be retried and logged." href="ErrorHandler.html"><span class="name">ErrorHandler</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Plugs into <code><a href="RetryingBlockTransferor.html" class="extype" name="org.apache.spark.network.shuffle.RetryingBlockTransferor">RetryingBlockTransferor</a></code> to further control when an exception should be retried
+and logged.</p><div class="fullcomment"><div class="comment cmt"><p>Plugs into <code><a href="RetryingBlockTransferor.html" class="extype" name="org.apache.spark.network.shuffle.RetryingBlockTransferor">RetryingBlockTransferor</a></code> to further control when an exception should be retried
+and logged.
+Note: <code><a href="RetryingBlockTransferor.html" class="extype" name="org.apache.spark.network.shuffle.RetryingBlockTransferor">RetryingBlockTransferor</a></code> will delegate the exception to this handler only when
+- remaining retries &lt; max retries
+- exception is an IOException
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.1.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.network.shuffle.ExecutorDiskUtils" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ExecutorDiskUtilsextendsObject"></a><a id="ExecutorDiskUtils:ExecutorDiskUtils"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/ExecutorDiskUtils.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ExecutorDiskUtils.html"><span class="name">ExecutorDiskUtils</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.network.shuffle.ExternalBlockHandler" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ExternalBlockHandlerextendsRpcHandlerwithRpcHandler.MergedBlockMetaReqHandler"></a><a id="ExternalBlockHandler:ExternalBlockHandler"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/ExternalBlockHandler.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="RPC Handler for a server which can serve both RDD blocks and shuffle blocks from outside of an Executor process." href="ExternalBlockHandler.html"><span class="name">ExternalBlockHandler</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.network.server.RpcHandler">RpcHandler</span> with <span class="extype" name="org.apache.spark.network.server.RpcHandler.MergedBlockMetaReqHandler">MergedBlockMetaReqHandler</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">RPC Handler for a server which can serve both RDD blocks and shuffle blocks from outside
+of an Executor process.</p><div class="fullcomment"><div class="comment cmt"><p>RPC Handler for a server which can serve both RDD blocks and shuffle blocks from outside
+of an Executor process.</p><p>Handles registering executors and opening shuffle or disk persisted RDD blocks from them.
+Blocks are registered with the &quot;one-for-one&quot; strategy, meaning each Transport-layer Chunk
+is equivalent to one block.
+</p></div></div>
+    </li><li name="org.apache.spark.network.shuffle.ExternalBlockStoreClient" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ExternalBlockStoreClientextendsBlockStoreClient"></a><a id="ExternalBlockStoreClient:ExternalBlockStoreClient"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/ExternalBlockStoreClient.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Client for reading both RDD blocks and shuffle blocks which points to an external (outside of executor) server." href="ExternalBlockStoreClient.html"><span class="name">ExternalBlockStoreClient</span></a><span class="result"> extends <a href="BlockStoreClient.html" class="extype" name="org.apache.spark.network.shuffle.BlockStoreClient">BlockStoreClient</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Client for reading both RDD blocks and shuffle blocks which points to an external
+(outside of executor) server.</p><div class="fullcomment"><div class="comment cmt"><p>Client for reading both RDD blocks and shuffle blocks which points to an external
+(outside of executor) server. This is instead of reading blocks directly from other executors
+(via BlockTransferService), which has the downside of losing the data if we lose the executors.
+</p></div></div>
+    </li><li name="org.apache.spark.network.shuffle.ExternalShuffleBlockResolver" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ExternalShuffleBlockResolverextendsObject"></a><a id="ExternalShuffleBlockResolver:ExternalShuffleBlockResolver"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/ExternalShuffleBlockResolver.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Manages converting shuffle BlockIds into physical segments of local files, from a process outside of Executors." href="ExternalShuffleBlockResolver.html"><span class="name">ExternalShuffleBlockResolver</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Manages converting shuffle BlockIds into physical segments of local files, from a process outside
+of Executors.</p><div class="fullcomment"><div class="comment cmt"><p>Manages converting shuffle BlockIds into physical segments of local files, from a process outside
+of Executors. Each Executor must register its own configuration about where it stores its files
+(local dirs) and how (shuffle manager). The logic for retrieval of individual files is replicated
+from Spark's IndexShuffleBlockResolver.
+</p></div></div>
+    </li><li name="org.apache.spark.network.shuffle.MergeFinalizerListener" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="MergeFinalizerListenerextendsEventListener"></a><a id="MergeFinalizerListener:MergeFinalizerListener"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/MergeFinalizerListener.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title=":: DeveloperApi ::" href="MergeFinalizerListener.html"><span class="name">MergeFinalizerListener</span></a><span class="result"> extends <span class="extype" name="java.util.EventListener">EventListener</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">:: DeveloperApi ::</p><div class="fullcomment"><div class="comment cmt"><p>:: DeveloperApi ::</p><p>Listener providing a callback function to invoke when driver receives the response for the
+finalize shuffle merge request sent to remote shuffle service.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>3.1.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.network.shuffle.MergedBlockMeta" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="MergedBlockMetaextendsObject"></a><a id="MergedBlockMeta:MergedBlockMeta"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/MergedBlockMeta.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Contains meta information for a merged block." href="MergedBlockMeta.html"><span class="name">MergedBlockMeta</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Contains meta information for a merged block.</p><div class="fullcomment"><div class="comment cmt"><p>Contains meta information for a merged block. Currently this information constitutes:
+1. Number of chunks in a merged shuffle block.
+2. Bitmaps for each chunk in the merged block. A chunk bitmap contains all the mapIds that were
+   merged to that merged block chunk.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>3.1.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.network.shuffle.MergedBlocksMetaListener" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="MergedBlocksMetaListenerextendsEventListener"></a><a id="MergedBlocksMetaListener:MergedBlocksMetaListener"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/MergedBlocksMetaListener.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Listener for receiving success or failure events when fetching meta of merged blocks." href="MergedBlocksMetaListener.html"><span class="name">MergedBlocksMetaListener</span></a><span class="result"> extends <span class="extype" name="java.util.EventListener">EventListener</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Listener for receiving success or failure events when fetching meta of merged blocks.</p><div class="fullcomment"><div class="comment cmt"><p>Listener for receiving success or failure events when fetching meta of merged blocks.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>3.2.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.network.shuffle.MergedShuffleFileManager" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="MergedShuffleFileManagerextendsObject"></a><a id="MergedShuffleFileManager:MergedShuffleFileManager"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/MergedShuffleFileManager.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="The MergedShuffleFileManager is used to process push based shuffle when enabled." href="MergedShuffleFileManager.html"><span class="name">MergedShuffleFileManager</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The MergedShuffleFileManager is used to process push based shuffle when enabled.</p><div class="fullcomment"><div class="comment cmt"><p>The MergedShuffleFileManager is used to process push based shuffle when enabled. It works
+along side <code><a href="ExternalBlockHandler.html" class="extype" name="org.apache.spark.network.shuffle.ExternalBlockHandler">ExternalBlockHandler</a></code> and serves as an RPCHandler for
+<code><span class="extype" name="org.apache.spark.network.server.RpcHandler#receiveStream">org.apache.spark.network.server.RpcHandler#receiveStream</span></code>, where it processes the
+remotely pushed streams of shuffle blocks to merge them into merged shuffle files. Right
+now, support for push based shuffle is only implemented for external shuffle service in
+YARN mode.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Evolving</span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>3.1.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.network.shuffle.NoOpMergedShuffleFileManager" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="NoOpMergedShuffleFileManagerextendsMergedShuffleFileManager"></a><a id="NoOpMergedShuffleFileManager:NoOpMergedShuffleFileManager"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/NoOpMergedShuffleFileManager.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Dummy implementation of merged shuffle file manager." href="NoOpMergedShuffleFileManager.html"><span class="name">NoOpMergedShuffleFileManager</span></a><span class="result"> extends <a href="MergedShuffleFileManager.html" class="extype" name="org.apache.spark.network.shuffle.MergedShuffleFileManager">MergedShuffleFileManager</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Dummy implementation of merged shuffle file manager.</p><div class="fullcomment"><div class="comment cmt"><p>Dummy implementation of merged shuffle file manager. Suitable for when push-based shuffle
+is not enabled.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>3.1.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.network.shuffle.OneForOneBlockFetcher" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="OneForOneBlockFetcherextendsObject"></a><a id="OneForOneBlockFetcher:OneForOneBlockFetcher"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/OneForOneBlockFetcher.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Simple wrapper on top of a TransportClient which interprets each chunk as a whole block, and invokes the BlockFetchingListener appropriately." href="OneForOneBlockFetcher.html"><span class="name">OneForOneBlockFetcher</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Simple wrapper on top of a TransportClient which interprets each chunk as a whole block, and
+invokes the BlockFetchingListener appropriately.</p><div class="fullcomment"><div class="comment cmt"><p>Simple wrapper on top of a TransportClient which interprets each chunk as a whole block, and
+invokes the BlockFetchingListener appropriately. This class is agnostic to the actual RPC
+handler, as long as there is a single &quot;open blocks&quot; message which returns a ShuffleStreamHandle,
+and Java serialization is used.</p><p>Note that this typically corresponds to a
+<code><span class="extype" name="org.apache.spark.network.server.OneForOneStreamManager">org.apache.spark.network.server.OneForOneStreamManager</span></code> on the server side.
+</p></div></div>
+    </li><li name="org.apache.spark.network.shuffle.OneForOneBlockPusher" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="OneForOneBlockPusherextendsObject"></a><a id="OneForOneBlockPusher:OneForOneBlockPusher"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/OneForOneBlockPusher.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Similar to OneForOneBlockFetcher, but for pushing blocks to remote shuffle service to be merged instead of for fetching them from remote shuffle services." href="OneForOneBlockPusher.html"><span class="name">OneForOneBlockPusher</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Similar to <code><a href="OneForOneBlockFetcher.html" class="extype" name="org.apache.spark.network.shuffle.OneForOneBlockFetcher">OneForOneBlockFetcher</a></code>, but for pushing blocks to remote shuffle service to
+be merged instead of for fetching them from remote shuffle services.</p><div class="fullcomment"><div class="comment cmt"><p>Similar to <code><a href="OneForOneBlockFetcher.html" class="extype" name="org.apache.spark.network.shuffle.OneForOneBlockFetcher">OneForOneBlockFetcher</a></code>, but for pushing blocks to remote shuffle service to
+be merged instead of for fetching them from remote shuffle services. This is used by
+ShuffleWriter when the block push process is initiated. The supplied BlockFetchingListener
+is used to handle the success or failure in pushing each blocks.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>3.1.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.network.shuffle.RemoteBlockPushResolver" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="RemoteBlockPushResolverextendsMergedShuffleFileManager"></a><a id="RemoteBlockPushResolver:RemoteBlockPushResolver"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/RemoteBlockPushResolver.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="An implementation of MergedShuffleFileManager that provides the most essential shuffle service processing logic to support push based shuffle." href="RemoteBlockPushResolver.html"><span class="name">RemoteBlockPushResolver</span></a><span class="result"> extends <a href="MergedShuffleFileManager.html" class="extype" name="org.apache.spark.network.shuffle.MergedShuffleFileManager">MergedShuffleFileManager</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">An implementation of <code><a href="MergedShuffleFileManager.html" class="extype" name="org.apache.spark.network.shuffle.MergedShuffleFileManager">MergedShuffleFileManager</a></code> that provides the most essential shuffle
+service processing logic to support push based shuffle.</p><div class="fullcomment"><div class="comment cmt"><p>An implementation of <code><a href="MergedShuffleFileManager.html" class="extype" name="org.apache.spark.network.shuffle.MergedShuffleFileManager">MergedShuffleFileManager</a></code> that provides the most essential shuffle
+service processing logic to support push based shuffle.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>3.1.0</p></dd></dl></div>
+    </li><li name="org.apache.spark.network.shuffle.RetryingBlockTransferor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="RetryingBlockTransferorextendsObject"></a><a id="RetryingBlockTransferor:RetryingBlockTransferor"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/RetryingBlockTransferor.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Wraps another BlockFetcher or BlockPusher with the ability to automatically retry block transfers which fail due to IOExceptions, which we hope are due to transient network conditions." href="RetryingBlockTransferor.html"><span class="name">RetryingBlockTransferor</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Wraps another BlockFetcher or BlockPusher with the ability to automatically retry block
+transfers which fail due to IOExceptions, which we hope are due to transient network conditions.</p><div class="fullcomment"><div class="comment cmt"><p>Wraps another BlockFetcher or BlockPusher with the ability to automatically retry block
+transfers which fail due to IOExceptions, which we hope are due to transient network conditions.</p><p>This transferor provides stronger guarantees regarding the parent BlockTransferListener. In
+particular, the listener will be invoked exactly once per blockId, with a success or failure.
+</p></div></div>
+    </li><li name="org.apache.spark.network.shuffle.ShuffleIndexInformation" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ShuffleIndexInformationextendsObject"></a><a id="ShuffleIndexInformation:ShuffleIndexInformation"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/ShuffleIndexInformation.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Keeps the index information for a particular map output as an in-memory LongBuffer." href="ShuffleIndexInformation.html"><span class="name">ShuffleIndexInformation</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Keeps the index information for a particular map output
+as an in-memory LongBuffer.</p>
+    </li><li name="org.apache.spark.network.shuffle.ShuffleIndexRecord" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ShuffleIndexRecordextendsObject"></a><a id="ShuffleIndexRecord:ShuffleIndexRecord"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/ShuffleIndexRecord.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Contains offset and length of the shuffle block data." href="ShuffleIndexRecord.html"><span class="name">ShuffleIndexRecord</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Contains offset and length of the shuffle block data.</p>
+    </li><li name="org.apache.spark.network.shuffle.SimpleDownloadFile" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="SimpleDownloadFileextendsDownloadFile"></a><a id="SimpleDownloadFile:SimpleDownloadFile"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/shuffle/SimpleDownloadFile.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A DownloadFile that does not take any encryption settings into account for reading and writing data." href="SimpleDownloadFile.html"><span class="name">SimpleDownloadFile</span></a><span class="result"> extends <a href="DownloadFile.html" class="extype" name="org.apache.spark.network.shuffle.DownloadFile">DownloadFile</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A DownloadFile that does not take any encryption settings into account for reading and
+writing data.</p><div class="fullcomment"><div class="comment cmt"><p>A DownloadFile that does not take any encryption settings into account for reading and
+writing data.</p><p>This does *not* mean the data in the file is unencrypted -- it could be that the data is
+already encrypted when its written, and subsequent layer is responsible for decrypting.
+</p></div></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

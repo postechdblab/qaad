@@ -1,0 +1,612 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Catalyst 3.2.1 API  - org.apache.spark.sql.catalyst.plans.logical.statsEstimation</title>
+          <meta name="description" content="Spark Project Catalyst 3.2.1 API - org.apache.spark.sql.catalyst.plans.logical.statsEstimation" />
+          <meta name="keywords" content="Spark Project Catalyst 3.2.1 API org.apache.spark.sql.catalyst.plans.logical.statsEstimation" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Catalyst 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sql"></a><a id="sql:sql"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">sql</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="catalyst"></a><a id="catalyst:catalyst"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/catalyst/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Catalyst is a library for manipulating relational query plans." href="../../../index.html"><span class="name">catalyst</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Catalyst is a library for manipulating relational query plans.</p><div class="fullcomment"><div class="comment cmt"><p>Catalyst is a library for manipulating relational query plans.  All classes in catalyst are
+considered an internal API to Spark SQL and are subject to change between minor releases.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.plans" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="plans"></a><a id="plans:plans"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/catalyst/plans/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="A collection of common abstractions for query plans as well as a base logical plan representation." href="../../index.html"><span class="name">plans</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">A collection of common abstractions for query plans as well as
+a base logical plan representation.</p><div class="fullcomment"><div class="comment cmt"><p>A collection of common abstractions for query plans as well as
+a base logical plan representation.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.plans.logical" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logical"></a><a id="logical:logical"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/catalyst/plans/logical/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">logical</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark.sql.catalyst.plans">plans</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.plans.logical.statsEstimation" visbl="pub" class="indented8 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="statsEstimation"></a><a id="statsEstimation:statsEstimation"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/catalyst/plans/logical/statsEstimation/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">statsEstimation</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical">logical</a></dd></dl></div>
+    </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="object" href="AggregateEstimation$.html" title=""></a>
+                        <a href="AggregateEstimation$.html" title="">AggregateEstimation</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="object" href="BasicStatsPlanVisitor$.html" title="A LogicalPlanVisitor that computes the statistics for the cost-based optimizer."></a>
+                        <a href="BasicStatsPlanVisitor$.html" title="A LogicalPlanVisitor that computes the statistics for the cost-based optimizer.">BasicStatsPlanVisitor</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="class" href="ColumnStatsMap.html" title="This class contains the original column stats from child, and maintains the updated column stats."></a>
+                        <a href="ColumnStatsMap.html" title="This class contains the original column stats from child, and maintains the updated column stats.">ColumnStatsMap</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="class" href="DefaultValueInterval.html" title="This version of Spark does not have min/max for binary/string types, we define their default behaviors by this class."></a>
+                        <a href="DefaultValueInterval.html" title="This version of Spark does not have min/max for binary/string types, we define their default behaviors by this class.">DefaultValueInterval</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="object" href="EstimationUtils$.html" title=""></a>
+                        <a href="EstimationUtils$.html" title="">EstimationUtils</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="class" href="FilterEstimation.html" title=""></a>
+                        <a href="FilterEstimation.html" title="">FilterEstimation</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="class" href="JoinEstimation.html" title=""></a>
+                        <a href="JoinEstimation.html" title="">JoinEstimation</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="trait" href="LogicalPlanStats.html" title="A trait to add statistics propagation to LogicalPlan."></a>
+                        <a href="LogicalPlanStats.html" title="A trait to add statistics propagation to LogicalPlan.">LogicalPlanStats</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="class" href="NullValueInterval.html" title="This is for columns with only null values."></a>
+                        <a href="NullValueInterval.html" title="This is for columns with only null values.">NullValueInterval</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="class" href="NumericValueInterval.html" title="For simplicity we use double to unify operations of numeric intervals."></a>
+                        <a href="NumericValueInterval.html" title="For simplicity we use double to unify operations of numeric intervals.">NumericValueInterval</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="object" href="ProjectEstimation$.html" title=""></a>
+                        <a href="ProjectEstimation$.html" title="">ProjectEstimation</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="object" href="SizeInBytesOnlyStatsPlanVisitor$.html" title="An LogicalPlanVisitor that computes a single dimension for plan stats: size in bytes."></a>
+                        <a href="SizeInBytesOnlyStatsPlanVisitor$.html" title="An LogicalPlanVisitor that computes a single dimension for plan stats: size in bytes.">SizeInBytesOnlyStatsPlanVisitor</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="object" href="UnionEstimation$.html" title="Estimate the number of output rows by doing the sum of output rows for each child of union, and estimate min and max stats for each column by finding the overall min and max of that column coming from its children."></a>
+                        <a href="UnionEstimation$.html" title="Estimate the number of output rows by doing the sum of output rows for each child of union, and estimate min and max stats for each column by finding the overall min and max of that column coming from its children.">UnionEstimation</a>
+                      </li><li class="current-entities indented8">
+                        <a class="object" href="ValueInterval$.html" title=""></a>
+                        <a class="trait" href="ValueInterval.html" title="Value range of a column."></a>
+                        <a href="ValueInterval.html" title="Value range of a column.">ValueInterval</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../../../../../index.html" class="extype" name="org">org</a>.<a href="../../../../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../../../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../../../../index.html" class="extype" name="org.apache.spark.sql">sql</a>.<a href="../../../index.html" class="extype" name="org.apache.spark.sql.catalyst">catalyst</a>.<a href="../../index.html" class="extype" name="org.apache.spark.sql.catalyst.plans">plans</a>.<a href="../index.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical">logical</a></p>
+        <h1>statsEstimation<span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/catalyst/plans/logical/statsEstimation/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">statsEstimation</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              
+            </ol>
+          </div>
+          
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.spark.sql.catalyst.plans.logical.statsEstimation.ColumnStatsMap" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ColumnStatsMapextendsProductwithSerializable"></a><a id="ColumnStatsMap:ColumnStatsMap"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/catalyst/plans/logical/statsEstimation/ColumnStatsMap.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="This class contains the original column stats from child, and maintains the updated column stats." href="ColumnStatsMap.html"><span class="name">ColumnStatsMap</span></a><span class="params">(<span name="originalMap">originalMap: <a href="../../../expressions/AttributeMap.html" class="extype" name="org.apache.spark.sql.catalyst.expressions.AttributeMap">AttributeMap</a>[<a href="../ColumnStat.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.ColumnStat">ColumnStat</a>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">This class contains the original column stats from child, and maintains the updated column stats.</p><div class="fullcomment"><div class="comment cmt"><p>This class contains the original column stats from child, and maintains the updated column stats.
+We will update the corresponding ColumnStats for a column after we apply a predicate condition.
+For example, column c has [min, max] value as [0, 100].  In a range condition such as
+(c &gt; 40 AND c &lt;= 50), we need to set the column's [min, max] value to [40, 100] after we
+evaluate the first condition c &gt; 40. We also need to set the column's [min, max] value to
+[40, 50] after we evaluate the second condition c &lt;= 50.
+</p></div><dl class="paramcmts block"><dt class="param">originalMap</dt><dd class="cmt"><p>Original column stats from child.</p></dd></dl></div>
+    </li><li name="org.apache.spark.sql.catalyst.plans.logical.statsEstimation.DefaultValueInterval" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DefaultValueIntervalextendsValueInterval"></a><a id="DefaultValueInterval:DefaultValueInterval"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/catalyst/plans/logical/statsEstimation/DefaultValueInterval.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="This version of Spark does not have min/max for binary/string types, we define their default behaviors by this class." href="DefaultValueInterval.html"><span class="name">DefaultValueInterval</span></a><span class="result"> extends <a href="ValueInterval.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.statsEstimation.ValueInterval">ValueInterval</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">This version of Spark does not have min/max for binary/string types, we define their default
+behaviors by this class.</p>
+    </li><li name="org.apache.spark.sql.catalyst.plans.logical.statsEstimation.FilterEstimation" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FilterEstimationextendsLoggingwithProductwithSerializable"></a><a id="FilterEstimation:FilterEstimation"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/catalyst/plans/logical/statsEstimation/FilterEstimation.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="FilterEstimation.html"><span class="name">FilterEstimation</span></a><span class="params">(<span name="plan">plan: <a href="../Filter.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.Filter">Filter</a></span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.internal.Logging">Logging</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.catalyst.plans.logical.statsEstimation.JoinEstimation" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="JoinEstimationextendsLoggingwithProductwithSerializable"></a><a id="JoinEstimation:JoinEstimation"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/catalyst/plans/logical/statsEstimation/JoinEstimation.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="JoinEstimation.html"><span class="name">JoinEstimation</span></a><span class="params">(<span name="join">join: <a href="../Join.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.Join">Join</a></span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.internal.Logging">Logging</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.catalyst.plans.logical.statsEstimation.LogicalPlanStats" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="LogicalPlanStatsextendsAnyRef"></a><a id="LogicalPlanStats:LogicalPlanStats"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/catalyst/plans/logical/statsEstimation/LogicalPlanStats.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A trait to add statistics propagation to LogicalPlan." href="LogicalPlanStats.html"><span class="name">LogicalPlanStats</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A trait to add statistics propagation to <a href="../LogicalPlan.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</a>.</p>
+    </li><li name="org.apache.spark.sql.catalyst.plans.logical.statsEstimation.NullValueInterval" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NullValueIntervalextendsValueInterval"></a><a id="NullValueInterval:NullValueInterval"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/catalyst/plans/logical/statsEstimation/NullValueInterval.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="This is for columns with only null values." href="NullValueInterval.html"><span class="name">NullValueInterval</span></a><span class="result"> extends <a href="ValueInterval.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.statsEstimation.ValueInterval">ValueInterval</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">This is for columns with only null values.</p>
+    </li><li name="org.apache.spark.sql.catalyst.plans.logical.statsEstimation.NumericValueInterval" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NumericValueIntervalextendsValueIntervalwithProductwithSerializable"></a><a id="NumericValueInterval:NumericValueInterval"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/catalyst/plans/logical/statsEstimation/NumericValueInterval.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="For simplicity we use double to unify operations of numeric intervals." href="NumericValueInterval.html"><span class="name">NumericValueInterval</span></a><span class="params">(<span name="min">min: <span class="extype" name="scala.Double">Double</span></span>, <span name="max">max: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result"> extends <a href="ValueInterval.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.statsEstimation.ValueInterval">ValueInterval</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">For simplicity we use double to unify operations of numeric intervals.</p>
+    </li><li name="org.apache.spark.sql.catalyst.plans.logical.statsEstimation.ValueInterval" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ValueIntervalextendsAnyRef"></a><a id="ValueInterval:ValueInterval"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/catalyst/plans/logical/statsEstimation/ValueInterval.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Value range of a column." href="ValueInterval.html"><span class="name">ValueInterval</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Value range of a column.</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="org.apache.spark.sql.catalyst.plans.logical.statsEstimation.AggregateEstimation" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AggregateEstimation"></a><a id="AggregateEstimation:AggregateEstimation"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/catalyst/plans/logical/statsEstimation/AggregateEstimation$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="AggregateEstimation$.html"><span class="name">AggregateEstimation</span></a>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.catalyst.plans.logical.statsEstimation.BasicStatsPlanVisitor" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BasicStatsPlanVisitor"></a><a id="BasicStatsPlanVisitor:BasicStatsPlanVisitor"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/catalyst/plans/logical/statsEstimation/BasicStatsPlanVisitor$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="A LogicalPlanVisitor that computes the statistics for the cost-based optimizer." href="BasicStatsPlanVisitor$.html"><span class="name">BasicStatsPlanVisitor</span></a><span class="result"> extends <a href="../LogicalPlanVisitor.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlanVisitor">LogicalPlanVisitor</a>[<a href="../Statistics.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.Statistics">Statistics</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">A <a href="../LogicalPlanVisitor.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlanVisitor">LogicalPlanVisitor</a> that computes the statistics for the cost-based optimizer.</p>
+    </li><li name="org.apache.spark.sql.catalyst.plans.logical.statsEstimation.EstimationUtils" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EstimationUtils"></a><a id="EstimationUtils:EstimationUtils"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/catalyst/plans/logical/statsEstimation/EstimationUtils$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="EstimationUtils$.html"><span class="name">EstimationUtils</span></a>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.catalyst.plans.logical.statsEstimation.ProjectEstimation" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ProjectEstimation"></a><a id="ProjectEstimation:ProjectEstimation"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/catalyst/plans/logical/statsEstimation/ProjectEstimation$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ProjectEstimation$.html"><span class="name">ProjectEstimation</span></a>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.catalyst.plans.logical.statsEstimation.SizeInBytesOnlyStatsPlanVisitor" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SizeInBytesOnlyStatsPlanVisitor"></a><a id="SizeInBytesOnlyStatsPlanVisitor:SizeInBytesOnlyStatsPlanVisitor"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/catalyst/plans/logical/statsEstimation/SizeInBytesOnlyStatsPlanVisitor$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="An LogicalPlanVisitor that computes a single dimension for plan stats: size in bytes." href="SizeInBytesOnlyStatsPlanVisitor$.html"><span class="name">SizeInBytesOnlyStatsPlanVisitor</span></a><span class="result"> extends <a href="../LogicalPlanVisitor.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlanVisitor">LogicalPlanVisitor</a>[<a href="../Statistics.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.Statistics">Statistics</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">An <a href="../LogicalPlanVisitor.html" class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlanVisitor">LogicalPlanVisitor</a> that computes a single dimension for plan stats: size in bytes.</p>
+    </li><li name="org.apache.spark.sql.catalyst.plans.logical.statsEstimation.UnionEstimation" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UnionEstimation"></a><a id="UnionEstimation:UnionEstimation"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/catalyst/plans/logical/statsEstimation/UnionEstimation$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Estimate the number of output rows by doing the sum of output rows for each child of union, and estimate min and max stats for each column by finding the overall min and max of that column coming from its children." href="UnionEstimation$.html"><span class="name">UnionEstimation</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Estimate the number of output rows by doing the sum of output rows for each child of union,
+and estimate min and max stats for each column by finding the overall min and max of that
+column coming from its children.</p>
+    </li><li name="org.apache.spark.sql.catalyst.plans.logical.statsEstimation.ValueInterval" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ValueInterval"></a><a id="ValueInterval:ValueInterval"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../org/apache/spark/sql/catalyst/plans/logical/statsEstimation/ValueInterval$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ValueInterval$.html"><span class="name">ValueInterval</span></a>
+      </span>
+      
+      
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

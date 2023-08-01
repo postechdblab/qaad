@@ -1,0 +1,1485 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project Networking 3.2.1 API  - org.apache.spark.network.util.TransportConf</title>
+          <meta name="description" content="Spark Project Networking 3.2.1 API - org.apache.spark.network.util.TransportConf" />
+          <meta name="keywords" content="Spark Project Networking 3.2.1 API org.apache.spark.network.util.TransportConf" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project Networking 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.network" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="network"></a><a id="network:network"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">network</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.network.util" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="util"></a><a id="util:util"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="index.html"><span class="name">util</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.network">network</a></dd></dl></div>
+    </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="AbstractFileRegion.html" title=""></a>
+                        <a href="AbstractFileRegion.html" title="">AbstractFileRegion</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ByteArrayReadableChannel.html" title=""></a>
+                        <a href="ByteArrayReadableChannel.html" title="">ByteArrayReadableChannel</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ByteArrayWritableChannel.html" title="A writable channel that stores the written data in a byte array in memory."></a>
+                        <a href="ByteArrayWritableChannel.html" title="A writable channel that stores the written data in a byte array in memory.">ByteArrayWritableChannel</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ByteUnit.html" title=""></a>
+                        <a href="ByteUnit.html" title="">ByteUnit</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ConfigProvider.html" title="Provides a mechanism for constructing a TransportConf using some sort of configuration."></a>
+                        <a href="ConfigProvider.html" title="Provides a mechanism for constructing a TransportConf using some sort of configuration.">ConfigProvider</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="CryptoUtils.html" title="Utility methods related to the commons-crypto library."></a>
+                        <a href="CryptoUtils.html" title="Utility methods related to the commons-crypto library.">CryptoUtils</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="IOMode.html" title="Selector for which form of low-level IO we should use."></a>
+                        <a href="IOMode.html" title="Selector for which form of low-level IO we should use.">IOMode</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="JavaUtils.html" title="General utilities available in the network package."></a>
+                        <a href="JavaUtils.html" title="General utilities available in the network package.">JavaUtils</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="LevelDBProvider.html" title="LevelDB utility class available in the network package."></a>
+                        <a href="LevelDBProvider.html" title="LevelDB utility class available in the network package.">LevelDBProvider</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="LimitedInputStream.html" title="Wraps a InputStream, limiting the number of bytes which can be read."></a>
+                        <a href="LimitedInputStream.html" title="Wraps a InputStream, limiting the number of bytes which can be read.">LimitedInputStream</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="MapConfigProvider.html" title="ConfigProvider based on a Map (copied in the constructor)."></a>
+                        <a href="MapConfigProvider.html" title="ConfigProvider based on a Map (copied in the constructor).">MapConfigProvider</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="NettyMemoryMetrics.html" title="A Netty memory metrics class to collect metrics from Netty PooledByteBufAllocator."></a>
+                        <a href="NettyMemoryMetrics.html" title="A Netty memory metrics class to collect metrics from Netty PooledByteBufAllocator.">NettyMemoryMetrics</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="NettyUtils.html" title="Utilities for creating various Netty constructs based on whether we're using EPOLL or NIO."></a>
+                        <a href="NettyUtils.html" title="Utilities for creating various Netty constructs based on whether we're using EPOLL or NIO.">NettyUtils</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TimerWithCustomTimeUnit.html" title="A custom version of a Timer which allows for specifying a specific TimeUnit to be used when accessing timing values via #getSnapshot()."></a>
+                        <a href="TimerWithCustomTimeUnit.html" title="A custom version of a Timer which allows for specifying a specific TimeUnit to be used when accessing timing values via #getSnapshot().">TimerWithCustomTimeUnit</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="" title="A central location that tracks all the settings we expose to users."></a>
+                        <a href="" title="A central location that tracks all the settings we expose to users.">TransportConf</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TransportFrameDecoder.html" title="A customized frame decoder that allows intercepting raw data."></a>
+                        <a href="TransportFrameDecoder.html" title="A customized frame decoder that allows intercepting raw data.">TransportFrameDecoder</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="class type">
+      <div id="definition">
+        <div class="big-circle class">c</div>
+        <p id="owner"><a href="../../../../index.html" class="extype" name="org">org</a>.<a href="../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../index.html" class="extype" name="org.apache.spark.network">network</a>.<a href="index.html" class="extype" name="org.apache.spark.network.util">util</a></p>
+        <h1>TransportConf<span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TransportConf</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A central location that tracks all the settings we expose to users.
+</p></div><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="org.apache.spark.network.util.TransportConf"><span>TransportConf</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="org.apache.spark.network.util.TransportConf#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(module:String,conf:org.apache.spark.network.util.ConfigProvider):org.apache.spark.network.util.TransportConf"></a><a id="&lt;init&gt;:TransportConf"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#&lt;init&gt;(module:String,conf:org.apache.spark.network.util.ConfigProvider):org.apache.spark.network.util.TransportConf" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TransportConf</span><span class="params">(<span name="module">module: <span class="extype" name="java.lang.String">String</span></span>, <span name="conf">conf: <a href="ConfigProvider.html" class="extype" name="org.apache.spark.network.util.ConfigProvider">ConfigProvider</a></span>)</span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#authRTTimeoutMs" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="authRTTimeoutMs():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#authRTTimeoutMs():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">authRTTimeoutMs</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Timeout for a single round trip of auth message exchange, in milliseconds.</p>
+    </li><li name="org.apache.spark.network.util.TransportConf#backLog" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="backLog():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#backLog():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">backLog</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Requested maximum length of the queue of incoming connections.</p><div class="fullcomment"><div class="comment cmt"><p>Requested maximum length of the queue of incoming connections. If  &lt; 1,
+the default Netty value of <code><span class="extype" name="io.netty.util.NetUtil#SOMAXCONN">io.netty.util.NetUtil#SOMAXCONN</span></code> will be used.
+Default to -1.
+</p></div></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#chunkFetchHandlerThreads" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="chunkFetchHandlerThreads():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#chunkFetchHandlerThreads():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">chunkFetchHandlerThreads</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Percentage of io.serverThreads used by netty to process ChunkFetchRequest.</p><div class="fullcomment"><div class="comment cmt"><p>Percentage of io.serverThreads used by netty to process ChunkFetchRequest.
+When the config <code>spark.shuffle.server.chunkFetchHandlerThreadsPercent</code> is set,
+shuffle server will use a separate EventLoopGroup to process ChunkFetchRequest messages.
+Although when calling the async writeAndFlush on the underlying channel to send
+response back to client, the I/O on the channel is still being handled by
+<code><a href="../server/TransportServer.html" class="extype" name="org.apache.spark.network.server.TransportServer">org.apache.spark.network.server.TransportServer</a></code>'s default EventLoopGroup
+that's registered with the Channel, by waiting inside the ChunkFetchRequest handler
+threads for the completion of sending back responses, we are able to put a limit on
+the max number of threads from TransportServer's default EventLoopGroup that are
+going to be consumed by writing response to ChunkFetchRequest, which are I/O intensive
+and could take long time to process due to disk contentions. By configuring a slightly
+higher number of shuffler server threads, we are able to reserve some threads for
+handling other RPC messages, thus making the Client less likely to experience timeout
+when sending RPC messages to the shuffle server. The number of threads used for handling
+chunked fetch requests are percentage of io.serverThreads (if defined) else it is a percentage
+of 2 * #cores. However, a percentage of 0 means netty default number of threads which
+is 2 * #cores ignoring io.serverThreads. The percentage here is configured via
+spark.shuffle.server.chunkFetchHandlerThreadsPercent. The returned value is rounded off to
+ceiling of the nearest integer.
+</p></div></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#cipherTransformation" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="cipherTransformation():String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#cipherTransformation():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cipherTransformation</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The cipher transformation to use for encrypting session data.</p>
+    </li><li name="org.apache.spark.network.util.TransportConf#clientThreads" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clientThreads():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#clientThreads():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clientThreads</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Number of threads used in the client thread pool.</p><div class="fullcomment"><div class="comment cmt"><p>Number of threads used in the client thread pool. Default to 0, which is 2x#cores.</p></div></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#connectionCreationTimeoutMs" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="connectionCreationTimeoutMs():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#connectionCreationTimeoutMs():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">connectionCreationTimeoutMs</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Connect creation timeout in milliseconds.</p><div class="fullcomment"><div class="comment cmt"><p>Connect creation timeout in milliseconds. Default 30 secs.</p></div></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#connectionTimeoutMs" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="connectionTimeoutMs():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#connectionTimeoutMs():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">connectionTimeoutMs</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Connection idle timeout in milliseconds.</p><div class="fullcomment"><div class="comment cmt"><p>Connection idle timeout in milliseconds. Default 120 secs.</p></div></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#cryptoConf" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="cryptoConf():java.util.Properties"></a><a id="cryptoConf():Properties"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#cryptoConf():java.util.Properties" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cryptoConf</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Properties">Properties</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The commons-crypto configuration for the module.</p>
+    </li><li name="org.apache.spark.network.util.TransportConf#enableTcpKeepAlive" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="enableTcpKeepAlive():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#enableTcpKeepAlive():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">enableTcpKeepAlive</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Whether to enable TCP keep-alive.</p><div class="fullcomment"><div class="comment cmt"><p>Whether to enable TCP keep-alive. If true, the TCP keep-alives are enabled, which removes
+connections that are idle for too long.
+</p></div></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#encryptionEnabled" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="encryptionEnabled():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#encryptionEnabled():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">encryptionEnabled</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Enables strong encryption.</p><div class="fullcomment"><div class="comment cmt"><p>Enables strong encryption. Also enables the new auth protocol, used to negotiate keys.
+</p></div></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#encryptionKeyLength" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="encryptionKeyLength():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#encryptionKeyLength():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">encryptionKeyLength</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Encryption key length, in bits.</p>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#get" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="get(name:String,defaultValue:String):String"></a><a id="get(String,String):String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#get(name:String,defaultValue:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">get</span><span class="params">(<span name="name">name: <span class="extype" name="java.lang.String">String</span></span>, <span name="defaultValue">defaultValue: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#getInt" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getInt(name:String,defaultValue:Int):Int"></a><a id="getInt(String,Int):Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#getInt(name:String,defaultValue:Int):Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getInt</span><span class="params">(<span name="name">name: <span class="extype" name="java.lang.String">String</span></span>, <span name="defaultValue">defaultValue: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.network.util.TransportConf#getModuleName" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getModuleName():String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#getModuleName():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getModuleName</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#ioExceptionsThresholdDuringMerge" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ioExceptionsThresholdDuringMerge():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#ioExceptionsThresholdDuringMerge():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ioExceptionsThresholdDuringMerge</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The threshold for number of IOExceptions while merging shuffle blocks to a shuffle partition.</p><div class="fullcomment"><div class="comment cmt"><p>The threshold for number of IOExceptions while merging shuffle blocks to a shuffle partition.
+When the number of IOExceptions while writing to merged shuffle data/index/meta file exceed
+this threshold then the shuffle server will respond back to client to stop pushing shuffle
+blocks for this shuffle partition.
+</p></div></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#ioMode" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ioMode():String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#ioMode():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ioMode</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">IO mode: nio or epoll</p>
+    </li><li name="org.apache.spark.network.util.TransportConf#ioRetryWaitTimeMs" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ioRetryWaitTimeMs():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#ioRetryWaitTimeMs():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ioRetryWaitTimeMs</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Time (in milliseconds) that we will wait in order to perform a retry after an IOException.</p><div class="fullcomment"><div class="comment cmt"><p>Time (in milliseconds) that we will wait in order to perform a retry after an IOException.
+Only relevant if maxIORetries &gt; 0.
+</p></div></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#ivLength" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ivLength():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#ivLength():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ivLength</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Initial vector length, in bytes.</p>
+    </li><li name="org.apache.spark.network.util.TransportConf#keyAlgorithm" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="keyAlgorithm():String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#keyAlgorithm():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">keyAlgorithm</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The algorithm for generated secret keys.</p><div class="fullcomment"><div class="comment cmt"><p>The algorithm for generated secret keys. Nobody should really need to change this,
+but configurable just in case.
+</p></div></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#keyFactoryAlgorithm" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="keyFactoryAlgorithm():String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#keyFactoryAlgorithm():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">keyFactoryAlgorithm</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The key generation algorithm.</p><div class="fullcomment"><div class="comment cmt"><p>The key generation algorithm. This should be an algorithm that accepts a &quot;PBEKeySpec&quot;
+as input. The default value (PBKDF2WithHmacSHA1) is available in Java 7.
+</p></div></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#keyFactoryIterations" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="keyFactoryIterations():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#keyFactoryIterations():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">keyFactoryIterations</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">How many iterations to run when generating keys.</p><div class="fullcomment"><div class="comment cmt"><p>How many iterations to run when generating keys.</p><p>See some discussion about this at: http://security.stackexchange.com/q/3959
+The default value was picked for speed, since it assumes that the secret has good entropy
+(128 bits by default), which is not generally the case with user passwords.
+</p></div></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#lazyFileDescriptor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="lazyFileDescriptor():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#lazyFileDescriptor():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">lazyFileDescriptor</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Whether to initialize FileDescriptor lazily or not.</p><div class="fullcomment"><div class="comment cmt"><p>Whether to initialize FileDescriptor lazily or not. If true, file descriptors are
+created only when data is going to be transferred. This can reduce the number of open files.
+</p></div></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#maxChunksBeingTransferred" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="maxChunksBeingTransferred():Long"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#maxChunksBeingTransferred():Long" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">maxChunksBeingTransferred</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The max number of chunks allowed to be transferred at the same time on shuffle service.</p><div class="fullcomment"><div class="comment cmt"><p>The max number of chunks allowed to be transferred at the same time on shuffle service.
+Note that new incoming connections will be closed when the max number is hit. The client will
+retry according to the shuffle retry configs (see <code>spark.shuffle.io.maxRetries</code> and
+<code>spark.shuffle.io.retryWait</code>), if those limits are reached the task will fail with fetch
+failure.
+</p></div></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#maxIORetries" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="maxIORetries():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#maxIORetries():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">maxIORetries</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Max number of times we will try IO exceptions (such as connection timeouts) per request.</p><div class="fullcomment"><div class="comment cmt"><p>Max number of times we will try IO exceptions (such as connection timeouts) per request.
+If set to 0, we will not do any retries.
+</p></div></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#maxSaslEncryptedBlockSize" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="maxSaslEncryptedBlockSize():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#maxSaslEncryptedBlockSize():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">maxSaslEncryptedBlockSize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Maximum number of bytes to be encrypted at a time when SASL encryption is used.</p>
+    </li><li name="org.apache.spark.network.util.TransportConf#memoryMapBytes" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="memoryMapBytes():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#memoryMapBytes():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">memoryMapBytes</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Minimum size of a block that we should start using memory map rather than reading in through
+normal IO operations.</p><div class="fullcomment"><div class="comment cmt"><p>Minimum size of a block that we should start using memory map rather than reading in through
+normal IO operations. This prevents Spark from memory mapping very small blocks. In general,
+memory mapping has high overhead for blocks close to or below the page size of the OS.
+</p></div></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#mergedIndexCacheSize" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mergedIndexCacheSize():Long"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#mergedIndexCacheSize():Long" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mergedIndexCacheSize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The maximum size of cache in memory which is used in push-based shuffle for storing merged
+index files.</p><div class="fullcomment"><div class="comment cmt"><p>The maximum size of cache in memory which is used in push-based shuffle for storing merged
+index files. This cache is in addition to the one configured via
+spark.shuffle.service.index.cache.size.
+</p></div></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#mergedShuffleFileManagerImpl" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mergedShuffleFileManagerImpl():String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#mergedShuffleFileManagerImpl():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mergedShuffleFileManagerImpl</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Class name of the implementation of MergedShuffleFileManager that merges the blocks
+pushed to it when push-based shuffle is enabled.</p><div class="fullcomment"><div class="comment cmt"><p>Class name of the implementation of MergedShuffleFileManager that merges the blocks
+pushed to it when push-based shuffle is enabled. By default, push-based shuffle is disabled at
+a cluster level because this configuration is set to
+'org.apache.spark.network.shuffle.NoOpMergedShuffleFileManager'.
+To turn on push-based shuffle at a cluster level, set the configuration to
+'org.apache.spark.network.shuffle.RemoteBlockPushResolver'.
+</p></div></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#minChunkSizeInMergedShuffleFile" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="minChunkSizeInMergedShuffleFile():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#minChunkSizeInMergedShuffleFile():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">minChunkSizeInMergedShuffleFile</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The minimum size of a chunk when dividing a merged shuffle file into multiple chunks during
+push-based shuffle.</p><div class="fullcomment"><div class="comment cmt"><p>The minimum size of a chunk when dividing a merged shuffle file into multiple chunks during
+push-based shuffle.
+A merged shuffle file consists of multiple small shuffle blocks. Fetching the complete
+merged shuffle file in a single disk I/O increases the memory requirements for both the
+clients and the external shuffle service. Instead, the external shuffle service serves
+the merged file in MB-sized chunks. This configuration controls how big a chunk can get.
+A corresponding index file for each merged shuffle file will be generated indicating chunk
+boundaries.</p><p>Setting this too high would increase the memory requirements on both the clients and the
+external shuffle service.</p><p>Setting this too low would increase the overall number of RPC requests to external shuffle
+service unnecessarily.
+</p></div></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#numConnectionsPerPeer" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="numConnectionsPerPeer():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#numConnectionsPerPeer():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">numConnectionsPerPeer</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Number of concurrent connections between two nodes for fetching data.</p>
+    </li><li name="org.apache.spark.network.util.TransportConf#portMaxRetries" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="portMaxRetries():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#portMaxRetries():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">portMaxRetries</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Maximum number of retries when binding to a port before giving up.</p>
+    </li><li name="org.apache.spark.network.util.TransportConf#preferDirectBufs" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="preferDirectBufs():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#preferDirectBufs():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">preferDirectBufs</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">If true, we will prefer allocating off-heap byte buffers within Netty.</p>
+    </li><li name="org.apache.spark.network.util.TransportConf#preferDirectBufsForSharedByteBufAllocators" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="preferDirectBufsForSharedByteBufAllocators():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#preferDirectBufsForSharedByteBufAllocators():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">preferDirectBufsForSharedByteBufAllocators</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">If enabled then off-heap byte buffers will be preferred for the shared ByteBuf allocators.</p>
+    </li><li name="org.apache.spark.network.util.TransportConf#receiveBuf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="receiveBuf():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#receiveBuf():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">receiveBuf</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Receive buffer size (SO_RCVBUF).</p><div class="fullcomment"><div class="comment cmt"><p>Receive buffer size (SO_RCVBUF).
+Note: the optimal size for receive buffer and send buffer should be
+ latency * network_bandwidth.
+Assuming latency = 1ms, network_bandwidth = 10Gbps
+ buffer size should be ~ 1.25MB
+</p></div></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#saslEncryption" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="saslEncryption():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#saslEncryption():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">saslEncryption</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Whether to enable SASL-based encryption when authenticating using SASL.</p>
+    </li><li name="org.apache.spark.network.util.TransportConf#saslFallback" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="saslFallback():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#saslFallback():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">saslFallback</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Whether to fall back to SASL if the new auth protocol fails.</p><div class="fullcomment"><div class="comment cmt"><p>Whether to fall back to SASL if the new auth protocol fails. Enabled by default for
+backwards compatibility.
+</p></div></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#saslServerAlwaysEncrypt" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="saslServerAlwaysEncrypt():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#saslServerAlwaysEncrypt():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">saslServerAlwaysEncrypt</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Whether the server should enforce encryption on SASL-authenticated connections.</p>
+    </li><li name="org.apache.spark.network.util.TransportConf#sendBuf" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="sendBuf():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#sendBuf():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sendBuf</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Send buffer size (SO_SNDBUF).</p>
+    </li><li name="org.apache.spark.network.util.TransportConf#separateChunkFetchRequest" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="separateChunkFetchRequest():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#separateChunkFetchRequest():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">separateChunkFetchRequest</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Whether to use a separate EventLoopGroup to process ChunkFetchRequest messages, it is decided
+by the config <code>spark.shuffle.server.chunkFetchHandlerThreadsPercent</code> is set or not.</p>
+    </li><li name="org.apache.spark.network.util.TransportConf#serverThreads" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="serverThreads():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#serverThreads():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">serverThreads</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Number of threads used in the server thread pool.</p><div class="fullcomment"><div class="comment cmt"><p>Number of threads used in the server thread pool. Default to 0, which is 2x#cores.</p></div></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#sharedByteBufAllocators" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sharedByteBufAllocators():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#sharedByteBufAllocators():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sharedByteBufAllocators</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Flag indicating whether to share the pooled ByteBuf allocators between the different Netty
+channels.</p><div class="fullcomment"><div class="comment cmt"><p>Flag indicating whether to share the pooled ByteBuf allocators between the different Netty
+channels. If enabled then only two pooled ByteBuf allocators are created: one where caching
+is allowed (for transport servers) and one where not (for transport clients).
+When disabled a new allocator is created for each transport servers and clients.
+</p></div></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#useOldFetchProtocol" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="useOldFetchProtocol():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#useOldFetchProtocol():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">useOldFetchProtocol</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Whether to use the old protocol while doing the shuffle block fetching.</p><div class="fullcomment"><div class="comment cmt"><p>Whether to use the old protocol while doing the shuffle block fetching.
+It is only enabled while we need the compatibility in the scenario of new spark version
+job fetching blocks from old version external shuffle service.
+</p></div></div>
+    </li><li name="org.apache.spark.network.util.TransportConf#verboseMetrics" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="verboseMetrics():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#verboseMetrics():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">verboseMetrics</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Whether to track Netty memory detailed metrics.</p><div class="fullcomment"><div class="comment cmt"><p>Whether to track Netty memory detailed metrics. If true, the detailed metrics of Netty
+PoolByteBufAllocator will be gotten, otherwise only general memory usage will be tracked.
+</p></div></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/apache/spark/network/util/TransportConf.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

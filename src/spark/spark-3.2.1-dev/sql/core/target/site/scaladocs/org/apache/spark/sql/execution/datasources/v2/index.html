@@ -1,0 +1,2141 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Spark Project SQL 3.2.1 API  - org.apache.spark.sql.execution.datasources.v2</title>
+          <meta name="description" content="Spark Project SQL 3.2.1 API - org.apache.spark.sql.execution.datasources.v2" />
+          <meta name="keywords" content="Spark Project SQL 3.2.1 API org.apache.spark.sql.execution.datasources.v2" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Spark Project SQL 3.2.1 API<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.apache" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apache"></a><a id="apache:apache"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">apache</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.apache.spark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="spark"></a><a id="spark:spark"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">spark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="org.apache">apache</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sql"></a><a id="sql:sql"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Allows the execution of relational queries, including those expressed in SQL using Spark." href="../../../index.html"><span class="name">sql</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Allows the execution of relational queries, including those expressed in SQL using Spark.</p><div class="fullcomment"><div class="comment cmt"><p>Allows the execution of relational queries, including those expressed in SQL using Spark.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="org.apache.spark">spark</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="execution"></a><a id="execution:execution"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="The physical execution component of Spark SQL." href="../../index.html"><span class="name">execution</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">The physical execution component of Spark SQL.</p><div class="fullcomment"><div class="comment cmt"><p>The physical execution component of Spark SQL. Note that this is a private package.
+All classes in catalyst are considered an internal API to Spark SQL and are subject
+to change between minor releases.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="org.apache.spark.sql">sql</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="datasources"></a><a id="datasources:datasources"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">datasources</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.binaryfile" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="binaryfile"></a><a id="binaryfile:binaryfile"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/binaryfile/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../binaryfile/index.html"><span class="name">binaryfile</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution.datasources">datasources</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.csv" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="csv"></a><a id="csv:csv"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/csv/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../csv/index.html"><span class="name">csv</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution.datasources">datasources</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.jdbc" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="jdbc"></a><a id="jdbc:jdbc"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/jdbc/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../jdbc/index.html"><span class="name">jdbc</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution.datasources">datasources</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.json" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="json"></a><a id="json:json"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/json/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../json/index.html"><span class="name">json</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution.datasources">datasources</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.noop" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="noop"></a><a id="noop:noop"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/noop/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../noop/index.html"><span class="name">noop</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution.datasources">datasources</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.orc" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="orc"></a><a id="orc:orc"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/orc/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../orc/index.html"><span class="name">orc</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution.datasources">datasources</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.parquet" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="parquet"></a><a id="parquet:parquet"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/parquet/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../parquet/index.html"><span class="name">parquet</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution.datasources">datasources</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.text" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="text"></a><a id="text:text"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/text/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../text/index.html"><span class="name">text</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution.datasources">datasources</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2" visbl="pub" class="indented7 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="v2"></a><a id="v2:v2"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">v2</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.apache.spark.sql.execution.datasources">datasources</a></dd></dl></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.csv" visbl="pub" class="indented8 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="csv"></a><a id="csv:csv"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/csv/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="csv/index.html"><span class="name">csv</span></a>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.jdbc" visbl="pub" class="indented8 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="jdbc"></a><a id="jdbc:jdbc"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/jdbc/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="jdbc/index.html"><span class="name">jdbc</span></a>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.json" visbl="pub" class="indented8 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="json"></a><a id="json:json"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/json/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="json/index.html"><span class="name">json</span></a>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.orc" visbl="pub" class="indented8 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="orc"></a><a id="orc:orc"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/orc/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="orc/index.html"><span class="name">orc</span></a>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.parquet" visbl="pub" class="indented8 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="parquet"></a><a id="parquet:parquet"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/parquet/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="parquet/index.html"><span class="name">parquet</span></a>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.text" visbl="pub" class="indented8 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="text"></a><a id="text:text"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/text/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="text/index.html"><span class="name">text</span></a>
+      </span>
+      
+      
+    </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="AddPartitionExec.html" title="Physical plan node for adding partitions of table."></a>
+                        <a href="AddPartitionExec.html" title="Physical plan node for adding partitions of table.">AddPartitionExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="AlterNamespaceSetPropertiesExec.html" title="Physical plan node for setting properties of namespace."></a>
+                        <a href="AlterNamespaceSetPropertiesExec.html" title="Physical plan node for setting properties of namespace.">AlterNamespaceSetPropertiesExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="AlterTableExec.html" title="Physical plan node for altering a table."></a>
+                        <a href="AlterTableExec.html" title="Physical plan node for altering a table.">AlterTableExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="AppendDataExec.html" title="Physical plan node for append into a v2 table."></a>
+                        <a href="AppendDataExec.html" title="Physical plan node for append into a v2 table.">AppendDataExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="AppendDataExecV1.html" title="Physical plan node for append into a v2 table using V1 write interfaces."></a>
+                        <a href="AppendDataExecV1.html" title="Physical plan node for append into a v2 table using V1 write interfaces.">AppendDataExecV1</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="AtomicCreateTableAsSelectExec.html" title="Physical plan node for v2 create table as select, when the catalog is determined to support staging table creation."></a>
+                        <a href="AtomicCreateTableAsSelectExec.html" title="Physical plan node for v2 create table as select, when the catalog is determined to support staging table creation.">AtomicCreateTableAsSelectExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="AtomicReplaceTableAsSelectExec.html" title="Physical plan node for v2 replace table as select when the catalog supports staging table replacement."></a>
+                        <a href="AtomicReplaceTableAsSelectExec.html" title="Physical plan node for v2 replace table as select when the catalog supports staging table replacement.">AtomicReplaceTableAsSelectExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="AtomicReplaceTableExec.html" title=""></a>
+                        <a href="AtomicReplaceTableExec.html" title="">AtomicReplaceTableExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="BaseCacheTableExec.html" title=""></a>
+                        <a href="BaseCacheTableExec.html" title="">BaseCacheTableExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="BatchScanExec.html" title="Physical plan node for scanning a batch of data from a data source v2."></a>
+                        <a href="BatchScanExec.html" title="Physical plan node for scanning a batch of data from a data source v2.">BatchScanExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="CacheTableAsSelectExec.html" title=""></a>
+                        <a href="CacheTableAsSelectExec.html" title="">CacheTableAsSelectExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="CacheTableExec.html" title=""></a>
+                        <a href="CacheTableExec.html" title="">CacheTableExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ContinuousScanExec.html" title="Physical plan node for scanning data from a streaming data source with continuous mode."></a>
+                        <a href="ContinuousScanExec.html" title="Physical plan node for scanning data from a streaming data source with continuous mode.">ContinuousScanExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="CreateNamespaceExec.html" title="Physical plan node for creating a namespace."></a>
+                        <a href="CreateNamespaceExec.html" title="Physical plan node for creating a namespace.">CreateNamespaceExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="CreateTableAsSelectExec.html" title="Physical plan node for v2 create table as select when the catalog does not support staging the table creation."></a>
+                        <a href="CreateTableAsSelectExec.html" title="Physical plan node for v2 create table as select when the catalog does not support staging the table creation.">CreateTableAsSelectExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="CreateTableExec.html" title=""></a>
+                        <a href="CreateTableExec.html" title="">CreateTableExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="DataSourcePartitioning.html" title="An adapter from public data source partitioning to catalyst internal Partitioning."></a>
+                        <a href="DataSourcePartitioning.html" title="An adapter from public data source partitioning to catalyst internal Partitioning.">DataSourcePartitioning</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="DataSourceRDD.html" title=""></a>
+                        <a href="DataSourceRDD.html" title="">DataSourceRDD</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="DataSourceRDDPartition.html" title=""></a>
+                        <a href="DataSourceRDDPartition.html" title="">DataSourceRDDPartition</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="DataSourceV2ScanExecBase.html" title=""></a>
+                        <a href="DataSourceV2ScanExecBase.html" title="">DataSourceV2ScanExecBase</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="DataSourceV2Strategy.html" title=""></a>
+                        <a href="DataSourceV2Strategy.html" title="">DataSourceV2Strategy</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="object" href="DataWritingSparkTask$.html" title=""></a>
+                        <a href="DataWritingSparkTask$.html" title="">DataWritingSparkTask</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="DeleteFromTableExec.html" title=""></a>
+                        <a href="DeleteFromTableExec.html" title="">DeleteFromTableExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="DescribeColumnExec.html" title=""></a>
+                        <a href="DescribeColumnExec.html" title="">DescribeColumnExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="DescribeNamespaceExec.html" title="Physical plan node for describing a namespace."></a>
+                        <a href="DescribeNamespaceExec.html" title="Physical plan node for describing a namespace.">DescribeNamespaceExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="DescribeTableExec.html" title=""></a>
+                        <a href="DescribeTableExec.html" title="">DescribeTableExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="object" href="DistributionAndOrderingUtils$.html" title=""></a>
+                        <a href="DistributionAndOrderingUtils$.html" title="">DistributionAndOrderingUtils</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="DropNamespaceExec.html" title="Physical plan node for dropping a namespace."></a>
+                        <a href="DropNamespaceExec.html" title="Physical plan node for dropping a namespace.">DropNamespaceExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="DropPartitionExec.html" title="Physical plan node for dropping partitions of table."></a>
+                        <a href="DropPartitionExec.html" title="Physical plan node for dropping partitions of table.">DropPartitionExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="DropTableExec.html" title="Physical plan node for dropping a table."></a>
+                        <a href="DropTableExec.html" title="Physical plan node for dropping a table.">DropTableExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="EmptyPartitionReader.html" title="A PartitionReader with empty output."></a>
+                        <a href="EmptyPartitionReader.html" title="A PartitionReader with empty output.">EmptyPartitionReader</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="FileBatchWrite.html" title=""></a>
+                        <a href="FileBatchWrite.html" title="">FileBatchWrite</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="FileDataSourceV2.html" title="A base interface for data source v2 implementations of the built-in file-based data sources."></a>
+                        <a href="FileDataSourceV2.html" title="A base interface for data source v2 implementations of the built-in file-based data sources.">FileDataSourceV2</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="FilePartitionReader.html" title=""></a>
+                        <a href="FilePartitionReader.html" title="">FilePartitionReader</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="FilePartitionReaderFactory.html" title=""></a>
+                        <a href="FilePartitionReaderFactory.html" title="">FilePartitionReaderFactory</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="FileScan.html" title=""></a>
+                        <a href="FileScan.html" title="">FileScan</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="FileScanBuilder.html" title=""></a>
+                        <a href="FileScanBuilder.html" title="">FileScanBuilder</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="FileTable$.html" title=""></a>
+                        <a class="class" href="FileTable.html" title=""></a>
+                        <a href="FileTable.html" title="">FileTable</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="FileWrite.html" title=""></a>
+                        <a href="FileWrite.html" title="">FileWrite</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="FileWriterFactory.html" title=""></a>
+                        <a href="FileWriterFactory.html" title="">FileWriterFactory</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="LeafV2CommandExec.html" title=""></a>
+                        <a href="LeafV2CommandExec.html" title="">LeafV2CommandExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="MicroBatchScanExec.html" title="Physical plan node for scanning a micro-batch of data from a data source."></a>
+                        <a href="MicroBatchScanExec.html" title="Physical plan node for scanning a micro-batch of data from a data source.">MicroBatchScanExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="OverwriteByExpressionExec.html" title="Physical plan node for overwrite into a v2 table."></a>
+                        <a href="OverwriteByExpressionExec.html" title="Physical plan node for overwrite into a v2 table.">OverwriteByExpressionExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="OverwriteByExpressionExecV1.html" title="Physical plan node for overwrite into a v2 table with V1 write interfaces."></a>
+                        <a href="OverwriteByExpressionExecV1.html" title="Physical plan node for overwrite into a v2 table with V1 write interfaces.">OverwriteByExpressionExecV1</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="OverwritePartitionsDynamicExec.html" title="Physical plan node for dynamic partition overwrite into a v2 table."></a>
+                        <a href="OverwritePartitionsDynamicExec.html" title="Physical plan node for dynamic partition overwrite into a v2 table.">OverwritePartitionsDynamicExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="PartitionReaderFromIterator.html" title=""></a>
+                        <a href="PartitionReaderFromIterator.html" title="">PartitionReaderFromIterator</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="PartitionReaderWithPartitionValues.html" title="A wrapper reader that always appends partition values to InternalRows produced by the input reader fileReader."></a>
+                        <a href="PartitionReaderWithPartitionValues.html" title="A wrapper reader that always appends partition values to InternalRows produced by the input reader fileReader.">PartitionReaderWithPartitionValues</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="PartitionRecordReader.html" title=""></a>
+                        <a href="PartitionRecordReader.html" title="">PartitionRecordReader</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="object" href="PushDownUtils$.html" title=""></a>
+                        <a href="PushDownUtils$.html" title="">PushDownUtils</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="RefreshTableExec.html" title=""></a>
+                        <a href="RefreshTableExec.html" title="">RefreshTableExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="RenamePartitionExec.html" title="Physical plan node for renaming a table partition."></a>
+                        <a href="RenamePartitionExec.html" title="Physical plan node for renaming a table partition.">RenamePartitionExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="RenameTableExec.html" title="Physical plan node for renaming a table."></a>
+                        <a href="RenameTableExec.html" title="Physical plan node for renaming a table.">RenameTableExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ReplaceTableAsSelectExec.html" title="Physical plan node for v2 replace table as select when the catalog does not support staging table replacement."></a>
+                        <a href="ReplaceTableAsSelectExec.html" title="Physical plan node for v2 replace table as select when the catalog does not support staging table replacement.">ReplaceTableAsSelectExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ReplaceTableExec.html" title=""></a>
+                        <a href="ReplaceTableExec.html" title="">ReplaceTableExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ScanBuilderHolder.html" title=""></a>
+                        <a href="ScanBuilderHolder.html" title="">ScanBuilderHolder</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="SetCatalogAndNamespaceExec.html" title="Physical plan node for setting the current catalog and/or namespace."></a>
+                        <a href="SetCatalogAndNamespaceExec.html" title="Physical plan node for setting the current catalog and/or namespace.">SetCatalogAndNamespaceExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ShowCreateTableExec.html" title="Physical plan node for show create table."></a>
+                        <a href="ShowCreateTableExec.html" title="Physical plan node for show create table.">ShowCreateTableExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ShowCurrentNamespaceExec.html" title="Physical plan node for showing current catalog/namespace."></a>
+                        <a href="ShowCurrentNamespaceExec.html" title="Physical plan node for showing current catalog/namespace.">ShowCurrentNamespaceExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ShowNamespacesExec.html" title="Physical plan node for showing namespaces."></a>
+                        <a href="ShowNamespacesExec.html" title="Physical plan node for showing namespaces.">ShowNamespacesExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ShowPartitionsExec.html" title="Physical plan node for showing partitions."></a>
+                        <a href="ShowPartitionsExec.html" title="Physical plan node for showing partitions.">ShowPartitionsExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ShowTablePropertiesExec.html" title="Physical plan node for showing table properties."></a>
+                        <a href="ShowTablePropertiesExec.html" title="Physical plan node for showing table properties.">ShowTablePropertiesExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ShowTablesExec.html" title="Physical plan node for showing tables."></a>
+                        <a href="ShowTablesExec.html" title="Physical plan node for showing tables.">ShowTablesExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="SupportsV1Write.html" title="A trait that allows Tables that use V1 Writer interfaces to append data."></a>
+                        <a href="SupportsV1Write.html" title="A trait that allows Tables that use V1 Writer interfaces to append data.">SupportsV1Write</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="object" href="TableCapabilityCheck$.html" title="Checks the capabilities of Data Source V2 tables, and fail problematic queries earlier."></a>
+                        <a href="TableCapabilityCheck$.html" title="Checks the capabilities of Data Source V2 tables, and fail problematic queries earlier.">TableCapabilityCheck</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="TextBasedFileScan.html" title=""></a>
+                        <a href="TextBasedFileScan.html" title="">TextBasedFileScan</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="TruncatePartitionExec.html" title="Physical plan node for table partition truncation."></a>
+                        <a href="TruncatePartitionExec.html" title="Physical plan node for table partition truncation.">TruncatePartitionExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="TruncateTableExec.html" title="Physical plan node for table truncation."></a>
+                        <a href="TruncateTableExec.html" title="Physical plan node for table truncation.">TruncateTableExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="UncacheTableExec.html" title=""></a>
+                        <a href="UncacheTableExec.html" title="">UncacheTableExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="V1FallbackWriters.html" title="Some helper interfaces that use V2 write semantics through the V1 writer interface."></a>
+                        <a href="V1FallbackWriters.html" title="Some helper interfaces that use V2 write semantics through the V1 writer interface.">V1FallbackWriters</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="V1ScanWrapper.html" title=""></a>
+                        <a href="V1ScanWrapper.html" title="">V1ScanWrapper</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="V2CommandExec.html" title="A physical operator that executes run() and saves the result to prevent multiple executions."></a>
+                        <a href="V2CommandExec.html" title="A physical operator that executes run() and saves the result to prevent multiple executions.">V2CommandExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="V2ExistingTableWriteExec.html" title=""></a>
+                        <a href="V2ExistingTableWriteExec.html" title="">V2ExistingTableWriteExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="object" href="V2ScanRelationPushDown$.html" title=""></a>
+                        <a href="V2ScanRelationPushDown$.html" title="">V2ScanRelationPushDown</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="V2SessionCatalog.html" title="A TableCatalog that translates calls to the v1 SessionCatalog."></a>
+                        <a href="V2SessionCatalog.html" title="A TableCatalog that translates calls to the v1 SessionCatalog.">V2SessionCatalog</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="V2TableWriteExec.html" title="The base physical plan for writing data into data source v2."></a>
+                        <a href="V2TableWriteExec.html" title="The base physical plan for writing data into data source v2.">V2TableWriteExec</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="object" href="V2Writes$.html" title="A rule that constructs logical writes."></a>
+                        <a href="V2Writes$.html" title="A rule that constructs logical writes.">V2Writes</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="WriteToDataSourceV2.html" title="Deprecated logical plan for writing data into data source v2."></a>
+                        <a href="WriteToDataSourceV2.html" title="Deprecated logical plan for writing data into data source v2.">WriteToDataSourceV2</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="WriteToDataSourceV2Exec.html" title=""></a>
+                        <a href="WriteToDataSourceV2Exec.html" title="">WriteToDataSourceV2Exec</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../../../../index.html" class="extype" name="org">org</a>.<a href="../../../../../index.html" class="extype" name="org.apache">apache</a>.<a href="../../../../index.html" class="extype" name="org.apache.spark">spark</a>.<a href="../../../index.html" class="extype" name="org.apache.spark.sql">sql</a>.<a href="../../index.html" class="extype" name="org.apache.spark.sql.execution">execution</a>.<a href="../index.html" class="extype" name="org.apache.spark.sql.execution.datasources">datasources</a></p>
+        <h1>v2<span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">v2</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              
+            </ol>
+          </div>
+          
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.spark.sql.execution.datasources.v2.AddPartitionExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AddPartitionExecextendsV2CommandExecwithLeafV2CommandExecwithProductwithSerializable"></a><a id="AddPartitionExec:AddPartitionExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/AddPartitionExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for adding partitions of table." href="AddPartitionExec.html"><span class="name">AddPartitionExec</span></a><span class="params">(<span name="table">table: <span class="extype" name="org.apache.spark.sql.connector.catalog.SupportsPartitionManagement">SupportsPartitionManagement</span></span>, <span name="partSpecs">partSpecs: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.analysis.ResolvedPartitionSpec">ResolvedPartitionSpec</span>]</span>, <span name="ignoreIfExists">ignoreIfExists: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="refreshCache">refreshCache: () ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="LeafV2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.LeafV2CommandExec">LeafV2CommandExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for adding partitions of table.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.AlterNamespaceSetPropertiesExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AlterNamespaceSetPropertiesExecextendsV2CommandExecwithLeafV2CommandExecwithProductwithSerializable"></a><a id="AlterNamespaceSetPropertiesExec:AlterNamespaceSetPropertiesExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/AlterNamespaceSetPropertiesExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for setting properties of namespace." href="AlterNamespaceSetPropertiesExec.html"><span class="name">AlterNamespaceSetPropertiesExec</span></a><span class="params">(<span name="catalog">catalog: <span class="extype" name="org.apache.spark.sql.connector.catalog.SupportsNamespaces">SupportsNamespaces</span></span>, <span name="namespace">namespace: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="props">props: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="LeafV2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.LeafV2CommandExec">LeafV2CommandExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for setting properties of namespace.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.AlterTableExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AlterTableExecextendsV2CommandExecwithLeafV2CommandExecwithProductwithSerializable"></a><a id="AlterTableExec:AlterTableExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/AlterTableExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for altering a table." href="AlterTableExec.html"><span class="name">AlterTableExec</span></a><span class="params">(<span name="catalog">catalog: <span class="extype" name="org.apache.spark.sql.connector.catalog.TableCatalog">TableCatalog</span></span>, <span name="ident">ident: <span class="extype" name="org.apache.spark.sql.connector.catalog.Identifier">Identifier</span></span>, <span name="changes">changes: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.connector.catalog.TableChange">TableChange</span>]</span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="LeafV2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.LeafV2CommandExec">LeafV2CommandExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for altering a table.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.AppendDataExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AppendDataExecextendsV2CommandExecwithV2ExistingTableWriteExecwithProductwithSerializable"></a><a id="AppendDataExec:AppendDataExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/AppendDataExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for append into a v2 table." href="AppendDataExec.html"><span class="name">AppendDataExec</span></a><span class="params">(<span name="query">query: <a href="../../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>, <span name="refreshCache">refreshCache: () ⇒ <span class="extype" name="scala.Unit">Unit</span></span>, <span name="write">write: <span class="extype" name="org.apache.spark.sql.connector.write.Write">Write</span></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="V2ExistingTableWriteExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2ExistingTableWriteExec">V2ExistingTableWriteExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for append into a v2 table.</p><div class="fullcomment"><div class="comment cmt"><p>Physical plan node for append into a v2 table.</p><p>Rows in the output data set are appended.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.AppendDataExecV1" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AppendDataExecV1extendsV2CommandExecwithV1FallbackWriterswithProductwithSerializable"></a><a id="AppendDataExecV1:AppendDataExecV1"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/AppendDataExecV1.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for append into a v2 table using V1 write interfaces." href="AppendDataExecV1.html"><span class="name">AppendDataExecV1</span></a><span class="params">(<span name="table">table: <span class="extype" name="org.apache.spark.sql.connector.catalog.SupportsWrite">SupportsWrite</span></span>, <span name="plan">plan: <span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</span></span>, <span name="refreshCache">refreshCache: () ⇒ <span class="extype" name="scala.Unit">Unit</span></span>, <span name="write">write: <a href="../../../connector/write/V1Write.html" class="extype" name="org.apache.spark.sql.connector.write.V1Write">V1Write</a></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="V1FallbackWriters.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V1FallbackWriters">V1FallbackWriters</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for append into a v2 table using V1 write interfaces.</p><div class="fullcomment"><div class="comment cmt"><p>Physical plan node for append into a v2 table using V1 write interfaces.</p><p>Rows in the output data set are appended.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.AtomicCreateTableAsSelectExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AtomicCreateTableAsSelectExecextendsV2CommandExecwithTableWriteExecHelperwithProductwithSerializable"></a><a id="AtomicCreateTableAsSelectExec:AtomicCreateTableAsSelectExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/AtomicCreateTableAsSelectExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for v2 create table as select, when the catalog is determined to support staging table creation." href="AtomicCreateTableAsSelectExec.html"><span class="name">AtomicCreateTableAsSelectExec</span></a><span class="params">(<span name="catalog">catalog: <span class="extype" name="org.apache.spark.sql.connector.catalog.StagingTableCatalog">StagingTableCatalog</span></span>, <span name="ident">ident: <span class="extype" name="org.apache.spark.sql.connector.catalog.Identifier">Identifier</span></span>, <span name="partitioning">partitioning: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.connector.expressions.Transform">Transform</span>]</span>, <span name="plan">plan: <span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</span></span>, <span name="query">query: <a href="../../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>, <span name="properties">properties: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="writeOptions">writeOptions: <span class="extype" name="org.apache.spark.sql.util.CaseInsensitiveStringMap">CaseInsensitiveStringMap</span></span>, <span name="ifNotExists">ifNotExists: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <span class="extype" name="org.apache.spark.sql.execution.datasources.v2.TableWriteExecHelper">TableWriteExecHelper</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for v2 create table as select, when the catalog is determined to support
+staging table creation.</p><div class="fullcomment"><div class="comment cmt"><p>Physical plan node for v2 create table as select, when the catalog is determined to support
+staging table creation.</p><p>A new table will be created using the schema of the query, and rows from the query are appended.
+The CTAS operation is atomic. The creation of the table is staged and the commit of the write
+should bundle the commitment of the metadata and the table contents in a single unit. If the
+write fails, the table is instructed to roll back all staged changes.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.AtomicReplaceTableAsSelectExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AtomicReplaceTableAsSelectExecextendsV2CommandExecwithTableWriteExecHelperwithProductwithSerializable"></a><a id="AtomicReplaceTableAsSelectExec:AtomicReplaceTableAsSelectExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/AtomicReplaceTableAsSelectExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for v2 replace table as select when the catalog supports staging table replacement." href="AtomicReplaceTableAsSelectExec.html"><span class="name">AtomicReplaceTableAsSelectExec</span></a><span class="params">(<span name="catalog">catalog: <span class="extype" name="org.apache.spark.sql.connector.catalog.StagingTableCatalog">StagingTableCatalog</span></span>, <span name="ident">ident: <span class="extype" name="org.apache.spark.sql.connector.catalog.Identifier">Identifier</span></span>, <span name="partitioning">partitioning: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.connector.expressions.Transform">Transform</span>]</span>, <span name="plan">plan: <span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</span></span>, <span name="query">query: <a href="../../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>, <span name="properties">properties: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="writeOptions">writeOptions: <span class="extype" name="org.apache.spark.sql.util.CaseInsensitiveStringMap">CaseInsensitiveStringMap</span></span>, <span name="orCreate">orCreate: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="invalidateCache">invalidateCache: (<span class="extype" name="org.apache.spark.sql.connector.catalog.TableCatalog">TableCatalog</span>, <span class="extype" name="org.apache.spark.sql.connector.catalog.Table">Table</span>, <span class="extype" name="org.apache.spark.sql.connector.catalog.Identifier">Identifier</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <span class="extype" name="org.apache.spark.sql.execution.datasources.v2.TableWriteExecHelper">TableWriteExecHelper</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for v2 replace table as select when the catalog supports staging
+table replacement.</p><div class="fullcomment"><div class="comment cmt"><p>Physical plan node for v2 replace table as select when the catalog supports staging
+table replacement.</p><p>A new table will be created using the schema of the query, and rows from the query are appended.
+If the table exists, its contents and schema should be replaced with the schema and the contents
+of the query. This implementation is atomic. The table replacement is staged, and the commit
+operation at the end should perform the replacement of the table's metadata and contents. If the
+write fails, the table is instructed to roll back staged changes and any previously written table
+is left untouched.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.AtomicReplaceTableExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AtomicReplaceTableExecextendsV2CommandExecwithLeafV2CommandExecwithProductwithSerializable"></a><a id="AtomicReplaceTableExec:AtomicReplaceTableExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/AtomicReplaceTableExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="AtomicReplaceTableExec.html"><span class="name">AtomicReplaceTableExec</span></a><span class="params">(<span name="catalog">catalog: <span class="extype" name="org.apache.spark.sql.connector.catalog.StagingTableCatalog">StagingTableCatalog</span></span>, <span name="identifier">identifier: <span class="extype" name="org.apache.spark.sql.connector.catalog.Identifier">Identifier</span></span>, <span name="tableSchema">tableSchema: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>, <span name="partitioning">partitioning: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.connector.expressions.Transform">Transform</span>]</span>, <span name="tableProperties">tableProperties: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="orCreate">orCreate: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="invalidateCache">invalidateCache: (<span class="extype" name="org.apache.spark.sql.connector.catalog.TableCatalog">TableCatalog</span>, <span class="extype" name="org.apache.spark.sql.connector.catalog.Table">Table</span>, <span class="extype" name="org.apache.spark.sql.connector.catalog.Identifier">Identifier</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="LeafV2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.LeafV2CommandExec">LeafV2CommandExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.BaseCacheTableExec" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="BaseCacheTableExecextendsV2CommandExecwithLeafV2CommandExec"></a><a id="BaseCacheTableExec:BaseCacheTableExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/BaseCacheTableExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="BaseCacheTableExec.html"><span class="name">BaseCacheTableExec</span></a><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="LeafV2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.LeafV2CommandExec">LeafV2CommandExec</a></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.BatchScanExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BatchScanExecextendsSparkPlanwithDataSourceV2ScanExecBasewithProductwithSerializable"></a><a id="BatchScanExec:BatchScanExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/BatchScanExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for scanning a batch of data from a data source v2." href="BatchScanExec.html"><span class="name">BatchScanExec</span></a><span class="params">(<span name="output">output: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.AttributeReference">AttributeReference</span>]</span>, <span name="scan">scan: <span class="extype" name="org.apache.spark.sql.connector.read.Scan">Scan</span></span>, <span name="runtimeFilters">runtimeFilters: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.Expression">Expression</span>]</span>)</span><span class="result"> extends <a href="../../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a> with <a href="DataSourceV2ScanExecBase.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.DataSourceV2ScanExecBase">DataSourceV2ScanExecBase</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for scanning a batch of data from a data source v2.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.CacheTableAsSelectExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CacheTableAsSelectExecextendsV2CommandExecwithBaseCacheTableExecwithProductwithSerializable"></a><a id="CacheTableAsSelectExec:CacheTableAsSelectExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/CacheTableAsSelectExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CacheTableAsSelectExec.html"><span class="name">CacheTableAsSelectExec</span></a><span class="params">(<span name="tempViewName">tempViewName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="query">query: <span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</span></span>, <span name="originalText">originalText: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="isLazy">isLazy: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="options">options: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="referredTempFunctions">referredTempFunctions: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="BaseCacheTableExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.BaseCacheTableExec">BaseCacheTableExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.CacheTableExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CacheTableExecextendsV2CommandExecwithBaseCacheTableExecwithProductwithSerializable"></a><a id="CacheTableExec:CacheTableExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/CacheTableExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CacheTableExec.html"><span class="name">CacheTableExec</span></a><span class="params">(<span name="relation">relation: <span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</span></span>, <span name="multipartIdentifier">multipartIdentifier: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="isLazy">isLazy: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="options">options: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="BaseCacheTableExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.BaseCacheTableExec">BaseCacheTableExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.ContinuousScanExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ContinuousScanExecextendsSparkPlanwithDataSourceV2ScanExecBasewithProductwithSerializable"></a><a id="ContinuousScanExec:ContinuousScanExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/ContinuousScanExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for scanning data from a streaming data source with continuous mode." href="ContinuousScanExec.html"><span class="name">ContinuousScanExec</span></a><span class="params">(<span name="output">output: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.Attribute">Attribute</span>]</span>, <span name="scan">scan: <span class="extype" name="org.apache.spark.sql.connector.read.Scan">Scan</span></span>, <span name="stream">stream: <span class="extype" name="org.apache.spark.sql.connector.read.streaming.ContinuousStream">ContinuousStream</span></span>, <span name="start">start: <span class="extype" name="org.apache.spark.sql.connector.read.streaming.Offset">Offset</span></span>)</span><span class="result"> extends <a href="../../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a> with <a href="DataSourceV2ScanExecBase.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.DataSourceV2ScanExecBase">DataSourceV2ScanExecBase</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for scanning data from a streaming data source with continuous mode.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.CreateNamespaceExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CreateNamespaceExecextendsV2CommandExecwithLeafV2CommandExecwithProductwithSerializable"></a><a id="CreateNamespaceExec:CreateNamespaceExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/CreateNamespaceExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for creating a namespace." href="CreateNamespaceExec.html"><span class="name">CreateNamespaceExec</span></a><span class="params">(<span name="catalog">catalog: <span class="extype" name="org.apache.spark.sql.connector.catalog.SupportsNamespaces">SupportsNamespaces</span></span>, <span name="namespace">namespace: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="ifNotExists">ifNotExists: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="properties">properties: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="LeafV2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.LeafV2CommandExec">LeafV2CommandExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for creating a namespace.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.CreateTableAsSelectExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="CreateTableAsSelectExecextendsV2CommandExecwithTableWriteExecHelperwithProductwithSerializable"></a><a id="CreateTableAsSelectExec:CreateTableAsSelectExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/CreateTableAsSelectExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for v2 create table as select when the catalog does not support staging the table creation." href="CreateTableAsSelectExec.html"><span class="name">CreateTableAsSelectExec</span></a><span class="params">(<span name="catalog">catalog: <span class="extype" name="org.apache.spark.sql.connector.catalog.TableCatalog">TableCatalog</span></span>, <span name="ident">ident: <span class="extype" name="org.apache.spark.sql.connector.catalog.Identifier">Identifier</span></span>, <span name="partitioning">partitioning: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.connector.expressions.Transform">Transform</span>]</span>, <span name="plan">plan: <span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</span></span>, <span name="query">query: <a href="../../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>, <span name="properties">properties: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="writeOptions">writeOptions: <span class="extype" name="org.apache.spark.sql.util.CaseInsensitiveStringMap">CaseInsensitiveStringMap</span></span>, <span name="ifNotExists">ifNotExists: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <span class="extype" name="org.apache.spark.sql.execution.datasources.v2.TableWriteExecHelper">TableWriteExecHelper</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for v2 create table as select when the catalog does not support staging
+the table creation.</p><div class="fullcomment"><div class="comment cmt"><p>Physical plan node for v2 create table as select when the catalog does not support staging
+the table creation.</p><p>A new table will be created using the schema of the query, and rows from the query are appended.
+If either table creation or the append fails, the table will be deleted. This implementation is
+not atomic; for an atomic variant for catalogs that support the appropriate features, see
+CreateTableAsSelectStagingExec.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.CreateTableExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CreateTableExecextendsV2CommandExecwithLeafV2CommandExecwithProductwithSerializable"></a><a id="CreateTableExec:CreateTableExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/CreateTableExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CreateTableExec.html"><span class="name">CreateTableExec</span></a><span class="params">(<span name="catalog">catalog: <span class="extype" name="org.apache.spark.sql.connector.catalog.TableCatalog">TableCatalog</span></span>, <span name="identifier">identifier: <span class="extype" name="org.apache.spark.sql.connector.catalog.Identifier">Identifier</span></span>, <span name="tableSchema">tableSchema: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>, <span name="partitioning">partitioning: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.connector.expressions.Transform">Transform</span>]</span>, <span name="tableProperties">tableProperties: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="ignoreIfExists">ignoreIfExists: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="LeafV2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.LeafV2CommandExec">LeafV2CommandExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.DataSourcePartitioning" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DataSourcePartitioningextendsPartitioning"></a><a id="DataSourcePartitioning:DataSourcePartitioning"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/DataSourcePartitioning.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="An adapter from public data source partitioning to catalyst internal Partitioning." href="DataSourcePartitioning.html"><span class="name">DataSourcePartitioning</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.plans.physical.Partitioning">Partitioning</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">An adapter from public data source partitioning to catalyst internal <code>Partitioning</code>.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.DataSourceRDD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DataSourceRDDextendsRDD[org.apache.spark.sql.catalyst.InternalRow]"></a><a id="DataSourceRDD:DataSourceRDD"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/DataSourceRDD.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="DataSourceRDD.html"><span class="name">DataSourceRDD</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<span class="extype" name="org.apache.spark.sql.catalyst.InternalRow">InternalRow</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.DataSourceRDDPartition" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DataSourceRDDPartitionextendsPartitionwithSerializable"></a><a id="DataSourceRDDPartition:DataSourceRDDPartition"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/DataSourceRDDPartition.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="DataSourceRDDPartition.html"><span class="name">DataSourceRDDPartition</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.Partition">Partition</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.DataSourceV2ScanExecBase" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="DataSourceV2ScanExecBaseextendsSparkPlanwithLeafExecNode"></a><a id="DataSourceV2ScanExecBase:DataSourceV2ScanExecBase"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/DataSourceV2ScanExecBase.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="DataSourceV2ScanExecBase.html"><span class="name">DataSourceV2ScanExecBase</span></a><span class="result"> extends <a href="../../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a> with <a href="../../LeafExecNode.html" class="extype" name="org.apache.spark.sql.execution.LeafExecNode">LeafExecNode</a></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.DataSourceV2Strategy" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DataSourceV2Strategyextendsorg.apache.spark.sql.StrategywithPredicateHelper"></a><a id="DataSourceV2Strategy:DataSourceV2Strategy"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/DataSourceV2Strategy.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="DataSourceV2Strategy.html"><span class="name">DataSourceV2Strategy</span></a><span class="result"> extends <a href="../../../index.html#Strategy=org.apache.spark.sql.execution.SparkStrategy" class="extmbr" name="org.apache.spark.sql.Strategy">Strategy</a> with <span class="extype" name="org.apache.spark.sql.catalyst.expressions.PredicateHelper">PredicateHelper</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.DeleteFromTableExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DeleteFromTableExecextendsV2CommandExecwithLeafV2CommandExecwithProductwithSerializable"></a><a id="DeleteFromTableExec:DeleteFromTableExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/DeleteFromTableExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="DeleteFromTableExec.html"><span class="name">DeleteFromTableExec</span></a><span class="params">(<span name="table">table: <span class="extype" name="org.apache.spark.sql.connector.catalog.SupportsDelete">SupportsDelete</span></span>, <span name="condition">condition: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="org.apache.spark.sql.sources.Filter">Filter</span>]</span>, <span name="refreshCache">refreshCache: () ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="LeafV2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.LeafV2CommandExec">LeafV2CommandExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.DescribeColumnExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DescribeColumnExecextendsV2CommandExecwithLeafV2CommandExecwithProductwithSerializable"></a><a id="DescribeColumnExec:DescribeColumnExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/DescribeColumnExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="DescribeColumnExec.html"><span class="name">DescribeColumnExec</span></a><span class="params">(<span name="output">output: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.Attribute">Attribute</span>]</span>, <span name="column">column: <span class="extype" name="org.apache.spark.sql.catalyst.expressions.Attribute">Attribute</span></span>, <span name="isExtended">isExtended: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="LeafV2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.LeafV2CommandExec">LeafV2CommandExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.DescribeNamespaceExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DescribeNamespaceExecextendsV2CommandExecwithLeafV2CommandExecwithProductwithSerializable"></a><a id="DescribeNamespaceExec:DescribeNamespaceExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/DescribeNamespaceExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for describing a namespace." href="DescribeNamespaceExec.html"><span class="name">DescribeNamespaceExec</span></a><span class="params">(<span name="output">output: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.Attribute">Attribute</span>]</span>, <span name="catalog">catalog: <span class="extype" name="org.apache.spark.sql.connector.catalog.SupportsNamespaces">SupportsNamespaces</span></span>, <span name="namespace">namespace: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="isExtended">isExtended: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="LeafV2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.LeafV2CommandExec">LeafV2CommandExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for describing a namespace.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.DescribeTableExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DescribeTableExecextendsV2CommandExecwithLeafV2CommandExecwithProductwithSerializable"></a><a id="DescribeTableExec:DescribeTableExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/DescribeTableExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="DescribeTableExec.html"><span class="name">DescribeTableExec</span></a><span class="params">(<span name="output">output: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.Attribute">Attribute</span>]</span>, <span name="table">table: <span class="extype" name="org.apache.spark.sql.connector.catalog.Table">Table</span></span>, <span name="isExtended">isExtended: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="LeafV2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.LeafV2CommandExec">LeafV2CommandExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.DropNamespaceExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DropNamespaceExecextendsV2CommandExecwithLeafV2CommandExecwithProductwithSerializable"></a><a id="DropNamespaceExec:DropNamespaceExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/DropNamespaceExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for dropping a namespace." href="DropNamespaceExec.html"><span class="name">DropNamespaceExec</span></a><span class="params">(<span name="catalog">catalog: <span class="extype" name="org.apache.spark.sql.connector.catalog.CatalogPlugin">CatalogPlugin</span></span>, <span name="namespace">namespace: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="ifExists">ifExists: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="cascade">cascade: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="LeafV2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.LeafV2CommandExec">LeafV2CommandExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for dropping a namespace.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.DropPartitionExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DropPartitionExecextendsV2CommandExecwithLeafV2CommandExecwithProductwithSerializable"></a><a id="DropPartitionExec:DropPartitionExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/DropPartitionExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for dropping partitions of table." href="DropPartitionExec.html"><span class="name">DropPartitionExec</span></a><span class="params">(<span name="table">table: <span class="extype" name="org.apache.spark.sql.connector.catalog.SupportsPartitionManagement">SupportsPartitionManagement</span></span>, <span name="partSpecs">partSpecs: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.analysis.ResolvedPartitionSpec">ResolvedPartitionSpec</span>]</span>, <span name="ignoreIfNotExists">ignoreIfNotExists: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="purge">purge: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="refreshCache">refreshCache: () ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="LeafV2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.LeafV2CommandExec">LeafV2CommandExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for dropping partitions of table.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.DropTableExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DropTableExecextendsV2CommandExecwithLeafV2CommandExecwithProductwithSerializable"></a><a id="DropTableExec:DropTableExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/DropTableExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for dropping a table." href="DropTableExec.html"><span class="name">DropTableExec</span></a><span class="params">(<span name="catalog">catalog: <span class="extype" name="org.apache.spark.sql.connector.catalog.TableCatalog">TableCatalog</span></span>, <span name="ident">ident: <span class="extype" name="org.apache.spark.sql.connector.catalog.Identifier">Identifier</span></span>, <span name="ifExists">ifExists: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="purge">purge: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="invalidateCache">invalidateCache: () ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="LeafV2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.LeafV2CommandExec">LeafV2CommandExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for dropping a table.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.EmptyPartitionReader" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EmptyPartitionReader[T]extendsPartitionReader[T]"></a><a id="EmptyPartitionReader[T]:EmptyPartitionReader[T]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/EmptyPartitionReader.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A PartitionReader with empty output." href="EmptyPartitionReader.html"><span class="name">EmptyPartitionReader</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.connector.read.PartitionReader">PartitionReader</span>[<span class="extype" name="org.apache.spark.sql.execution.datasources.v2.EmptyPartitionReader.T">T</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">A <span class="extype" name="PartitionReader">PartitionReader</span> with empty output.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.FileBatchWrite" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FileBatchWriteextendsBatchWritewithLogging"></a><a id="FileBatchWrite:FileBatchWrite"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/FileBatchWrite.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="FileBatchWrite.html"><span class="name">FileBatchWrite</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.connector.write.BatchWrite">BatchWrite</span> with <span class="extype" name="org.apache.spark.internal.Logging">Logging</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.FileDataSourceV2" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="FileDataSourceV2extendsTableProviderwithDataSourceRegister"></a><a id="FileDataSourceV2:FileDataSourceV2"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/FileDataSourceV2.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A base interface for data source v2 implementations of the built-in file-based data sources." href="FileDataSourceV2.html"><span class="name">FileDataSourceV2</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.connector.catalog.TableProvider">TableProvider</span> with <a href="../../../sources/DataSourceRegister.html" class="extype" name="org.apache.spark.sql.sources.DataSourceRegister">DataSourceRegister</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A base interface for data source v2 implementations of the built-in file-based data sources.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.FilePartitionReader" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FilePartitionReader[T]extendsPartitionReader[T]withLogging"></a><a id="FilePartitionReader[T]:FilePartitionReader[T]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/FilePartitionReader.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="FilePartitionReader.html"><span class="name">FilePartitionReader</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.connector.read.PartitionReader">PartitionReader</span>[<span class="extype" name="org.apache.spark.sql.execution.datasources.v2.FilePartitionReader.T">T</span>] with <span class="extype" name="org.apache.spark.internal.Logging">Logging</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.FilePartitionReaderFactory" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="FilePartitionReaderFactoryextendsPartitionReaderFactory"></a><a id="FilePartitionReaderFactory:FilePartitionReaderFactory"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/FilePartitionReaderFactory.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="FilePartitionReaderFactory.html"><span class="name">FilePartitionReaderFactory</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.connector.read.PartitionReaderFactory">PartitionReaderFactory</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.FileScan" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="FileScanextendsScanwithBatchwithSupportsReportStatisticswithSupportsMetadatawithLogging"></a><a id="FileScan:FileScan"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/FileScan.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="FileScan.html"><span class="name">FileScan</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.connector.read.Scan">Scan</span> with <span class="extype" name="org.apache.spark.sql.connector.read.Batch">Batch</span> with <span class="extype" name="org.apache.spark.sql.connector.read.SupportsReportStatistics">SupportsReportStatistics</span> with <span class="extype" name="org.apache.spark.sql.internal.connector.SupportsMetadata">SupportsMetadata</span> with <span class="extype" name="org.apache.spark.internal.Logging">Logging</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.FileScanBuilder" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="FileScanBuilderextendsScanBuilderwithSupportsPushDownRequiredColumns"></a><a id="FileScanBuilder:FileScanBuilder"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/FileScanBuilder.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="FileScanBuilder.html"><span class="name">FileScanBuilder</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.connector.read.ScanBuilder">ScanBuilder</span> with <span class="extype" name="org.apache.spark.sql.connector.read.SupportsPushDownRequiredColumns">SupportsPushDownRequiredColumns</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.FileTable" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="FileTableextendsTablewithSupportsReadwithSupportsWrite"></a><a id="FileTable:FileTable"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/FileTable.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="FileTable.html"><span class="name">FileTable</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.connector.catalog.Table">Table</span> with <span class="extype" name="org.apache.spark.sql.connector.catalog.SupportsRead">SupportsRead</span> with <span class="extype" name="org.apache.spark.sql.connector.catalog.SupportsWrite">SupportsWrite</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.FileWrite" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="FileWriteextendsWrite"></a><a id="FileWrite:FileWrite"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/FileWrite.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="FileWrite.html"><span class="name">FileWrite</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.connector.write.Write">Write</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.FileWriterFactory" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FileWriterFactoryextendsDataWriterFactorywithProductwithSerializable"></a><a id="FileWriterFactory:FileWriterFactory"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/FileWriterFactory.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="FileWriterFactory.html"><span class="name">FileWriterFactory</span></a><span class="params">(<span name="description">description: <a href="../WriteJobDescription.html" class="extype" name="org.apache.spark.sql.execution.datasources.WriteJobDescription">WriteJobDescription</a></span>, <span name="committer">committer: <span class="extype" name="org.apache.spark.internal.io.FileCommitProtocol">FileCommitProtocol</span></span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.connector.write.DataWriterFactory">DataWriterFactory</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.LeafV2CommandExec" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="LeafV2CommandExecextendsV2CommandExecwithLeafLike[org.apache.spark.sql.execution.SparkPlan]"></a><a id="LeafV2CommandExec:LeafV2CommandExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/LeafV2CommandExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="LeafV2CommandExec.html"><span class="name">LeafV2CommandExec</span></a><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <span class="extype" name="org.apache.spark.sql.catalyst.trees.LeafLike">LeafLike</span>[<a href="../../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.MicroBatchScanExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MicroBatchScanExecextendsSparkPlanwithDataSourceV2ScanExecBasewithProductwithSerializable"></a><a id="MicroBatchScanExec:MicroBatchScanExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/MicroBatchScanExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for scanning a micro-batch of data from a data source." href="MicroBatchScanExec.html"><span class="name">MicroBatchScanExec</span></a><span class="params">(<span name="output">output: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.Attribute">Attribute</span>]</span>, <span name="scan">scan: <span class="extype" name="org.apache.spark.sql.connector.read.Scan">Scan</span></span>, <span name="stream">stream: <span class="extype" name="org.apache.spark.sql.connector.read.streaming.MicroBatchStream">MicroBatchStream</span></span>, <span name="start">start: <span class="extype" name="org.apache.spark.sql.connector.read.streaming.Offset">Offset</span></span>, <span name="end">end: <span class="extype" name="org.apache.spark.sql.connector.read.streaming.Offset">Offset</span></span>)</span><span class="result"> extends <a href="../../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a> with <a href="DataSourceV2ScanExecBase.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.DataSourceV2ScanExecBase">DataSourceV2ScanExecBase</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for scanning a micro-batch of data from a data source.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.OverwriteByExpressionExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="OverwriteByExpressionExecextendsV2CommandExecwithV2ExistingTableWriteExecwithProductwithSerializable"></a><a id="OverwriteByExpressionExec:OverwriteByExpressionExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/OverwriteByExpressionExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for overwrite into a v2 table." href="OverwriteByExpressionExec.html"><span class="name">OverwriteByExpressionExec</span></a><span class="params">(<span name="query">query: <a href="../../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>, <span name="refreshCache">refreshCache: () ⇒ <span class="extype" name="scala.Unit">Unit</span></span>, <span name="write">write: <span class="extype" name="org.apache.spark.sql.connector.write.Write">Write</span></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="V2ExistingTableWriteExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2ExistingTableWriteExec">V2ExistingTableWriteExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for overwrite into a v2 table.</p><div class="fullcomment"><div class="comment cmt"><p>Physical plan node for overwrite into a v2 table.</p><p>Overwrites data in a table matched by a set of filters. Rows matching all of the filters will be
+deleted and rows in the output data set are appended.</p><p>This plan is used to implement SaveMode.Overwrite. The behavior of SaveMode.Overwrite is to
+truncate the table -- delete all rows -- and append the output data set. This uses the filter
+AlwaysTrue to delete all rows.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.OverwriteByExpressionExecV1" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="OverwriteByExpressionExecV1extendsV2CommandExecwithV1FallbackWriterswithProductwithSerializable"></a><a id="OverwriteByExpressionExecV1:OverwriteByExpressionExecV1"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/OverwriteByExpressionExecV1.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for overwrite into a v2 table with V1 write interfaces." href="OverwriteByExpressionExecV1.html"><span class="name">OverwriteByExpressionExecV1</span></a><span class="params">(<span name="table">table: <span class="extype" name="org.apache.spark.sql.connector.catalog.SupportsWrite">SupportsWrite</span></span>, <span name="plan">plan: <span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</span></span>, <span name="refreshCache">refreshCache: () ⇒ <span class="extype" name="scala.Unit">Unit</span></span>, <span name="write">write: <a href="../../../connector/write/V1Write.html" class="extype" name="org.apache.spark.sql.connector.write.V1Write">V1Write</a></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="V1FallbackWriters.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V1FallbackWriters">V1FallbackWriters</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for overwrite into a v2 table with V1 write interfaces.</p><div class="fullcomment"><div class="comment cmt"><p>Physical plan node for overwrite into a v2 table with V1 write interfaces. Note that when this
+interface is used, the atomicity of the operation depends solely on the target data source.</p><p>Overwrites data in a table matched by a set of filters. Rows matching all of the filters will be
+deleted and rows in the output data set are appended.</p><p>This plan is used to implement SaveMode.Overwrite. The behavior of SaveMode.Overwrite is to
+truncate the table -- delete all rows -- and append the output data set. This uses the filter
+AlwaysTrue to delete all rows.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.OverwritePartitionsDynamicExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="OverwritePartitionsDynamicExecextendsV2CommandExecwithV2ExistingTableWriteExecwithProductwithSerializable"></a><a id="OverwritePartitionsDynamicExec:OverwritePartitionsDynamicExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/OverwritePartitionsDynamicExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for dynamic partition overwrite into a v2 table." href="OverwritePartitionsDynamicExec.html"><span class="name">OverwritePartitionsDynamicExec</span></a><span class="params">(<span name="query">query: <a href="../../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>, <span name="refreshCache">refreshCache: () ⇒ <span class="extype" name="scala.Unit">Unit</span></span>, <span name="write">write: <span class="extype" name="org.apache.spark.sql.connector.write.Write">Write</span></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="V2ExistingTableWriteExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2ExistingTableWriteExec">V2ExistingTableWriteExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for dynamic partition overwrite into a v2 table.</p><div class="fullcomment"><div class="comment cmt"><p>Physical plan node for dynamic partition overwrite into a v2 table.</p><p>Dynamic partition overwrite is the behavior of Hive INSERT OVERWRITE ... PARTITION queries, and
+Spark INSERT OVERWRITE queries when spark.sql.sources.partitionOverwriteMode=dynamic. Each
+partition in the output data set replaces the corresponding existing partition in the table or
+creates a new partition. Existing partitions for which there is no data in the output data set
+are not modified.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.PartitionReaderFromIterator" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PartitionReaderFromIterator[InternalRow]extendsPartitionReader[InternalRow]"></a><a id="PartitionReaderFromIterator[InternalRow]:PartitionReaderFromIterator[InternalRow]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/PartitionReaderFromIterator.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="PartitionReaderFromIterator.html"><span class="name">PartitionReaderFromIterator</span></a><span class="tparams">[<span name="InternalRow">InternalRow</span>]</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.connector.read.PartitionReader">PartitionReader</span>[<span class="extype" name="org.apache.spark.sql.execution.datasources.v2.PartitionReaderFromIterator.InternalRow">InternalRow</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.PartitionReaderWithPartitionValues" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PartitionReaderWithPartitionValuesextendsPartitionReader[org.apache.spark.sql.catalyst.InternalRow]"></a><a id="PartitionReaderWithPartitionValues:PartitionReaderWithPartitionValues"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/PartitionReaderWithPartitionValues.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A wrapper reader that always appends partition values to InternalRows produced by the input reader fileReader." href="PartitionReaderWithPartitionValues.html"><span class="name">PartitionReaderWithPartitionValues</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.connector.read.PartitionReader">PartitionReader</span>[<span class="extype" name="org.apache.spark.sql.catalyst.InternalRow">InternalRow</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">A wrapper reader that always appends partition values to <span class="extype" name="InternalRow">InternalRow</span>s produced by the input
+reader <span class="extype" name="fileReader">fileReader</span>.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.PartitionRecordReader" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PartitionRecordReader[T]extendsPartitionReader[T]"></a><a id="PartitionRecordReader[T]:PartitionRecordReader[T]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/PartitionRecordReader.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="PartitionRecordReader.html"><span class="name">PartitionRecordReader</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.connector.read.PartitionReader">PartitionReader</span>[<span class="extype" name="org.apache.spark.sql.execution.datasources.v2.PartitionRecordReader.T">T</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.RefreshTableExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RefreshTableExecextendsV2CommandExecwithLeafV2CommandExecwithProductwithSerializable"></a><a id="RefreshTableExec:RefreshTableExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/RefreshTableExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="RefreshTableExec.html"><span class="name">RefreshTableExec</span></a><span class="params">(<span name="catalog">catalog: <span class="extype" name="org.apache.spark.sql.connector.catalog.TableCatalog">TableCatalog</span></span>, <span name="ident">ident: <span class="extype" name="org.apache.spark.sql.connector.catalog.Identifier">Identifier</span></span>, <span name="refreshCache">refreshCache: () ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="LeafV2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.LeafV2CommandExec">LeafV2CommandExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.RenamePartitionExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RenamePartitionExecextendsV2CommandExecwithLeafV2CommandExecwithProductwithSerializable"></a><a id="RenamePartitionExec:RenamePartitionExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/RenamePartitionExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for renaming a table partition." href="RenamePartitionExec.html"><span class="name">RenamePartitionExec</span></a><span class="params">(<span name="table">table: <span class="extype" name="org.apache.spark.sql.connector.catalog.SupportsPartitionManagement">SupportsPartitionManagement</span></span>, <span name="from">from: <span class="extype" name="org.apache.spark.sql.catalyst.analysis.ResolvedPartitionSpec">ResolvedPartitionSpec</span></span>, <span name="to">to: <span class="extype" name="org.apache.spark.sql.catalyst.analysis.ResolvedPartitionSpec">ResolvedPartitionSpec</span></span>, <span name="refreshCache">refreshCache: () ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="LeafV2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.LeafV2CommandExec">LeafV2CommandExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for renaming a table partition.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.RenameTableExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RenameTableExecextendsV2CommandExecwithLeafV2CommandExecwithProductwithSerializable"></a><a id="RenameTableExec:RenameTableExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/RenameTableExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for renaming a table." href="RenameTableExec.html"><span class="name">RenameTableExec</span></a><span class="params">(<span name="catalog">catalog: <span class="extype" name="org.apache.spark.sql.connector.catalog.TableCatalog">TableCatalog</span></span>, <span name="oldIdent">oldIdent: <span class="extype" name="org.apache.spark.sql.connector.catalog.Identifier">Identifier</span></span>, <span name="newIdent">newIdent: <span class="extype" name="org.apache.spark.sql.connector.catalog.Identifier">Identifier</span></span>, <span name="invalidateCache">invalidateCache: () ⇒ <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="org.apache.spark.storage.StorageLevel">StorageLevel</span>]</span>, <span name="cacheTable">cacheTable: (<a href="../../../SparkSession.html" class="extype" name="org.apache.spark.sql.SparkSession">SparkSession</a>, <span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</span>, <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>], <span class="extype" name="org.apache.spark.storage.StorageLevel">StorageLevel</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="LeafV2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.LeafV2CommandExec">LeafV2CommandExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for renaming a table.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.ReplaceTableAsSelectExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ReplaceTableAsSelectExecextendsV2CommandExecwithTableWriteExecHelperwithProductwithSerializable"></a><a id="ReplaceTableAsSelectExec:ReplaceTableAsSelectExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/ReplaceTableAsSelectExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for v2 replace table as select when the catalog does not support staging table replacement." href="ReplaceTableAsSelectExec.html"><span class="name">ReplaceTableAsSelectExec</span></a><span class="params">(<span name="catalog">catalog: <span class="extype" name="org.apache.spark.sql.connector.catalog.TableCatalog">TableCatalog</span></span>, <span name="ident">ident: <span class="extype" name="org.apache.spark.sql.connector.catalog.Identifier">Identifier</span></span>, <span name="partitioning">partitioning: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.connector.expressions.Transform">Transform</span>]</span>, <span name="plan">plan: <span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</span></span>, <span name="query">query: <a href="../../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>, <span name="properties">properties: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="writeOptions">writeOptions: <span class="extype" name="org.apache.spark.sql.util.CaseInsensitiveStringMap">CaseInsensitiveStringMap</span></span>, <span name="orCreate">orCreate: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="invalidateCache">invalidateCache: (<span class="extype" name="org.apache.spark.sql.connector.catalog.TableCatalog">TableCatalog</span>, <span class="extype" name="org.apache.spark.sql.connector.catalog.Table">Table</span>, <span class="extype" name="org.apache.spark.sql.connector.catalog.Identifier">Identifier</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <span class="extype" name="org.apache.spark.sql.execution.datasources.v2.TableWriteExecHelper">TableWriteExecHelper</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for v2 replace table as select when the catalog does not support staging
+table replacement.</p><div class="fullcomment"><div class="comment cmt"><p>Physical plan node for v2 replace table as select when the catalog does not support staging
+table replacement.</p><p>A new table will be created using the schema of the query, and rows from the query are appended.
+If the table exists, its contents and schema should be replaced with the schema and the contents
+of the query. This is a non-atomic implementation that drops the table and then runs non-atomic
+CTAS. For an atomic implementation for catalogs with the appropriate support, see
+ReplaceTableAsSelectStagingExec.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.ReplaceTableExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReplaceTableExecextendsV2CommandExecwithLeafV2CommandExecwithProductwithSerializable"></a><a id="ReplaceTableExec:ReplaceTableExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/ReplaceTableExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ReplaceTableExec.html"><span class="name">ReplaceTableExec</span></a><span class="params">(<span name="catalog">catalog: <span class="extype" name="org.apache.spark.sql.connector.catalog.TableCatalog">TableCatalog</span></span>, <span name="ident">ident: <span class="extype" name="org.apache.spark.sql.connector.catalog.Identifier">Identifier</span></span>, <span name="tableSchema">tableSchema: <span class="extype" name="org.apache.spark.sql.types.StructType">StructType</span></span>, <span name="partitioning">partitioning: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.connector.expressions.Transform">Transform</span>]</span>, <span name="tableProperties">tableProperties: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="orCreate">orCreate: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="invalidateCache">invalidateCache: (<span class="extype" name="org.apache.spark.sql.connector.catalog.TableCatalog">TableCatalog</span>, <span class="extype" name="org.apache.spark.sql.connector.catalog.Table">Table</span>, <span class="extype" name="org.apache.spark.sql.connector.catalog.Identifier">Identifier</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="LeafV2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.LeafV2CommandExec">LeafV2CommandExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.ScanBuilderHolder" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ScanBuilderHolderextendsLogicalPlanwithLeafNodewithProductwithSerializable"></a><a id="ScanBuilderHolder:ScanBuilderHolder"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/ScanBuilderHolder.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ScanBuilderHolder.html"><span class="name">ScanBuilderHolder</span></a><span class="params">(<span name="output">output: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.AttributeReference">AttributeReference</span>]</span>, <span name="relation">relation: <span class="extype" name="org.apache.spark.sql.execution.datasources.v2.DataSourceV2Relation">DataSourceV2Relation</span></span>, <span name="builder">builder: <span class="extype" name="org.apache.spark.sql.connector.read.ScanBuilder">ScanBuilder</span></span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</span> with <span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LeafNode">LeafNode</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.SetCatalogAndNamespaceExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SetCatalogAndNamespaceExecextendsV2CommandExecwithLeafV2CommandExecwithProductwithSerializable"></a><a id="SetCatalogAndNamespaceExec:SetCatalogAndNamespaceExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/SetCatalogAndNamespaceExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for setting the current catalog and/or namespace." href="SetCatalogAndNamespaceExec.html"><span class="name">SetCatalogAndNamespaceExec</span></a><span class="params">(<span name="catalogManager">catalogManager: <span class="extype" name="org.apache.spark.sql.connector.catalog.CatalogManager">CatalogManager</span></span>, <span name="catalogName">catalogName: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="namespace">namespace: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="LeafV2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.LeafV2CommandExec">LeafV2CommandExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for setting the current catalog and/or namespace.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.ShowCreateTableExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ShowCreateTableExecextendsV2CommandExecwithLeafExecNodewithProductwithSerializable"></a><a id="ShowCreateTableExec:ShowCreateTableExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/ShowCreateTableExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for show create table." href="ShowCreateTableExec.html"><span class="name">ShowCreateTableExec</span></a><span class="params">(<span name="output">output: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.Attribute">Attribute</span>]</span>, <span name="table">table: <span class="extype" name="org.apache.spark.sql.connector.catalog.Table">Table</span></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="../../LeafExecNode.html" class="extype" name="org.apache.spark.sql.execution.LeafExecNode">LeafExecNode</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for show create table.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.ShowCurrentNamespaceExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ShowCurrentNamespaceExecextendsV2CommandExecwithLeafV2CommandExecwithProductwithSerializable"></a><a id="ShowCurrentNamespaceExec:ShowCurrentNamespaceExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/ShowCurrentNamespaceExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for showing current catalog/namespace." href="ShowCurrentNamespaceExec.html"><span class="name">ShowCurrentNamespaceExec</span></a><span class="params">(<span name="output">output: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.Attribute">Attribute</span>]</span>, <span name="catalogManager">catalogManager: <span class="extype" name="org.apache.spark.sql.connector.catalog.CatalogManager">CatalogManager</span></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="LeafV2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.LeafV2CommandExec">LeafV2CommandExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for showing current catalog/namespace.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.ShowNamespacesExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ShowNamespacesExecextendsV2CommandExecwithLeafExecNodewithProductwithSerializable"></a><a id="ShowNamespacesExec:ShowNamespacesExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/ShowNamespacesExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for showing namespaces." href="ShowNamespacesExec.html"><span class="name">ShowNamespacesExec</span></a><span class="params">(<span name="output">output: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.Attribute">Attribute</span>]</span>, <span name="catalog">catalog: <span class="extype" name="org.apache.spark.sql.connector.catalog.SupportsNamespaces">SupportsNamespaces</span></span>, <span name="namespace">namespace: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="pattern">pattern: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="../../LeafExecNode.html" class="extype" name="org.apache.spark.sql.execution.LeafExecNode">LeafExecNode</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for showing namespaces.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.ShowPartitionsExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ShowPartitionsExecextendsV2CommandExecwithLeafExecNodewithProductwithSerializable"></a><a id="ShowPartitionsExec:ShowPartitionsExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/ShowPartitionsExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for showing partitions." href="ShowPartitionsExec.html"><span class="name">ShowPartitionsExec</span></a><span class="params">(<span name="output">output: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.Attribute">Attribute</span>]</span>, <span name="catalog">catalog: <span class="extype" name="org.apache.spark.sql.connector.catalog.TableCatalog">TableCatalog</span></span>, <span name="table">table: <span class="extype" name="org.apache.spark.sql.connector.catalog.SupportsPartitionManagement">SupportsPartitionManagement</span></span>, <span name="partitionSpec">partitionSpec: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="org.apache.spark.sql.catalyst.analysis.ResolvedPartitionSpec">ResolvedPartitionSpec</span>]</span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="../../LeafExecNode.html" class="extype" name="org.apache.spark.sql.execution.LeafExecNode">LeafExecNode</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for showing partitions.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.ShowTablePropertiesExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ShowTablePropertiesExecextendsV2CommandExecwithLeafV2CommandExecwithProductwithSerializable"></a><a id="ShowTablePropertiesExec:ShowTablePropertiesExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/ShowTablePropertiesExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for showing table properties." href="ShowTablePropertiesExec.html"><span class="name">ShowTablePropertiesExec</span></a><span class="params">(<span name="output">output: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.Attribute">Attribute</span>]</span>, <span name="catalogTable">catalogTable: <span class="extype" name="org.apache.spark.sql.connector.catalog.Table">Table</span></span>, <span name="propertyKey">propertyKey: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="LeafV2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.LeafV2CommandExec">LeafV2CommandExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for showing table properties.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.ShowTablesExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ShowTablesExecextendsV2CommandExecwithLeafExecNodewithProductwithSerializable"></a><a id="ShowTablesExec:ShowTablesExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/ShowTablesExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for showing tables." href="ShowTablesExec.html"><span class="name">ShowTablesExec</span></a><span class="params">(<span name="output">output: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.catalyst.expressions.Attribute">Attribute</span>]</span>, <span name="catalog">catalog: <span class="extype" name="org.apache.spark.sql.connector.catalog.TableCatalog">TableCatalog</span></span>, <span name="namespace">namespace: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="pattern">pattern: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="../../LeafExecNode.html" class="extype" name="org.apache.spark.sql.execution.LeafExecNode">LeafExecNode</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for showing tables.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.SupportsV1Write" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SupportsV1WriteextendsSparkPlan"></a><a id="SupportsV1Write:SupportsV1Write"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/SupportsV1Write.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A trait that allows Tables that use V1 Writer interfaces to append data." href="SupportsV1Write.html"><span class="name">SupportsV1Write</span></a><span class="result"> extends <a href="../../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A trait that allows Tables that use V1 Writer interfaces to append data.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.TextBasedFileScan" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TextBasedFileScanextendsFileScan"></a><a id="TextBasedFileScan:TextBasedFileScan"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/TextBasedFileScan.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="TextBasedFileScan.html"><span class="name">TextBasedFileScan</span></a><span class="result"> extends <a href="FileScan.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.FileScan">FileScan</a></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.TruncatePartitionExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TruncatePartitionExecextendsV2CommandExecwithLeafV2CommandExecwithProductwithSerializable"></a><a id="TruncatePartitionExec:TruncatePartitionExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/TruncatePartitionExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for table partition truncation." href="TruncatePartitionExec.html"><span class="name">TruncatePartitionExec</span></a><span class="params">(<span name="table">table: <span class="extype" name="org.apache.spark.sql.connector.catalog.SupportsPartitionManagement">SupportsPartitionManagement</span></span>, <span name="partSpec">partSpec: <span class="extype" name="org.apache.spark.sql.catalyst.analysis.ResolvedPartitionSpec">ResolvedPartitionSpec</span></span>, <span name="refreshCache">refreshCache: () ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="LeafV2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.LeafV2CommandExec">LeafV2CommandExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for table partition truncation.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.TruncateTableExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TruncateTableExecextendsV2CommandExecwithLeafV2CommandExecwithProductwithSerializable"></a><a id="TruncateTableExec:TruncateTableExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/TruncateTableExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Physical plan node for table truncation." href="TruncateTableExec.html"><span class="name">TruncateTableExec</span></a><span class="params">(<span name="table">table: <span class="extype" name="org.apache.spark.sql.connector.catalog.TruncatableTable">TruncatableTable</span></span>, <span name="refreshCache">refreshCache: () ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="LeafV2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.LeafV2CommandExec">LeafV2CommandExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Physical plan node for table truncation.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.UncacheTableExec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UncacheTableExecextendsV2CommandExecwithLeafV2CommandExecwithProductwithSerializable"></a><a id="UncacheTableExec:UncacheTableExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/UncacheTableExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="UncacheTableExec.html"><span class="name">UncacheTableExec</span></a><span class="params">(<span name="relation">relation: <span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</span></span>, <span name="cascade">cascade: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="LeafV2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.LeafV2CommandExec">LeafV2CommandExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.V1FallbackWriters" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="V1FallbackWritersextendsV2CommandExecwithLeafV2CommandExecwithSupportsV1Write"></a><a id="V1FallbackWriters:V1FallbackWriters"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/V1FallbackWriters.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Some helper interfaces that use V2 write semantics through the V1 writer interface." href="V1FallbackWriters.html"><span class="name">V1FallbackWriters</span></a><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="LeafV2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.LeafV2CommandExec">LeafV2CommandExec</a> with <a href="SupportsV1Write.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.SupportsV1Write">SupportsV1Write</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Some helper interfaces that use V2 write semantics through the V1 writer interface.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.V1ScanWrapper" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="V1ScanWrapperextendsScanwithProductwithSerializable"></a><a id="V1ScanWrapper:V1ScanWrapper"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/V1ScanWrapper.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="V1ScanWrapper.html"><span class="name">V1ScanWrapper</span></a><span class="params">(<span name="v1Scan">v1Scan: <a href="../../../connector/read/V1Scan.html" class="extype" name="org.apache.spark.sql.connector.read.V1Scan">V1Scan</a></span>, <span name="handledFilters">handledFilters: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.sources.Filter">Filter</span>]</span>, <span name="pushedAggregate">pushedAggregate: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="org.apache.spark.sql.connector.expressions.aggregate.Aggregation">Aggregation</span>]</span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.connector.read.Scan">Scan</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="V2CommandExecextendsSparkPlan"></a><a id="V2CommandExec:V2CommandExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/V2CommandExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A physical operator that executes run() and saves the result to prevent multiple executions." href="V2CommandExec.html"><span class="name">V2CommandExec</span></a><span class="result"> extends <a href="../../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A physical operator that executes run() and saves the result to prevent multiple executions.</p><div class="fullcomment"><div class="comment cmt"><p>A physical operator that executes run() and saves the result to prevent multiple executions.
+Any V2 commands that do not require triggering a spark job should extend this class.
+</p></div></div>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.V2ExistingTableWriteExec" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="V2ExistingTableWriteExecextendsV2CommandExecwithV2TableWriteExec"></a><a id="V2ExistingTableWriteExec:V2ExistingTableWriteExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/V2ExistingTableWriteExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="V2ExistingTableWriteExec.html"><span class="name">V2ExistingTableWriteExec</span></a><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="V2TableWriteExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2TableWriteExec">V2TableWriteExec</a></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.V2SessionCatalog" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="V2SessionCatalogextendsTableCatalogwithSupportsNamespaceswithSQLConfHelper"></a><a id="V2SessionCatalog:V2SessionCatalog"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/V2SessionCatalog.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A TableCatalog that translates calls to the v1 SessionCatalog." href="V2SessionCatalog.html"><span class="name">V2SessionCatalog</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.connector.catalog.TableCatalog">TableCatalog</span> with <span class="extype" name="org.apache.spark.sql.connector.catalog.SupportsNamespaces">SupportsNamespaces</span> with <span class="extype" name="org.apache.spark.sql.catalyst.SQLConfHelper">SQLConfHelper</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A <span class="extype" name="TableCatalog">TableCatalog</span> that translates calls to the v1 SessionCatalog.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.V2TableWriteExec" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="V2TableWriteExecextendsV2CommandExecwithUnaryExecNode"></a><a id="V2TableWriteExec:V2TableWriteExec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/V2TableWriteExec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="The base physical plan for writing data into data source v2." href="V2TableWriteExec.html"><span class="name">V2TableWriteExec</span></a><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="../../UnaryExecNode.html" class="extype" name="org.apache.spark.sql.execution.UnaryExecNode">UnaryExecNode</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The base physical plan for writing data into data source v2.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.WriteToDataSourceV2Exec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WriteToDataSourceV2ExecextendsV2CommandExecwithV2TableWriteExecwithProductwithSerializable"></a><a id="WriteToDataSourceV2Exec:WriteToDataSourceV2Exec"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/WriteToDataSourceV2Exec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="WriteToDataSourceV2Exec.html"><span class="name">WriteToDataSourceV2Exec</span></a><span class="params">(<span name="batchWrite">batchWrite: <span class="extype" name="org.apache.spark.sql.connector.write.BatchWrite">BatchWrite</span></span>, <span name="refreshCache">refreshCache: () ⇒ <span class="extype" name="scala.Unit">Unit</span></span>, <span name="query">query: <a href="../../SparkPlan.html" class="extype" name="org.apache.spark.sql.execution.SparkPlan">SparkPlan</a></span>, <span name="writeMetrics">writeMetrics: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.connector.metric.CustomMetric">CustomMetric</span>]</span>)</span><span class="result"> extends <a href="V2CommandExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2CommandExec">V2CommandExec</a> with <a href="V2TableWriteExec.html" class="extype" name="org.apache.spark.sql.execution.datasources.v2.V2TableWriteExec">V2TableWriteExec</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.WriteToDataSourceV2" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="WriteToDataSourceV2extendsLogicalPlanwithUnaryNodewithProductwithSerializable"></a><a id="WriteToDataSourceV2:WriteToDataSourceV2"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/WriteToDataSourceV2.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Deprecated logical plan for writing data into data source v2." href="WriteToDataSourceV2.html"><span class="name deprecated" title="Deprecated: (Since version 2.4.0) Use specific logical plans like AppendData instead">WriteToDataSourceV2</span></a><span class="params">(<span name="relation">relation: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="org.apache.spark.sql.execution.datasources.v2.DataSourceV2Relation">DataSourceV2Relation</span>]</span>, <span name="batchWrite">batchWrite: <span class="extype" name="org.apache.spark.sql.connector.write.BatchWrite">BatchWrite</span></span>, <span name="query">query: <span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</span></span>, <span name="customMetrics">customMetrics: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.sql.connector.metric.CustomMetric">CustomMetric</span>]</span>)</span><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</span> with <span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.UnaryNode">UnaryNode</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Deprecated logical plan for writing data into data source v2.</p><div class="fullcomment"><div class="comment cmt"><p>Deprecated logical plan for writing data into data source v2. This is being replaced by more
+specific logical plans, like <span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.AppendData">org.apache.spark.sql.catalyst.plans.logical.AppendData</span>.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.4.0)</i> Use specific logical plans like AppendData instead</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DataWritingSparkTask"></a><a id="DataWritingSparkTask:DataWritingSparkTask"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/DataWritingSparkTask$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="DataWritingSparkTask$.html"><span class="name">DataWritingSparkTask</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.internal.Logging">Logging</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.DistributionAndOrderingUtils" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DistributionAndOrderingUtils"></a><a id="DistributionAndOrderingUtils:DistributionAndOrderingUtils"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/DistributionAndOrderingUtils$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="DistributionAndOrderingUtils$.html"><span class="name">DistributionAndOrderingUtils</span></a>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.FileTable" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FileTable"></a><a id="FileTable:FileTable"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/FileTable$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="FileTable$.html"><span class="name">FileTable</span></a>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.PushDownUtils" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PushDownUtils"></a><a id="PushDownUtils:PushDownUtils"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/PushDownUtils$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="PushDownUtils$.html"><span class="name">PushDownUtils</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.expressions.PredicateHelper">PredicateHelper</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.TableCapabilityCheck" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TableCapabilityCheck"></a><a id="TableCapabilityCheck:TableCapabilityCheck"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/TableCapabilityCheck$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Checks the capabilities of Data Source V2 tables, and fail problematic queries earlier." href="TableCapabilityCheck$.html"><span class="name">TableCapabilityCheck</span></a><span class="result"> extends (<span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Checks the capabilities of Data Source V2 tables, and fail problematic queries earlier.</p>
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.V2ScanRelationPushDown" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="V2ScanRelationPushDown"></a><a id="V2ScanRelationPushDown:V2ScanRelationPushDown"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/V2ScanRelationPushDown$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="V2ScanRelationPushDown$.html"><span class="name">V2ScanRelationPushDown</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</span>[<span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</span>] with <span class="extype" name="org.apache.spark.sql.catalyst.expressions.PredicateHelper">PredicateHelper</span></span>
+      </span>
+      
+      
+    </li><li name="org.apache.spark.sql.execution.datasources.v2.V2Writes" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="V2Writes"></a><a id="V2Writes:V2Writes"></a>
+      <span class="permalink">
+      <a href="../../../../../../../org/apache/spark/sql/execution/datasources/v2/V2Writes$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="A rule that constructs logical writes." href="V2Writes$.html"><span class="name">V2Writes</span></a><span class="result"> extends <span class="extype" name="org.apache.spark.sql.catalyst.rules.Rule">Rule</span>[<span class="extype" name="org.apache.spark.sql.catalyst.plans.logical.LogicalPlan">LogicalPlan</span>] with <span class="extype" name="org.apache.spark.sql.catalyst.expressions.PredicateHelper">PredicateHelper</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A rule that constructs logical writes.</p>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>
