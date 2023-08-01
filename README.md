@@ -42,7 +42,7 @@ Users put the path of the repository into `PATH_TO_DIR` in the following instruc
 ##### (2) Repeat the same task for all workers.
 In a distributed programming environment, in most cases there are multiple workers, so you have to iterate over each worker machine with the same setup. Name each machine in the list of worker machines in the following order: `worker1`, `worker2`, `worker3`,... In addition, the part marked with `workerX` in the manual below means to repeatedly execute the instruction by substituting a worker number of `X = 1,2,3...` for each worker machine.
 
-## 2. Docker Swarm
+## 3. Docker Swarm
 This step is to group each machine where Docker is installed into one cluster.
 
 1. Connect via ssh to the master node.
@@ -64,7 +64,7 @@ Here, use USER_NAME (Linux user name), IP (machine's IP address), and PASSWORD (
 When you do this, all machines (including master) to be included in the cluster should be displayed.
 
 
-## 3. Create Docker Image and Run Container
+## 4. Create Docker Image and Run Container
 This step is the process of downloading the configuration file/external source codes, creating a Docker image, and running the container.
 
 #### For Master, do the following:
@@ -118,7 +118,7 @@ worker4
 [master]$ cd /root/qaad/scripts/setup-scripts; bash run-containers.sh PATH_TO_DIR root@0.0.0.0 EXPW123! root@0.0.0.1 EXPW123! root@0.0.0.2 EXPW123! root@0.0.0.3 EXPW123! root@0.0.0.4 EXPW123!
 ```
 
-## 4. Run Experiments
+## 5. Run Experiments
 
 1. Enter the master docker container.
 ```
@@ -187,6 +187,6 @@ Fig. 14(a):
 Fig. 14(b):
 `PATH_TO_OUTPUT_DIR/batchsize-ebay-elapsedtime-r-0-p-448-bar.eps`
 
-## 5. Contact Us
+## 6. Contact Us
 
 If you have any inquiry or bug report, please send emails to me at yspark@dblab.postech.ac.kr.
