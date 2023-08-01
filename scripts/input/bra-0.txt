@@ -1,0 +1,8 @@
+/root/QaaD/datasets/synthetic-brazilian-ecommerce/num-rows-0/orders.csv
+/root/QaaD/datasets/synthetic-brazilian-ecommerce/num-rows-0/order_items.csv
+/root/QaaD/datasets/synthetic-brazilian-ecommerce/num-rows-0/products.csv
+/root/QaaD/datasets/synthetic-brazilian-ecommerce/num-rows-0/customers.csv
+/root/QaaD/datasets/synthetic-brazilian-ecommerce/num-rows-0/sellers.csv
+/root/QaaD/datasets/synthetic-brazilian-ecommerce/num-rows-0/geolocation.csv
+/root/QaaD/datasets/synthetic-brazilian-ecommerce/num-rows-0/order_payments.csv
+/root/QaaD/datasets/synthetic-brazilian-ecommerce/num-rows-0/order_reviews.csv
