@@ -6,7 +6,7 @@ num_partitions=$3
 num_queries=1
 /root/QaaD/scripts/set.sh ori-jars
 if [ ${dataset} == bra ]; then
-  for i in {0/root/QaaD10}; do
+  for i in {0..10}; do
     hdfs_dir=/root/QaaD/datasets/synthetic-brazilian-ecommerce/num-rows-${num_rows}/
     /root/dev/hadoop-2.7.7/bin/hdfs dfs -rm -r -f ${hdfs_dir}/*
     /root/dev/hadoop-2.7.7/bin/hdfs dfs -mkdir -p ${hdfs_dir}
@@ -41,7 +41,7 @@ if [ ${dataset} == bra ]; then
     fi
   done
 else
-  for i in {0/root/QaaD10}; do
+  for i in {0..10}; do
     hdfs_dir=/root/QaaD/datasets/synthetic-ebay/num-rows-${num_rows}/
     /root/dev/hadoop-2.7.7/bin/hdfs dfs -rm -r -f ${hdfs_dir}/*
     /root/dev/hadoop-2.7.7/bin/hdfs dfs -mkdir -p ${hdfs_dir}
