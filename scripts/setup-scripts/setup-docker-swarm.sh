@@ -26,7 +26,7 @@ while [ "$#" -gt 1 ]; do
   ssh-keygen -R $(echo $WORKER | cut -d'@' -f2)
 
   # Join each worker to the swarm
-  sshpass -p "$WORKER_PASSWORD" ssh -tt "$WORKER" "docker swarm leave -f && docker swarm join --token $JOIN_TOKEN $(echo $MASTER | cut -d'@' -f2):2377"
+  sshpass -p "$WORKER_PASSWORD" ssh -tt "$WORKER" "docker swarm leave -f; docker swarm join --token $JOIN_TOKEN $(echo $MASTER | cut -d'@' -f2):2377"
 done
 
 
